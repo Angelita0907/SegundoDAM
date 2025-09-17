@@ -7,7 +7,7 @@ public class CanalService {
 	
 	CanalRepository canalRepo;
 
-	public CanalService(CanalRepository canalRepo) {
+	public CanalService() {
 		super();
 		this.canalRepo = new CanalRepository();
 	}

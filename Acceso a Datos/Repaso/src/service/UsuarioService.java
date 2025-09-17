@@ -7,7 +7,7 @@ public class UsuarioService {
 
 	UsuarioRepository usuRepo;
 
-	public UsuarioService(UsuarioRepository usuRepo) {
+	public UsuarioService() {
 		super();
 		this.usuRepo = new UsuarioRepository();
 	}
@@ -22,6 +22,14 @@ public class UsuarioService {
 	
 	public void buscarUsuario(Usuario u) {
 		usuRepo.findUser(u);
+	}
+
+	public UsuarioRepository getUsuRepo() {
+		return usuRepo;
+	}
+
+	public void setUsuRepo(UsuarioRepository usuRepo) {
+		this.usuRepo = usuRepo;
 	}
 
 }

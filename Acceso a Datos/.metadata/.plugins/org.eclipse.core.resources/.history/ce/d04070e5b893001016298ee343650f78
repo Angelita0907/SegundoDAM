@@ -1,0 +1,35 @@
+package controlador;
+
+import java.time.LocalDate;
+
+import models.Canal;
+import models.Usuario;
+import service.UsuarioService;
+
+public class controlar {
+
+	public static void main(String[] args) {
+		
+		Usuario usu1 = new Usuario(1, "Pepito", "aa@aa", false);
+		Usuario usu2 = new Usuario(2, "Juanito", "juanito@aa", true);
+		Usuario usu3 = new Usuario(3, "Maria", "maria@bb", false);
+		Usuario usu4 = new Usuario(4, "Carlos", "carlos@cc", true);
+		Usuario usu5 = new Usuario(5, "Luisa", "luisa@dd", false);
+
+		Canal c1 = new Canal(0, "Canal de Juanito", usu2, LocalDate.of(2025, 9, 17));
+		Canal c2 = new Canal(1, "Canal de Carlos", usu4, LocalDate.of(2025, 9, 17));
+
+
+		
+		
+		//terminar llamando a los metodos de cada servicio
+		
+		UsuarioService usuServ = new UsuarioService();
+		
+		
+		
+		System.out.println(usuServ.getUsuRepo().getUsuarios());
+		
+	}
+
+}

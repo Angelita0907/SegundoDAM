@@ -32,4 +32,14 @@ public class CanalRepository {
 		
 	}
 
+	public List<Canal> getCanales() {
+		return canales;
+	}
+
+	public void setCanales(List<Canal> canales) {
+		this.canales = canales;
+	}
+	
+	
+
 }
