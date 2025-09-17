@@ -1,0 +1,31 @@
+package Repository;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import models.Usuario;
+
+public class usuarioRepository {
+	
+	List<Usuario> usuarios = new ArrayList<>();
+	
+	public void addUsuarios (Usuario u){
+		usuarios.add(u);
+	}
+	
+	public void delUsuario (Usuario u) {
+		usuarios.remove(u);
+	}
+	
+	public Usuario findUser (Usuario u) {
+		Usuario found = null;
+		
+		if(usuarios.contains(u)) {
+			found = u;
+		}
+		
+		return found;
+		
+	}
+
+}

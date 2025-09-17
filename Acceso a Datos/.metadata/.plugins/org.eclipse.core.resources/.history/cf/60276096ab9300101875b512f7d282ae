@@ -1,0 +1,53 @@
+package models;
+
+import java.util.ArrayList;
+
+public class Usuario {
+
+	private int idUsuario;
+	private String nombre;
+	private String email;
+	private boolean esStreamer;
+	private ArrayList<Usuario> listaUsuario;
+	
+	public int getIdUsuario() {
+		return idUsuario;
+	}
+	public void setIdUsuario(int idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+	
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public boolean isEsStreamer() {
+		return esStreamer;
+	}
+	public void setEsStreamer(boolean esStreamer) {
+		this.esStreamer = esStreamer;
+	}
+	
+	public ArrayList<Usuario> getListaUsuario() {
+		return listaUsuario;
+	}
+	public void setListaUsuario(ArrayList<Usuario> listaUsuario) {
+		this.listaUsuario = listaUsuario;
+	}
+	
+	public Usuario(int idUsuario, boolean esStreamer) {
+		super();
+		this.idUsuario = idUsuario;
+		this.esStreamer = esStreamer;
+	}
+	
+	
+}

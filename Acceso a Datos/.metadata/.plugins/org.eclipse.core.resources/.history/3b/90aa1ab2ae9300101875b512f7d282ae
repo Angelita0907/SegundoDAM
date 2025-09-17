@@ -1,0 +1,30 @@
+package Repository;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import models.Canal;
+
+public class canalRepository {
+	
+	List<Canal> canales = new ArrayList<>();
+	
+	public void addCanal (Canal c){
+		canales.add(c);
+	}
+	
+	public void delCanal (Canal c) {
+		canales.remove(c);
+	}
+	
+	public Canal findCanal (Canal c) {
+		Canal found = null;
+		
+		if(canales.contains(c)) {
+			found = c;
+		}
+		return found;
+		
+	}
+
+}

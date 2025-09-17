@@ -1,0 +1,8 @@
+1758099020077	Rename package 'modelo'
+1758102519582	Encapsulate field 'listaUsuario, ...'
+1758104387001	Rename type 'canalRepository'
+1758104393902	Rename type 'retransmisionRepository'
+1758104399407	Rename type 'usuarioRepository'
+1758104405722	Rename type 'canalService'
+1758104411041	Rename type 'retransmisionService'
+1758104452704	Delete element

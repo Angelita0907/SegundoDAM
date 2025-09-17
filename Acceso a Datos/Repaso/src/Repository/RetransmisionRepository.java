@@ -1,0 +1,35 @@
+package Repository;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import models.Retransmision;
+
+public class RetransmisionRepository {
+	
+List<Retransmision> retransmisiones;
+	
+	public RetransmisionRepository() {
+	super();
+	this.retransmisiones = new ArrayList<Retransmision>();
+}
+
+	public void addRetransmision (Retransmision r){
+		retransmisiones.add(r);
+	}
+	
+	public void delRetransmision (Retransmision r) {
+		retransmisiones.remove(r);
+	}
+	
+	public Retransmision findRetransmision (Retransmision r) {
+		Retransmision found = null;
+		
+		if(retransmisiones.contains(r)) {
+			found = r;
+		}
+		return found;
+		
+	}
+
+}

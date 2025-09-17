@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="models.Canal"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="Repository.usuarioRepository"/>
+    <fullyQualifiedTypeName name="service.usuarioService"/>
+    <fullyQualifiedTypeName name="service.UsuarioService"/>
+    <fullyQualifiedTypeName name="Repository.UsuarioRepository"/>
+    <fullyQualifiedTypeName name="models.Usuario"/>
+    <fullyQualifiedTypeName name="Repository.CanalRepository"/>
+    <fullyQualifiedTypeName name="Repository.RetransmisionRepository"/>
+    <fullyQualifiedTypeName name="service.RetransmisionService"/>
+    <fullyQualifiedTypeName name="models.Retransmision"/>
+</qualifiedTypeNameHistroy>
