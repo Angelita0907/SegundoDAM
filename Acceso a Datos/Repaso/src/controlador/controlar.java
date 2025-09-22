@@ -48,7 +48,7 @@ public class controlar {
 		canalServ.altaCanal(c1);
 		canalServ.altaCanal(c2);
 
-		System.out.println(canalServ.get);
+		System.out.println(canalServ);
 		
 		
 	}
