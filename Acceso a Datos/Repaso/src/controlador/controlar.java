@@ -47,8 +47,12 @@ public class controlar {
 		CanalService canalServ = new CanalService();
 		canalServ.altaCanal(c1);
 		canalServ.altaCanal(c2);
+		
+		canalServ.borrarCanal(c1);
+		
+		canalServ.findCanal(c2);
 
-		System.out.println(canalServ);
+		//System.out.println(canalServ);
 		
 		
 	}
