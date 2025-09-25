@@ -76,4 +76,10 @@ public class Editorial {
 		return Objects.equals(cif, other.cif);
 	}
 
+	@Override
+	public String toString() {
+		return "Editorial [nombre=" + nombre + ", direccion=" + direccion + ", cif=" + cif + ", web=" + web + ", email="
+				+ email + "]";
+	}
+	
 }

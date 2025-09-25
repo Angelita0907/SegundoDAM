@@ -14,10 +14,14 @@
     <fullyQualifiedTypeName name="models.Retransmision"/>
     <fullyQualifiedTypeName name="service.CanalService"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.HashSet"/>
-    <fullyQualifiedTypeName name="dam.accesoDatos.repaso.biblioteca.modelo.Editorial"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="dam.accesoDatos.repaso.biblioteca.repositorio.LibroRepository"/>
+    <fullyQualifiedTypeName name="dam.accesoDatos.repaso.biblioteca.repositorio.EditorialRepository"/>
     <fullyQualifiedTypeName name="dam.accesoDatos.repaso.biblioteca.modelo.LibreriaException"/>
+    <fullyQualifiedTypeName name="dam.accesoDatos.repaso.biblioteca.modelo.genero"/>
+    <fullyQualifiedTypeName name="dam.accesoDatos.repaso.biblioteca.modelo.Genero"/>
+    <fullyQualifiedTypeName name="dam.accesoDatos.repaso.biblioteca.modelo.Editorial"/>
+    <fullyQualifiedTypeName name="dam.accesoDatos.repaso.biblioteca.modelo.Libro"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
 </qualifiedTypeNameHistroy>

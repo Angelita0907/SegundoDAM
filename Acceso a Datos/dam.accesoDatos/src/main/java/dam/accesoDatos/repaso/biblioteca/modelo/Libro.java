@@ -10,9 +10,10 @@ public class Libro {
 	private int anioPublicacion;
 	private Editorial editorial;
 	private int ejemplares_dis;
+	private Genero genero;
 
-	public Libro(String isbn, String titulo, String autor, int anioPublicacion, Editorial editorial,
-			int ejemplares_dis) {
+	public Libro(String isbn, String titulo, String autor, int anioPublicacion, Editorial editorial, int ejemplares_dis,
+			Genero genero) {
 		super();
 		this.isbn = isbn;
 		this.titulo = titulo;
@@ -20,6 +21,7 @@ public class Libro {
 		this.anioPublicacion = anioPublicacion;
 		this.editorial = editorial;
 		this.ejemplares_dis = ejemplares_dis;
+		this.genero = genero;
 	}
 
 	public String getIsbn() {
@@ -70,6 +72,14 @@ public class Libro {
 		this.ejemplares_dis = ejemplares_dis;
 	}
 
+	public Genero getGenero() {
+		return genero;
+	}
+
+	public void setGenero(Genero genero) {
+		this.genero = genero;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(isbn);
@@ -87,6 +97,10 @@ public class Libro {
 		return Objects.equals(isbn, other.isbn);
 	}
 
-	
-	
+	@Override
+	public String toString() {
+		return "Libro [isbn=" + isbn + ", titulo=" + titulo + ", autor=" + autor + ", anioPublicacion="
+				+ anioPublicacion + ", editorial=" + editorial + ", ejemplares_dis=" + ejemplares_dis + "]";
+	}
+
 }

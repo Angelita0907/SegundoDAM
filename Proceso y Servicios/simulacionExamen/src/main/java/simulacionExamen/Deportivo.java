@@ -23,6 +23,8 @@ public class Deportivo extends Evento {
 		
 		double costeBase = 0;
 		
+		
+		
 		if(televidado == true) {
 			costeBase = -10000;
 		}

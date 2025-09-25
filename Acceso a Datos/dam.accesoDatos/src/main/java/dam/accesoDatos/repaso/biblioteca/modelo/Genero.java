@@ -1,5 +1,5 @@
 package dam.accesoDatos.repaso.biblioteca.modelo;
 
-public enum genero {
+public enum Genero {
 INFATIL, DRAMA, ROMÁNTICO, TERROR, HISTÓRICO
 }
