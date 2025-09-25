@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="Repository.usuarioRepository"/>
     <fullyQualifiedTypeName name="service.usuarioService"/>
@@ -14,4 +13,11 @@
     <fullyQualifiedTypeName name="models.Canal"/>
     <fullyQualifiedTypeName name="models.Retransmision"/>
     <fullyQualifiedTypeName name="service.CanalService"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="dam.accesoDatos.repaso.biblioteca.modelo.Editorial"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="dam.accesoDatos.repaso.biblioteca.repositorio.LibroRepository"/>
+    <fullyQualifiedTypeName name="dam.accesoDatos.repaso.biblioteca.modelo.LibreriaException"/>
 </qualifiedTypeNameHistroy>
