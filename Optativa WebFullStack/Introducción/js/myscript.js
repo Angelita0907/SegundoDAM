@@ -1,5 +1,5 @@
 //alert("Hello World!");
-
+/*
 console.log("Hola k ase")
 
 var table = "Normal Table";
@@ -59,7 +59,7 @@ console.log(testUndefined);
 //Array
 var first_array = [];
 var second_array = new Array(3);
-var third_array = new Array(3,5);
+var third_array = new Array(3,5, 6,7);
 var fourth_array = new Array(3,5,"Seville", true, third_array);
 console.log(first_array);
 console.log(second_array);
@@ -84,3 +84,66 @@ console.log(arrayFinal);
 //primero final luego columna
 arrayFinal[1][2] = 8;
 console.log(arrayFinal);
+*/
+
+var third_array = new Array(1,2,3,5,4,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20);
+
+//recorrer un array
+/*
+for(var i=0; third_array.length > i; i++){
+    console.log(third_array[i]);
+}
+*/
+//recorrido a la inversa
+/*
+for(var i = third_array.length-1; i >=0; i--){
+    console.log("Entramos en la iteracion de  "+third_array[i])
+}
+*/
+//declarando la variable fuera
+/*
+var i = third_array.length-1;
+for(;i>=0;i--){
+    console.log("Entramos en la iteracion de  "+third_array[i])
+}
+*/
+
+//for each
+/*
+third_array.forEach(function myFunction(item) {
+    console.log(item)
+});
+*/
+
+//if comprobar dni
+/*
+var DNI_REGEX = /^(\d{8})([A-Z])$/;
+let dni = '12345678K';
+if(dni.match(DNI_REGEX)){
+    console.log("Dni correcto")
+}
+else{
+    console.log("Dni incorrecto")
+}
+*/
+
+//objeto fecha
+/*
+let today = new Date();
+let first_september = new Date(2025,9,1);
+console.log(today);
+console.log(first_september);
+console.log(today.getDay());
+
+if(today>first_september){
+    console.log("Today is after to first octuber");
+}
+else{
+    console.log("Today is before to first octuber");
+}
+*/
+
+//eventos
+function myFirstFunction(){
+    console.log("Thank you for your click");
+}
