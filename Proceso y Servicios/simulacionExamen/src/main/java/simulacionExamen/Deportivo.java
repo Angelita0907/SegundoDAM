@@ -20,24 +20,18 @@ public class Deportivo extends Evento {
 
 	@Override
 	public double calcularCosteBae() {
-		
+
 		double costeBase = 0;
-		
-		
-		
-		if(televidado == true) {
+
+		if (televidado == true) {
 			costeBase = -10000;
-		}
-		else if (getMaxAsistentes() >= 3000) {
+		} else if (getMaxAsistentes() >= 3000) {
 			costeBase = 150000;
-		}
-		else {
+		} else {
 			costeBase = 75000;
 		}
-		
+
 		return costeBase;
 	}
-	
-	
-	
+
 }

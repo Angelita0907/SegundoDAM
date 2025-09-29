@@ -3,6 +3,8 @@ package simulacionExamen;
 import java.time.LocalDate;
 import java.util.Objects;
 
+import Exception.CraftersException;
+
 public abstract class Evento {
 
 	static int contador;
@@ -13,12 +15,12 @@ public abstract class Evento {
 	private int maxAsistentes;
 	private estado estado;
 
-	public Evento(int id, String nombre, int numEntradas, int maxAsistentes, estado estado) {
+	public Evento(int id, String nombre, int numEntradas, int maxAsistentes, estado estado) throws CraftersException {
 		super();
 		this.id = contador;
 		this.nombre = nombre;
-		this.numEntradas = numEntradas;
-		this.maxAsistentes = maxAsistentes;
+		setNumEntradas(numEntradas);
+		setMaxAsistentes(maxAsistentes);
 		this.estado = estado;
 		contador = contador + 1;
 	}
@@ -51,15 +53,24 @@ public abstract class Evento {
 		return numEntradas;
 	}
 
-	public void setNumEntradas(int numEntradas) {
+	public void setNumEntradas(int numEntradas) throws CraftersException {
+		
+		if(numEntradas < 0 || numEntradas < maxAsistentes) {
+			throw new CraftersException("No se puede crear el evento");
+		}
+		else {
 		this.numEntradas = numEntradas;
+		}
 	}
 
 	public int getMaxAsistentes() {
 		return maxAsistentes;
 	}
 
-	public void setMaxAsistentes(int maxAsistentes) {
+	public void setMaxAsistentes(int maxAsistentes) throws CraftersException {
+		if(maxAsistentes <= 0) {
+			throw new CraftersException("No se puede crear el evento");
+		}
 		this.maxAsistentes = maxAsistentes;
 	}
 
@@ -99,8 +110,10 @@ public abstract class Evento {
 
 	public abstract double calcularCosteBae();
 
-	public void modificaEstado(Evento e) {
-		// TODO terminar
+	public void modificaEstado(estado estado_nuevo)  {
+		//TODO
+		
+		
 	}
 
 	public double getPorcentajeOcupacion() {
