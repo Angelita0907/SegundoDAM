@@ -1,6 +1,9 @@
 package dam.accesoDatos.repaso.biblioteca.servicio;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 
 import dam.accesoDatos.repaso.biblioteca.modelo.Genero;
 import dam.accesoDatos.repaso.biblioteca.modelo.LibreriaException;
@@ -47,13 +50,32 @@ public class LibroService {
 		return actualizado;
 	}
 	
-	public HashSet<Libro> listaLibmismoGenero(Genero g){
-		
-		return libRepo.buscalibrosGenero(g);
+	
+	//las operaciones de filtrar u ordenar son del servicio
+	public HashSet<Libro> buscalibrosGenero(Genero genero) {
+
+		HashSet<Libro> librosGenero = new HashSet<Libro>();
+
+		for (Libro l : this.libRepo.getLibros()) {
+			if (l.getGenero().equals(genero)) {
+				librosGenero.add(l);
+			}
+		}
+		return librosGenero;
 	}
 	
 	public HashSet<Libro> listamismaEditorial(String cif){
 		return libRepo.librosCifEditorial(cif);
 	}
+	/*
+	public Map<Genero, List<Libro>> mapalibro = new HashMap<Genero, List<Libro>>();
+	{
+		//terminar mapa
+		//List<Libro> libroGenero = buscalibrosGenero(genero)
+		
+		return null;
+	}
+	*/
+	
 
 }

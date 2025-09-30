@@ -3,8 +3,6 @@ package dam.accesoDatos.repaso.biblioteca.repositorio;
 import java.util.HashSet;
 import java.util.Iterator;
 
-import dam.accesoDatos.repaso.biblioteca.modelo.Editorial;
-import dam.accesoDatos.repaso.biblioteca.modelo.Genero;
 import dam.accesoDatos.repaso.biblioteca.modelo.LibreriaException;
 import dam.accesoDatos.repaso.biblioteca.modelo.Libro;
 
@@ -63,17 +61,6 @@ public class LibroRepository {
 
 	}
 
-	public HashSet<Libro> buscalibrosGenero(Genero genero) {
-
-		HashSet<Libro> librosGenero = new HashSet<Libro>();
-
-		for (Libro l : libros) {
-			if (l.getGenero().equals(genero)) {
-				librosGenero.add(l);
-			}
-		}
-		return librosGenero;
-	}
 
 	public HashSet<Libro> librosCifEditorial(String cif) {
 

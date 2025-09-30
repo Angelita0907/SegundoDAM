@@ -2,7 +2,7 @@ package dam.accesoDatos.repaso.biblioteca.modelo;
 
 import java.util.Objects;
 
-public class Editorial {
+public class Editorial implements Comparable<Editorial> {
 
 	private String nombre;
 	private String direccion;
@@ -81,5 +81,19 @@ public class Editorial {
 		return "Editorial [nombre=" + nombre + ", direccion=" + direccion + ", cif=" + cif + ", web=" + web + ", email="
 				+ email + "]";
 	}
-	
+
+	@Override
+	public int compareTo(Editorial e) {
+
+		// si son iguales en nomnre (compare to es 0) se mira por el cif
+
+		int comparar = this.nombre.compareTo(e.getCif());
+
+		if (comparar == 0) {
+			comparar = this.cif.compareTo(e.getCif());
+		}
+
+		return comparar;
+	}
+
 }
