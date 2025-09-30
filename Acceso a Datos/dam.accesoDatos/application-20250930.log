@@ -1,0 +1,4 @@
+2025-09-30 12:28:00.366 [main] ERROR dam.accesoDatos.repaso.biblioteca.controller.ProbandoLog - Ocurre excepción
+2025-09-30 12:28:00.367 [main] DEBUG dam.accesoDatos.repaso.biblioteca.controller.ProbandoLog - Empieza main
+2025-09-30 12:28:19.748 [main] DEBUG dam.accesoDatos.repaso.biblioteca.controller.ProbandoLog - Empieza main
+2025-09-30 12:29:12.627 [main] DEBUG dam.accesoDatos.repaso.biblioteca.controller.ProbandoLog - Esto escribe en el fichero log 
