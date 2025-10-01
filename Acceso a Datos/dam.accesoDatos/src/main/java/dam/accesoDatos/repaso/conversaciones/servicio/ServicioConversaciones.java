@@ -60,11 +60,14 @@ public class ServicioConversaciones implements IServicioConversaciones{
 	public double getValoracionMediaParaHumanos() {
 		
 		RepositorioConversaciones repoC = new RepositorioConversaciones();
-		int totalC = repoC.getListaConversaciones().size();
+		int totalC = 0;
 		int contador = 0;
 		double mediaHumano = 0;
 		
 		for (Conversacion conversacionItero : repoC.getListaConversaciones()) {
+			
+			totalC = conversacionItero.getNumValoracionesPositivas();
+			
 			if (conversacionItero.getTipo().equals(TipoAgente.HUMANO)) {
 				contador++;
 			}
