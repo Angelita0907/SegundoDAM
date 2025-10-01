@@ -33,10 +33,10 @@ public class ServicioConversaciones implements IServicioConversaciones{
 	}
 
 	@Override
-	public boolean eliminaConversacion(LocalDate fecha, TipoAgente tipo, String oregunta) throws ConversacionException {
+	public boolean eliminaConversacion(LocalDate fecha, TipoAgente tipo, String pregunta) throws ConversacionException {
 		boolean borrado = true;
 		try {
-			repoConversaciones.eliminaConversacion(fecha, tipo, null);
+			repoConversaciones.eliminaConversacion(fecha, tipo, pregunta);
 		} catch (ConversacionException e) {
 			borrado = false;
 		}
@@ -59,13 +59,32 @@ public class ServicioConversaciones implements IServicioConversaciones{
 	@Override
 	public double getValoracionMediaParaHumanos() {
 		
-		return 0;
+		RepositorioConversaciones repoC = new RepositorioConversaciones();
+		int totalC = repoC.getListaConversaciones().size();
+		int contador = 0;
+		double mediaHumano = 0;
+		
+		for (Conversacion conversacionItero : repoC.getListaConversaciones()) {
+			if (conversacionItero.getTipo().equals(TipoAgente.HUMANO)) {
+				contador++;
+			}
+		}
+		return mediaHumano = totalC/contador;
 	}
 
 	@Override
 	public double getValoracionMedidaParaBots() {
-		// TODO Auto-generated method stub
-		return 0;
+		RepositorioConversaciones repoC = new RepositorioConversaciones();
+		int totalC = repoC.getListaConversaciones().size();
+		int contador = 0;
+		double mediaIA = 0;
+		
+		for (Conversacion conversacionItero : repoC.getListaConversaciones()) {
+			if (conversacionItero.getTipo().equals(TipoAgente.IA)) {
+				contador++;
+			}
+		}
+		return mediaIA = totalC/contador;
 	}
 
 }
