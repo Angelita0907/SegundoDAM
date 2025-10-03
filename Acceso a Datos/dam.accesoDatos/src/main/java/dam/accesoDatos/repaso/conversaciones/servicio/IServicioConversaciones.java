@@ -9,6 +9,7 @@ import exepciones.ConversacionException;
 public interface IServicioConversaciones
 {
 	
+	
 	public void registraNuevaConveracion(TipoAgente tipo, String pregunta, String respuesta);
 
 	public Conversacion getRecuperaConversacion(TipoAgente tipo, String pregunta, LocalDate fecha);
