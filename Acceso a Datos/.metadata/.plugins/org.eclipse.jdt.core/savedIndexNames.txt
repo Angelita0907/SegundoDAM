@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INDEX VERSION 1.134+C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos\.metadata\.plugins\org.eclipse.jdt.core
 2782998763.index
 1737575566.index
@@ -11,13 +12,11 @@ INDEX VERSION 1.134+C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos\
 721696195.index
 1227306570.index
 2758576337.index
+=======
+INDEX VERSION 1.134+C:\Users\alumno\Desktop\SegundoDAM\Acceso a Datos\.metadata\.plugins\org.eclipse.jdt.core
+3334129505.index
+>>>>>>> 3d97c6348616ac1ecc25e6a5331601693acec039
 1865797976.index
-1552878334.index
-2006079928.index
-2071462652.index
-4278764599.index
-1963527970.index
-585472926.index
-3566089501.index
-3852244655.index
-3312165055.index
+1283376873.index
+3772730432.index
+1287215092.index
