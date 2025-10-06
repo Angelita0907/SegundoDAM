@@ -34,5 +34,7 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="dam.accesoDatos.repaso.biblioteca.modelo.Libro"/>
     <fullyQualifiedTypeName name="dam.accesoDatos.repaso.biblioteca.modelo.Genero"/>
+    <fullyQualifiedTypeName name="dam.accesoDatos.repaso.conversaciones.repository.RepositorioConversaciones"/>
+    <fullyQualifiedTypeName name="exepciones.ConversacionException"/>
     <fullyQualifiedTypeName name="dam.accesoDatos.repaso.conversaciones.modelo.Conversacion"/>
 </qualifiedTypeNameHistroy>

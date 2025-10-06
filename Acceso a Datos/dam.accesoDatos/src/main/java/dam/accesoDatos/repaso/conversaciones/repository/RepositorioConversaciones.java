@@ -11,8 +11,16 @@ import exepciones.ConversacionException;
 public class RepositorioConversaciones implements IRepositorioConversaciones{
 
 	HashSet<Conversacion> listaConversaciones;
-	
-	public RepositorioConversaciones(HashSet<Conversacion> listaConversaciones) {
+
+	public HashSet<Conversacion> getListaConversaciones() {
+		return listaConversaciones;
+	}
+
+	public void setListaConversaciones(HashSet<Conversacion> listaConversaciones) {
+		this.listaConversaciones = listaConversaciones;
+	}
+
+	public RepositorioConversaciones() {
 		super();
 		this.listaConversaciones = new HashSet<Conversacion>();
 	}

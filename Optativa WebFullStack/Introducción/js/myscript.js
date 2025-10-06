@@ -147,3 +147,31 @@ else{
 function myFirstFunction(){
     console.log("Thank you for your click");
 }
+
+function mySecondFunction(){
+    console.log("Hola");
+}
+
+function myThirdFunction(variable){
+    console.log("Pesao");
+    console.log(variable);
+}
+
+// seleccionar y añadir al dom
+var div = document.getElementById("my_div");
+div.classList.add("my_class");
+console.log(div);
+
+var div2 = document.getElementsByTagName("div");
+console.log(div2);
+
+var div3 = document.querySelector(".my_class");
+console.log(div3);
+
+//buscamos por nombre para encontrarlo por selector o por la clase
+//JQuery
+function $(selector){
+    return document.querySelectorAll(selector);
+}
+console.log($("#my_third_div"));
+console.log($(".my_class"));

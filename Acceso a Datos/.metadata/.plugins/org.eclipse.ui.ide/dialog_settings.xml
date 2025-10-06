@@ -59,9 +59,10 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\alumno\Desktop\SegundoDAM\Acceso a Datos\dam.accesoDatos"/>
+			<item value="C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos\dam.accesoDatos"/>
 			<item value="C:\Users\alumno\Desktop\SegundoDAM\Acceso a Datos"/>
 			<item value="C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos"/>
-			<item value="C:\Users\alumno\Desktop\SegundoDAM\Acceso a Datos\dam.accesoDatos"/>
 			<item value="C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos\Repaso"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
