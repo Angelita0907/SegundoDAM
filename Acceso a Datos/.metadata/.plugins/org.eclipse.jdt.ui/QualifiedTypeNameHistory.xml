@@ -34,8 +34,14 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="dam.accesoDatos.repaso.biblioteca.modelo.Libro"/>
     <fullyQualifiedTypeName name="dam.accesoDatos.repaso.biblioteca.modelo.Genero"/>
+<<<<<<< HEAD
     <fullyQualifiedTypeName name="exepciones.ConversacionException"/>
     <fullyQualifiedTypeName name="dam.accesoDatos.repaso.conversaciones.repository.RepositorioConversaciones"/>
     <fullyQualifiedTypeName name="dam.accesoDatos.repaso.conversaciones.modelo.Conversacion"/>
     <fullyQualifiedTypeName name="dam.accesoDatos.repaso.conversaciones.modelo.TipoAgente"/>
+=======
+    <fullyQualifiedTypeName name="dam.accesoDatos.repaso.conversaciones.repository.RepositorioConversaciones"/>
+    <fullyQualifiedTypeName name="dam.accesoDatos.repaso.conversaciones.modelo.Conversacion"/>
+    <fullyQualifiedTypeName name="exepciones.ConversacionException"/>
+>>>>>>> b09e16ccd44f7d84957776a168aa3850a87ea4ad
 </qualifiedTypeNameHistroy>

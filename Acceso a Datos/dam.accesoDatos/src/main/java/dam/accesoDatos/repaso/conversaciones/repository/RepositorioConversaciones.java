@@ -45,6 +45,9 @@ public class RepositorioConversaciones implements IRepositorioConversaciones{
 				encontrado = true;
 				conversacionBucada = conversacionItero;
 			}
+			else {
+				throw new ConversacionException(pregunta);
+			}
 		}
 		return conversacionBucada;
 	}
@@ -63,7 +66,6 @@ public class RepositorioConversaciones implements IRepositorioConversaciones{
 
 	@Override
 	public void eliminaConversacion(LocalDate fecha, TipoAgente tipo, String pregunta) throws ConversacionException {
-		// TODO Auto-generated method stub
 		Conversacion encuentraC = this.getConversacion(fecha, tipo, pregunta);
 		if (encuentraC == null) {
 			throw new ConversacionException("No existe la conversacion.");
