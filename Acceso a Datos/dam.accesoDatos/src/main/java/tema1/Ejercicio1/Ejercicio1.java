@@ -9,7 +9,7 @@ import tema1.Ejemplos.Ejemplo;
 
 public class Ejercicio1 {
 	
-	private static final Logger logger = LogManager.getLogger(Ejemplo.class);
+	private static final Logger logger = LogManager.getLogger(Ejercicio1.class);
 
 	public static void main(String[] args) {
 		
