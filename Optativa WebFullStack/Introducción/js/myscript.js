@@ -1,3 +1,10 @@
+//acceso a JQuery
+function $(selector){
+    //querySelectorAll es para un array
+    return document.querySelector(selector);
+}
+
+
 //alert("Hello World!");
 /*
 console.log("Hola k ase")
@@ -141,7 +148,7 @@ if(today>first_september){
 else{
     console.log("Today is before to first octuber");
 }
-*/
+
 
 //eventos
 function myFirstFunction(){
@@ -170,8 +177,43 @@ console.log(div3);
 
 //buscamos por nombre para encontrarlo por selector o por la clase
 //JQuery
-function $(selector){
-    return document.querySelectorAll(selector);
-}
+
 console.log($("#my_third_div"));
 console.log($(".my_class"));
+console.log($(".pruebas"));
+
+//funcion que con map asigna una funcion a cada valor del array
+var numbers = [1,2,3,4,5];
+var num_elevado_2 = numbers.map(function(n){return n*n});
+console.log(num_elevado_2);
+
+// lo mismo pero quito function
+var num_elevado_2 = numbers.map((n) => {return n*n});
+console.log(num_elevado_2);
+
+//sin return --> forma más optima
+var num_elevado_2 = numbers.map((n) => n*n);
+console.log(num_elevado_2);
+
+//bidimensional
+let numbers2 = [[1,1],[2,2],[3,3],[4,4]];
+let itself = numbers.map(([x,y]) => x*y);
+console.log(itself);
+*/
+
+//va con el formulario 
+$("#btn").addEventListener("click", function(){
+    var input = document.createElement("input");
+    input.setAttribute("type","email");
+    input.setAttribute("placeholder", "E-mail");
+    input.setAttribute("name", "emails[]");
+    $("#form").appendChild(input);
+    myAlert("Add new email input");
+});
+
+function myAlert(msg) {
+    var div = document.createElement("div");
+    div.classList.add("alert");
+    div.innerHTML = msg;
+    $("body").insertBefore(div,$("body").firstChild);
+}
