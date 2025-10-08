@@ -4,10 +4,10 @@ import java.io.IOException;
 
 public class Lanzador {
 	
-	private static final String directorioGenerarClases = "C:\\Users\\alumno\\Desktop\\SegundoDAM\\Proceso y Servicios\\tema1\\target" ;
+	private static final String directorioGenerarClases = "target\\classes" ;
 
-	private static final String rutaFicheroJava = "C:\\Users\\alumno\\Desktop\\SegundoDAM\\Proceso y Servicios\\tema1\\src\\main\\java";
-	private static final String  rutaClase = "C:\\Users\\alumno\\Desktop\\SegundoDAM\\Proceso y Servicios\\tema1\\target\\classes\\tema1\\Gestiona.class" ;
+	private static final String rutaFicheroJava = "src\\main\\java\\tema1\\";
+	private static final String  rutaClase = "target\\classes\\tema1" ;
 	
 	public static void main(String[] args) {
 		//Esta clase lanzador hace dos cosas:
@@ -16,17 +16,20 @@ public class Lanzador {
 		
 		Lanzador lanzador = new Lanzador();
 		lanzador.ejecutaProcesoCompila();
-		
+		lanzador.ejecutaProceso();
 		
 	}
 	
 	public void ejecutaProcesoCompila() {
 
 			String[] comando = { "javac", "-d", directorioGenerarClases, 
-					rutaFicheroJava + "tema1\\Gestiona.java"};
+					rutaFicheroJava + "Gestiona.java"};
 			ProcessBuilder pb = new ProcessBuilder(comando);
 			
 			try {
+				// para la comunicacion entre proceso padre e hijo
+				pb.redirectErrorStream(true);
+				pb.inheritIO();
 				Process p1 = pb.start();
 		
 			} catch (IOException e) {
@@ -34,9 +37,12 @@ public class Lanzador {
 			}
 	}
 	
-	public void ejecutaProcesoCompila2() {
+	public void ejecutaProceso() {
 
-		String[] comando2 = {"java", "-cp", "target/classes", "C:\\Users\\alumno\\Desktop\\SegundoDAM\\Proceso y Servicios\\tema1\\target\\classes\\tema1\\Gestiona.class"};
+		String[] comando2 = {"java", "-cp", directorioGenerarClases, "tema1.Gestiona"
+				+ ""
+				+ ""
+				+ ""};
 		ProcessBuilder pb = new ProcessBuilder(comando2);
 		
 		try {
