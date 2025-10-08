@@ -5,8 +5,6 @@ import java.io.File;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import tema1.Ejemplos.Ejemplo;
-
 public class Ejercicio1 {
 	
 	private static final Logger logger = LogManager.getLogger(Ejercicio1.class);

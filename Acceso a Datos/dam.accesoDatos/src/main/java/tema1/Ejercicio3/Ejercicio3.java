@@ -13,7 +13,8 @@ public class Ejercicio3 {
 	
 	public static void main(String[] args) {
 		
-		String rutaDirectorio = "C:\\Users\\Usuario\\OneDrive\\Desktop\\SegundoDAM\\Acceso a Datos";
+		String rutaDirectorio = "C:\\Users\\alumno\\Desktop\\SegundoDAM\\Acceso a Datos";
+		//ruta casa: C:\\Users\\Usuario\\OneDrive\\Desktop\\SegundoDAM\\Acceso a Datos
 		File directorio = new File(rutaDirectorio);
 		
 		File carpeta = new File(rutaDirectorio, "miDirectorio");
@@ -41,5 +42,7 @@ public class Ejercicio3 {
 
 		
 	}
+	
+	
 	
 }

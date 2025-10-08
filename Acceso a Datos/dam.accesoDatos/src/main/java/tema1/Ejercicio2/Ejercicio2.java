@@ -10,7 +10,8 @@ public class Ejercicio2 {
 	private static final Logger logger = LogManager.getLogger(Ejercicio2.class);
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		
 
 	}
 
