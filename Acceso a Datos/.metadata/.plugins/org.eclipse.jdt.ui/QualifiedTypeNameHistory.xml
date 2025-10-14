@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="tema1.Ejercicio4.Ejercicio4"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="tema1.Boletin2.DiffFolder"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="tema1.Boletin2.ValorComparacion"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="tema1.Boletin2.Contorlador"/>
+    <fullyQualifiedTypeName name="tema1.Boletin2.DiffFolder"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="tema1.Boletin2.ResultadoComparacion"/>
+    <fullyQualifiedTypeName name="tema1.Lectura.LecturaFichero"/>
+    <fullyQualifiedTypeName name="tema1.Lectura.GestionaFichero"/>
+    <fullyQualifiedTypeName name="tema1.Lectura.Persona"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.awt.List"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="tema1.Lectura.GestionaPersonas"/>
+    <fullyQualifiedTypeName name="utils.ManejaFicheroPersona"/>
 </qualifiedTypeNameHistroy>
