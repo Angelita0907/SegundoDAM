@@ -10,14 +10,22 @@ public class Contorlador {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		String ruta1 ="C:\\Users\\alumno\\Desktop\\SegundoDAM\\Acceso a Datos\\boletin2\\carpeta1";
-		String ruta2 ="C:\\Users\\alumno\\Desktop\\SegundoDAM\\Acceso a Datos\\boletin2\\carpeta2";
 
-		File directorio1 = new File(ruta1);
-		File directorio2 = new File(ruta2);
-		
-		
+		try {
+			DiffFolder diff = new DiffFolder();
+			diff.setCarpetas(
+				new File(diff.getRuta(), "carpeta1"),
+				new File(diff.getRuta(), "carpeta2")
+			);
+
+			for (ResultadoComparacion r : diff.compare()) {
+
+				logger.info(r);
+				}
+		} catch (Exception e) {
+			// TODO: handle exception
+			logger.error("Error ");
+		}
 		
 	}
 

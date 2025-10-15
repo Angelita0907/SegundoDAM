@@ -41,5 +41,9 @@ public class ResultadoComparacion {
 		return Objects.equals(nombreFichero, other.nombreFichero);
 	}
 	
+	@Override
+	public String toString() {
+		return nombreFichero + " -> " + comparacion;
+	}
 	
 }
