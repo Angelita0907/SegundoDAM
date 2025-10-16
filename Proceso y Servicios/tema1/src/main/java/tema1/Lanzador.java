@@ -39,10 +39,7 @@ public class Lanzador {
 	
 	public void ejecutaProceso() {
 
-		String[] comando2 = {"java", "-cp", directorioGenerarClases, "tema1.Gestiona"
-				+ ""
-				+ ""
-				+ ""};
+		String[] comando2 = {"java", "-cp", directorioGenerarClases, "tema1.Gestiona"};
 		ProcessBuilder pb = new ProcessBuilder(comando2);
 		
 		try {
