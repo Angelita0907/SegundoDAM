@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Formulario Validaciones</title>
   <link rel="stylesheet" href="./css/principal.css">
-</head>
+  
 <body>
 
   <h2>Formulario de Registro</h2>
@@ -23,19 +23,29 @@
       <input type="email" id="correo" name="correo" required><br><br>
     </div>
 
+    <div id="gDireccion" class="oculto">
+      <label for="direccion">Direccion: </label><br>
+      <input type="text" id="direccion" name="direccion" required><br><br>
+    </div>
+
+    <div id="gDni" class="oculto">
+      <label for="dni">DNI: </label><br>
+      <input type="text" id="dni" name="dni" required><br><br>
+    </div>
+
     <div id="gFecha" class="oculto">
       <label for="fecha_nacimiento">Fecha de nacimiento:</label><br>
       <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
     </div>
 
     <div id="gContrasena" class="oculto">
-      <label for="password">Contraseña:</label><br>
-      <input type="password" id="password" name="password" required><br><br>
+      <label for="contrasena">Contraseña:</label><br>
+      <input type="password" id="contrasena" name="contrasena" required><br><br>
     </div>
 
     <div id="gConfirmar" class="oculto">
-      <label for="password_confirm">Repetir contraseña:</label><br>
-      <input type="password" id="password_confirm" name="password_confirm" required><br><br>
+      <label for="confirmar_contrasena">Repetir contraseña:</label><br>
+      <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required><br><br>
     </div>
 
     <div id="gGenero" class="oculto">
@@ -52,15 +62,15 @@
       <label for="pais">País:</label><br>
       <select id="pais" name="pais" required>
         <option value="">Seleccione una opción</option>
-        <option value="mexico">México</option>
-        <option value="espana">España</option>
-        <option value="argentina">Argentina</option>
-        <option value="colombia">Colombia</option>
+        <option value="mexico">España</option>
+        <option value="espana">Portugal</option>
+        <option value="argentina">Francia</option>
+        <option value="colombia">Reino Unido</option>
         <option value="otro">Otro</option>
       </select><br><br>
     </div>
 
-    <button type="submit" id="registro">Registrarse</button>
+    <button type="button" id="registro">Registrarse</button>
   </form>
 
   <script src="./js/validacion.js"></script>
