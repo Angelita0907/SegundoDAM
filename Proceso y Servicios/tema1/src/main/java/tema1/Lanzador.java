@@ -6,7 +6,7 @@ public class Lanzador {
 	
 	private static final String directorioGenerarClases = "target\\classes" ;
 
-	private static final String rutaFicheroJava = "src\\main\\java\\tema1\\";
+	private static final String rutaFicheroJava = "src\\main\\java\\tema1\\ProcesoHijo.java";
 	private static final String  rutaClase = "target\\classes\\tema1" ;
 	
 	public static void main(String[] args) {
@@ -39,7 +39,7 @@ public class Lanzador {
 	
 	public void ejecutaProceso() {
 
-		String[] comando2 = {"java", "-cp", directorioGenerarClases, "tema1.Gestiona"};
+		String[] comando2 = {"java", "-cp", directorioGenerarClases,rutaFicheroJava ,"hola", "adios"};
 		ProcessBuilder pb = new ProcessBuilder(comando2);
 		
 		try {

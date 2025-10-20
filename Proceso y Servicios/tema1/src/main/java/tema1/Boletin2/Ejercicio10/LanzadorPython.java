@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class LanzadorPython {
 
-	private static final String rutaFicheroJava = "C:\\Users\\alumno\\Desktop\\SegundoDAM\\Proceso y Servicios\\tema1\\src\\main\\resources\\fichero.py";
+	private static final String rutaFicheroJava = "src\\main\\resources\\fichero1.py";
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -20,6 +20,7 @@ public class LanzadorPython {
 		ProcessBuilder pb = new ProcessBuilder(comando);
 		
 		try {
+			//con esto rediirige el error del hijo al padre para saber que pasa
 			pb.redirectErrorStream(true);
 			pb.inheritIO();
 			Process p1 = pb.start();
