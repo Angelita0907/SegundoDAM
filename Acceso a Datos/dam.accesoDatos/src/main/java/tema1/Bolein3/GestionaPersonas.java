@@ -17,7 +17,7 @@ public class GestionaPersonas {
 		ManejaFicheroPersona p =new ManejaFicheroPersona();
 		try {
 			p.cargarLista(
-					"C:\\Users\\alumno\\Desktop\\SegundoDAM\\Acceso a Datos\\dam.accesoDatos\\src\\main\\resources\\alumnosNotas");
+					"src\\main\\resources\\alumnosNotas");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
