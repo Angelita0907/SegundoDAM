@@ -9,9 +9,9 @@ import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import tema1.Lectura.GestionaPersonas;
-import tema1.Lectura.Nota;
-import tema1.Lectura.Persona;
+import tema1.Bolein3.GestionaPersonas;
+import tema1.Bolein3.Nota;
+import tema1.Bolein3.Persona;
 
 public class ManejaFicheroPersona {
 	private static final Logger logger = LogManager.getLogger(GestionaPersonas.class);

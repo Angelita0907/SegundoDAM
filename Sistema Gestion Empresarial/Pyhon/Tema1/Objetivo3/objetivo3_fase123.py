@@ -55,7 +55,7 @@ print("--- 5. Clasificar una nota ---")
 # con lo siguiente veremos para clasificar la nota
 nota = int(input("Intriduce una nota (0-10): "))
 
-if 0 < nota < 4:(
+if 0 <= nota <= 4:(
     print("Insuficiente")
 )
 elif nota == 5:(
@@ -64,10 +64,10 @@ elif nota == 5:(
 elif nota == 6:(
     print("Bien")
 )
-elif 7 < nota < 8: (
+elif 7 <= nota <= 8: (
     print("Notable")
 )
-elif 9 < nota < 10: (
+elif 9 <= nota <= 10: (
     print("Sobresaliente")
 )
 else:

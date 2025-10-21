@@ -2,8 +2,6 @@ package tema1.Boletin2.Ejercicio13;
 
 import java.io.IOException;
 
-
-
 // proceso hijo
 public class LanzadorCalculaSuma {
 
