@@ -20,7 +20,7 @@ public class CalculaMultiplicacion {
 		for(int i = num1; i <= num2; i++) {
 			total = total*i;
 		}
-		
+		//prueba
 		return total;
 
 	}
