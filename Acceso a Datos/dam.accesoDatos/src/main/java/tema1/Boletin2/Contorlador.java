@@ -24,7 +24,7 @@ public class Contorlador {
 				}
 		} catch (Exception e) {
 			// TODO: handle exception
-			logger.error("Error ");
+			logger.error("Error, no se ha podido comparar");
 		}
 		
 	}

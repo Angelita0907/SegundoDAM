@@ -1,4 +1,4 @@
-package tema1.Lectura;
+package tema1.Bolein3;
 
 public class Nota {
 

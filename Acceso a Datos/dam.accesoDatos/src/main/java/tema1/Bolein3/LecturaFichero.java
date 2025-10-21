@@ -1,4 +1,4 @@
-package tema1.Lectura;
+package tema1.Bolein3;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
