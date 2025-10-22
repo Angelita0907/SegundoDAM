@@ -1,6 +1,8 @@
-{
+[ 
+	{
 	"identificador" : "empleado21",
 	"nombreApellido": "Miguel Ramirez",
-"edad": 34,
+	"edad": 34,
 	"empresa": "Su Empresa"
-}
+	}
+]

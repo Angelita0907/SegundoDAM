@@ -10,12 +10,11 @@ import org.apache.logging.log4j.Logger;
 import com.google.gson.Gson;
 
 import tema1.Json.Ejemplo.Empleado;
-import tema1.LecturayEscritura.ContadorPalabras;
-
 
 public class ManejaJson {
 	
-	private static final Logger logger = LogManager.getLogger(ContadorPalabras.class);
+
+	private static final Logger logger = LogManager.getLogger(ManejaJson.class);
 
 	
 	public void leeEmpleados(String rutaFichero) {

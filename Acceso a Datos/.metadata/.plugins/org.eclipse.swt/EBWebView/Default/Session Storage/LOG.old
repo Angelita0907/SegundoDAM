@@ -1,3 +1,9 @@
-2025/10/21-10:10:54.302 215c Reusing MANIFEST C:\Users\alumno\Desktop\SegundoDAM\Acceso a Datos\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Session Storage/MANIFEST-000001
-2025/10/21-10:10:54.303 215c Recovering log #3
-2025/10/21-10:10:54.307 215c Reusing old log C:\Users\alumno\Desktop\SegundoDAM\Acceso a Datos\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Session Storage/000003.log 
+<<<<<<< HEAD
+2025/10/21-12:31:51.177 1d18 Reusing MANIFEST C:\Users\alumno\Desktop\SegundoDAM\Acceso a Datos\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Session Storage/MANIFEST-000001
+2025/10/21-12:31:51.178 1d18 Recovering log #3
+2025/10/21-12:31:51.179 1d18 Reusing old log C:\Users\alumno\Desktop\SegundoDAM\Acceso a Datos\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Session Storage/000003.log 
+=======
+2025/10/21-20:38:56.371 4b58 Reusing MANIFEST C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Session Storage/MANIFEST-000001
+2025/10/21-20:38:56.372 4b58 Recovering log #3
+2025/10/21-20:38:56.374 4b58 Reusing old log C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Session Storage/000003.log 
+>>>>>>> 0f3f4d67d403b8bde3e0d794118d31c897fd7abe

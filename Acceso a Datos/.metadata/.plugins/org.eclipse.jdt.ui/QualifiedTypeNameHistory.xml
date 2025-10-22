@@ -12,13 +12,22 @@
     <fullyQualifiedTypeName name="tema1.Lectura.LecturaFichero"/>
     <fullyQualifiedTypeName name="tema1.Lectura.GestionaFichero"/>
     <fullyQualifiedTypeName name="tema1.Lectura.Persona"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.awt.List"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="tema1.Lectura.GestionaPersonas"/>
     <fullyQualifiedTypeName name="utils.ManejaFicheroPersona"/>
+<<<<<<< HEAD
     <fullyQualifiedTypeName name="tema1.LecturayEscritura.ContadorPalabras"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="java.io.FileReader"/>
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
+=======
+    <fullyQualifiedTypeName name="tema1.Json.Ejemplo.GestionaEmpleadoJson"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="tema1.Json.Ejemplo.Empleado"/>
+    <fullyQualifiedTypeName name="utils.ManejaJson"/>
+    <fullyQualifiedTypeName name="tema1.PokemonJson.Pokemon"/>
+    <fullyQualifiedTypeName name="utils.ManejaPokemons"/>
+    <fullyQualifiedTypeName name="utils.UtilidadPokemonCsv"/>
+>>>>>>> 0f3f4d67d403b8bde3e0d794118d31c897fd7abe
 </qualifiedTypeNameHistroy>
