@@ -34,7 +34,7 @@ public class LanzaMultiplicador {
 	public void ejecutaProceso() {
 	
 		String[] comando1 = {"java", "-cp", directorioGenerarClases,rutaFicheroJava,"1" ,"4"};
-		String[] comando2 = {"java", "-cp", directorioGenerarClases,rutaFicheroJava,"5" ,"9"};
+		String[] comando2 = {"java", "-cp", directorioGenerarClases,rutaFicheroJava,"5" ,"7"};
 		//cambiar para hacerlo llamando al jar
 		ProcessBuilder pb = new ProcessBuilder(comando1);
 		ProcessBuilder pb2 = new ProcessBuilder(comando2);
@@ -43,7 +43,10 @@ public class LanzaMultiplicador {
 			pb.redirectErrorStream(true);
 			pb.inheritIO();
 			Process p1 = pb.start();
-			p1 = pb2.start();
+			p1 = pb.start();
+			Process p2 = pb2.start();
+			p2 = pb2.start();
+			
 			/*int exit = p1.waitFor();
 			System.out.println(exit);*/
 	

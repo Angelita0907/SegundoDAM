@@ -4,4 +4,11 @@
   <artifactId>psp.tema1</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>tema1</name>
+  <dependencies>
+  	<dependency>
+  		<groupId>dam.psp</groupId>
+  		<artifactId>tema0</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>
