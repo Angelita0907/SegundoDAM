@@ -1,33 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="tema1.Ejercicio4.Ejercicio4"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
-    <fullyQualifiedTypeName name="tema1.Boletin2.ValorComparacion"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="tema1.Boletin2.Contorlador"/>
-    <fullyQualifiedTypeName name="tema1.Boletin2.DiffFolder"/>
-    <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="java.util.HashSet"/>
-    <fullyQualifiedTypeName name="tema1.Boletin2.ResultadoComparacion"/>
-    <fullyQualifiedTypeName name="tema1.Lectura.LecturaFichero"/>
-    <fullyQualifiedTypeName name="tema1.Lectura.GestionaFichero"/>
-    <fullyQualifiedTypeName name="tema1.Lectura.Persona"/>
-    <fullyQualifiedTypeName name="java.awt.List"/>
-    <fullyQualifiedTypeName name="tema1.Lectura.GestionaPersonas"/>
-    <fullyQualifiedTypeName name="utils.ManejaFicheroPersona"/>
-<<<<<<< HEAD
-    <fullyQualifiedTypeName name="tema1.LecturayEscritura.ContadorPalabras"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
-    <fullyQualifiedTypeName name="java.io.FileReader"/>
-    <fullyQualifiedTypeName name="java.io.FileWriter"/>
-=======
-    <fullyQualifiedTypeName name="tema1.Json.Ejemplo.GestionaEmpleadoJson"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.Locale"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="tema1.Json.Ejemplo.Empleado"/>
-    <fullyQualifiedTypeName name="utils.ManejaJson"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.lang.Float"/>
+    <fullyQualifiedTypeName name="tema1.PokemonJson.GestionaPokemons"/>
+    <fullyQualifiedTypeName name="utils.PokemonAJson"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="tema1.PokemonJson.Pokemon"/>
-    <fullyQualifiedTypeName name="utils.ManejaPokemons"/>
-    <fullyQualifiedTypeName name="utils.UtilidadPokemonCsv"/>
->>>>>>> 0f3f4d67d403b8bde3e0d794118d31c897fd7abe
 </qualifiedTypeNameHistroy>

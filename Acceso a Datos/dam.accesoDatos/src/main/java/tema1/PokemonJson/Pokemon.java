@@ -1,13 +1,16 @@
 package tema1.PokemonJson;
 
+import java.util.Arrays;
+
 public class Pokemon {
 
 	private int id;
-	private String nombre, tipo, habilidadPrincipal, evoluciona_a;
+	private String nombre, tipo, evoluciona_a;
+	private String []habilidadPrincipal;
 	private float altura_m, peso_kg;
 	
-	public Pokemon(int id, String nombre, String tipo, String habilidadPrincipal, String evoluciona_a, float altura_m,
-			float peso_kg) {
+	public Pokemon(int id, String nombre, String tipo, float altura_m,
+			float peso_kg, String[] habilidadPrincipal, String evoluciona_a) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -35,10 +38,10 @@ public class Pokemon {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	public String getHabilidadPrincipal() {
+	public String[] getHabilidadPrincipal() {
 		return habilidadPrincipal;
 	}
-	public void setHabilidadPrincipal(String habilidadPrincipal) {
+	public void setHabilidadPrincipal(String[] habilidadPrincipal) {
 		this.habilidadPrincipal = habilidadPrincipal;
 	}
 	public String getEvoluciona_a() {
@@ -59,13 +62,14 @@ public class Pokemon {
 	public void setPeso_kg(float peso_kg) {
 		this.peso_kg = peso_kg;
 	}
-	
 	@Override
 	public String toString() {
-		return "Pokemon [id=" + id + ", nombre=" + nombre + ", tipo=" + tipo + ", habilidadPrincipal="
-				+ habilidadPrincipal + ", evoluciona_a=" + evoluciona_a + ", altura_m=" + altura_m + ", peso_kg="
-				+ peso_kg + "]";
+		return "Pokemon [id=" + id + ", nombre=" + nombre + ", tipo=" + tipo + ", evoluciona_a=" + evoluciona_a
+				+ ", habilidadPrincipal=" + Arrays.toString(habilidadPrincipal) + ", altura_m=" + altura_m
+				+ ", peso_kg=" + peso_kg + "]";
 	}
+	
+	
 	
 	
 }

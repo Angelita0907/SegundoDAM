@@ -1,4 +1,4 @@
-[
+
 	{
 	    "id": 1,
 	    "nombre": "Bulbasaur",
@@ -8,4 +8,3 @@
 	    "habilidadPrincipal": "Clorofila",
 	    "evoluciona_a": "Ivysaur"
 	  }
-]
