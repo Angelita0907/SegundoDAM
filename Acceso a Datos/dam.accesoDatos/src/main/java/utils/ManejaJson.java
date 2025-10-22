@@ -16,6 +16,7 @@ import tema1.LecturayEscritura.ContadorPalabras;
 public class ManejaJson {
 	
 	private static final Logger logger = LogManager.getLogger(ContadorPalabras.class);
+
 	
 	public void leeEmpleados(String rutaFichero) {
 		try {

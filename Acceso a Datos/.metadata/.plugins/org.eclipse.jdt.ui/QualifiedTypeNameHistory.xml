@@ -17,4 +17,8 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="tema1.Lectura.GestionaPersonas"/>
     <fullyQualifiedTypeName name="utils.ManejaFicheroPersona"/>
+    <fullyQualifiedTypeName name="tema1.LecturayEscritura.ContadorPalabras"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
 </qualifiedTypeNameHistroy>
