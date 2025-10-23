@@ -17,10 +17,12 @@ public class GestionaPokemons {
 		//ManejaPokemons manejaPokemonJson = new ManejaPokemons();
 		EscribirPokemonCsv escribirP = new EscribirPokemonCsv();
 		PokemonAJson leerPokemon = new PokemonAJson();
-
+		//primer ejercicio leer json
 		String ruta = "src\\main\\resources\\pokemon.json";
+		
 		//para escrbir json a csv
 		String rutaCsv = "src\\main\\resources\\pokemon.csv";
+		
 		//Ejercicio de pasar cvs a json
 		String listaCsv = "src\\main\\resources\\listaPokemons.csv";
 		String listaJson = "src\\main\\resources\\ListaPokemon.json";
