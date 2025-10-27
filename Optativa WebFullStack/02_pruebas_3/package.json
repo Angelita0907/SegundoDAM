@@ -1,16 +1,15 @@
 {
-  "dependencies": {
-    "forms": "^1.3.2"
-  },
-  "name": "02modulosnpm",
+  "name": "02_pruebas_3",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "form": "^0.2.5"
+  }
 }
