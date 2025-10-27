@@ -7,6 +7,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class ContadorPalabras {
+	//hijo
 	
 		private static final String fichero = "src/main/resources/";
 		

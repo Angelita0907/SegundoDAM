@@ -1,28 +1,23 @@
-package contador;
+package tema1.Boletin2.Temperaturas;
 
 import java.io.IOException;
 
-public class LanzadorContadorPalabras {
-	//padre 
-	private static final String rutaFicheroJava = "src\\main\\java\\contador\\ContadorPalabras.java" ;
+public class LanzadorAnalisisTemperaturas {
+	
+	private static final String rutaFicheroJava = "src\\main\\java\\tema1\\Boletin2\\Temperaturas\\AnalizadorTemperaturas.java" ;
 	private static final String directorioGenerarClases = "target\\classes";
 	
+
 	public static void main(String[] args) {
 		
-		// asi comunicamos con el proceso hijo (contador palabras) para crear
-		// procesos en el padre
 		
-		LanzadorContadorPalabras lanzarPalabras = new LanzadorContadorPalabras();
+		int[] umbrales = {10, 20, 25, 30, 35};
 		
-		lanzarPalabras.ejecutaProceso("fichero.txt", "es");
-		lanzarPalabras.ejecutaProceso("fichero.txt", "Java");
-		lanzarPalabras.ejecutaProceso("fichero.txt", "y");
-
 	}
 	
 	public void compilaProceso() {
 
-		String[] comando = { "javac", "-d", rutaFicheroJava, "ContadorPalabras.java"};
+		String[] comando = { "javac", "-d", rutaFicheroJava, "AnalizadorTemperaturas.java"};
 		ProcessBuilder pb = new ProcessBuilder(comando);
 		
 		try {
