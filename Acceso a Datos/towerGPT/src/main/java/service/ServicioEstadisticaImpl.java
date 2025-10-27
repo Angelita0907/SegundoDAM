@@ -4,11 +4,14 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,9 +28,11 @@ public class ServicioEstadisticaImpl {
 	private static final Logger logger = LogManager.getLogger(ServicioEstadisticaImpl.class);
 
 	private RepositorioInteracciones repoInteraccioes;
-	
-	// instancio aqui la lista porque la uso en varios metodos y me parecia redundante hacerlo en todos igual
-	ArrayList<InteraccionAgente> listaInteracciones = repoInteraccioes.getListaInteracciones();
+
+	// instancio aqui la lista porque la uso en varios metodos y me parecia
+	// redundante hacerlo en todos igual
+	// ArrayList<InteraccionAgente> listaInteracciones =
+	// repoInteraccioes.getListaInteracciones();
 
 	public ServicioEstadisticaImpl(RepositorioInteracciones repoInteraccioes) {
 		super();
@@ -55,24 +60,24 @@ public class ServicioEstadisticaImpl {
 	public void actualizarPorcentaje(InteraccionAgente interaccion, double porcentajeNuevo) {
 		repoInteraccioes.actualizaPorcentajeInteraccion(interaccion, porcentajeNuevo);
 	}
-	
 
 	public InteraccionAgente obtenerInteraccionConMejorValoracion() {
-		
-		//voy a comprar por las posiciones de la lista y con eso que guarde la mejor
-		
+
+		// voy a comprar por las posiciones de la lista y con eso que guarde la mejor
+		ArrayList<InteraccionAgente> listaInteracciones = new ArrayList<>(repoInteraccioes.getListaInteracciones());
+
 		InteraccionAgente mejorValoracion = listaInteracciones.get(0);
-		
-		// empieza en la posisicon 1 ya que primero cogimos la 0 para asignar cual coger primero
-		for(int i = 1; i < listaInteracciones.size(); i++) {
+
+		// empieza en la posisicon 1 ya que primero cogimos la 0 para asignar cual coger
+		// primero
+		for (int i = 1; i < listaInteracciones.size(); i++) {
 			InteraccionAgente valoracionActual = listaInteracciones.get(i);
-			if(valoracionActual.getNumValoracionesPositivas() > mejorValoracion.getNumValoracionesPositivas()) {
+			if (valoracionActual.getNumValoracionesPositivas() > mejorValoracion.getNumValoracionesPositivas()) {
 				mejorValoracion = valoracionActual;
 			}
 		}
 		return mejorValoracion;
 	}
-	
 
 	public Map<TipoAgente, List<InteraccionAgente>> mostrarInteraccionAgrupadasPorTipo(
 			HashSet<InteraccionAgente> listaInteracciones, TipoAgente tipo) {
@@ -118,14 +123,25 @@ public class ServicioEstadisticaImpl {
 		return interaccionesHumano;
 	}
 
-	public void grabarResumenEstadistica(String ruta) {
+	public List<InteraccionAgente> obtenerinteraccionesAciertoMayorOrdenadas(double porcentajeAcierto) {
 
+		// para ordenar creo que usando un treeSet es más rapdio y no habria que
+		// implementar comparable?
+		List<InteraccionAgente> interaccionesOrdenadas = new ArrayList<>();
+
+		for (InteraccionAgente interaccion : interaccionesOrdenadas) {
+			if (interaccion.getPorcentajeAcierto() > porcentajeAcierto) {
+				interaccionesOrdenadas.add(interaccion);
+			}
+		}
+
+		Collections.sort(interaccionesOrdenadas);
+
+		return interaccionesOrdenadas;
 	}
 
-	public String obtenerinteraccionesAciertoMayorOrdenadas(double porcentajeAcierto) {
 
-		return null;
-	}
+
 
 	public void grabarFicheroCSV(List<InteraccionAgente> listaInteracciones, String ruta) {
 
@@ -194,17 +210,18 @@ public class ServicioEstadisticaImpl {
 	}
 
 	public double obtenerTiempoMedioPorAgente(TipoAgente agente) {
-		
+
 		double tiempoAgente = 0;
 		int contaddor = 0;
-		
+		ArrayList<InteraccionAgente> listaInteracciones = new ArrayList<>(repoInteraccioes.getListaInteracciones());
+
 		for (InteraccionAgente interaccion : listaInteracciones) {
-			if(interaccion.getTipoAgente() == agente) {
+			if (interaccion.getTipoAgente() == agente) {
 				tiempoAgente = tiempoAgente + interaccion.getTiempoEjecucion();
-				contaddor ++;
+				contaddor++;
 			}
 		}
-		
+
 		double mediaEjecucion = tiempoAgente / contaddor;
 
 		return mediaEjecucion;
@@ -215,17 +232,59 @@ public class ServicioEstadisticaImpl {
 		// es como la anterior pero cogemos el porcentaje en vez de la ejecución
 		double aciertoAgente = 0;
 		int contaddor = 0;
-		
+		ArrayList<InteraccionAgente> listaInteracciones = new ArrayList<>(repoInteraccioes.getListaInteracciones());
+
 		for (InteraccionAgente interaccion : listaInteracciones) {
-			if(interaccion.getTipoAgente() == agente) {
+			if (interaccion.getTipoAgente() == agente) {
 				aciertoAgente = aciertoAgente + interaccion.getPorcentajeAcierto();
-				contaddor ++;
+				contaddor++;
 			}
 		}
-		
+
 		double mediaAcierto = aciertoAgente / contaddor;
 
 		return mediaAcierto;
+	}
+
+	public void grabarResumenEstadistica(String ruta) {
+		ArrayList<InteraccionAgente> listaInteracciones = new ArrayList<>(repoInteraccioes.getListaInteracciones());
+
+		PrintWriter out = null;
+		FileWriter fichero = null;
+		try {
+			fichero = new FileWriter(ruta);
+			out = new PrintWriter(fichero);
+			// fichero.write(json);
+
+			// llamo a las funciones anteriores
+
+			int interaccionesTotal = listaInteracciones.size();
+			double mediaHumano = obtenerPorcentajeMedioPorAgente(TipoAgente.HUMANO);
+			double mediaIA = obtenerPorcentajeMedioPorAgente(TipoAgente.IA);
+
+			// asi se escribe un fichero:
+			out.printf("RESUMEN DE INTERACCIONES:\n"
+					+ "-------------------------------------------------------------------------------------------------------------\n"
+					+ "Se han efectuado un total de %d interacciones:\n"
+					+ "Las interacciones que han tomado más tiempo han sido las efectuadas por Humanos con un tiempo medio de %f segundos.\n"
+					+ "De todas las interacciones:\n"
+					+ "- %d han sido efectuadas por Humanos con una valoración media de %f y una tasa de acierto del %f %\n"
+					+ "- %d han sido efectuadas por IAs con una valoración media de %f y una tasa de acierto del %f %\n"
+					+ interaccionesTotal + "");
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (fichero != null) {
+				try {
+					fichero.close();
+					out.close();
+				} catch (IOException e) {
+					System.out.println("Error al escribir resumen txt de interacciones");
+				}
+			}
+		}
+
 	}
 
 }

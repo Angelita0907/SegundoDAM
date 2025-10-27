@@ -1,0 +1,47 @@
+[
+  {
+    "identificador": "null1",
+    "tipoAgente": "HUMANO",
+    "peticion": "Pregunta 1",
+    "respuesta": "Respuesta 1",
+    "tiempoEjecucion": 5.2,
+    "numValoracionesPositivas": 5,
+    "porcentajeAcierto": 92.0
+  },
+  {
+    "identificador": "null1",
+    "tipoAgente": "IA",
+    "peticion": "Pregunta 2",
+    "respuesta": "Respuesta 2",
+    "tiempoEjecucion": 1.5,
+    "numValoracionesPositivas": 6,
+    "porcentajeAcierto": 92.0
+  },
+  {
+    "identificador": "null1",
+    "tipoAgente": "HUMANO",
+    "peticion": "Pregunta 3",
+    "respuesta": "Respuesta 3",
+    "tiempoEjecucion": 7.0,
+    "numValoracionesPositivas": 4,
+    "porcentajeAcierto": 92.0
+  },
+  {
+    "identificador": "null1",
+    "tipoAgente": "IA",
+    "peticion": "Pregunta 4",
+    "respuesta": "Respuesta 4",
+    "tiempoEjecucion": 2.3,
+    "numValoracionesPositivas": 5,
+    "porcentajeAcierto": 92.0
+  },
+  {
+    "identificador": "null1",
+    "tipoAgente": "HUMANO",
+    "peticion": "Pregunta 5",
+    "respuesta": "Respuesta 5",
+    "tiempoEjecucion": 6.8,
+    "numValoracionesPositivas": 6,
+    "porcentajeAcierto": 92.0
+  }
+]

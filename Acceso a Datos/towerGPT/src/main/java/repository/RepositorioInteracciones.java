@@ -13,7 +13,7 @@ public class RepositorioInteracciones {
 	private ArrayList<InteraccionAgente> listaInteracciones;
 	
 
-	public RepositorioInteracciones(HashSet<InteraccionAgente> listaInteracciones) {
+	public RepositorioInteracciones() {
 		super();
 		this.listaInteracciones = new ArrayList<>();
 	}
