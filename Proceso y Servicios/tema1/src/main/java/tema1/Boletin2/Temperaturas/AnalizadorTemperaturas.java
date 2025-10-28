@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-
+//hijo
 public class AnalizadorTemperaturas {
 	
 	private static final String fichero = "src/main/resources/";
@@ -18,8 +18,11 @@ public class AnalizadorTemperaturas {
 		int temp = Integer.parseInt(args[1]);
 		
 		AnalizadorTemperaturas contador = new AnalizadorTemperaturas();
-		System.out.println(contador.contarTemperatura(ruta, temp));
+		int resultado = contador.contarTemperatura(ruta, temp);
 
+		String ficheroResultado = fichero + temp + ".txt";
+		contador.escribeFichero(ficheroResultado, resultado);
+		
 	}
 	
 	public int contarTemperatura(String ruta, int temp) throws FileNotFoundException {
@@ -35,7 +38,7 @@ public class AnalizadorTemperaturas {
 				// Aquí se hará la lectura in.next()
 				String linea = in.nextLine();
 				int umbral = Integer.parseInt(linea);
-				if(umbral > temp) {
+				if(umbral >= temp) {
 					contador +=1;	
 				}
 				
