@@ -14,7 +14,7 @@ public class LanzadorAnalisisTemperaturas {
 		LanzadorAnalisisTemperaturas lanzadorTemp = new LanzadorAnalisisTemperaturas();
 		
 		int[] umbrales = {10, 20, 25, 30, 35};
-		String fihceroTemperatutas = "src\\main\\java\\resources\\datos.txt";
+		String fihceroTemperatutas = "src\\main\\resources\\datos.txt";
 		
 		lanzadorTemp.compilaProceso();
 		

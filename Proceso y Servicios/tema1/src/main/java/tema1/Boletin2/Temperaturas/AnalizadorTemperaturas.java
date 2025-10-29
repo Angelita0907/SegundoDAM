@@ -14,7 +14,7 @@ public class AnalizadorTemperaturas {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		
-		String ruta = fichero + args[0];
+		String ruta = args[0];
 		int temp = Integer.parseInt(args[1]);
 		
 		AnalizadorTemperaturas contador = new AnalizadorTemperaturas();
