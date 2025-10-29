@@ -7,7 +7,6 @@ public class LanzadorAnalisisTemperaturas {
 	
 	private static final String rutaFicheroJava = "src\\main\\java\\tema1\\Boletin2\\Temperaturas\\AnalizadorTemperaturas.java" ;
 	private static final String directorioGenerarClases = "target\\classes";
-	//private static final String NOMBRE_CLASE_HIJA = "tema1.Boletin2.Temperaturas.AnalizadorTemperaturas";
 
 	public static void main(String[] args) {
 		
