@@ -7,14 +7,13 @@ public class LanzadorAnalisisTemperaturas {
 	
 	private static final String rutaFicheroJava = "src\\main\\java\\tema1\\Boletin2\\Temperaturas\\AnalizadorTemperaturas.java" ;
 	private static final String directorioGenerarClases = "target\\classes";
-	//private static final String NOMBRE_CLASE_HIJA = "tema1.Boletin2.Temperaturas.AnalizadorTemperaturas";
 
 	public static void main(String[] args) {
 		
 		LanzadorAnalisisTemperaturas lanzadorTemp = new LanzadorAnalisisTemperaturas();
 		
 		int[] umbrales = {10, 20, 25, 30, 35};
-		String fihceroTemperatutas = "src\\main\\java\\resources\\datos.txt";
+		String fihceroTemperatutas = "src\\main\\resources\\datos.txt";
 		
 		lanzadorTemp.compilaProceso();
 		
