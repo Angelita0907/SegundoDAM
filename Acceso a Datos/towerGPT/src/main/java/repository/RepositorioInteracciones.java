@@ -1,4 +1,5 @@
 package repository;
+import java.util.ArrayList;
 import java.util.HashSet;
 
 import org.apache.logging.log4j.LogManager;
@@ -9,19 +10,19 @@ public class RepositorioInteracciones {
 	
 	private static final Logger logger = LogManager.getLogger(RepositorioInteracciones.class);
 	
-	private HashSet<InteraccionAgente> listaInteracciones;
+	private ArrayList<InteraccionAgente> listaInteracciones;
 	
 
-	public RepositorioInteracciones(HashSet<InteraccionAgente> listaInteracciones) {
+	public RepositorioInteracciones() {
 		super();
-		this.listaInteracciones = new HashSet<>();
+		this.listaInteracciones = new ArrayList<>();
 	}
 	
 	
-	public HashSet<InteraccionAgente> getListaInteracciones() {
+	public ArrayList<InteraccionAgente> getListaInteracciones() {
 		return listaInteracciones;
 	}
-	public void setListaInteracciones(HashSet<InteraccionAgente> listaInteracciones) {
+	public void setListaInteracciones(ArrayList<InteraccionAgente> listaInteracciones) {
 		this.listaInteracciones = listaInteracciones;
 	}
 	
@@ -41,9 +42,11 @@ public class RepositorioInteracciones {
 	
 	public void actualizaPorcentajeInteraccion(InteraccionAgente interaccion, double porcentajeNuevo) {
 		
-		interaccion.setPorcentajeAcierto(porcentajeNuevo);
-		
+		for(InteraccionAgente i : listaInteracciones) {
+			i.setPorcentajeAcierto(porcentajeNuevo);
+		}
 	}
+	
 
 	
 }

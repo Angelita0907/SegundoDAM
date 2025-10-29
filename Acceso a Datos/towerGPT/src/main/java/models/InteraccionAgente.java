@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Objects;
 import java.util.Random;
 
-public class InteraccionAgente {
+public class InteraccionAgente implements Comparable<InteraccionAgente> {
 	
 	private static int contador;
 	
@@ -104,6 +104,12 @@ public class InteraccionAgente {
 				+ peticion + ", respuesta=" + respuesta + ", tiempoEjecucion=" + tiempoEjecucion
 				+ ", numValoracionesPositivas=" + numValoracionesPositivas + ", porcentajeAcierto=" + porcentajeAcierto
 				+ "]";
+	}
+
+	@Override
+	public int compareTo(InteraccionAgente o) {
+		// TODO Auto-generated method stub
+		return Double.compare(this.porcentajeAcierto, o.getPorcentajeAcierto());
 	}
 	
 	/*
