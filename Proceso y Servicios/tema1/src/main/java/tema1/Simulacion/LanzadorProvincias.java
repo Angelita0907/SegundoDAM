@@ -24,6 +24,7 @@ public class LanzadorProvincias {
 		
 		int totalPedidos = 0;
 		
+		// por cada provincia de la lista lanza un proceso que ejecuta las funciones del hijo
 		for (String nombreProv : provincias) {
 			
 			totalPedidos = totalPedidos + lanzadorProv.ejecutaProceso(ficheroPedidoProvincias, nombreProv);
