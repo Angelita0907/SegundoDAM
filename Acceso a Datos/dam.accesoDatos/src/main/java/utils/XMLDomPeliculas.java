@@ -1,4 +1,4 @@
-package tema1.XML.Peliculas;
+package utils;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -14,7 +14,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import tema1.XML.modelo.Empleado;
 import tema1.XML.modelo.Pelicula;
 
 public class XMLDomPeliculas {

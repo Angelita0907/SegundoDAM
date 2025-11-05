@@ -6,8 +6,8 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import tema1.XML.Peliculas.XMLDomPeliculas;
 import tema1.XML.modelo.Pelicula;
+import utils.XMLDomPeliculas;
 
 public class GestionaPeliculas {
 
