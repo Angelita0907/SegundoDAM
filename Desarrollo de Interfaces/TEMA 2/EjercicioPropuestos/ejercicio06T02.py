@@ -16,18 +16,22 @@ class VentanaPrincipal(QMainWindow):
         # maximo de elementos
         lista.setMaxCount(10)
 
-        # para que ordene alfabeticamente
-        lista.setInsertPolicy(QComboBox.InsertAlphabetically)
-
         # añadir elementos despues del elemento seleccionado
         lista.setInsertPolicy(QComboBox.InsertAfterCurrent)
 
-        lista.itemText(self.cambio_texto)
+        # para que ordene alfabeticamente
+        lista.setInsertPolicy(QComboBox.InsertAlphabetically)
+
+        lista.currentIndexChanged.connect(self.cambio_texto)
 
         self.setCentralWidget(lista)
 
-    def cambio_texto(self, t):
-        print("Texto seleccionado: ", t)
+    def cambio_texto(self, texto):
+        print("Elemento seleccionado:", texto)
+        self.setWindowTitle(texto)
+    
+    def cambia_indice(self, i):
+        print("Texto seleccionado: ", i)
 
 
 app = QApplication([])
