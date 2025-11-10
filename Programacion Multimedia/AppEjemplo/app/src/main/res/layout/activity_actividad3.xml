@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id = "@+id/padre" >
+        <RelativeLayout
+            android:id = "@+id/hijo1"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:background ="#F291B5" ></RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hijo2"
+            android:layout_width="211dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/hijo1"
+            android:layout_marginTop="0dp"
+            android:background="#4174D9"></RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hijo3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/hijo2"
+            android:layout_marginTop="0dp"
+            android:background="#468C26"></RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hijo4"
+            android:layout_width="430dp"
+            android:layout_height="400dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/hijo2"
+            android:background="#F2AC29"></RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hijo5"
+            android:layout_width="150dp"
+            android:layout_height="300dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/hijo4"
+            android:background="#F22727"></RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hijo6"
+            android:layout_width="150dp"
+            android:layout_height="300dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/hijo4"
+            android:layout_toRightOf="@id/hijo5"
+            android:background="#593311"></RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
