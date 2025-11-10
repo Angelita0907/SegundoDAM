@@ -1,0 +1,4 @@
+2025-11-10 09:33:34.311 [main] INFO  tema1.XML.controlador.GestionaProductos - [Producto [id=3, enVenta=true, nombre= Producto 3 , precio=25.0, stock=0]]
+2025-11-10 09:35:21.198 [main] INFO  tema1.XML.controlador.GestionaProductos - [Producto [id=3, enVenta=true, nombre= Producto 3 , precio=25.0, stock=0]]
+2025-11-10 09:47:56.937 [main] INFO  tema1.XML.controlador.GestionaProductos - []
+2025-11-10 09:49:11.094 [main] INFO  tema1.XML.controlador.GestionaProductos - [Producto [id=3, enVenta=true, nombre= Producto 3 , precio=25.0, stock=0]]

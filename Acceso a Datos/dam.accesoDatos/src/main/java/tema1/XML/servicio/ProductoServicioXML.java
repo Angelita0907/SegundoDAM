@@ -26,9 +26,9 @@ public class ProductoServicioXML {
 	// List<Producto> listaProductos = new
 	// ArrayList<>(domProductos.leerProductosDesdeXML(rutaXML));
 
-	public ProductoServicioXML(ProductoRepositorioXML repoProducto) {
+	public ProductoServicioXML(List<Producto> productos) {
 		super();
-		this.repoProducto = repoProducto;
+		this.repoProducto = new ProductoRepositorioXML(productos);
 	}
 
 	public ProductoRepositorioXML getRepoProducto() {
@@ -50,7 +50,7 @@ public class ProductoServicioXML {
 		List<Producto> productosFiltro = new ArrayList<>();
 
 		// lista para llamar a la funcion que nos crea la lista segun el xml
-		List<Producto> listaProductos = new ArrayList<>(domProductos.leerProductosDesdeXML(rutaXML));
+		List<Producto> listaProductos = repoProducto.getProductos();
 
 		for (Producto producto : listaProductos) {
 			if (producto.getStock() < stock) {
@@ -84,32 +84,8 @@ public class ProductoServicioXML {
 		return productosFiltro;
 	}
 	
-	public void escribeProductoAJson(List<Producto> p, String ruta)
-	{// Convertir el objeto a JSON
-		
-		 Gson gson = new GsonBuilder().setPrettyPrinting().create();
-		 String json = gson.toJson(p);
-		 FileWriter fichero = null;
-		 try {
-			fichero = new FileWriter(ruta);
-			fichero.write(json);
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			if (fichero != null) {
-				try {
-					fichero.close();
-				} catch (IOException e) {
-					System.out.println("Error al escribir producto");
-				}			
-				
-			}		
-			
-		}	   
-		 
-	}
-	
 	//falta el 7
+	
 	
 
 }

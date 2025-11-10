@@ -26,10 +26,11 @@
     <fullyQualifiedTypeName name="utils.ProductosAJson"/>
     <fullyQualifiedTypeName name="tema1.PokemonJson.Pokemon"/>
     <fullyQualifiedTypeName name="tema1.XML.servicio.ProductoServicioXML"/>
-    <fullyQualifiedTypeName name="tema1.XML.repositorio.ProductoRepositorioXML"/>
     <fullyQualifiedTypeName name="tema1.XML.controlador.GestionaProductos"/>
+    <fullyQualifiedTypeName name="tema1.XML.repositorio.ProductoRepositorioXML"/>
+    <fullyQualifiedTypeName name="utils.XMLDomProductos"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="tema1.XML.modelo.Producto"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="utils.XMLDomProductos"/>
+    <fullyQualifiedTypeName name="utils.ProductoAJson"/>
 </qualifiedTypeNameHistroy>
