@@ -2,22 +2,22 @@
 <ListaProductos  fecha = "23/11/2011" >
 <Producto  id = "1"  enVenta = "true" >
   <Nombre> Producto 1 </Nombre>
-  <Precio> 10.0 </Precio>
-  <Stock> 3 </Stock>
+  <Precio>10.0</Precio>
+  <Stock>3</Stock>
 </Producto>
 <Producto  id = "2"  enVenta = "true" >
   <Nombre> Producto 2 </Nombre>
-  <Precio> 15.0 </Precio>
-  <Stock> 10 </Stock>
+  <Precio>15.0</Precio>
+  <Stock>10</Stock>
 </Producto>
 <Producto  id = "3"  enVenta = "true" >
   <Nombre> Producto 3 </Nombre>
-  <Precio> 25.0 </Precio>
-  <Stock> 0 </Stock>
+  <Precio>25.0</Precio>
+  <Stock>0</Stock>
 </Producto>
 <Producto  id = "4"  enVenta = "true" >
   <Nombre> Producto 4 </Nombre>
-  <Precio> 5.75 </Precio>
-  <Stock> 50 </Stock>
+  <Precio>5.75</Precio>
+  <Stock>50</Stock>
 </Producto>
 </ListaProductos>

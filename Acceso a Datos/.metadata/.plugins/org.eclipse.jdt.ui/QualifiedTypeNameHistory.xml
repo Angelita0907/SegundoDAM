@@ -5,7 +5,6 @@
     <fullyQualifiedTypeName name="java.lang.Float"/>
     <fullyQualifiedTypeName name="tema1.PokemonJson.GestionaPokemons"/>
     <fullyQualifiedTypeName name="utils.PokemonAJson"/>
-    <fullyQualifiedTypeName name="tema1.PokemonJson.Pokemon"/>
     <fullyQualifiedTypeName name="tema1.Paises.Pais"/>
     <fullyQualifiedTypeName name="utils.GestionaFicheroPaises"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
@@ -20,11 +19,17 @@
     <fullyQualifiedTypeName name="tema1.XML.Peliculas.XMLDomPeliculas"/>
     <fullyQualifiedTypeName name="org.w3c.dom.NodeList"/>
     <fullyQualifiedTypeName name="org.w3c.dom.Element"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="tema1.XML.modelo.Pelicula"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.lang.Boolean"/>
     <fullyQualifiedTypeName name="java.lang.Process"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="utils.ProductosAJson"/>
+    <fullyQualifiedTypeName name="tema1.PokemonJson.Pokemon"/>
+    <fullyQualifiedTypeName name="tema1.XML.servicio.ProductoServicioXML"/>
+    <fullyQualifiedTypeName name="tema1.XML.repositorio.ProductoRepositorioXML"/>
+    <fullyQualifiedTypeName name="tema1.XML.controlador.GestionaProductos"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="tema1.XML.modelo.Producto"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="utils.XMLDomProductos"/>
 </qualifiedTypeNameHistroy>

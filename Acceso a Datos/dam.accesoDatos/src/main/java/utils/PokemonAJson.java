@@ -16,6 +16,7 @@ import com.google.gson.GsonBuilder;
 
 import tema1.PokemonJson.Pokemon;
 
+
 public class PokemonAJson {
 	
 	//lee el csv como le indicamos y luego lo usa para escrbrir el json
