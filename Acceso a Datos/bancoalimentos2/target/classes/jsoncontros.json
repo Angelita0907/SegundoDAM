@@ -1,0 +1,146 @@
+[
+  {
+    "id": "CL01",
+    "nombre": "Banco de Alimentos Sevilla",
+    "ciudad": "Sevilla",
+    "numeroComedores": 50,
+    "personal": [
+      {
+        "nombre": "Juan Pérez",
+        "dni": "12345678A",
+        "id": "CL01",
+        "fechaNacimiento": "1980-04-12",
+        "esAsalariado": true
+      },
+      {
+        "nombre": "María González",
+        "dni": "87654321B",
+        "id": "CL01",
+        "fechaNacimiento": "1992-11-05",
+        "esAsalariado": false
+      },
+      {
+        "nombre": "Isabel Morales",
+        "dni": "34567890C",
+        "id": "CL01",
+        "fechaNacimiento": "1985-05-22",
+        "esAsalariado": true
+      },
+      {
+        "nombre": "Antonio Fernández",
+        "dni": "23456789D",
+        "id": "CL01",
+        "fechaNacimiento": "1977-03-14",
+        "esAsalariado": false
+      }
+    ]
+  },
+  {
+    "id": "CL02",
+    "nombre": "Banco de Alimentos Málaga",
+    "ciudad": "Málaga",
+    "numeroComedores": 35,
+    "personal": [
+      {
+        "nombre": "Pedro López",
+        "dni": "11223344C",
+        "id": "CL02",
+        "fechaNacimiento": "1975-08-23",
+        "esAsalariado": true
+      },
+      {
+        "nombre": "Ana Torres",
+        "dni": "44332211D",
+        "id": "CL02",
+        "fechaNacimiento": "1988-03-30",
+        "esAsalariado": false
+      },
+      {
+        "nombre": "Lucía Martín",
+        "dni": "55667788F",
+        "id": "CL02",
+        "fechaNacimiento": "1991-07-08",
+        "esAsalariado": true
+      },
+      {
+        "nombre": "Francisco Ruiz",
+        "dni": "66778899G",
+        "id": "CL02",
+        "fechaNacimiento": "1984-12-19",
+        "esAsalariado": false
+      }
+    ]
+  },
+  {
+    "id": "CL03",
+    "nombre": "Banco de Alimentos Granada",
+    "ciudad": "Granada",
+    "numeroComedores": 28,
+    "personal": [
+      {
+        "nombre": "Laura Fernández",
+        "dni": "55667788E",
+        "id": "CL03",
+        "fechaNacimiento": "1995-06-14",
+        "esAsalariado": false
+      },
+      {
+        "nombre": "Carlos Méndez",
+        "dni": "33445566F",
+        "id": "CL03",
+        "fechaNacimiento": "1982-01-10",
+        "esAsalariado": true
+      },
+      {
+        "nombre": "Elena Martín",
+        "dni": "77889900H",
+        "id": "CL03",
+        "fechaNacimiento": "1993-09-29",
+        "esAsalariado": false
+      },
+      {
+        "nombre": "Rafael Sánchez",
+        "dni": "88990011I",
+        "id": "CL03",
+        "fechaNacimiento": "1978-02-17",
+        "esAsalariado": true
+      }
+    ]
+  },
+  {
+    "id": "CL04",
+    "nombre": "Banco de Alimentos Córdoba",
+    "ciudad": "Córdoba",
+    "numeroComedores": 22,
+    "personal": [
+      {
+        "nombre": "Elena Ruiz",
+        "dni": "99887766G",
+        "id": "CL04",
+        "fechaNacimiento": "1990-12-22",
+        "esAsalariado": false
+      },
+      {
+        "nombre": "Alberto García",
+        "dni": "22334455H",
+        "id": "CL04",
+        "fechaNacimiento": "1979-09-15",
+        "esAsalariado": true
+      },
+      {
+        "nombre": "Julia Muñoz",
+        "dni": "99001122J",
+        "id": "CL04",
+        "fechaNacimiento": "1987-10-05",
+        "esAsalariado": false
+      },
+      {
+        "nombre": "Manuel Serrano",
+        "dni": "10111213K",
+        "id": "CL04",
+        "fechaNacimiento": "1983-04-01",
+        "esAsalariado": true
+      }
+    ]
+  }
+]

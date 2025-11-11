@@ -10,7 +10,7 @@ public class CentroLogistico {
 	private String nombre;
 	private String ciudad;
 	private int comedores;
-	private List<Trabajador> listaTrabajdores;
+	private List<Trabajador> listaTrabajdores = new ArrayList<>();
 
 	public CentroLogistico() {
 		super();

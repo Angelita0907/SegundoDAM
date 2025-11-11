@@ -1,0 +1,293 @@
+
+
+LEER  CSV
+	public List<Pokemon> leeCsv (String rutaFichero) throws FileNotFoundException{
+		List<Pokemon> listapokemon= new ArrayList<Pokemon>();
+			
+			FileReader fichero = new FileReader(rutaFichero);
+			Scanner in = new Scanner(fichero);
+			while(in.hasNextLine()) {
+				String linea= in.nextLine();
+				String[] palabras= linea.split(",");
+				
+				int id= Integer.parseInt(palabras[0]) ;
+				String nompokemon= palabras[1];
+				String tipo= palabras[2];
+				float altura= Float.parseFloat( palabras[3]);
+				float peso= Float.parseFloat(palabras[4]);
+				String[] habilidades = palabras[5].split(";");
+				String evoluciona_a= palabras[6];
+				
+				Pokemon pokemon = new Pokemon(id, nompokemon, tipo, habilidades, evoluciona_a, altura, peso);
+				listapokemon.add(pokemon);
+				
+				
+				}
+			return listapokemon;
+			}
+
+
+ESCRIBIR CSV	
+CENTRO LOGÍSTICO
+public void escribeCentrosYTrabajadoresCSV(String nombreArchivo) {
+       PrintWriter out = null;
+       FileWriter fichero = null;
+       try {
+           // 🗂️ Crear carpeta "src/main/resources" si no existe
+           File carpeta = new File("src/main/resources");
+           if (!carpeta.exists()) {
+               carpeta.mkdirs();
+           }
+           // 📄 Crear el archivo dentro de esa carpeta
+           String rutaCompleta = "src/main/resources/" + nombreArchivo;
+           fichero = new FileWriter(rutaCompleta);
+           out = new PrintWriter(fichero);
+           // 🔁 Escribir datos
+           for (CentroLogistico centro : repo.getCentroslogisticos()) {
+               if (centro.getPersonal() == null || centro.getPersonal().isEmpty()) {
+                   // Centro sin personal
+                   out.printf(Locale.US, "%s,%s,%s,%d,\n",
+                           centro.getId(),
+                           centro.getNombre(),
+                           centro.getCiudad(),
+                           centro.getNumeroComedores());
+               } else {
+                   // Centro con trabajadores
+                   for (Trabajador t : centro.getPersonal()) {
+                       out.printf(Locale.US, "%s,%s,%s,%d,%s,%s,%s,%s,%b\n",
+                               centro.getId(),
+                               centro.getNombre(),
+                               centro.getCiudad(),
+                               centro.getNumeroComedores(),
+                               t.getId(),
+                               t.getNombre(),
+                               t.getDni(),
+                               t.getFechaNacimiento(),
+                               t.isEsAsalariado());
+                   }
+               }
+           }
+           System.out.println("CSV generado en: " + rutaCompleta);
+       } catch (IOException e) {
+           e.printStackTrace();
+       } finally {
+           if (out != null) out.close();
+           if (fichero != null) {
+               try {
+                   fichero.close();
+               } catch (IOException e) {
+                   System.out.println("Error al cerrar el fichero CSV");
+               }
+           }
+       }
+   }
+
+
+LEER  JSON
+	public void leeEmpleados(String rutaFichero) {
+		try {
+		  Gson gson = new Gson();
+		  FileReader fichero = new FileReader(rutaFichero);
+		  // Leer el archivo JSON y convertirlo a un objeto Empleado
+		  Empleado[] empleadosArray = gson.fromJson(fichero,Empleado[].class);
+			List<Empleado> empleados = Arrays.asList(empleadosArray);
+			System.out.println(empleados);
+		} catch (Exception e) {
+			System.out.println("Error al leer empleados"+e.getMessage());
+		}	
+		
+	}
+
+ESCRIBIR JSON
+	public void generaJSONnoenventa(List<CentroLogistico> centroslogisticos) throws Exception {
+	    String rutaSalida = "src/main/resources/" + "jsoncontros.json";
+		
+	    Gson gson = new GsonBuilder().setPrettyPrinting().create();
+	   
+	    try (FileWriter writer = new FileWriter(rutaSalida)) {
+	        gson.toJson(centroslogisticos, writer);
+	        System.out.println(("CREADO"));
+	      
+	    } catch (IOException e) {
+	    	 System.out.println(("no CREADO"));	    }
+	}
+
+LEER  XML
+public class XMLDomBancoAlimento {
+	private static final Logger logger= LogManager.getLogger(XMLDomBancoAlimento.class);
+		
+		private static final String rutaFichero= "src\\main\\resources\\";
+	
+		//siempre igual
+			//genero dom
+			private Document getDocumentFromXML(String nombrefichero) {
+				File file = new File(rutaFichero + nombrefichero);
+				Document documento = null;
+				try {
+					DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+					DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+					documento = dBuilder.parse(file);
+	
+				} catch (Exception e) {
+					logger.error(e.getMessage());
+				}
+				return documento;
+				
+				
+			}
+			//cambia dependiendo de lo que quiera
+			private CentroLogistico getCentroFromElement(Element elemento) {
+			    CentroLogistico c = new CentroLogistico(); // el Set de trabajadores ya debe estar inicializado en el constructor
+			    // Leer datos del centro
+			    String id = elemento.getElementsByTagName("ID").item(0).getTextContent().trim();
+			    String nombre = elemento.getElementsByTagName("Nombre").item(0).getTextContent().trim();
+			    String ciudad = elemento.getElementsByTagName("Ciudad").item(0).getTextContent().trim();
+			    int numComedores = Integer.parseInt(elemento.getElementsByTagName("ComedoresAbastecidos").item(0).getTextContent().trim());
+			    c.setId(id);
+			    c.setNombre(nombre);
+			    c.setCiudad(ciudad);
+			    c.setNumeroComedores(numComedores);
+			    // Leer trabajadores
+			    NodeList trabajadoresNodo = elemento.getElementsByTagName("Trabajador"); // cada nodo <Trabajador>
+			    for (int i = 0; i < trabajadoresNodo.getLength(); i++) {
+			        Node nodo = trabajadoresNodo.item(i);
+			        if (nodo.getNodeType() == Node.ELEMENT_NODE) {
+			            Element eTrabajador = (Element) nodo;
+			            Trabajador t = getTrabajadorFromElement(eTrabajador);
+			            c.getPersonal().add(t);  
+			            t.setId(id);
+			        }
+			    }
+			    return c;
+			}
+			
+			private Trabajador getTrabajadorFromElement(Element elemento) {
+				Trabajador t = new Trabajador();
+				
+				String nombre = elemento.getElementsByTagName("Nombre").item(0).getTextContent().trim();
+				
+				String dni = elemento.getElementsByTagName("DNI").item(0).getTextContent().trim();
+				
+				String fechaNacimiento =elemento.getElementsByTagName("FechaNacimiento").item(0).getTextContent().trim();
+				
+				String tipo = elemento.getElementsByTagName("Tipo").item(0).getTextContent().trim();
+				
+		        t.setEsAsalariado(tipo.equalsIgnoreCase("Asalariado"));
+				
+				t.setNombre(nombre);
+				t.setDni(dni);
+				t.setFechaNacimiento( fechaNacimiento);
+				
+				return t;
+			}
+	
+			public List<CentroLogistico> leerCentroLogisticoDesdeXML(String rutaFichero) throws Exception {
+				List<CentroLogistico> centros = new ArrayList<CentroLogistico>();
+				// 1. Calcula el dom
+				Document doc = getDocumentFromXML(rutaFichero);
+				// 2. Obtener todos los nodos con etiqueta empleados
+				NodeList nodoscentros = doc.getElementsByTagName("CentroLogistico");
+		 // 3. Recorro la lista de los nodos empleado
+				for (int j = 0; j < nodoscentros.getLength(); j++) {
+					Node modeloNodo = nodoscentros.item(j);
+					if (modeloNodo.getNodeType() == Node.ELEMENT_NODE) {
+						CentroLogistico c = this.getCentroFromElement((Element) modeloNodo);
+						centros.add(c);
+					}
+				}
+				return centros;
+			}	
+			public List<Trabajador> leerTrabajadorDesdeXML(String rutaFichero) throws Exception {
+				List<Trabajador> trabajadores = new ArrayList<Trabajador>();
+				// 1. Calcula el dom
+				Document doc = getDocumentFromXML(rutaFichero);
+				// 2. Obtener todos los nodos con etiqueta empleados
+				NodeList nodosproductos = doc.getElementsByTagName("Trabajador");
+				// 3. Recorro la lista de los nodos empleado
+				for (int j = 0; j < nodosproductos.getLength(); j++) {
+					Node modeloNodo = nodosproductos.item(j);
+					if (modeloNodo.getNodeType() == Node.ELEMENT_NODE) {
+						Trabajador t = this.getTrabajadorFromElement((Element) modeloNodo);
+						trabajadores.add(t);
+					}
+				}
+				return trabajadores;
+			}	
+	}
+
+
+ESCRIBIR  XML
+public class Formula1XMLNuevo {
+   private static final Logger logger = LogManager.getLogger(Formula1XMLNuevo.class);
+   private static final String rutaResources = "src\\main\\resources\\";
+   /**
+    * Escribe una lista de equipos (y sus pilotos) en un archivo XML.
+    */
+   public void escribeEquiposEnXML(String nombreFichero, List<Equipo> equipos) {
+       try {
+           Document documento = this.construyoObjetoDocumento("equipos");
+           for (Equipo e : equipos) {
+               Element elementoEquipo = this.creaElemento("equipo", null, documento.getDocumentElement(), documento);
+               agregaEquipoADocumento(documento, elementoEquipo, e);
+           }
+           escribeDocumentoEnFichero(documento, rutaResources + nombreFichero);
+           logger.info("Archivo XML generado correctamente: " + nombreFichero);
+       } catch (ParserConfigurationException | TransformerException e1) {
+           logger.error("Error al escribir XML: " + e1.getMessage());
+       }
+   }
+   /**
+    * Crea y escribe el documento XML en el fichero físico.
+    */
+   private void escribeDocumentoEnFichero(Document documento, String nombreFichero) throws TransformerException {
+       TransformerFactory transformerFactory = TransformerFactory.newInstance();
+       Transformer transformer = transformerFactory.newTransformer();
+       transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+       transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+       DOMSource source = new DOMSource(documento);
+       StreamResult resultado = new StreamResult(new File(nombreFichero));
+       transformer.transform(source, resultado);
+   }
+   /**
+    * Añade la información de un equipo y sus pilotos al documento.
+    */
+   private void agregaEquipoADocumento(Document documento, Element padre, Equipo e) {
+       // Elementos del equipo
+       this.creaElemento("nombreEquipo", e.getNombreEquipo(), padre, documento);
+       this.creaElemento("puntos", Integer.toString(e.getPuntos()), padre, documento);
+       // Lista de pilotos
+       Element pilotos = this.creaElemento("pilotos", null, padre, documento);
+       for (Piloto p : e.getListaPilotos()) {
+           Element piloto = this.creaElemento("piloto", null, pilotos, documento);
+           this.creaElemento("nombrePiloto", p.getNombre(), piloto, documento);
+           this.creaElemento("puntos", Integer.toString(p.getPuntos()), piloto, documento);
+           this.creaElemento("identificadorEquipo", String.valueOf(p.getIdentificadorEquipo()), piloto, documento);
+           this.creaElemento("pais", p.getPais(), piloto, documento);
+           // Atributo identificador del piloto
+           piloto.setAttribute("identificadorPiloto", String.valueOf(p.getIdentificadorPiloto()));
+       }
+       // Atributo identificador del equipo
+       padre.setAttribute("identificadorEquipo", String.valueOf(e.getIdentificadorEquipo()));
+   }
+   /**
+    * Crea un elemento XML (con o sin valor) y lo añade al nodo padre.
+    */
+   private Element creaElemento(String nombreElemento, String valorElemento, Element padre, Document documento) {
+       Element elemento = documento.createElement(nombreElemento);
+       if (valorElemento != null) {
+           Text texto = documento.createTextNode(valorElemento);
+           elemento.appendChild(texto);
+       }
+       padre.appendChild(elemento);
+       return elemento;
+   }
+   /**
+    * Crea la estructura base de un documento XML con una raíz.
+    */
+   private Document construyoObjetoDocumento(String nombreRaiz) throws ParserConfigurationException {
+       DocumentBuilderFactory factoria = DocumentBuilderFactory.newInstance();
+       DocumentBuilder builder = factoria.newDocumentBuilder();
+       DOMImplementation implementacion = builder.getDOMImplementation();
+       return implementacion.createDocument(null, nombreRaiz, null);
+   }
+}

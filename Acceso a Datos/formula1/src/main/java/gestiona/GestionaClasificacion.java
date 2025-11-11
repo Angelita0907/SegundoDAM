@@ -11,6 +11,7 @@ import modelo.Piloto;
 import servicio.ServicioEquipos;
 import utils.EquiposAJson;
 import utils.Formula1XMLDom;
+import utils.Formula1XMLNuevo;
 
 public class GestionaClasificacion {
 	
@@ -22,6 +23,8 @@ public class GestionaClasificacion {
 		Formula1XMLDom domFormula1 = new Formula1XMLDom();
 		ServicioEquipos equipoServicio = new ServicioEquipos();
 		EquiposAJson formula1JSON = new EquiposAJson();
+		Formula1XMLNuevo xmlNuevo = new Formula1XMLNuevo();
+		
 		
 		try {
 			// crear dom para piloto
@@ -61,6 +64,8 @@ public class GestionaClasificacion {
 			String rutaJson = "src/main/resources/pilotosPuntuacion.json";
 			formula1JSON.escribeProductoAJson(mayorPuntos, rutaJson);
 			
+			String nombreNuevoXML = "equipos_generados.xml";
+            xmlNuevo.escribeEquiposEnXML(nombreNuevoXML, listaEquipos);
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

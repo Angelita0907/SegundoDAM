@@ -1,5 +1,6 @@
 package repositorio;
 
+import java.util.Iterator;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -41,53 +42,82 @@ public class RepositorioBancoAlimentos {
 			}
 			i++;
 		}
-		if (encontrado = true) {
+		if (!encontrado) {
 			listaCentros.add(c);
 		}
 		
 	}
 	
 	// agregar trabajador por el centro
-	public void agregarTrabajadorACentro(Trabajador t, CentroLogistico c) throws BancoAlimentosException {
-		if(t.getIdCentroLogistico().equals(c.getId())) {
-			throw new BancoAlimentosException("ya está dentro");
-		}
-		else {
-			t.setIdCentroLogistico(c.getId());
-			c.getListaTrabajdores().add(t);
-		}
-	}
-	
-	public CentroLogistico mostrarCentro(String id) {
-		int i = 0;
+	public void agregarTrabajadorACentro(String dni, String centro) throws BancoAlimentosException {
 		boolean encontrado = false;
-		CentroLogistico datosCentro = null;
-		
-		while(!encontrado && i < listaCentros.size()) {
-			if(listaCentros.get(i).getId().equals(id)) {
-				datosCentro = listaCentros.get(i);
+		CentroLogistico centroEncontrado = null;
+
+		Iterator<CentroLogistico> itCentros = listaCentros.iterator();
+		while (itCentros.hasNext() && !encontrado) {
+			CentroLogistico c = itCentros.next();
+			if (c.getId().equalsIgnoreCase(centro)) {
+				centroEncontrado = c;
 				encontrado = true;
 			}
-			i++;
 		}
 
-		return datosCentro;
+		if (!encontrado) {
+			throw new BancoAlimentosException("No se encontró el centro logístico");
+		}
+
+		Iterator<Trabajador> itTrabajadores = centroEncontrado.getListaTrabajdores().iterator();
+		while (itTrabajadores.hasNext() && !encontrado) {
+			Trabajador t = itTrabajadores.next();
+			if (t.getDni().equalsIgnoreCase(dni)) {
+				throw new BancoAlimentosException("El trabajador ya existe en este centro");
+			} else {
+				centroEncontrado.getListaTrabajdores().add(t);
+			}
+		}
 	}
 	
-	public Trabajador mostrarTrabajador(String dni) {
-		int i = 0;
+	public CentroLogistico mostrarCentro(String id) throws BancoAlimentosException {
 		boolean encontrado = false;
-		Trabajador datosTrabajador = null;
-		// terminar
-		while(!encontrado && i < listaCentros.size()) {
-			if(listaCentros.getListaTrabajdores().get(i)) {
-				datosTrabajador = listaCentros.get(i);
+		CentroLogistico centro = null;
+
+		Iterator<CentroLogistico> it = listaCentros.iterator();
+		while (it.hasNext() && !encontrado) {
+			CentroLogistico c = it.next();
+
+			if (c.getId().equalsIgnoreCase(id)) {
 				encontrado = true;
+				centro = c;
 			}
-			i++;
 		}
-		
-		return datosTrabajador;
+
+		if (!encontrado)
+			throw new BancoAlimentosException("No se encuentra ningún centro asociado a ese id");
+
+		return centro;
+	}
+	
+	public Trabajador mostrarTrabajador(String dni) throws BancoAlimentosException {
+		boolean encontrado = false;
+		Trabajador trabajador = null;
+
+		Iterator<CentroLogistico> itCentros = listaCentros.iterator();
+		while (itCentros.hasNext()) {
+			CentroLogistico centro = itCentros.next();
+
+			Iterator<Trabajador> it = centro.getListaTrabajdores().iterator();
+			while (it.hasNext() && !encontrado) {
+				Trabajador t = it.next();
+				if (t.getDni().equalsIgnoreCase(dni)) {
+					encontrado = true;
+					trabajador = t;
+
+				} 
+				
+			}
+			throw new BancoAlimentosException("No se encuentra ningún trabajador asociado a ese dni");
+		}
+		return trabajador;
 	}
 		
 
