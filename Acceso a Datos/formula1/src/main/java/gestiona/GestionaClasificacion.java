@@ -52,7 +52,7 @@ public class GestionaClasificacion {
 			for (Equipo equipo : listaEquipos) {
 			    logger.info("Equipo: " + equipo.getNombreEquipo());
 			    for (Piloto piloto : equipo.getListaPilotos()) {
-			        logger.info("  " + piloto);
+			        logger.info(piloto);
 			    }
 			}
 			
