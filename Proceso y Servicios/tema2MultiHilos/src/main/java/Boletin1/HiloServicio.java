@@ -1,36 +1,23 @@
 package Boletin1;
 
-public class HiloServicio extends Thread{
-private String nombreHilo;
-	
-	
-	public HiloServicio() {
-		super();
-		this.nombreHilo = "SERVICIO";
-	}
+public class HiloServicio extends Thread {
+    private String nombreHilo;
 
-	public String getNombreHilo() {
-		return nombreHilo;
-	}
+    public HiloServicio() {
+        super();
+        this.nombreHilo = "SERVICIO";
+    }
 
-	public void setNombreHilo(String nombreHilo) {
-		this.nombreHilo = nombreHilo;
-	}
-
-	@Override
-	public void run() {
-		
-		try {
-			while (true) {
-				System.out.println(this.nombreHilo                                                                                        );
-				sleep(500);
-			}
-			
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println("Termina hilo: "+ this.nombreHilo);
-	}
-
+    @Override
+    public void run() {
+        try {
+            for (int i = 0; i < 5; i++) {
+                System.out.println(this.nombreHilo + " ejecutándose (" + i + ")");
+                sleep(500);
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Termina hilo: " + this.nombreHilo);
+    }
 }
