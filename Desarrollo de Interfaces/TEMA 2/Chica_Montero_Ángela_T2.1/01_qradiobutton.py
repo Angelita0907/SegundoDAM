@@ -12,6 +12,7 @@ class ventanaPrincipal(QMainWindow):
         self.setCentralWidget(radio)
 
         # Conectamos la señal al método
+        
         radio.toggled.connect(self.cambiaTitulo)
 
     def cambiaTitulo(self, checked):
