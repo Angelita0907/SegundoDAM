@@ -47,23 +47,7 @@ public class Formula1XMLNuevo {
             logger.error("Error al escribir XML: " + e1.getMessage());
         }
     }
-
-    /**
-     * Crea y escribe el documento XML en el fichero físico.
-     */
-    private void escribeDocumentoEnFichero(Document documento, String nombreFichero) throws TransformerException {
-        TransformerFactory transformerFactory = TransformerFactory.newInstance();
-        Transformer transformer = transformerFactory.newTransformer();
-
-        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
-
-        DOMSource source = new DOMSource(documento);
-        StreamResult resultado = new StreamResult(new File(nombreFichero));
-
-        transformer.transform(source, resultado);
-    }
-
+    
     /**
      * Añade la información de un equipo y sus pilotos al documento.
      */
@@ -90,6 +74,32 @@ public class Formula1XMLNuevo {
     }
 
     /**
+     * Crea y escribe el documento XML en el fichero físico.
+     */
+    private void escribeDocumentoEnFichero(Document documento, String nombreFichero) throws TransformerException {
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+
+        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+
+        DOMSource source = new DOMSource(documento);
+        StreamResult resultado = new StreamResult(new File(nombreFichero));
+
+        transformer.transform(source, resultado);
+    }
+
+    /**
+     * Crea la estructura base de un documento XML con una raíz.
+     */
+    private Document construyoObjetoDocumento(String nombreRaiz) throws ParserConfigurationException {
+        DocumentBuilderFactory factoria = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factoria.newDocumentBuilder();
+        DOMImplementation implementacion = builder.getDOMImplementation();
+        return implementacion.createDocument(null, nombreRaiz, null);
+    }
+    
+    /**
      * Crea un elemento XML (con o sin valor) y lo añade al nodo padre.
      */
     private Element creaElemento(String nombreElemento, String valorElemento, Element padre, Document documento) {
@@ -102,13 +112,5 @@ public class Formula1XMLNuevo {
         return elemento;
     }
 
-    /**
-     * Crea la estructura base de un documento XML con una raíz.
-     */
-    private Document construyoObjetoDocumento(String nombreRaiz) throws ParserConfigurationException {
-        DocumentBuilderFactory factoria = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = factoria.newDocumentBuilder();
-        DOMImplementation implementacion = builder.getDOMImplementation();
-        return implementacion.createDocument(null, nombreRaiz, null);
-    }
+   
 }

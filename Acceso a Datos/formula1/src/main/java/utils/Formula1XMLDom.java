@@ -81,7 +81,7 @@ public class Formula1XMLDom {
 	
 	// lo mismo pero con equipos
 	
-	private Equipo getEquipoFromElement(Element elemento)
+	private Equipo getEquipoFromElement2(Element elemento)
 	{
 			Equipo e = new Equipo();
 			int identificadorEquipo = Integer.parseInt(elemento.getAttribute("identificadorEquipo"));
@@ -109,7 +109,7 @@ public class Formula1XMLDom {
 			Node modeloNodo = nodoProductos.item(j);
 			if (modeloNodo.getNodeType() == Node.ELEMENT_NODE) {
 				// esto es un casting para saber si se puede cambiar de un tipo nodo
-				Equipo e = this.getEquipoFromElement((Element) modeloNodo);
+				Equipo e = this.getEquipoFromElement2((Element) modeloNodo);
 				equipos.add(e);
 			}
 		}
