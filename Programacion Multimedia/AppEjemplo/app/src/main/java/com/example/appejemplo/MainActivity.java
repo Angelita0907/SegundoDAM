@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
  */
-
+/*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,13 +45,14 @@ public class MainActivity extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA)
                 == PackageManager.PERMISSION_GRANTED) {
             // Si ya tiene permiso, abrir la cámara
-            abrirCamara();
+            //abrirCamara();
         } else {
             // Si no tiene permiso, solicitarlo
             ActivityCompat.requestPermissions(this,
                     new String[]{android.Manifest.permission.CAMERA},
                     REQUEST_CAMERA_PERMISSION);
         }
+        */
 
 /*
         setContentView(R.layout.activity_actividad1);
@@ -69,15 +70,17 @@ public class MainActivity extends AppCompatActivity {
 
         Intent ejemplo4 = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivity(ejemplo4);
-*/
+
 
 
     }
 
+ */
+/*
     private void abrirCamara() {
         Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE); // Acción para abrir la cámara
         startActivity(intent);  // Lanzar la actividad de la cámara
-    }
+    }*/
     @Override
     protected void onStart(){
         super.onStart();

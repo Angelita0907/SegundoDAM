@@ -53,7 +53,11 @@
             android:layout_column="3"
             android:layout_rowSpan="3"
             android:layout_height="159dp"
-            android:background="#0000ff" />
+            android:background="#0000ff"
+            android:text="Hola"
+            android:textStyle="bold"
+            android:typeface="serif"
+            />
 
         <!-- Fila 3: 2 botones centrales -->
         <Button
