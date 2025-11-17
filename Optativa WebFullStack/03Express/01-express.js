@@ -2,24 +2,35 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-// para poder usar la carpeta donde tengamos ficheros
+// motor de plantillas 
+app.set('view engine', 'ejs');
+
+// carpeta de las vistas
+app.use('views', express.static(__dirname + '/views'));
+
+// para poder usar la carpeta donde tengamos ficheros (middleworld)
 app.use(express.static(__dirname + '/public'))
 
-app.get('/', (req, res) => {
+
+app.get('/pruebas', (req, res) => {
     //console.log(__dirname + '/public') // pinta la ruta de donde estamos
-  res.send('Ya somos unos cracks en node+express')
+  res.render('pruebas', {titulo:'Título dinámico'})
 })
 
-app.get('/contacto', (req, res) => {
+app.get('/public/html/contacto.html', (req, res) => {
   res.send('Estás en contacto')
 })
 
-app.get('/about_us', (req, res) => {
+app.get('/public/html/about_us.html', (req, res) => {
   res.send('Estás en about us')
 })
 
-app.get('/productos', (req, res) => {
+app.get('/public/html/productos.html', (req, res) => {
   res.send('Estás en productos')
+})
+
+app.use((req, res) => {
+  res.status(404).sendFile(__dirname + "/public/html/404.html")
 })
 
 app.listen(port, () => {
