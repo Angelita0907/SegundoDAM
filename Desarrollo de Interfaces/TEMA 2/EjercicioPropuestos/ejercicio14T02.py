@@ -41,14 +41,14 @@ class VentanaPrincipal(QMainWindow):
             defaultButton=QMessageBox.Discard
         )
 
+        if boton_pulsado == QDialog.Yes:
+            print("Resultado: Discard")
 
-        if boton_pulsado == QMessageBox.Yes:
-            print("Descartado")
-
-        elif boton_pulsado == QMessageBox.NoToAll:
-            print("No a todo")
-        else:
-            print("Ignorado")
+        elif boton_pulsado == QMessageBox.No:
+            print("Resultado: NoToAll")
+            
+        elif boton_pulsado == QDialog.Help:
+            print("Resultado: Ignore")
 
 def cargar_traductor(app):
     traductor = QTranslator(app)
