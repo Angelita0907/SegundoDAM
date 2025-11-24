@@ -84,9 +84,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart(){
         super.onStart();
-
-        Intent ejemplo = new Intent(this, Activity2.class);
-        ejemplo.putExtra("Surname", "Chica");
+        // hay que poner que activity inicia el main
+        Intent ejemplo = new Intent(this, Activity3.class);
+        //ejemplo.putExtra("Surname", "Chica");
         startActivity(ejemplo);
 
         /*
