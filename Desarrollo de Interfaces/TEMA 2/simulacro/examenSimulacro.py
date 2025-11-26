@@ -2,7 +2,7 @@ import sys
 
 from PySide6.QtWidgets import (
     QApplication,QMainWindow,QWidget,QLineEdit,QTextEdit, QComboBox, QMessageBox,QRadioButton,QFormLayout, QVBoxLayout,
-    QToolBar, QStatusBar, QLabel
+    QToolBar, QStatusBar, QLabel, QHBoxLayout
 )
 from PySide6.QtGui import QAction, QKeySequence
 from PySide6.QtCore import Qt, QSize
@@ -51,23 +51,33 @@ class VentanaPrincipal(QMainWindow):
 
         # TODO: crear widgets del formulario
         self.line_edit_titulo = QLineEdit()
+        self.line_edit_titulo.setPlaceholderText("Escribe aquí")
         self.combo_categoria = QComboBox()
 
         # añadimos lo que aparece como selección
         self.combo_categoria.addItems(["Trabajo","Ideas","Otros"])
 
-        self.radio_prioridad_normal = QRadioButton()
+        self.radio_prioridad_normal = QRadioButton("Normal")
+        self.radio_prioridad_alta = QRadioButton("Alta")
+
+
         self.texto_nota = QTextEdit()
 
         # TODO: crear layouts (formulario + layout principal)
         layout_form = QFormLayout()
         layout_principal = QVBoxLayout()
+        # layout para los botones
+        layout_botones = QHBoxLayout()
+
+        layout_botones.addWidget(self.radio_prioridad_normal)
+        layout_botones.addWidget(self.radio_prioridad_alta)
 
         # TODO: aÃ±adir widgets al layout del formulario
         
         layout_form.addRow("Titulo: ",self.line_edit_titulo)
         layout_form.addRow("Categoría: ",self.combo_categoria)
-        layout_form.addRow("Pioridad: ",self.radio_prioridad_normal)
+        layout_form.addRow("Pioridad: ",layout_botones)
+
 
         # TODO: aÃ±adir layouts al layout principal
         layout_principal.addLayout(layout_form)
@@ -89,7 +99,7 @@ class VentanaPrincipal(QMainWindow):
 
         self.accion_imprimir_nota = QAction("Imprimir Nota", self)
         self.accion_imprimir_nota.setShortcut(QKeySequence("Ctrl+I"))
-        self.accion_imprimir_nota.triggered.connect(self.slot_imprimir_nota)
+        self.accion_imprimir_nota.triggered.connect(self.imprimir_en_consola)
         
         self.salir = QAction("Salir")
         self.accion_imprimir_nota.setShortcut(QKeySequence("Ctrl+S"))
@@ -125,8 +135,9 @@ class VentanaPrincipal(QMainWindow):
 
     def crear_statusbar(self):
         # TODO: crear barra de estado y mostrar un mensaje inicial
-        barra_estado = QStatusBar()
-        self.setStatusBar(barra_estado)
+        self.barra_estado = QStatusBar()
+        self.setStatusBar(self.barra_estado)
+        self.barra_estado.showMessage("Bienvenido a tu bloc de notas!!",3000)
         pass
 
     # =========================
@@ -136,6 +147,13 @@ class VentanaPrincipal(QMainWindow):
         # TODO conectar seÃ±ales como textChanged, currentTextChanged, toggled...
         
         self.combo_categoria.currentTextChanged.connect(self.slot_categoria_cambiada)
+
+        self.line_edit_titulo.textChanged.connect(self.slot_titulo_cambiado)
+
+        self.radio_prioridad_normal.clicked.connect(self.slot_prioridad_cambiada)
+        self.radio_prioridad_alta.clicked.connect(self.slot_prioridad_cambiada)
+
+        self.accion_imprimir_nota.triggered.connect(self.slot_imprimir_nota)
         
         pass
 
@@ -145,7 +163,14 @@ class VentanaPrincipal(QMainWindow):
     def obtener_prioridad_actual(self):
         # TODO devolver prioridad actual
         prioridad = ""
-        return prioridad    # Ãºnico return
+
+        if self.radio_prioridad_normal.isChecked():
+            prioridad = "Normal"
+
+        else:
+            prioridad = "Alta"
+
+        return prioridad    
 
     def limpiar_contenido_nota(self):
         self.texto_nota.clear()
@@ -153,6 +178,18 @@ class VentanaPrincipal(QMainWindow):
 
     def imprimir_en_consola(self):
         # TODO imprimir la nota completa usando print con comas
+
+        print(' ======================================\n',
+              'NOTA ACTUAL\n',
+              '======================================\n',
+              'Título: ',self.line_edit_titulo.text(),'\n',
+              'Categoría: ',self.combo_categoria.itemText(self.combo_categoria.currentIndex()),'\n',
+              'Prioridad: ',self.obtener_prioridad_actual(),'\n',
+              '--------------------------------------\n',
+              'Contenido: \n',self.texto_nota.toPlainText(),'\n',
+              '======================================'
+              )
+
         pass
 
     # =========================
@@ -172,7 +209,8 @@ class VentanaPrincipal(QMainWindow):
         pass
 
     def slot_imprimir_nota(self):
-        # TODO llamar a imprimir_en_consola y mostrar mensaje
+
+        self.texto_nota        
 
         pass
 
@@ -186,6 +224,9 @@ class VentanaPrincipal(QMainWindow):
 
     def slot_titulo_cambiado(self, nuevo_titulo):
         # TODO actualizar tÃ­tulo de la ventana y barra de estado
+        self.setWindowTitle("Mini Bloc de Notas - "+nuevo_titulo)
+        self.barra_estado.showMessage("Bienvenido a tu bloc de notas!!",3000)
+
         pass
 
     def slot_categoria_cambiada(self, nueva_categoria):
@@ -194,6 +235,13 @@ class VentanaPrincipal(QMainWindow):
 
     def slot_prioridad_cambiada(self, checked):
         # TODO reaccionar solo si checked es True
+
+        if checked:
+
+            prioridad = self.obtener_prioridad_actual()
+
+            self.barra_estado.showMessage("Prioridad: "+ prioridad)
+
         pass
 
 
