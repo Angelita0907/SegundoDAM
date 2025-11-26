@@ -45,11 +45,19 @@
     <fullyQualifiedTypeName name="controlador.GestionaColaboradoresBancos"/>
     <fullyQualifiedTypeName name="modelo.TipoTrabajador"/>
     <fullyQualifiedTypeName name="modelo.Trabajador"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="modelo.CentroLogistico"/>
     <fullyQualifiedTypeName name="repositorio.RepositorioBancoAlimentos"/>
     <fullyQualifiedTypeName name="utils.DomXMLBancoAlimentos"/>
     <fullyQualifiedTypeName name="servicio.ServicioBancoAlimentos"/>
     <fullyQualifiedTypeName name="utils.BancoAlimentosCsv"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="mongo.repositorio.EstudianteService"/>
+    <fullyQualifiedTypeName name="org.bson.Document"/>
+    <fullyQualifiedTypeName name="java.lang.Double"/>
+    <fullyQualifiedTypeName name="mongo.modelo.Direccion"/>
+    <fullyQualifiedTypeName name="mongo.modelo.Estudiante"/>
+    <fullyQualifiedTypeName name="mongo.servicio.EstudianteService"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="mongo.modelo.Score"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

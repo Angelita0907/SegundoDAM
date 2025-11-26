@@ -1,10 +1,11 @@
-package mongo.repositorio;
+package mongo.servicio;
 
 import java.util.List;
 
 import com.mongodb.client.MongoDatabase;
 
 import mongo.modelo.Estudiante;
+import mongo.repositorio.EstudianteRepositorio;
 
 public class EstudianteService {
 	private final EstudianteRepositorio repo;
@@ -26,4 +27,10 @@ public class EstudianteService {
 	}
 	// TODO Agregar resto de operaciones del CRUD
 
+	public EstudianteRepositorio getRepo() {
+		return repo;
+	}
+
+	
+	
 }
