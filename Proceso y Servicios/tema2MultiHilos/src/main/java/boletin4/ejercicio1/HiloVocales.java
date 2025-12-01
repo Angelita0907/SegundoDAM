@@ -5,12 +5,15 @@ public class HiloVocales extends Thread {
 	private char vocal;
 	private int numVocales;
 	private CuentaVocales vocales;
+	private String texto;
 
-	public HiloVocales(char vocal, int numVocales, CuentaVocales vocales) {
+	
+
+	public HiloVocales(char vocal,CuentaVocales vocales, String texto) {
 		super();
 		this.vocal = vocal;
-		this.numVocales = numVocales;
 		this.vocales = vocales;
+		this.texto = texto;
 	}
 
 	public char getVocal() {
@@ -42,6 +45,21 @@ public class HiloVocales extends Thread {
 		
 		
 		
+	}
+
+	public String getTexto() {
+		return texto;
+	}
+
+	public void setTexto(String texto) {
+		this.texto = texto;
+	}
+	
+	public int contar() {
+		
+		int contador = 0;
+		
+		return contador;
 	}
 
 }
