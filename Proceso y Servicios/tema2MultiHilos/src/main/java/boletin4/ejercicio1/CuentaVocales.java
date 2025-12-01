@@ -24,7 +24,7 @@ public class CuentaVocales {
 		this.numTotalVocales = numTotalVocales;
 	}
 	
-	synchronized void incrementaVocales(int vocalestotales) {
+	public synchronized void incrementaVocales(int vocalestotales) {
 		this.numTotalVocales = this.numTotalVocales+vocalestotales;
 	}
 	
