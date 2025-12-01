@@ -41,7 +41,7 @@ public class Activity3 extends AppCompatActivity{
         String cadena = teclado.getText().toString();
 */
         RadioButton boton1 = (RadioButton) findViewById(R.id.radio1);
-        RadioButton boton2 = (RadioButton) findViewById(R.id.radio2);
+        RadioButton boton2 = (RadioButton) findViewById(R.id.radio2);(RadioButton)
         RadioButton boton3 = (RadioButton) findViewById(R.id.radio3);
         RadioButton boton4 = (RadioButton) findViewById(R.id.radio4);
 
