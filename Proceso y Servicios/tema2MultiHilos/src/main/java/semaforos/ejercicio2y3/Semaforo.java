@@ -1,4 +1,4 @@
-package semaforos.ejercicio2;
+package semaforos.ejercicio2y3;
 
 import java.util.concurrent.Semaphore;
 
@@ -19,7 +19,7 @@ public class Semaforo {
 		this.semaforo = semaforo;
 	}
 	
-	public void conexion() {
+	public void repostar() {
 		
 		try {
 			semaforo.acquire();
@@ -33,7 +33,7 @@ public class Semaforo {
 		}
 		finally {
 			semaforo.release();
-			System.out.println(Thread.currentThread().getName()+" puede repostar");
+			System.out.println(Thread.currentThread().getName()+" libera surtidor");
 		}
 		
 	}
