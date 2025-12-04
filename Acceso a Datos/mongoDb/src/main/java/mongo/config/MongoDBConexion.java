@@ -1,6 +1,5 @@
 package mongo.config;
 
-
 import java.io.IOException;
 
 import org.apache.logging.log4j.LogManager;
@@ -9,7 +8,6 @@ import org.apache.logging.log4j.Logger;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
-
 
 // sirve para conectar con nuestra base de datos
 public class MongoDBConexion {
@@ -27,8 +25,10 @@ public class MongoDBConexion {
 			logger.debug("Conectado a la BD: " + db.getName());
 		} catch (IOException e) {
 			logger.error(e.getMessage());
-		}	}
+		}
+	}
 
 	public MongoDatabase getDb() {
 		return db;
-	}}
+	}
+}

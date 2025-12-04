@@ -3,4 +3,45 @@
   <groupId>LibrosMongo</groupId>
   <artifactId>librosMongo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+    <dependencies>
+  	<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.13.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.13.0</version>
+		</dependency>
+		<dependency>
+	        <groupId>com.google.code.gson</groupId>
+	        <artifactId>gson</artifactId>
+	        <version>2.10.1</version>
+	    </dependency>
+	    <dependency>
+		  <groupId>org.mongodb</groupId>
+		  <artifactId>mongodb-driver-sync</artifactId>
+		  <version>4.11.1</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.apache.logging.log4j</groupId>
+		  <artifactId>log4j-api</artifactId>
+		  <version>2.23.1</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.apache.logging.log4j</groupId>
+		  <artifactId>log4j-core</artifactId>
+		  <version>2.23.1</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.apache.logging.log4j</groupId>
+		  <artifactId>log4j-slf4j2-impl</artifactId>
+		  <version>2.23.1</version>
+		</dependency>
+
+
+	</dependencies>
+  
 </project>
