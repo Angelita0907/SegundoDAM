@@ -1,0 +1,32 @@
+<%- include("template/cabecera", {subtitulo: "Nuestras Autoescuelas"})%>
+
+
+    <div class="container">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (arrayautoescuelas.length> 0) { %>
+                    <!--Haremos el foreach para recorrer el array-->
+                    <% arrayautoescuelas.forEach(autoescuelas => { %>
+                        <tr>
+                            <th scope="row"><%= autoescuelas.id %></th>
+                            <td><%= autoescuelas.nombre %></td>
+                            <td><%= autoescuelas.tipo %></td>
+                            <td><%= autoescuelas.descripcion %></td>
+                        </tr>
+                    <% }) %>
+                <% } %>
+
+            </tbody>
+
+        </table>
+    </div>
+
+<%- include("template/footer")%>
