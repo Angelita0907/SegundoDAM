@@ -1,130 +1,81 @@
-// Creamos la base de datos
-// La seleccionamos para usarla
+// =================================================================
+// 1. Seleccionar la Base de Datos
+// =================================================================
+// Usa o crea la base de datos llamada 'LitMindDB'.
 use('LitMindDB');
 
-// --- 1. Definición de Índices (Clave 'id') ---
+// =================================================================
+// 2. Crear Índice Único
+// =================================================================
+// Evita que se inserten documentos con el mismo 'id' en la colección 'usuarios'.
+db.usuarios.createIndex({ "id": 1 },{ unique: true });
 
-// Índice Único para la colección 'usuarios'
-db.usuarios.createIndex({ id: 1 }, { unique: true });
-
-// Índice Único para la colección 'lecturas'
-db.lecturas.createIndex({ id: 1 }, { unique: true });
-
-// Índice Único para la colección 'asignaciones'
-db.asignaciones.createIndex({ id: 1 }, { unique: true });
-
-// --- 2. Insertamos Lecturas Base (Necesarias para la incrustación) ---
-
-// LECTURA 1 (LEC-89021A)
-db.lecturas.insertOne(
-  {
-    "id": "LEC-89021A",
-    "titulo": "Cien Años de Soledad (Fragmento)",
-    "autor": "Gabriel García Márquez",
-    "numPalabras": 3450, // int
-    "puntuacionMedia": 4.75, // float
-    "disponible": true, // boolean
-    "tipoContenido": "Ficción",
-    
-    // Campos aplanados: Administración
-    "fechaPublicacion": "2025-09-01",
-    "costePorLicencia": 0.05, // float
-
-    // Lista aplanada: Actividades
-    "tiposPrueba": ["Opción Múltiple", "Tiempo Máximo"],
-    "nivelesRecomendadosPrueba": [5, 4], // List<Integer>
-
-    // Campo auxiliar: pesoEnCalificacion (0.0 por defecto en el catálogo)
-    "pesoEnCalificacion": 0.0 
-  }
-);
-
-// LECTURA 2 (LEC-45B09W)
-db.lecturas.insertOne(
-  {
-    "id": "LEC-45B09W",
-    "titulo": "Ensayo sobre la Memoria", 
-    "autor": "Autor Anónimo",
-    "numPalabras": 1800,
-    "puntuacionMedia": 4.20,
-    "disponible": true,
-    "tipoContenido": "NoFicción",
-    "fechaPublicacion": "2025-10-20",
-    "costePorLicencia": 1.25,
-    "tiposPrueba": ["Resumen"],
-    "nivelesRecomendadosPrueba": [6],
-    "pesoEnCalificacion": 0.0
-  }
-);
-
-
-// --- 3. Insertamos Usuario (Estudiante) ---
-
-// USUARIO (Estudiante)
-db.usuarios.insertOne(
-  {
-    "id": "USR-001234",
-    "nombreCompleto": "Diego García",
-    "edad": 14, // int
-    "esDocente": false, // boolean
-    "metaDiaria": 30.5, // float
-    "rolPrincipal": "Estudiante",
-    
-    // Campos eliminados/reemplazados del diseño original para coincidir con la clase Java:
-    // "nivelLector" (removido, sus campos se usan en las clases), metaDiaria ahora es float.
-    
-    // Lista aplanada: Logros
-    "codigosLogrosObtenidos": ["VEL-SUPERSONICA", "NO-FICTION-MASTER"],
-    "puntosPorLogro": [500, 350] // List<Integer>
-  }
-);
-
-// --- 4. Insertamos Asignación (Con incrustación de Lecturas) ---
-
-// ASIGNACION
-db.asignaciones.insertOne(
-  {
-    "id": "ASN-000456",
-    "tituloAsignacion": "Proyecto: Inferencia y Resumen",
-    "idDocente": "USR-000005",
-    // fechaLimite (se puede dejar como String si el driver lo maneja)
-    "fechaLimite": "2026-03-15", 
-    "esObligatoria": true, // boolean
-    
-    // Campos aplanados: Clase Asignada
-    "codigoClase": "3ESOA-2025",
-    "totalAlumnos": 28, // int
-    
-    // LISTA INCORPORADA: List<Lectura>
-    "referenciasLectura": [
-      {
-        "id": "LEC-89021A",
-        "titulo": "Cien Años de Soledad (Fragmento)",
-        "autor": "Gabriel García Márquez",
-        "numPalabras": 3450,
-        "puntuacionMedia": 4.75,
-        "disponible": true,
-        "tipoContenido": "Ficción",
-        "fechaPublicacion": "2025-09-01",
-        "costePorLicencia": 0.05,
-        "tiposPrueba": ["Opción Múltiple", "Tiempo Máximo"],
-        "nivelesRecomendadosPrueba": [5, 4],
-        "pesoEnCalificacion": 0.40 // ¡Metadato de la tarea!
-      },
-      {
-        "id": "LEC-45B09W",
-        "titulo": "Ensayo sobre la Memoria", 
-        "autor": "Autor Anónimo",
-        "numPalabras": 1800,
-        "puntuacionMedia": 4.20,
-        "disponible": true,
-        "tipoContenido": "NoFicción",
-        "fechaPublicacion": "2025-10-20",
-        "costePorLicencia": 1.25,
-        "tiposPrueba": ["Resumen"],
-        "nivelesRecomendadosPrueba": [6],
-        "pesoEnCalificacion": 0.60 // ¡Metadato de la tarea!
-      }
-    ]
-  }
-);
+// =================================================================
+// 3. Insertar Documentos
+// =================================================================
+// Inserta los documentos del fichero JSON en la colección 'usuarios'.
+db.usuarios.insertMany([
+	{
+		"id": "USR-1001",
+		"nombreCompleto": "Elena Ríos Martínez",
+		"edad": 15,
+		"esDocente": false,
+		"rolPrincipal": "ESTUDIANTE",
+		"puntosPorLogro": [50, 120, 80],
+		"tipoUsuario": "AVANZADO",
+		"lecturaActiva": {
+			"id": "LEC-0034",
+			"titulo": "Crónicas de un Viajero Estelar",
+			"autor": "Anya Sharma",
+			"genero": "CIENCIA_FICCION",
+			"progreso": 68.5
+		},
+		"lecturasAsignadas": [
+			{
+				"id": "ASG-001",
+				"idDocente": "DOC-550",
+				"tituloAsignacion": "Tarea 1: Resumen de Utopías",
+				"esObligatoria": true,
+				"codigoClase": "CS-A101",
+				"totalAlumnos": 28,
+				"idLecturas": ["LEC-0012", "LEC-0021"]
+			},
+			{
+				"id": "ASG-002",
+				"idDocente": "DOC-550",
+				"tituloAsignacion": "Lectura Opcional de Verano",
+				"esObligatoria": false,
+				"codigoClase": "CS-A101",
+				"totalAlumnos": 28,
+				"idLecturas": ["LEC-0040"]
+			}
+		]
+	},
+	{
+		"id": "USR-1002",
+		"nombreCompleto": "Roberto Gómez Piñol",
+		"edad": 17,
+		"esDocente": false,
+		"rolPrincipal": "ESTUDIANTE",
+		"puntosPorLogro": [10, 30],
+		"tipoUsuario": "BASICO",
+		"lecturaActiva": {
+			"id": "LEC-0199",
+			"titulo": "Introducción a la Programación Funcional",
+			"autor": "Dr. Manuel Torres",
+			"genero": "TECNICO",
+			"progreso": 15.0
+		},
+		"lecturasAsignadas": [
+			{
+				"id": "ASG-003",
+				"idDocente": "DOC-701",
+				"tituloAsignacion": "Entrega de Proyecto Final",
+				"esObligatoria": true,
+				"codigoClase": "MAT-B205",
+				"totalAlumnos": 22,
+				"idLecturas": ["LEC-0150"]
+			}
+		]
+	}
+])

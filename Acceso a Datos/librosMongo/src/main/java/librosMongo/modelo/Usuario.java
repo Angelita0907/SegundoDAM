@@ -1,33 +1,42 @@
 package librosMongo.modelo;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+import utils.Roles;
+import utils.TipoUsuario;
+
 public class Usuario {
-    
+
     private String id; 
     private String nombreCompleto;
     private int edad; 
-    private boolean esDocente;
-    private String rolPrincipal;
-    private List<Integer> puntosPorLogro;
+    private boolean esDocente; 
+    private Roles rolPrincipal; // (Estudiante, Docente, Familia)
+    private List<Integer> puntosPorLogro; 
+    private TipoUsuario tipoUsuario; 
+    private Lectura lecturaActiva; 
+    private List<Asignacion> lecturasAsignadas; 
 
 
-    public Usuario() {
+	public Usuario() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Usuario(String id, String nombreCompleto, int edad, boolean esDocente, String rolPrincipal,
-			List<Integer> puntosPorLogro) {
+	public Usuario(String id, String nombreCompleto, int edad, boolean esDocente, Roles rolPrincipal,
+			List<Integer> puntosPorLogro, TipoUsuario tipoUsuario, Lectura lecturaActiva,
+			List<Asignacion> asignacionesRecibidas) {
 		super();
 		this.id = id;
 		this.nombreCompleto = nombreCompleto;
 		this.edad = edad;
 		this.esDocente = esDocente;
 		this.rolPrincipal = rolPrincipal;
-		this.puntosPorLogro = new ArrayList<>();
+		this.puntosPorLogro = puntosPorLogro;
+		this.tipoUsuario = tipoUsuario;
+		this.lecturaActiva = lecturaActiva;
+		this.lecturasAsignadas = new ArrayList<>();
 	}
 
 	public String getId() {
@@ -62,15 +71,21 @@ public class Usuario {
         this.esDocente = esDocente;
     }
 
-
-    public String getRolPrincipal() {
+    public Roles getRolPrincipal() {
         return rolPrincipal;
     }
 
-    public void setRolPrincipal(String rolPrincipal) {
+    public void setRolPrincipal(Roles rolPrincipal) {
         this.rolPrincipal = rolPrincipal;
     }
 
+    public TipoUsuario getTipoUsuario() {
+        return tipoUsuario;
+    }
+
+    public void setTipoUsuario(TipoUsuario tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
+    }
 
     public List<Integer> getPuntosPorLogro() {
         return puntosPorLogro;
@@ -79,9 +94,30 @@ public class Usuario {
     public void setPuntosPorLogro(List<Integer> puntosPorLogro) {
         this.puntosPorLogro = puntosPorLogro;
     }
+    
+    public Lectura getLecturaActiva() {
+		return lecturaActiva;
+	}
 
-    @Override
-    public String toString() {
-        return "Usuario [id=" + id + ", nombreCompleto=" + nombreCompleto + ", rolPrincipal=" + rolPrincipal  + "]";
-    }
+	public void setLecturaActiva(Lectura lecturaActiva) {
+		this.lecturaActiva = lecturaActiva;
+	}
+
+	public List<Asignacion> getAsignacionesRecibidas() {
+		return lecturasAsignadas;
+	}
+
+	public void setAsignacionesRecibidas(List<Asignacion> asignacionesRecibidas) {
+		this.lecturasAsignadas = asignacionesRecibidas;
+	}
+
+	@Override
+	public String toString() {
+		return "Usuario [id=" + id + ", nombreCompleto=" + nombreCompleto + ", edad=" + edad + ", esDocente="
+				+ esDocente + ", rolPrincipal=" + rolPrincipal + ", puntosPorLogro=" + puntosPorLogro + ", tipoUsuario="
+				+ tipoUsuario + ", lecturaActiva=" + lecturaActiva + ", lecturasAsignadas=" + lecturasAsignadas + "]";
+	}
+
+	
+	
 }
