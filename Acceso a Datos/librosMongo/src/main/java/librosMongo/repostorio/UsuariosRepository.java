@@ -21,7 +21,11 @@ import utils.Roles;
 import utils.TipoUsuario;
 
 public class UsuariosRepository {
+<<<<<<< HEAD
 	private static final Logger logger = LogManager.getLogger(UsuarioService.class);
+=======
+	private static final Logger logger = LogManager.getLogger(UsuariosRepository.class);
+>>>>>>> 831493c19ad4c4035f654a1640a999d97b4ced60
 
 	private static final String NOMBRE_COLECCION = "usuarios";
 	private final MongoCollection<Document> coleccion;

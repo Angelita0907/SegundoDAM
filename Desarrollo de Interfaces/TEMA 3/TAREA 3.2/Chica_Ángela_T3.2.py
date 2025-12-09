@@ -9,12 +9,14 @@ from PySide6.QtWidgets import (
     QPushButton
 )
 from PySide6.QtGui import QPalette, QColor
-
+from PySide6.QtCore import Signal
 # widget personalizado de QTextEdit
 class AreaTextoLimitada(QTextEdit):
 
     def __init__(self, parent=None):
         super().__init__(parent)
+
+        self.texto_senal = Signal()
 
         # Voy a crear una variable con el total y desde ella haremos los porcentajes
         self.limite = 200

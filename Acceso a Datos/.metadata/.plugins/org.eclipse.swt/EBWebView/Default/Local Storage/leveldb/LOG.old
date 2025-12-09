@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 2025/12/08-14:15:09.511 25c8 Reusing MANIFEST C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
 2025/12/08-14:15:09.517 25c8 Recovering log #3
 2025/12/08-14:15:09.519 25c8 Reusing old log C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/000003.log 
+=======
+2025/12/09-10:37:48.452 86c Reusing MANIFEST C:\Users\alumno\Desktop\SegundoDAM\Acceso a Datos\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2025/12/09-10:37:48.456 86c Recovering log #3
+2025/12/09-10:37:48.458 86c Reusing old log C:\Users\alumno\Desktop\SegundoDAM\Acceso a Datos\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/000003.log 
+>>>>>>> 831493c19ad4c4035f654a1640a999d97b4ced60
