@@ -1,19 +1,10 @@
-// =================================================================
-// 1. Seleccionar la Base de Datos
-// =================================================================
-// Usa o crea la base de datos llamada 'LitMindDB'.
+// creamos la base de datos y la usamos
 use('LitMindDB');
 
-// =================================================================
-// 2. Crear Índice Único
-// =================================================================
-// Evita que se inserten documentos con el mismo 'id' en la colección 'usuarios'.
+// creamos indice para el id
 db.usuarios.createIndex({ "id": 1 },{ unique: true });
 
-// =================================================================
-// 3. Insertar Documentos
-// =================================================================
-// Inserta los documentos del fichero JSON en la colección 'usuarios'.
+// insert del json que hay en resources
 db.usuarios.insertMany([
 	{
 		"id": "USR-1001",
@@ -21,7 +12,7 @@ db.usuarios.insertMany([
 		"edad": 15,
 		"esDocente": false,
 		"rolPrincipal": "ESTUDIANTE",
-		"puntosPorLogro": [50, 120, 80],
+		"puntosPorLogro": 80,
 		"tipoUsuario": "AVANZADO",
 		"lecturaActiva": {
 			"id": "LEC-0034",
@@ -37,8 +28,7 @@ db.usuarios.insertMany([
 				"tituloAsignacion": "Tarea 1: Resumen de Utopías",
 				"esObligatoria": true,
 				"codigoClase": "CS-A101",
-				"totalAlumnos": 28,
-				"idLecturas": ["LEC-0012", "LEC-0021"]
+				"totalAlumnos": 28
 			},
 			{
 				"id": "ASG-002",
@@ -47,7 +37,6 @@ db.usuarios.insertMany([
 				"esObligatoria": false,
 				"codigoClase": "CS-A101",
 				"totalAlumnos": 28,
-				"idLecturas": ["LEC-0040"]
 			}
 		]
 	},
@@ -57,7 +46,7 @@ db.usuarios.insertMany([
 		"edad": 17,
 		"esDocente": false,
 		"rolPrincipal": "ESTUDIANTE",
-		"puntosPorLogro": [10, 30],
+		"puntosPorLogro": 10,
 		"tipoUsuario": "BASICO",
 		"lecturaActiva": {
 			"id": "LEC-0199",
@@ -74,7 +63,6 @@ db.usuarios.insertMany([
 				"esObligatoria": true,
 				"codigoClase": "MAT-B205",
 				"totalAlumnos": 22,
-				"idLecturas": ["LEC-0150"]
 			}
 		]
 	}

@@ -12,14 +12,13 @@ public class Asignacion {
     private boolean esObligatoria; 
     private String codigoClase;
     private int totalAlumnos; 
-    private List<String> idLecturas; 
 
     public Asignacion() {
 		super();
 	}
 
 	public Asignacion(String id, String idDocente, String tituloAsignacion, boolean esObligatoria, String codigoClase,
-			int totalAlumnos, List<String> idLecturasReferencias) {
+			int totalAlumnos) {
 		super();
 		this.id = id;
 		this.idDocente = idDocente;
@@ -27,7 +26,6 @@ public class Asignacion {
 		this.esObligatoria = esObligatoria;
 		this.codigoClase = codigoClase;
 		this.totalAlumnos = totalAlumnos;
-		this.idLecturas = new ArrayList<>();
 	}
 
     // Getters y Setters
@@ -79,19 +77,11 @@ public class Asignacion {
         this.totalAlumnos = totalAlumnos;
     }
 
-    public List<String> getIdLecturasReferencias() {
-        return idLecturas;
-    }
-
-    public void setIdLecturasReferencias(List<String> idLecturasReferencias) {
-        this.idLecturas = idLecturasReferencias;
-    }
 
 	@Override
 	public String toString() {
 		return "Asignacion [id=" + id + ", idDocente=" + idDocente + ", tituloAsignacion=" + tituloAsignacion
-				+ ", esObligatoria=" + esObligatoria + ", codigoClase=" + codigoClase + ", totalAlumnos=" + totalAlumnos
-				+ ", idLecturasReferencias=" + idLecturas + "]";
+				+ ", esObligatoria=" + esObligatoria + ", codigoClase=" + codigoClase + ", totalAlumnos=" + totalAlumnos+"]";
 	}
 
 

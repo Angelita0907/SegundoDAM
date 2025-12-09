@@ -6,14 +6,14 @@ import java.util.List;
 import utils.Roles;
 import utils.TipoUsuario;
 
-public class Usuario {
+public class Usuario implements Comparable<Usuario> {
 
     private String id; 
     private String nombreCompleto;
     private int edad; 
     private boolean esDocente; 
     private Roles rolPrincipal; // (Estudiante, Docente, Familia)
-    private List<Integer> puntosPorLogro; 
+    private int puntosPorLogro; 
     private TipoUsuario tipoUsuario; 
     private Lectura lecturaActiva; 
     private List<Asignacion> lecturasAsignadas; 
@@ -25,7 +25,7 @@ public class Usuario {
 	}
 
 	public Usuario(String id, String nombreCompleto, int edad, boolean esDocente, Roles rolPrincipal,
-			List<Integer> puntosPorLogro, TipoUsuario tipoUsuario, Lectura lecturaActiva,
+			int puntosPorLogro, TipoUsuario tipoUsuario, Lectura lecturaActiva,
 			List<Asignacion> asignacionesRecibidas) {
 		super();
 		this.id = id;
@@ -87,11 +87,11 @@ public class Usuario {
         this.tipoUsuario = tipoUsuario;
     }
 
-    public List<Integer> getPuntosPorLogro() {
+    public int getPuntosPorLogro() {
         return puntosPorLogro;
     }
 
-    public void setPuntosPorLogro(List<Integer> puntosPorLogro) {
+    public void setPuntosPorLogro(int puntosPorLogro) {
         this.puntosPorLogro = puntosPorLogro;
     }
     
@@ -118,6 +118,15 @@ public class Usuario {
 				+ tipoUsuario + ", lecturaActiva=" + lecturaActiva + ", lecturasAsignadas=" + lecturasAsignadas + "]";
 	}
 
+
+	// aquí implemento comparable para usarlo en el servicio
+	
+	@Override
+	public int compareTo(Usuario usu) {
+		// TODO Auto-generated method stub
+		return Integer.compare(this.puntosPorLogro, usu.puntosPorLogro);
+	}
+	
 	
 	
 }
