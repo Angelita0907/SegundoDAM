@@ -1,3 +1,4 @@
+
 package simulacionExamen.utils;
 
 public enum Tipo {
