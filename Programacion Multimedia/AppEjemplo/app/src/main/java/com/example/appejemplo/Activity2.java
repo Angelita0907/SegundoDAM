@@ -17,7 +17,7 @@ public class Activity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pruebalinearlayout);
 
-       // Bundle b = getIntent().getExtras();
+        // Bundle b = getIntent().getExtras();
 
         //Log.i("Datos: ", b.getString("Surname"));
 

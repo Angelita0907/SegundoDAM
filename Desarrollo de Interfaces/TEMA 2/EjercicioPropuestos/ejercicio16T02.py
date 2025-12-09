@@ -1,4 +1,5 @@
 # Ángela Chica Montero
+import os
 
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout,
@@ -12,12 +13,12 @@ class VentanaPrincipal(QMainWindow):
         super().__init__()
         self.setWindowTitle("Gestión de archivo y preferencias")
 
-        layout = QVBoxLayout()   
+        self.layout1 = QVBoxLayout()   
         # para poder mostrar los cambios usamos qlabel    
         self.label_texto = QLabel()
 
         contenedor_botones = QWidget()
-        contenedor_botones.setLayout(layout)
+        contenedor_botones.setLayout(self.layout1)
         self.setCentralWidget(contenedor_botones)
 
         # ahora crearemos los botones del layout vertical 
@@ -29,10 +30,10 @@ class VentanaPrincipal(QMainWindow):
         fuente = QPushButton("Cambiar fuente del texto")
 
         # añadimos al layout
-        layout.addWidget(abrirArchivo)
-        layout.addWidget(guardar)
-        layout.addWidget(color)
-        layout.addWidget(fuente)
+        self.layout1.addWidget(abrirArchivo)
+        self.layout1.addWidget(guardar)
+        self.layout1.addWidget(color)
+        self.layout1.addWidget(fuente)
 
         # conectamos con las funciones
         abrirArchivo.clicked.connect(self.abrir_archivo)
@@ -40,7 +41,7 @@ class VentanaPrincipal(QMainWindow):
         color.clicked.connect(self.cambiar_color)
         fuente.clicked.connect(self.cambiar_fuente)
 
-        layout.addWidget(self.label_texto)
+        self.layout1.addWidget(self.label_texto)
 
     # abrir archivos
     def abrir_archivo(self):
@@ -53,6 +54,9 @@ class VentanaPrincipal(QMainWindow):
     )
 
         archivo = ventana_dialogo[0]   # Ruta del archivo seleccionado
+        self.layout1.addWidget(QLabel("Archivo: "+archivo))
+
+        nombre = os.path.basename(archivo)
 
     # guardar archhivos
     def guardar_archivo(self):

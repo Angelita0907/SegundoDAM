@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="tema1.XML.modelo.Empleado"/>
-    <fullyQualifiedTypeName name="tema1.XML.controlador.GestionaEmpledoXML"/>
-    <fullyQualifiedTypeName name="org.apache.logging.log4j.core.config.xml.XmlConfiguration"/>
-    <fullyQualifiedTypeName name="tema1.XML.Peliculas.XMLDomPeliculas"/>
-    <fullyQualifiedTypeName name="org.w3c.dom.NodeList"/>
-    <fullyQualifiedTypeName name="tema1.XML.modelo.Pelicula"/>
     <fullyQualifiedTypeName name="java.lang.Boolean"/>
     <fullyQualifiedTypeName name="java.lang.Process"/>
     <fullyQualifiedTypeName name="utils.ProductosAJson"/>
@@ -43,7 +37,6 @@
     <fullyQualifiedTypeName name="mongo.modelo.Estudiante"/>
     <fullyQualifiedTypeName name="mongo.servicio.EstudianteService"/>
     <fullyQualifiedTypeName name="mongo.modelo.Score"/>
-    <fullyQualifiedTypeName name="java.awt.List"/>
     <fullyQualifiedTypeName name="utils.Genero"/>
     <fullyQualifiedTypeName name="org.w3c.dom.Document"/>
     <fullyQualifiedTypeName name="librosMongo.repostorio.UsuariosRepository"/>
@@ -51,13 +44,20 @@
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.lang.Comparable"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="librosMongo.modelo.Asignacion"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.lang.Number"/>
     <fullyQualifiedTypeName name="java.lang.Double"/>
     <fullyQualifiedTypeName name="librosMongo.modelo.Usuario"/>
     <fullyQualifiedTypeName name="utils.Roles"/>
-    <fullyQualifiedTypeName name="org.bson.Document"/>
     <fullyQualifiedTypeName name="utils.TipoUsuario"/>
+    <fullyQualifiedTypeName name="java.awt.List"/>
+    <fullyQualifiedTypeName name="simulacionExamen.modelo.Hotel"/>
+    <fullyQualifiedTypeName name="simulacionExamen.repositorio.HotelesRepository"/>
+    <fullyQualifiedTypeName name="simulacionExamen.servicio.HotelesServicio"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.bson.Document"/>
+    <fullyQualifiedTypeName name="com.mongodb.client.model.Filters"/>
+    <fullyQualifiedTypeName name="com.mongodb.internal.bulk.UpdateRequest"/>
+    <fullyQualifiedTypeName name="com.mongodb.client.result.UpdateResult"/>
 </qualifiedTypeNameHistroy>
