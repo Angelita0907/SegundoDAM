@@ -5,11 +5,7 @@
     "edad": 15,
     "esDocente": false,
     "rolPrincipal": "ESTUDIANTE",
-    "puntosPorLogro": [
-      50,
-      120,
-      80
-    ],
+    "puntosPorLogro": 50,
     "tipoUsuario": "AVANZADO",
     "lecturaActiva": {
       "id": "LEC-0034",
@@ -50,10 +46,7 @@
     "edad": 17,
     "esDocente": false,
     "rolPrincipal": "ESTUDIANTE",
-    "puntosPorLogro": [
-      10,
-      30
-    ],
+    "puntosPorLogro":10,
     "tipoUsuario": "BASICO",
     "lecturaActiva": {
       "id": "LEC-0199",

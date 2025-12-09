@@ -3,20 +3,25 @@ package librosMongo.repostorio;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.bson.Document;
 
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.result.UpdateResult;
 
 import librosMongo.modelo.Asignacion;
 import librosMongo.modelo.Lectura;
 import librosMongo.modelo.Usuario;
+import librosMongo.servicio.UsuarioService;
 import utils.Genero;
 import utils.Roles;
 import utils.TipoUsuario;
 
 public class UsuariosRepository {
+	private static final Logger logger = LogManager.getLogger(UsuarioService.class);
 
 	private static final String NOMBRE_COLECCION = "usuarios";
 	private final MongoCollection<Document> coleccion;
@@ -51,7 +56,7 @@ public class UsuariosRepository {
 				Document docAsignacion = new Document().append("id", a.getId()).append("idDocente", a.getIdDocente())
 						.append("tituloAsignacion", a.getTituloAsignacion())
 						.append("esObligatoria", a.isEsObligatoria()).append("codigoClase", a.getCodigoClase())
-						.append("totalAlumnos", a.getTotalAlumnos()).append("idLecturas", a.getIdLecturasReferencias());
+						.append("totalAlumnos", a.getTotalAlumnos());
 				listDocAsignaciones.add(docAsignacion);
 			}
 		}
@@ -123,7 +128,7 @@ public class UsuariosRepository {
 
 			u.setRolPrincipal(Roles.valueOf(doc.getString("rolPrincipal")));
 
-			u.setPuntosPorLogro(doc.getList("puntosPorLogro", Integer.class));
+			u.setPuntosPorLogro(doc.getInteger("puntosPorLogro"));
 
 			u.setTipoUsuario(TipoUsuario.valueOf(doc.getString("tipoUsuario")));
 
@@ -132,7 +137,7 @@ public class UsuariosRepository {
 				Lectura lecturaActiva = new Lectura(lecturaActivaDoc.getString("id"),
 						lecturaActivaDoc.getString("titulo"), lecturaActivaDoc.getString("autor"),
 						Genero.valueOf(lecturaActivaDoc.getString("genero")),
-						lecturaActivaDoc.getDouble("progreso").floatValue());
+						lecturaActivaDoc.get("progreso",Number.class).doubleValue());
 				u.setLecturaActiva(lecturaActiva);
 			}
 
@@ -150,8 +155,7 @@ public class UsuariosRepository {
 					Asignacion asignacion = new Asignacion(asignacionDoc.getString("id"),
 							asignacionDoc.getString("idDocente"), asignacionDoc.getString("tituloAsignacion"),
 							asignacionDoc.getBoolean("esObligatoria"), asignacionDoc.getString("codigoClase"),
-							asignacionDoc.getInteger("totalAlumnos"),
-							asignacionDoc.getList("idLecturas", String.class));
+							asignacionDoc.getInteger("totalAlumnos"));
 
 					listasAsignacion.add(asignacion);
 					u.setAsignacionesRecibidas(listasAsignacion);
@@ -163,7 +167,8 @@ public class UsuariosRepository {
 		return usuarios;
 	}
 
-	// pasamos de documento a usuario para poder realizar consultas o filtros por los objetos
+	// pasamos de documento a usuario para poder realizar consultas o filtros por
+	// los objetos
 	private Usuario DocumentoAUsuario(Document doc) {
 		// guardamos en el usuario la lectura que tiene actualmente (clase Lectura)
 		Usuario u = new Usuario();
@@ -173,14 +178,14 @@ public class UsuariosRepository {
 		u.setEdad(doc.getInteger("edad"));
 		u.setEsDocente(doc.getBoolean("esDocente"));
 		u.setRolPrincipal(Roles.valueOf(doc.getString("rolPrincipal")));
-		u.setPuntosPorLogro(doc.getList("puntosPorLogro", Integer.class));
+		u.setPuntosPorLogro(doc.getInteger("puntosPorLogro"));
 		u.setTipoUsuario(TipoUsuario.valueOf(doc.getString("tipoUsuario")));
 
 		Document lecturaActivaDoc = doc.get("lecturaActiva", Document.class);
 		if (lecturaActivaDoc != null) {
 			Lectura lecturaActiva = new Lectura(lecturaActivaDoc.getString("id"), lecturaActivaDoc.getString("titulo"),
 					lecturaActivaDoc.getString("autor"), Genero.valueOf(lecturaActivaDoc.getString("genero")),
-					lecturaActivaDoc.getDouble("progreso").floatValue());
+					lecturaActivaDoc.get("progreso",Number.class).doubleValue());
 			u.setLecturaActiva(lecturaActiva);
 		}
 
@@ -191,8 +196,7 @@ public class UsuariosRepository {
 			if (aDoc != null) {
 				Asignacion asignacion = new Asignacion(aDoc.getString("id"), aDoc.getString("idDocente"),
 						aDoc.getString("tituloAsignacion"), aDoc.getBoolean("esObligatoria"),
-						aDoc.getString("codigoClase"), aDoc.getInteger("totalAlumnos"),
-						aDoc.getList("idLecturas", String.class));
+						aDoc.getString("codigoClase"), aDoc.getInteger("totalAlumnos"));
 
 				listasAsignacion.add(asignacion);
 			}
@@ -208,10 +212,10 @@ public class UsuariosRepository {
 	// por el constructor y solo usamos add
 
 	public void aniadirUsuario(Usuario usu) {
-		
+
 		Document usuario = UsuarioADocumento(usu);
 		coleccion.insertOne(usuario);
-		
+		logger.info("usuario añadido");
 	}
 
 	// hacer una funcion de usuario a documento para poder usarlo en las otras
@@ -223,20 +227,83 @@ public class UsuariosRepository {
 
 		Document usuario = UsuarioADocumento(usu);
 		coleccion.deleteOne(usuario);
+		logger.info("usuario borrado");
 
 	}
 
 	// para esta funcion sería buscar un usuario por id que creo que es más sencillo
-	public void mostrarUsuario(String id) {
+	public Usuario mostrarUsuario(String id) {
 
 		// creamos el objeto usuario para buscar por el filtro luego
 		Usuario usuaMostrar = null;
 
 		Document buscarId = new Document("id", id);
-		Document buscarSsuario = coleccion.findOneAndDelete(buscarId);
+		Document buscarSsuario = coleccion.find(buscarId).first();
 
 		usuaMostrar = DocumentoAUsuario(buscarSsuario);
+		
+		return usuaMostrar;
 
+	}
+
+	// busca el usuario por id y con eso actualizamos lo que filtramos al nuevo
+	// usuario
+	public void actualizarUsuario(Usuario usu) {
+		
+		// busca el usuario por id y ya podremos modificar lo que queramos
+		Document filtro = new Document("$set", UsuarioADocumento(usu));
+		Document usuarioNuevo = new Document("id", usu.getId());
+		coleccion.findOneAndUpdate(usuarioNuevo, filtro); 
+		
+		logger.info("usuario se actualizó");
+
+
+	}
+
+	// Filtrar y ordenar
+
+	public List<Usuario> filtarEdad(int edad) {
+
+		// como quiero que me devuelva todos los que tengan la misma edad lo tengo que
+		// hacer por una lista
+
+		List<Usuario> mismaEdad = new ArrayList<>();
+
+		Document buscarEdad = new Document("edad", edad);
+
+		// ahora la query de mongo
+		FindIterable<Document> resltado = coleccion.find(buscarEdad);
+
+		// recorremos la lista y guarde los que cumplan
+		for (Document usuDoc : resltado) {
+
+			Usuario usuario = DocumentoAUsuario(usuDoc);
+			mismaEdad.add(usuario);
+
+		}
+
+		return mismaEdad;
+	}
+
+	// ordenamos por nombre
+
+	public List<Usuario> ordenarNombre() {
+
+		List<Usuario> ordenarNombre = new ArrayList<>();
+
+		// el 1 es para que sea a-z si no sería -1
+		Document filtroNombre = new Document("nombreCompleto", 1);
+
+		// Ejecutar la consulta y aplicar el sort()
+		FindIterable<Document> documentos = coleccion.find().sort(filtroNombre);
+
+		// Recorrer y mapear a objetos Usuario
+		for (Document doc : documentos) {
+			Usuario u = DocumentoAUsuario(doc);
+			ordenarNombre.add(u);
+		}
+
+		return ordenarNombre;
 	}
 
 	public List<Usuario> getUsuarios() {
