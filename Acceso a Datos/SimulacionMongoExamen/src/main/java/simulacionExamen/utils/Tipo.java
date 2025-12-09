@@ -2,6 +2,6 @@ package simulacionExamen.utils;
 
 public enum Tipo {
 	
-	SUITEJUNIOR, DOBLEESTANDAR, INDIVIDUAL
+	SUITEJUNIOR, DOBLEESTÁNDAR, INDIVIDUAL
 
 }

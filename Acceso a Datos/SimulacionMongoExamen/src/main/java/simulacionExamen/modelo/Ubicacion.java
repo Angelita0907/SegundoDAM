@@ -7,7 +7,7 @@ public class Ubicacion {
 	
 	private String calle;
 	private int numero;
-	private int codigoPostal;
+	private String codigoPostal;
 	private Coordenada coordenadas;
 	
 	
@@ -17,14 +17,14 @@ public class Ubicacion {
 	}
 	
 	
-	public Ubicacion(String calle, int numero, int codigoPostal) {
+	public Ubicacion(String calle, int numero, String codigoPostal) {
 		super();
 		this.calle = calle;
 		this.numero = numero;
 		this.codigoPostal = codigoPostal;
 	}
 
-	public Ubicacion(String calle, int numero, int codigoPostal, Coordenada coordenadas) {
+	public Ubicacion(String calle, int numero, String codigoPostal, Coordenada coordenadas) {
 		super();
 		this.calle = calle;
 		this.numero = numero;
@@ -43,10 +43,10 @@ public class Ubicacion {
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
-	public int getCodigoPostal() {
+	public String getCodigoPostal() {
 		return codigoPostal;
 	}
-	public void setCodigoPostal(int codigoPostal) {
+	public void setCodigoPostal(String codigoPostal) {
 		this.codigoPostal = codigoPostal;
 	}
 	public Coordenada getCoordenadas() {
