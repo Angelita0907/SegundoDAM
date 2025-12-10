@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="models.TipoAgente"/>
-    <fullyQualifiedTypeName name="java.lang.Comparable"/>
-    <fullyQualifiedTypeName name="models.InteraccionAgente"/>
-    <fullyQualifiedTypeName name="java.util.TreeSet"/>
-    <fullyQualifiedTypeName name="tema1.XML.XMLDomEmpleado"/>
-    <fullyQualifiedTypeName name="tema1.XML.modelo.Empleado"/>
-    <fullyQualifiedTypeName name="tema1.XML.controlador.GestionaEmpledoXML"/>
     <fullyQualifiedTypeName name="org.apache.logging.log4j.core.config.xml.XmlConfiguration"/>
     <fullyQualifiedTypeName name="tema1.XML.Peliculas.XMLDomPeliculas"/>
     <fullyQualifiedTypeName name="org.w3c.dom.NodeList"/>
@@ -51,13 +43,21 @@
     <fullyQualifiedTypeName name="mongo.servicio.EstudianteService"/>
     <fullyQualifiedTypeName name="mongo.modelo.Score"/>
     <fullyQualifiedTypeName name="java.awt.List"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="utils.Genero"/>
     <fullyQualifiedTypeName name="utils.Roles"/>
     <fullyQualifiedTypeName name="utils.TipoUsuario"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="org.w3c.dom.Document"/>
     <fullyQualifiedTypeName name="librosMongo.modelo.Usuario"/>
+    <fullyQualifiedTypeName name="simulacionExamen.modelo.Habitaciones"/>
+    <fullyQualifiedTypeName name="javax.print.Doc"/>
+    <fullyQualifiedTypeName name="simulacionExamen.modelo.Ubicacion"/>
+    <fullyQualifiedTypeName name="simulacionExamen.modelo.Coordenada"/>
     <fullyQualifiedTypeName name="org.bson.Document"/>
+    <fullyQualifiedTypeName name="simulacionExamen.modelo.Habitacion"/>
+    <fullyQualifiedTypeName name="simulacionExamen.utils.Tipo"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="simulacionExamen.modelo.Hotel"/>
+    <fullyQualifiedTypeName name="com.mongodb.client.result.InsertOneResult"/>
 </qualifiedTypeNameHistroy>
