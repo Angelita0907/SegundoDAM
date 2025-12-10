@@ -7,6 +7,7 @@ public class Cocinero implements Runnable{
 	private String nombre;
 	private Semaphore cocina;
 	
+	
 	public Cocinero(String nombre, Semaphore cocina) {
 		super();
 		this.nombre = nombre;
