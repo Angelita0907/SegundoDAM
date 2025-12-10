@@ -1,4 +1,4 @@
-package semaforos.ejercicio5;
+package semaforos.ejercicio6;
 
 import java.util.concurrent.Semaphore;
 
