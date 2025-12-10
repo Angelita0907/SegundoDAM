@@ -13,10 +13,12 @@ from PySide6.QtCore import Signal
 # widget personalizado de QTextEdit
 class AreaTextoLimitada(QTextEdit):
 
+    texto_senal = Signal(int)
+
     def __init__(self, parent=None):
         super().__init__(parent)
 
-        self.texto_senal = Signal()
+        # self.texto_senal = Signal()
 
         # Voy a crear una variable con el total y desde ella haremos los porcentajes
         self.limite = 200
@@ -35,24 +37,29 @@ class AreaTextoLimitada(QTextEdit):
         self.__comprobar_longitud()
 
     def __comprobar_longitud(self):
+
         # añadimos palette para usar los colores que trae por defecto
         paleta = self.palette()
         
         # Obtenemos el texto directamente aquí
         texto = self.toPlainText()
-        longitud = len(texto)
+        self.longitud = len(texto)
 
-        if longitud < self.aviso:
+        if self.longitud < self.aviso:
             paleta.setColor(QPalette.Base, QColor("white"))
-        elif longitud <= self.limite:
+        elif self.longitud <= self.limite:
             paleta.setColor(QPalette.Base, QColor("#FFF2CC"))
         else:
             paleta.setColor(QPalette.Base, QColor("#FFCCCC"))
 
         self.setPalette(paleta)
 
+        self.texto_senal.emit(self.longitud)
+
     def obtener_maximo_caracteres(self):
         return self.limite
+    
+
 
 
 # Widget personalizado de QLabel
@@ -129,16 +136,17 @@ class VentanaPrincipal(QMainWindow):
         layout.addWidget(self.area_texto)
         layout.addWidget(self.boton_limpiador)
 
+        self.area_texto.texto_senal.connect(self.contador_caracteres.modificar_contador)
 
-        self.area_texto.textChanged.connect(self.actualizar_contador)
+        
 
         contenedor.setLayout(layout)
         self.setCentralWidget(contenedor)
 
-    def actualizar_contador(self):
+    '''def actualizar_contador(self):
         longitud = len(self.area_texto.toPlainText())
 
-        self.contador_caracteres.modificar_contador(longitud)
+        self.contador_caracteres.modificar_contador(longitud)'''
 
 
 app = QApplication(sys.argv)
