@@ -33,11 +33,11 @@ app.get('/public/html/about_us.html', (req, res) => {
 app.get('/public/html/productos.html', (req, res) => {
   res.send('Estás en productos')
 })
-
+*/
 app.use((req, res) => {
   res.status(404).sendFile(__dirname + "/public/html/404.html")
 })
-  */
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

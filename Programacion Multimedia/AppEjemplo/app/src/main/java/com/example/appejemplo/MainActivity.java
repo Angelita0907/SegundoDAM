@@ -56,10 +56,11 @@ public class MainActivity extends AppCompatActivity {
 
 /*
         setContentView(R.layout.activity_actividad1);
-
+        // para ir de una actividad a otra
         Intent ejemplo = new Intent(MainActivity.this, Activity2.class);
         startActivity(ejemplo);
-
+ */
+        // para abrir una url
         /*Intent ejemplo2 = new Intent(Intent.ACTION_VIEW);
         ejemplo2.setData(Uri.parse("https://www.google.es"));
         startActivity(ejemplo2);
