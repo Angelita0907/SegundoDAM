@@ -1,91 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<<<<<<< HEAD
-    <fullyQualifiedTypeName name="org.apache.logging.log4j.core.config.xml.XmlConfiguration"/>
-    <fullyQualifiedTypeName name="tema1.XML.Peliculas.XMLDomPeliculas"/>
-    <fullyQualifiedTypeName name="org.w3c.dom.NodeList"/>
-    <fullyQualifiedTypeName name="tema1.XML.modelo.Pelicula"/>
-=======
->>>>>>> 0eb9c9bed4cf409c2a0d84bfb7b2d5bc8c487e5c
-    <fullyQualifiedTypeName name="java.lang.Boolean"/>
-    <fullyQualifiedTypeName name="java.lang.Process"/>
-    <fullyQualifiedTypeName name="utils.ProductosAJson"/>
-    <fullyQualifiedTypeName name="tema1.PokemonJson.Pokemon"/>
-    <fullyQualifiedTypeName name="tema1.XML.servicio.ProductoServicioXML"/>
-    <fullyQualifiedTypeName name="tema1.XML.controlador.GestionaProductos"/>
-    <fullyQualifiedTypeName name="tema1.XML.repositorio.ProductoRepositorioXML"/>
-    <fullyQualifiedTypeName name="utils.XMLDomProductos"/>
-    <fullyQualifiedTypeName name="tema1.XML.modelo.Producto"/>
-    <fullyQualifiedTypeName name="utils.ProductoAJson"/>
-    <fullyQualifiedTypeName name="repositorio.RepositorioEquipos"/>
-    <fullyQualifiedTypeName name="gestiona.GestionaClasificacion"/>
-    <fullyQualifiedTypeName name="modelo.Equipo"/>
-    <fullyQualifiedTypeName name="modelo.Piloto"/>
-    <fullyQualifiedTypeName name="servicio.ServicioEquipos"/>
-    <fullyQualifiedTypeName name="utils.EquiposAJson"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
-    <fullyQualifiedTypeName name="utils.BancoAlimentosException"/>
-    <fullyQualifiedTypeName name="utils.Formula1XMLDom"/>
-    <fullyQualifiedTypeName name="utils.Formula1XMLNuevo"/>
-    <fullyQualifiedTypeName name="org.w3c.dom.Element"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="controlador.GestionaColaboradoresBancos"/>
-    <fullyQualifiedTypeName name="modelo.TipoTrabajador"/>
-    <fullyQualifiedTypeName name="modelo.Trabajador"/>
-    <fullyQualifiedTypeName name="modelo.CentroLogistico"/>
-    <fullyQualifiedTypeName name="repositorio.RepositorioBancoAlimentos"/>
-    <fullyQualifiedTypeName name="utils.DomXMLBancoAlimentos"/>
-    <fullyQualifiedTypeName name="servicio.ServicioBancoAlimentos"/>
-    <fullyQualifiedTypeName name="utils.BancoAlimentosCsv"/>
-    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
-    <fullyQualifiedTypeName name="mongo.repositorio.EstudianteService"/>
-    <fullyQualifiedTypeName name="mongo.modelo.Direccion"/>
-    <fullyQualifiedTypeName name="mongo.modelo.Estudiante"/>
-    <fullyQualifiedTypeName name="mongo.servicio.EstudianteService"/>
-    <fullyQualifiedTypeName name="mongo.modelo.Score"/>
-<<<<<<< HEAD
-    <fullyQualifiedTypeName name="java.awt.List"/>
-=======
->>>>>>> 0eb9c9bed4cf409c2a0d84bfb7b2d5bc8c487e5c
-    <fullyQualifiedTypeName name="utils.Genero"/>
-    <fullyQualifiedTypeName name="org.w3c.dom.Document"/>
-    <fullyQualifiedTypeName name="librosMongo.repostorio.UsuariosRepository"/>
-    <fullyQualifiedTypeName name="java.lang.UnknownError"/>
-    <fullyQualifiedTypeName name="java.util.Collection"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
-    <fullyQualifiedTypeName name="java.lang.Comparable"/>
-    <fullyQualifiedTypeName name="librosMongo.modelo.Asignacion"/>
-    <fullyQualifiedTypeName name="java.lang.Number"/>
-    <fullyQualifiedTypeName name="java.lang.Double"/>
-    <fullyQualifiedTypeName name="librosMongo.modelo.Usuario"/>
-    <fullyQualifiedTypeName name="utils.Roles"/>
-    <fullyQualifiedTypeName name="utils.TipoUsuario"/>
-<<<<<<< HEAD
-    <fullyQualifiedTypeName name="java.util.Collection"/>
-    <fullyQualifiedTypeName name="org.w3c.dom.Document"/>
-    <fullyQualifiedTypeName name="librosMongo.modelo.Usuario"/>
-    <fullyQualifiedTypeName name="simulacionExamen.modelo.Habitaciones"/>
-    <fullyQualifiedTypeName name="javax.print.Doc"/>
-    <fullyQualifiedTypeName name="simulacionExamen.modelo.Ubicacion"/>
-    <fullyQualifiedTypeName name="simulacionExamen.modelo.Coordenada"/>
-    <fullyQualifiedTypeName name="org.bson.Document"/>
-    <fullyQualifiedTypeName name="simulacionExamen.modelo.Habitacion"/>
-    <fullyQualifiedTypeName name="simulacionExamen.utils.Tipo"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="simulacionExamen.modelo.Hotel"/>
+    <fullyQualifiedTypeName name="examenMongo.modelo.Preferencias"/>
+    <fullyQualifiedTypeName name="examenMongo.modelo.Evento"/>
+    <fullyQualifiedTypeName name="examenMongo.servicio.UsuariosServicio"/>
+    <fullyQualifiedTypeName name="examenMongo.repositorio.UsuarioRepositorio"/>
     <fullyQualifiedTypeName name="com.mongodb.client.result.InsertOneResult"/>
-=======
-    <fullyQualifiedTypeName name="java.awt.List"/>
-    <fullyQualifiedTypeName name="simulacionExamen.modelo.Hotel"/>
-    <fullyQualifiedTypeName name="simulacionExamen.repositorio.HotelesRepository"/>
-    <fullyQualifiedTypeName name="simulacionExamen.servicio.HotelesServicio"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="org.bson.Document"/>
-    <fullyQualifiedTypeName name="com.mongodb.client.model.Filters"/>
-    <fullyQualifiedTypeName name="com.mongodb.internal.bulk.UpdateRequest"/>
+    <fullyQualifiedTypeName name="examenMongo.utils.PlanActivo"/>
     <fullyQualifiedTypeName name="com.mongodb.client.result.UpdateResult"/>
->>>>>>> 0eb9c9bed4cf409c2a0d84bfb7b2d5bc8c487e5c
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="org.bson.Document"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="examenMongo.modelo.Usuario"/>
 </qualifiedTypeNameHistroy>
