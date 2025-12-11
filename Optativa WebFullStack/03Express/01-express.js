@@ -21,6 +21,19 @@ app.get('/pruebas', (req, res) => {
   res.render('pruebas', {titulo:'Título dinámico'})
 })
 
+//Conexión a base de datos
+const mongoose = require('mongoose');
+//Variables que tendremos siempre:
+//Lo correcto será declararlas EN VARIABLES DE ENTORNO
+//para que nadie vea directamente nuestras credenciales
+const user = 'angela';
+const password = 'BatmAn977';
+const dbname = 'pokemon';
+const uri = `mongodb+srv://${user}:${password}@clase.xq89gc1.mongodb.net/${dbname}?retryWrites=true&w=majority`; //URL de conexión, que completaremos luego
+mongoose.connect(uri)
+  .then(() => console.log('Base de datos conectada'))
+  .catch(e => console.log(e))
+
 /*
 app.get('/public/html/contacto.html', (req, res) => {
   res.send('Estás en contacto')
