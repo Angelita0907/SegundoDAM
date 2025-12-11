@@ -138,8 +138,6 @@ class VentanaPrincipal(QMainWindow):
 
         self.area_texto.texto_senal.connect(self.contador_caracteres.modificar_contador)
 
-        
-
         contenedor.setLayout(layout)
         self.setCentralWidget(contenedor)
 
