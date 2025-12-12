@@ -8,7 +8,7 @@ public class Partida {
 
     private int id;
     private int torneoId; 
-    private int narradorId; 
+    private Jugador narradorId; 
     private Date fecha;
     private ResultadoPartida resultado; 
 
@@ -17,7 +17,7 @@ public class Partida {
     }
 
     // Constructor completo
-    public Partida(int id, int torneoId, int narradorId, Date fecha, ResultadoPartida resultado) {
+    public Partida(int id, int torneoId, Jugador narradorId, Date fecha, ResultadoPartida resultado) {
         this.id = id;
         this.torneoId = torneoId;
         this.narradorId = narradorId;
@@ -43,11 +43,11 @@ public class Partida {
         this.torneoId = torneoId;
     }
 
-    public int getNarradorId() {
+    public Jugador getNarradorId() {
         return narradorId;
     }
 
-    public void setNarradorId(Integer narradorId) {
+    public void setNarradorId(Jugador narradorId) {
         this.narradorId = narradorId;
     }
 

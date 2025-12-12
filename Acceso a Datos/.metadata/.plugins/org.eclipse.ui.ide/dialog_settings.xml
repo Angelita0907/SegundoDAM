@@ -59,9 +59,9 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos"/>
 			<item value="C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos\ExamenMongo"/>
 			<item value="C:\Users\alumno\Desktop\SegundoDAM\Acceso a Datos"/>
-			<item value="C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos"/>
 			<item value="C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos\bancoalimentos"/>
 			<item value="C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos\formula1"/>
 			<item value="C:\Users\Usuario\OneDrive\Desktop\SegundoDAM"/>
@@ -73,8 +73,8 @@
 			<item value=""/>
 		</list>
 		<section name="ExternalProjectImportWizard.dialogBounds">
-			<item key="DIALOG_X_ORIGIN" value="225"/>
-			<item key="DIALOG_Y_ORIGIN" value="182"/>
+			<item key="DIALOG_X_ORIGIN" value="250"/>
+			<item key="DIALOG_Y_ORIGIN" value="47"/>
 			<item key="DIALOG_WIDTH" value="525"/>
 			<item key="DIALOG_HEIGHT" value="710"/>
 			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
