@@ -17,6 +17,9 @@ public class Comensal implements Runnable {
 	public void run() {
 		
 		try {
+			// toman el turno para esprear la comida
+			// cuando el consicenro hace release 
+			// sueltan el testigo para que lo coja el siguiente
 			comida.acquire();
 			System.out.println("Empieza a comer");
 			

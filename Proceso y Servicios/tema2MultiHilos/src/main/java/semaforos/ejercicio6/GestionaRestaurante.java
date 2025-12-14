@@ -5,51 +5,38 @@ import java.util.List;
 import java.util.concurrent.Semaphore;
 
 public class GestionaRestaurante {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		Semaphore cocina = new Semaphore(3);
-		
-		// el cocinero coge los 3 espacios y es quien los lbera
+	List<Thread> hilos = new ArrayList<>();
+	Semaphore semaforoMenu = new Semaphore(3);
+	Semaphore semaforoClientes = new Semaphore(1);
+	try {
+		semaforoClientes.acquire(1);
+		semaforoMenu.acquire(3);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	Cocinero cocinero = new Cocinero("Cocinero", semaforoMenu,semaforoClientes);
+	Thread cocineroHilo = new Thread(cocinero);
+	
+	hilos.add(cocineroHilo);
+	for (int i = 1; i <= 6; i++) {
+		Comensal comensal = new Comensal("Comensal"+i, semaforoClientes,semaforoMenu);
+		Thread comensalHilo = new Thread(comensal);
+		hilos.add(comensalHilo);
+	}
+	
+	for (Thread h : hilos) {
+		h.start();
+	}
+	
+	for (Thread h : hilos) {
 		try {
-			cocina.acquire(3);
+			h.join();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
-		List<Thread> hilos = new ArrayList<>();
-		
-		Cocinero cocinero = new Cocinero("Cocinero", cocina);
-		
-		Thread Hilococinero = new Thread(cocinero);
-		
-		hilos.add(Hilococinero);
-		
-		int comensales = 3; 
-		
-		for (int i = 0; i < comensales; i++) {
-			Comensal comensal = new Comensal(cocina);
-			
-			Thread hiloComensal = new Thread(comensal);
-			
-			hilos.add(hiloComensal);
-		}
-		
-		for (Thread thread : hilos) {
-			thread.start();
-		}
-		
-		for (Thread thread : hilos) {
-			try {
-				thread.join();
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		
+		};
 	}
-
+}
 }
