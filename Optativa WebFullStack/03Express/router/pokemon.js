@@ -70,6 +70,57 @@ router.post('/', async (req, res) => {
         console.log('error', error)
     }
 })
- 
+
+// eliminar
+router.delete('/:id', async (req, res) => {
+    const id = req.params.id;
+    console.log('id desde backend', id)
+    try {
+        //En la documentación de Mongoose podremos encontrar la
+        //siguiente función para eliminar
+        const pokemonDB = await Pokemon.findByIdAndDelete({ _id: id });
+        console.log(pokemonDB)
+        // https://stackoverflow.com/questions/27202075/expressjs-res-redirect-not-working-as-expected
+        // res.redirect('/pokemon') //Esto daría un error, tal y como podemos ver arriba
+        if (!pokemonDB) {
+            res.json({ 
+                estado: false,
+                mensaje: 'No se puede eliminar el Pokémon.'
+            })
+        } else {
+            res.json({
+                estado: true,
+                mensaje: 'Pokémon eliminado.'
+            })
+        } 
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+// put para modificar
+router.put('/:id', async (req, res) => {
+    const id = req.params.id;
+    const body = req.body;
+    console.log(id)
+    console.log('body', body)
+    try {
+        const pokemonDB = await Pokemon.findByIdAndUpdate(
+            id, body, { useFindAndModify: false }
+        )
+        console.log(pokemonDB)
+        res.json({
+            estado: true,
+            mensaje: 'Pokémon editado'
+        })
+    } catch (error) {
+        console.log(error)
+        res.json({
+            estado: false,
+            mensaje: 'Problema al editar el Pokémon'
+        })
+    }
+})
+
 
 module.exports = router;
