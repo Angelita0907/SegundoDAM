@@ -25,8 +25,6 @@ public class Partida {
         this.resultado = resultado;
     }
 
-    // --- Getters y Setters ---
-
     public int getId() {
         return id;
     }

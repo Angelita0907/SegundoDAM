@@ -15,7 +15,7 @@ public class TestConnection {
 
 			String url = properties.getProperty("url");
 			String user = properties.getProperty("user");
-			String clave = properties.getProperty("clave");
+			String clave = properties.getProperty("password");
 
 			DriverManager.getConnection(url, user, clave);
 			System.out.println("Conexión exitosa a MySQL en Docker!");

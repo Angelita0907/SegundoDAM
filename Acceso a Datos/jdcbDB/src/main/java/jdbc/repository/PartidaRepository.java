@@ -3,6 +3,8 @@ package jdbc.repository;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,6 +12,7 @@ import org.apache.logging.log4j.Logger;
 import jdbc.models.Partida;
 import jdbc.utiles.MiExcepcion;
 import jdbc.utiles.MySqlConector;
+import jdbc.utiles.ResultadoPartida;
 
 public class PartidaRepository {
 
@@ -24,7 +27,7 @@ public class PartidaRepository {
 		this.conector = conector;
 	}
 
-	public PartidaRepository(MySqlConector conector) throws MiExcepcion {
+	public PartidaRepository() throws MiExcepcion {
 		super();
 		this.conector = new MySqlConector();
 	}
@@ -39,12 +42,13 @@ public class PartidaRepository {
 
 		String contarPartidas = "SELECT count(*) FROM angelajdbc.partidas";
 
-		try (Connection connection = conector.getConnect();
-				PreparedStatement ps = connection.prepareStatement(contarPartidas);
-				// ahora queremos ejecutar y que nos devuelva algo no solo meter valores
-				ResultSet rs = ps.executeQuery()) {
+		try {
+			Connection connection = conector.getConnect();
+			PreparedStatement ps = connection.prepareStatement(contarPartidas);
+			// ahora queremos ejecutar y que nos devuelva algo no solo meter valores
+			ResultSet rs = ps.executeQuery();
 
-			rs.getInt(contarPartidas);
+			totalPartidas = rs.getInt(contarPartidas);
 
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -59,13 +63,14 @@ public class PartidaRepository {
 		
 		String aniadirPartida = "INSERT INTO AngelaJdbc.partidas (torneo_id, narrador_id, fecha, resultado) VALUES (?,?,?,?)";
 		
-		try (Connection connection = conector.getConnect();
+		try {
+			Connection connection = conector.getConnect();
 
-				// statement para poder realizar la consulta
-				PreparedStatement ps = connection.prepareStatement(aniadirPartida)){
+			// statement para poder realizar la consulta
+			PreparedStatement ps = connection.prepareStatement(aniadirPartida);
 			
 			// preguntar soraya donde poner metodo
-			
+			if(contarPartidas() <= 5) {
 			ps.setInt(1, partida.getTorneoId());
 			// narrador es de jugador por eso necetamos el id del jugador
 			ps.setInt(2, partida.getNarradorId().getId()); 
@@ -73,7 +78,7 @@ public class PartidaRepository {
 			ps.setString(4, partida.getResultado().name());
 			
 			ps.executeUpdate();
-			
+			}
 		} catch (Exception e) {
 			throw new MiExcepcion("Error al añadir partida: " + e.getMessage());
 		}
@@ -86,6 +91,46 @@ public class PartidaRepository {
 	// update puntuacion no acertante
 	
 	
+	// update puntuacion acertante
+	
+	
+	// mostrar partidas ordenadas por fecha
+	
+	public List<Partida> mostrarPartidas() throws MiExcepcion {
+
+		List<Partida> listaPartidas = new ArrayList<>();
+		String partidasPorFecha = "SELECT * FROM angelajdbc.partidas order by fecha asc;";
+
+		try {
+			Connection connection = conector.getConnect();
+
+			PreparedStatement ps = connection.prepareStatement(partidasPorFecha);
+
+			// ahora queremos ejecutar y que nos devuelva algo no solo meter valores
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				// creamos el jugador para guardar los valores
+				Partida p = new Partida();
+				
+				p.setId(rs.getInt("id"));
+				p.setTorneoId(rs.getInt("torneo_id"));
+				// preguntar a soraya p.setNarradorId(rs.getInt("narrador_id"));
+				p.setFecha(rs.getDate("fecha").toLocalDate());
+				// coge valores del enum que corresponden con los escritos en mysql
+				p.setResultado(ResultadoPartida.valueOf(rs.getString("resultado")));
+			
+				listaPartidas.add(p);
+			}
+			
+			
+		} catch (Exception e) {
+	        throw new MiExcepcion("Error al mostrar partidas: " + e.getMessage());
+		}
+
+		return listaPartidas;
+
+	}
 	
 	
 

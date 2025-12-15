@@ -21,7 +21,7 @@ public class MySqlConector {
 
 			this.url = properties.getProperty("url");
 			this.user = properties.getProperty("user");
-			this.clave = properties.getProperty("clave");
+			this.clave = properties.getProperty("password");
 			
 			this.connect = DriverManager.getConnection(this.url, this.user, this.clave);
 			
@@ -32,8 +32,15 @@ public class MySqlConector {
 		}
 	}
 
-	public Connection getConnect() {
-		return connect;
+	// preguntar a soraya que como el metodo creaba solo una conexion no me dejaba usarlo en más metodos
+	public Connection getConnect() throws MiExcepcion {
+	    Connection conn = null;
+	    try {
+	        conn = DriverManager.getConnection(this.url, this.user, this.clave);
+	    } catch (SQLException e) {
+	        throw new MiExcepcion("Error al conectar a la base de datos: " + e.getMessage());
+	    }
+	    return conn;
 	}
 
 	public void release() {

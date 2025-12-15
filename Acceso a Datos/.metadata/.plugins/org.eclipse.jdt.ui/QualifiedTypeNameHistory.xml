@@ -13,9 +13,13 @@
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="jdbc.models.Jugador"/>
     <fullyQualifiedTypeName name="jdbc.utiles.MySqlConector"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
-    <fullyQualifiedTypeName name="jdbc.models.Partida"/>
+    <fullyQualifiedTypeName name="jdbc.repository.JugadorRepository"/>
+    <fullyQualifiedTypeName name="jdbc.models.Jugador"/>
+    <fullyQualifiedTypeName name="jdbc.service.JugadorService"/>
+    <fullyQualifiedTypeName name="jdbc.utiles.ResultadoPartida"/>
+    <fullyQualifiedTypeName name="jdbc.service.PartidaService"/>
     <fullyQualifiedTypeName name="jdbc.repository.PartidaRepository"/>
+    <fullyQualifiedTypeName name="jdbc.models.Partida"/>
 </qualifiedTypeNameHistroy>
