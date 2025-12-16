@@ -1,5 +1,7 @@
 package jdbc.models;
 
+import java.util.Objects;
+
 public class Jugador {
 
 	private int id;
@@ -10,8 +12,8 @@ public class Jugador {
 	public Jugador() {
 	}
 
-	public Jugador(int id, String nombre, String email, int puntosTotales) {
-		this.id = id;
+	public Jugador( String nombre, String email, int puntosTotales) {
+	
 		this.nombre = nombre;
 		this.email = email;
 		this.puntosTotales = puntosTotales;
@@ -54,4 +56,23 @@ public class Jugador {
 		return "Jugador{" + "id=" + id + ", nombre='" + nombre + '\'' + ", email='" + email + '\'' + ", puntosTotales="
 				+ puntosTotales + '}';
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Jugador other = (Jugador) obj;
+		return id == other.id;
+	}
+	
+	
 }

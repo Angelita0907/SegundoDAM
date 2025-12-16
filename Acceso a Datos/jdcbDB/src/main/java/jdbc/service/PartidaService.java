@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 import jdbc.models.Partida;
 import jdbc.repository.PartidaRepository;
 import jdbc.utiles.MiExcepcion;
+import jdbc.utiles.ResultadoPartida;
 
 public class PartidaService {
 	
@@ -31,6 +32,23 @@ public class PartidaService {
 	public void addPartida(Partida partida) throws MiExcepcion {
 		repoPartida.aniadirPartida(partida);
 	}
+	
+	public void actualizarPuntuacionNarrador(int idJugador, ResultadoPartida resultado) throws MiExcepcion {
+		repoPartida.actualizarPuntuacionNarrador(idJugador, resultado);
+	}
+	
+	public void actualizarPuntuacionNOAcertante (int idJugador, ResultadoPartida resultado) throws MiExcepcion {
+		repoPartida.actualizarPuntuacionNOAcertante(idJugador, resultado);
+	}
+	
+	public void actualizarPuntuacionAcertante(int idJugador, ResultadoPartida resultado) {
+		try {
+			repoPartida.actualizarPuntuacionAcertante(idJugador, resultado);
+		} catch (MiExcepcion e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	} 
 	
 	public List<Partida> mostrarPartidas() throws MiExcepcion{
 		return repoPartida.mostrarPartidas();

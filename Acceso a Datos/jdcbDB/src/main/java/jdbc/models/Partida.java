@@ -1,5 +1,6 @@
 package jdbc.models;
 
+import java.sql.Date;
 import java.time.LocalDate;
 
 import jdbc.utiles.ResultadoPartida;
@@ -9,7 +10,7 @@ public class Partida {
     private int id;
     private int torneoId; 
     private Jugador narradorId; 
-    private LocalDate fecha;
+    private Date fecha;
     private ResultadoPartida resultado; 
 
     // Constructor vacío
@@ -17,8 +18,7 @@ public class Partida {
     }
 
     // Constructor completo
-    public Partida(int id, int torneoId, Jugador narradorId, LocalDate fecha, ResultadoPartida resultado) {
-        this.id = id;
+    public Partida(int torneoId, Jugador narradorId, Date fecha, ResultadoPartida resultado) {
         this.torneoId = torneoId;
         this.narradorId = narradorId;
         this.fecha = fecha;
@@ -49,11 +49,11 @@ public class Partida {
         this.narradorId = narradorId;
     }
 
-    public LocalDate getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(LocalDate fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 

@@ -1,5 +1,6 @@
 package jdbc.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -28,16 +29,38 @@ public class JugadorService {
 		this.repoJugador = repoJugador;
 	}
 	
-	public void addJugador(Jugador jugador) throws MiExcepcion {
-		repoJugador.aniadirJugador(jugador);
+	public void addJugador(Jugador jugador)  {
+		try {
+			repoJugador.aniadirJugador(jugador);
+		} catch (MiExcepcion e) {
+			// TODO Auto-generated catch block
+			logger.error("No se ha podido añadir el jugador: "+ e.getMessage());
+		}
 	}
 	
-	public Jugador mostrarJugadorMayorPuntuacion() throws MiExcepcion {
-		return repoJugador.mostrarJugadorMayorPuntuacion();
+	public Jugador mostrarJugadorMayorPuntuacion() {
+		
+		Jugador j = new Jugador();
+		
+		try {
+			j = repoJugador.mostrarJugadorMayorPuntuacion();
+		} catch (MiExcepcion e) {
+			// TODO Auto-generated catch block
+			logger.error("No se ha encontrado jugador con mayor puntuación: "+ e.getMessage());
+		}
+		return j;
 	}
 	
-	public  List<Jugador> mostrarPuntuaciones() throws MiExcepcion {
-		return repoJugador.mostrarPuntuaciones();
+	public  List<Jugador> mostrarPuntuaciones(){
+		
+		List<Jugador> listaPuntos = new ArrayList<>();
+		try {
+				listaPuntos =  repoJugador.mostrarPuntuaciones();
+		} catch (MiExcepcion e) {
+		    logger.error("Error al obtener puntuaciones: " + e.getMessage());
+		}
+		return listaPuntos;
+	
 	}
 
 }

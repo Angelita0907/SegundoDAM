@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,12 +20,15 @@ public class JugadorRepository {
 	// conslra
 	private static final Logger logger = LogManager.getLogger(JugadorRepository.class);
 	private MySqlConector conector;
-
+	private List<Jugador> listaJugadores;
+	
 	public JugadorRepository() throws MiExcepcion {
 		super();
 		// instancioamos la conexion en el propio constructor para que al usarlo siempre
 		// llame a la conexion
 		this.conector = new MySqlConector();
+		this.listaJugadores = new ArrayList<>();
+		
 	}
 
 	public MySqlConector getConector() {
@@ -33,6 +37,14 @@ public class JugadorRepository {
 
 	public void setConector(MySqlConector conector) {
 		this.conector = conector;
+	}
+
+	public List<Jugador> getListaJugadores() {
+		return listaJugadores;
+	}
+
+	public void setListaJugadores(List<Jugador> listaJugadores) {
+		this.listaJugadores = listaJugadores;
 	}
 
 	// añadir jugador
@@ -45,8 +57,8 @@ public class JugadorRepository {
 		// luego anidamos conexion a lo que sirve para llamar a la conexion
 		try {
 			Connection connection = conector.getConnect();
-			// statement para poder realizar la consulta
-			PreparedStatement ps = connection.prepareStatement(aniadir);
+			// statement para poder realizar la consulta, el generate keys es para que haga referencia a los id generados automaticamente
+			PreparedStatement ps = connection.prepareStatement(aniadir, Statement.RETURN_GENERATED_KEYS);
 
 			// le damos los valores de java a sql
 			// usamos get para coger los valores que le pasamos por parametros del jugador
@@ -55,8 +67,16 @@ public class JugadorRepository {
 			ps.setInt(3, jugador.getPuntosTotales());
 
 			ps.executeUpdate();
+			
+			ResultSet rs = ps.getGeneratedKeys();
+			if(rs.next()) {
+				jugador.setId(rs.getInt(1));
+			}
 
 			logger.info("Jugador añadido: " + jugador.getNombre());
+			
+			// para que tambien se añada a la lista y tenga coherencia con sql y java
+			this.listaJugadores.add(jugador);
 
 		} catch (SQLException e) {
 			throw new MiExcepcion("Error al añadir jugador: " + e.getMessage());
@@ -126,7 +146,7 @@ public class JugadorRepository {
 				listaJugadoresPuntuacion.add(j);
 			}
 			
-			//logger.info("Jugadores con mayor puntuación:"+ listaJugadoresPuntuacion.toString());
+			logger.info("Jugadores con mayor puntuación:"+ listaJugadoresPuntuacion.toString());
 			
 			
 		} catch (Exception e) {
@@ -136,6 +156,8 @@ public class JugadorRepository {
 		return listaJugadoresPuntuacion;
 
 	}
+	
+	// mostrar jugador segun id requerido
 	
 	
 
