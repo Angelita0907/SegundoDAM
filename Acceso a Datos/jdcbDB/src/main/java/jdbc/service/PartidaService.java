@@ -33,8 +33,13 @@ public class PartidaService {
 		repoPartida.aniadirPartida(partida);
 	}
 	
-	public void actualizarPuntuacionNarrador(int idJugador, ResultadoPartida resultado) throws MiExcepcion {
-		repoPartida.actualizarPuntuacionNarrador(idJugador, resultado);
+	public void actualizarPuntuacionNarrador(int idJugador, ResultadoPartida resultado)  {
+		try {
+			repoPartida.actualizarPuntuacionNarrador(idJugador, resultado);
+		} catch (MiExcepcion e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void actualizarPuntuacionNOAcertante (int idJugador, ResultadoPartida resultado) throws MiExcepcion {

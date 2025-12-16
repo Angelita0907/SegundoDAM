@@ -27,7 +27,7 @@ public class JugadorRepository {
 		// instancioamos la conexion en el propio constructor para que al usarlo siempre
 		// llame a la conexion
 		this.conector = new MySqlConector();
-		this.listaJugadores = new ArrayList<>();
+		this.listaJugadores = cargar();
 		
 	}
 
@@ -45,6 +45,42 @@ public class JugadorRepository {
 
 	public void setListaJugadores(List<Jugador> listaJugadores) {
 		this.listaJugadores = listaJugadores;
+	}
+	
+	private List<Jugador> cargar() throws MiExcepcion {
+
+		List<Jugador> lista = new ArrayList<>();
+		
+		try {
+
+		Connection conexion = conector.getConnect();
+
+		Statement sentencia = conexion.createStatement();
+
+		String sql = "SELECT * FROM angelajdbc.jugadores";
+
+		ResultSet rs = sentencia.executeQuery(sql);
+
+		while (rs.next()) {
+
+			Jugador jugador = new Jugador();
+
+			jugador.setId(rs.getInt("id"));
+			jugador.setNombre(rs.getString("nombre"));
+			jugador.setEmail(rs.getString("email"));
+			jugador.setPuntosTotales(rs.getInt("puntosTotales"));
+
+			lista.add(jugador);
+
+			}
+
+		}
+		
+		catch (SQLException e) {
+			// TODO: handle exception
+		}
+		return lista;
+
 	}
 
 	// añadir jugador
@@ -111,7 +147,6 @@ public class JugadorRepository {
 			}
 
 
-
 		} catch (SQLException e) {
 			throw new MiExcepcion("Eroor al buscar jugador con mayor puntuación: " + e.getMessage());
 		}
@@ -159,6 +194,6 @@ public class JugadorRepository {
 	
 	// mostrar jugador segun id requerido
 	
-	
+	//public mostrarJugador
 
 }

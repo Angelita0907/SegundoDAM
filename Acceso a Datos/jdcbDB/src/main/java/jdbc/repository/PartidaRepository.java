@@ -62,9 +62,7 @@ public class PartidaRepository {
 		while (resul.next()) {
 
 			Partida p = new Partida();
-
 			p.setId(resul.getInt("id"));
-
 			p.setTorneoId(resul.getInt("torneo_id"));
 
 			int narradorId = resul.getInt("narrador_id");
@@ -72,17 +70,13 @@ public class PartidaRepository {
 			buscarid.setId(narradorId);
 			
 		    p.setNarradorId(buscarid);
-
 			p.setFecha(resul.getDate("fecha"));
-
 			p.setResultado(ResultadoPartida.valueOf(resul.getString("resultado")));
-
 			lista.add(p);
 
 			}
 
-		}
-		
+		}	
 		catch (SQLException e) {
 			// TODO: handle exception
 		}
@@ -137,8 +131,10 @@ public class PartidaRepository {
 				ps.setString(4, partida.getResultado().name());
 
 				ps.executeUpdate();
-
+				ResultSet rs = ps.getGeneratedKeys();
+				
 				this.listaPartidas.add(partida);
+
 			}
 		} catch (Exception e) {
 			throw new MiExcepcion("Error al añadir partida: " + e.getMessage());
@@ -161,13 +157,15 @@ public class PartidaRepository {
 			if (resultado.equals(ResultadoPartida.ALGUNOS)) {
 				// cambiamos la primera ? por lo que corresponde
 				ps.setInt(1, idJugador);
-
+				ps.executeUpdate();
 			}
+			logger.info("Puntuación narrador actualizada correctamente");
 
 		} catch (Exception e) {
 			logger.error("Error SQL al actualizar la puntuación: " + e.getMessage());
 			throw new MiExcepcion("Error al actualizar la puntuación del jugador " + idJugador + ": " + e.getMessage());
 		}
+		this.listaPartidas = cargar();
 
 	}
 
@@ -186,8 +184,12 @@ public class PartidaRepository {
 			if (resultado.equals(ResultadoPartida.TODOS) || resultado.equals(ResultadoPartida.NADIE)) {
 				// cambiamos la primera ? por lo que corresponde
 				ps.setInt(1, idJugador);
-
+				ps.executeUpdate();
 			}
+			
+			logger.info("Puntuación No acertante actualizada correctamente");
+			
+			this.listaPartidas = cargar();
 
 		} catch (Exception e) {
 			logger.error("Error SQL al actualizar la puntuación: " + e.getMessage());
@@ -199,27 +201,12 @@ public class PartidaRepository {
 	// update puntuacion acertante
 
 	public void actualizarPuntuacionAcertante(int idJugador, ResultadoPartida resultado) throws MiExcepcion {
-		String actualizarPuntos = "UPDATE angelajdbc.jugadores SET puntosTotales = puntosTotales + ? WHERE id = ?";
 
-		int puntosAcierto = 0;
-
+		actualizarPuntuacionNarrador(idJugador, resultado);
+		actualizarPuntuacionNOAcertante(idJugador, resultado);
+		
 		try {
-			Connection connection = conector.getConnect();
-
-			// statement para poder realizar la consulta
-			PreparedStatement ps = connection.prepareStatement(actualizarPuntos);
-
-			if (resultado.equals(ResultadoPartida.TODOS) || resultado.equals(ResultadoPartida.NADIE)) {
-				// cambiamos la primera ? por lo que corresponde
-				puntosAcierto = 2;
-				ps.setInt(1, puntosAcierto);
-				ps.setInt(2, idJugador);
-
-			} else if (resultado.equals(ResultadoPartida.ALGUNOS)) {
-				puntosAcierto = 3;
-				ps.setInt(1, puntosAcierto);
-				ps.setInt(2, idJugador);
-			}
+			this.listaPartidas = cargar();
 
 		} catch (Exception e) {
 			logger.error("Error SQL al actualizar la puntuación: " + e.getMessage());
