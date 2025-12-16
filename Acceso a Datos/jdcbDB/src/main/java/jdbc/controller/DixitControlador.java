@@ -44,7 +44,7 @@ public class DixitControlador {
 		for (Jugador jugador : jugadores) {
 			logger.info(jugador);
 		}
-		
+		/*
 		// y luego lo relacionamos con el indice dentro de donde pertenece a la lista
 		Partida partida1 = new Partida(3, jugadores.get(3), Date.valueOf("2025-12-05"), ResultadoPartida.ALGUNOS);
 		Partida partida2 = new Partida(4, jugadores.get(0), Date.valueOf("2025-10-17"), ResultadoPartida.NADIE);
@@ -52,10 +52,10 @@ public class DixitControlador {
 
 		// añadimos las partidas
 		
-		//servicioPartida.addPartida(partida1); 
-		//servicioPartida.addPartida(partida2);
-		//servicioPartida.addPartida(partida3);
-		 
+		/*servicioPartida.addPartida(partida1); 
+		servicioPartida.addPartida(partida2);
+		servicioPartida.addPartida(partida3);
+		 */
 
 		List<Partida> partidas = servicioPartida.getRepoPartida().getListaPartidas();
 		for (Partida partida : partidas) {
@@ -75,6 +75,12 @@ public class DixitControlador {
 		//servicioPartida.actualizarPuntuacionAcertante(1, ResultadoPartida.NADIE);
 
 		logger.info("Lista de puntuaciones: " +servicioPartida.mostrarPartidas());
+		
+		// borrar jugador
+		servicioJugador.borrarJugador(3);
+		
+		servicioJugador.mediaPuntuaciones();
+		servicioJugador.mediaPuntuaciones2();
 
 	}
 

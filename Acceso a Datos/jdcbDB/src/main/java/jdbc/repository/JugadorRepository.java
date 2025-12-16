@@ -21,14 +21,14 @@ public class JugadorRepository {
 	private static final Logger logger = LogManager.getLogger(JugadorRepository.class);
 	private MySqlConector conector;
 	private List<Jugador> listaJugadores;
-	
+
 	public JugadorRepository() throws MiExcepcion {
 		super();
 		// instancioamos la conexion en el propio constructor para que al usarlo siempre
 		// llame a la conexion
 		this.conector = new MySqlConector();
 		this.listaJugadores = cargar();
-		
+
 	}
 
 	public MySqlConector getConector() {
@@ -46,36 +46,36 @@ public class JugadorRepository {
 	public void setListaJugadores(List<Jugador> listaJugadores) {
 		this.listaJugadores = listaJugadores;
 	}
-	
+
 	private List<Jugador> cargar() throws MiExcepcion {
 
 		List<Jugador> lista = new ArrayList<>();
-		
+
 		try {
 
-		Connection conexion = conector.getConnect();
+			Connection conexion = conector.getConnect();
 
-		Statement sentencia = conexion.createStatement();
+			Statement sentencia = conexion.createStatement();
 
-		String sql = "SELECT * FROM angelajdbc.jugadores";
+			String sql = "SELECT * FROM angelajdbc.jugadores";
 
-		ResultSet rs = sentencia.executeQuery(sql);
+			ResultSet rs = sentencia.executeQuery(sql);
 
-		while (rs.next()) {
+			while (rs.next()) {
 
-			Jugador jugador = new Jugador();
+				Jugador jugador = new Jugador();
 
-			jugador.setId(rs.getInt("id"));
-			jugador.setNombre(rs.getString("nombre"));
-			jugador.setEmail(rs.getString("email"));
-			jugador.setPuntosTotales(rs.getInt("puntosTotales"));
+				jugador.setId(rs.getInt("id"));
+				jugador.setNombre(rs.getString("nombre"));
+				jugador.setEmail(rs.getString("email"));
+				jugador.setPuntosTotales(rs.getInt("puntosTotales"));
 
-			lista.add(jugador);
+				lista.add(jugador);
 
 			}
 
 		}
-		
+
 		catch (SQLException e) {
 			// TODO: handle exception
 		}
@@ -93,7 +93,8 @@ public class JugadorRepository {
 		// luego anidamos conexion a lo que sirve para llamar a la conexion
 		try {
 			Connection connection = conector.getConnect();
-			// statement para poder realizar la consulta, el generate keys es para que haga referencia a los id generados automaticamente
+			// statement para poder realizar la consulta, el generate keys es para que haga
+			// referencia a los id generados automaticamente
 			PreparedStatement ps = connection.prepareStatement(aniadir, Statement.RETURN_GENERATED_KEYS);
 
 			// le damos los valores de java a sql
@@ -103,14 +104,14 @@ public class JugadorRepository {
 			ps.setInt(3, jugador.getPuntosTotales());
 
 			ps.executeUpdate();
-			
+
 			ResultSet rs = ps.getGeneratedKeys();
-			if(rs.next()) {
+			if (rs.next()) {
 				jugador.setId(rs.getInt(1));
 			}
 
 			logger.info("Jugador añadido: " + jugador.getNombre());
-			
+
 			// para que tambien se añada a la lista y tenga coherencia con sql y java
 			this.listaJugadores.add(jugador);
 
@@ -128,7 +129,7 @@ public class JugadorRepository {
 		// creamos un jugador para consultar datos
 		Jugador jugador = new Jugador();
 
-		try  {
+		try {
 			Connection connection = conector.getConnect();
 
 			PreparedStatement ps = connection.prepareStatement(mostrarJugador);
@@ -145,7 +146,6 @@ public class JugadorRepository {
 				jugador.setEmail(rs.getString("email"));
 				jugador.setPuntosTotales(rs.getInt("puntosTotales"));
 			}
-
 
 		} catch (SQLException e) {
 			throw new MiExcepcion("Eroor al buscar jugador con mayor puntuación: " + e.getMessage());
@@ -174,26 +174,115 @@ public class JugadorRepository {
 			while (rs.next()) {
 				// creamos el jugador para guardar los valores
 				Jugador j = new Jugador();
-				
+
 				j.setNombre(rs.getString("nombre"));
 				j.setPuntosTotales(rs.getInt("puntosTotales"));
-			
+
 				listaJugadoresPuntuacion.add(j);
 			}
-			
-			logger.info("Jugadores con mayor puntuación:"+ listaJugadoresPuntuacion.toString());
-			
-			
+
+			logger.info("Jugadores con mayor puntuación:" + listaJugadoresPuntuacion.toString());
+
 		} catch (Exception e) {
-	        throw new MiExcepcion("Error al mostrar puntuaciones: " + e.getMessage());
+			throw new MiExcepcion("Error al mostrar puntuaciones: " + e.getMessage());
 		}
 
 		return listaJugadoresPuntuacion;
 
 	}
-	
+
+	// borrar jugador --> poner fk on delete cascade en sql
+
+	public void borrarJugador(int id) throws MiExcepcion {
+
+		String borrarPorId = "delete from AngelaJdbc.jugadores where id = ? ;";
+
+		try {
+			Connection connection = conector.getConnect();
+
+			PreparedStatement ps = connection.prepareStatement(borrarPorId);
+
+			ps.setInt(1, id);
+
+			ps.executeUpdate();
+
+			logger.info("Jugador borrado correctamente");
+
+		} catch (Exception e) {
+			throw new MiExcepcion("Error al borrar un jugador: " + e.getMessage());
+		}
+
+		this.listaJugadores = cargar();
+
+	}
+
+	// media puntuaciones
+
+	public float mediaPuntuaciones() {
+
+		int totalPuntuaciones = 0;
+		float media = 0;
+
+		String sql = "select puntosTotales from jugadores";
+
+		try {
+
+			Connection connection = conector.getConnect();
+
+			PreparedStatement ps = connection.prepareStatement(sql);
+
+			ResultSet rs = ps.executeQuery();
+
+			int contador = 0;
+			while (rs.next()) {
+
+				totalPuntuaciones = totalPuntuaciones + rs.getInt("puntosTotales");
+				contador++;
+			}
+
+			media = totalPuntuaciones / contador;
+			logger.info("La media de puntuaciones es: " + media);
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+		return media;
+	}
+
+	public float mediaPuntuaciones2() {
+		float media = 0;
+
+		String sql = "select avg(puntosTotales) from jugadores";
+
+		try {
+			Connection connection = conector.getConnect();
+
+			PreparedStatement ps = connection.prepareStatement(sql);
+
+			ResultSet rs = ps.executeQuery();
+
+			if (rs.next()) {
+				media = rs.getInt(1);
+			}
+
+			logger.info("La media de puntuaciones es: " + media);
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+		return media;
+	}
+
+	// join -->
+	/*
+	 * SELECT p.resultado, j.* FROM Partidas AS p JOIN Jugadores AS j ON
+	 * p.narrador_id = j.id WHERE p.id = 1;
+	 */
+
 	// mostrar jugador segun id requerido
-	
-	//public mostrarJugador
+
+	// public mostrarJugador
 
 }

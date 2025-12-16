@@ -131,7 +131,8 @@ public class PartidaRepository {
 				ps.setString(4, partida.getResultado().name());
 
 				ps.executeUpdate();
-				ResultSet rs = ps.getGeneratedKeys();
+				
+				//logger.info("Partida añadida con id: "+ ps.getGeneratedKeys());
 				
 				this.listaPartidas.add(partida);
 
@@ -162,7 +163,6 @@ public class PartidaRepository {
 			logger.info("Puntuación narrador actualizada correctamente");
 
 		} catch (Exception e) {
-			logger.error("Error SQL al actualizar la puntuación: " + e.getMessage());
 			throw new MiExcepcion("Error al actualizar la puntuación del jugador " + idJugador + ": " + e.getMessage());
 		}
 		this.listaPartidas = cargar();

@@ -22,4 +22,6 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="jdbc.utiles.ResultadoPartida"/>
+    <fullyQualifiedTypeName name="java.lang.Throwable"/>
+    <fullyQualifiedTypeName name="jdbc.utiles.MiExcepcion"/>
 </qualifiedTypeNameHistroy>
