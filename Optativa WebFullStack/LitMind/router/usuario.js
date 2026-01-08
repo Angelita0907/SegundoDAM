@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Usuario = require('../models/usuario'); // Cambiado a modelo Usuario
+const Usuario = require('../models/usuarios'); // Cambiado a modelo Usuario
 
 // Vista para crear un nuevo usuario
 router.get('/crearUsuario', (req, res) => {
@@ -44,6 +44,10 @@ router.get('/:id', async(req, res) => {
 router.post('/', async (req, res) => {
     const body = req.body 
     console.log(body) 
+
+    // asi mongo entiende el check box del formulario como un booleano que si no me daba error
+    body.esDocente = body.esDocente === 'on' ? true : false;
+
     try {
         const usuarioDB = new Usuario(body) 
         await usuarioDB.save() 

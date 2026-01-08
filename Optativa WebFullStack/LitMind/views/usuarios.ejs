@@ -1,0 +1,42 @@
+<%- include("template/cabecera", {subtitulo: 'Panel de Administración'}) %>
+
+    <div class="container">
+        <h1>CRUD MONGO</h1>
+        <a class="btn btn-success btn-block my-4" href="/usuario/crearUsuario">Crear nuevo Usuario</a>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre Completo</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Es Docente</th>
+                    <th scope="col">Rol Principal</th>
+                    <th scope="col">Puntos</th>
+                    <th scope="col">Tipo Usuario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (arrayUsuarios.length > 0) { %>
+                    <!--Haremos el foreach para recorrer el array-->
+                    <% arrayUsuarios.forEach(usuario => { %>
+                        <tr>
+                            <th scope="row"><%= usuario.id %></th>
+                            <td><%= usuario.nombreCompleto %></td>
+                            <td><%= usuario.edad %></td>
+                            <td><%= usuario.esDocente ? 'Sí' : 'No' %></td>
+                            <td><%= usuario.rolPrincipal %></td>
+                            <td><%= usuario.puntosPortLogro %></td>
+                            <td><%= usuario.tipoUsuario %></td>
+                            <td>
+                                <a class="btn btn-warning btn-sm" href="usuarios/<%= usuario.id %>">Editar/Eliminar</a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                <% } %>
+            </tbody>
+
+        </table>
+    </div>
+
+
+<%- include("template/footer") %>

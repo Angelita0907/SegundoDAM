@@ -4,7 +4,7 @@
         <% if (error) { %>
             <%= mensaje %> 
             <a 
-                href="/usuarios"
+                href="/usuario"
                 class="btn btn-dark btn-block my-2"
             >
                 Volver
@@ -13,7 +13,6 @@
 
         <% if (!error) { %>
         <form id="editar" data-id="<%= usuario.id %>">
-            <input type="text" value="<%= usuario.nombre %>" class="form-control my-2" name="nombre" id="nombreInput" required>
             
             <input type="text" value="<%= usuario.nombreCompleto %>" class="form-control my-2" name="nombreCompleto" id="nombreCompletoInput" required>
             
@@ -69,7 +68,6 @@
             const formEditar = document.querySelector('#editar');
             formEditar.addEventListener('submit', async (e) => {
                 e.preventDefault()
-                const nombre = formEditar.elements['nombre'].value
                 const nombreCompleto = formEditar.elements['nombreCompleto'].value
                 const edad = formEditar.elements['edad'].value
                 const esDocente = formEditar.elements['esDocente'].checked

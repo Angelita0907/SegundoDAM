@@ -23,7 +23,7 @@ app.use(express.static(__dirname + '/public'))
 
 // llamamos al fichero de las rutas
 app.use('/', require('./router/rutas'));
-app.use('/usuarios', require('./router/usuario'));
+app.use('/usuario', require('./router/usuario'));
 
 // Conexión a base de datos
 const mongoose = require('mongoose');

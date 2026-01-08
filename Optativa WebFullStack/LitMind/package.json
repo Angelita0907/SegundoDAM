@@ -17,5 +17,6 @@
     "mongodb": "^7.0.0",
     "mongoose": "^9.1.2",
     "nodemon": "^3.1.11"
-  }
+  },
+  "type": "commonjs"
 }
