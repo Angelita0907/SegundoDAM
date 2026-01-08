@@ -1,0 +1,97 @@
+<%- include("template/cabecera", {subtitulo: 'Detalles del Usuario' }) %>
+    <div class="container">
+        <h1>Detalles del Usuario</h1>
+        <% if (error) { %>
+            <%= mensaje %> 
+            <a 
+                href="/usuarios"
+                class="btn btn-dark btn-block my-2"
+            >
+                Volver
+            </a>
+        <% } %>
+
+        <% if (!error) { %>
+        <form id="editar" data-id="<%= usuario.id %>">
+            <input type="text" value="<%= usuario.nombre %>" class="form-control my-2" name="nombre" id="nombreInput" required>
+            
+            <input type="text" value="<%= usuario.nombreCompleto %>" class="form-control my-2" name="nombreCompleto" id="nombreCompletoInput" required>
+            
+            <input type="number" value="<%= usuario.edad %>" class="form-control my-2" name="edad" id="edadInput" required>
+            
+            <div class="form-check my-2">
+                <input class="form-check-input" type="checkbox" name="esDocente" id="esDocenteInput" <%= usuario.esDocente ? 'checked' : '' %>>
+                <label class="form-check-label" for="esDocenteInput">
+                    Es Docente
+                </label>
+            </div>
+            
+            <input type="text" value="<%= usuario.rolPrincipal %>" class="form-control my-2" name="rolPrincipal" id="rolPrincipalInput" required>
+            
+            <input type="number" value="<%= usuario.puntosPortLogro %>" class="form-control my-2" name="puntosPortLogro" id="puntosInput">
+            
+            <select class="form-control my-2" name="tipoUsuario" id="tipoUsuarioInput" required>
+                <option value="AVANZADO" >AVANZADO</option>
+                <option value="INTERMEDIO">INTERMEDIO</option>
+                <option value="PRINCIPIANTE">PRINCIPIANTE</option>
+            </select>
+            
+            <button class="btn btn-warning btn-sm" type="submit">
+                Editar
+            </button>
+        </form>
+        <hr>
+        <button class="btn btn-danger btn-sm" data-id="<%= usuario.id %>">
+            Eliminar
+        </button>
+        <% } %>
+
+        <script>
+            const btnEliminar = document.querySelector('.btn-danger')
+            btnEliminar.addEventListener('click', async () => {
+                console.log(btnEliminar.dataset.id)
+                try {
+                    const data = await fetch(`/usuarios/${btnEliminar.dataset.id}`, {
+                        method: 'delete'
+                    })
+                    const res = await data.json()
+                    console.log(res)
+                    if (res.estado) {
+                        window.location.href = '/usuarios'
+                    } else {
+                        console.log(res)
+                    }
+                } catch (error) {
+                    console.log(error)
+                }
+            })
+
+            const formEditar = document.querySelector('#editar');
+            formEditar.addEventListener('submit', async (e) => {
+                e.preventDefault()
+                const nombre = formEditar.elements['nombre'].value
+                const nombreCompleto = formEditar.elements['nombreCompleto'].value
+                const edad = formEditar.elements['edad'].value
+                const esDocente = formEditar.elements['esDocente'].checked
+                const rolPrincipal = formEditar.elements['rolPrincipal'].value
+                const puntosPortLogro = formEditar.elements['puntosPortLogro'].value
+                const tipoUsuario = formEditar.elements['tipoUsuario'].value
+                const id = formEditar.dataset.id
+                
+                const data = await fetch(`/usuarios/${id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ nombre, nombreCompleto, edad, esDocente, rolPrincipal, puntosPortLogro, tipoUsuario })
+                })
+                const res = await data.json()
+                if (res.estado) {
+                    window.location.href = '/usuarios'
+                } else {
+                    console.log(res)
+                }
+            })
+        </script>
+    </div>
+<%- include("template/footer") %>
