@@ -11,14 +11,14 @@ import jdbc.models.Jugador;
 import jdbc.models.Partida;
 import jdbc.service.JugadorService;
 import jdbc.service.PartidaService;
-import jdbc.utiles.MiExcepcion;
+import jdbc.utiles.AppException;
 import jdbc.utiles.ResultadoPartida;
 
 public class DixitControlador {
 
 	private static final Logger logger = LogManager.getLogger(DixitControlador.class);
 
-	public static void main(String[] args) throws MiExcepcion {
+	public static void main(String[] args) throws AppException {
 		
 		JugadorService servicioJugador = new JugadorService();
 		PartidaService servicioPartida = new PartidaService();
@@ -52,7 +52,7 @@ public class DixitControlador {
 
 		// añadimos las partidas
 		
-		/*servicioPartida.addPartida(partida1); 
+		servicioPartida.addPartida(partida1); 
 		servicioPartida.addPartida(partida2);
 		servicioPartida.addPartida(partida3);
 		 */
@@ -68,11 +68,11 @@ public class DixitControlador {
 
 		// probar metedos partidas
 		
-		//servicioPartida.actualizarPuntuacionNarrador(4, ResultadoPartida.ALGUNOS);
+		servicioPartida.actualizarPuntuacionNarrador(4, ResultadoPartida.ALGUNOS);
 		
-		//servicioPartida.actualizarPuntuacionNOAcertante(3, ResultadoPartida.TODOS);
+		servicioPartida.actualizarPuntuacionNOAcertante(3, ResultadoPartida.TODOS);
 		
-		//servicioPartida.actualizarPuntuacionAcertante(1, ResultadoPartida.NADIE);
+		servicioPartida.actualizarPuntuacionAcertante(1, ResultadoPartida.NADIE);
 
 		logger.info("Lista de puntuaciones: " +servicioPartida.mostrarPartidas());
 		
@@ -82,6 +82,8 @@ public class DixitControlador {
 		servicioJugador.mediaPuntuaciones();
 		servicioJugador.mediaPuntuaciones2();
 
+		servicioPartida.mostrarPartidasJoin();
+		
 	}
 
 }
