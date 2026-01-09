@@ -50,13 +50,13 @@
             btnEliminar.addEventListener('click', async () => {
                 console.log(btnEliminar.dataset.id)
                 try {
-                    const data = await fetch(`/usuarios/${btnEliminar.dataset.id}`, {
+                    const data = await fetch(`/usuario/${btnEliminar.dataset.id}`, {
                         method: 'delete'
                     })
                     const res = await data.json()
                     console.log(res)
                     if (res.estado) {
-                        window.location.href = '/usuarios'
+                        window.location.href = '/usuario'
                     } else {
                         console.log(res)
                     }
@@ -76,7 +76,7 @@
                 const tipoUsuario = formEditar.elements['tipoUsuario'].value
                 const id = formEditar.dataset.id
                 
-                const data = await fetch(`/usuarios/${id}`, {
+                const data = await fetch(`/usuario/${id}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
@@ -85,7 +85,7 @@
                 })
                 const res = await data.json()
                 if (res.estado) {
-                    window.location.href = '/usuarios'
+                    window.location.href = '/usuario'
                 } else {
                     console.log(res)
                 }
