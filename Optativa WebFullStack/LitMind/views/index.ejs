@@ -1,7 +1,27 @@
 <%- include("template/cabecera", {subtitulo: "Inicio"})%>
 
 <body>
-    <h1>Estamos en el inicio</h1>
-    <h2><%= titulo %></h2>
+    
+    <h1>LitMind</h1>
+
+    <div class="contenedor-principal">
+        <div class="cajitas">
+            <h3>Gestión de Usuarios</h3>
+            <a href="/usuario">
+                <button class="boton" type="button">
+                    Ver Lista de Usuarios
+                </button>
+            </a>
+        </div>
+
+        <div class="cajitas">
+            <h3>Gestión de Lecturas</h3>
+            <a href="/lecturas">
+                <button class="boton" type="button">
+                    Ver Lista de Lecturas
+                </button>
+            </a>
+        </div>
+    </div>
 
 <%- include("template/footer")%>

@@ -1,0 +1,231 @@
+/* Colores principales de LitMind */
+:root {
+    --morado: #6C63FF;
+    --morado-claro: #AFA9D9;
+    --verde: #10b981;
+    --amarillo: #f59e0b;
+    --rojo: #ef4444;
+    --gris-oscuro: #2D2D3A;
+}
+
+/* Fondo general */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+
+.contenedor-principal {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .cajitas {
+            background-color: #f5f5f5;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cajitas:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .cajitas h3 {
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .boton {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .boton:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+/* Barra de navegación */
+.navbar {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--morado) !important;
+}
+
+.nav-link {
+    color: var(--gris-oscuro) !important;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.nav-link:hover {
+    color: var(--morado) !important;
+}
+
+
+/* Títulos */
+h1 {
+    color: var(--gris-oscuro);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Botones personalizados */
+.btn-morado {
+    background: var(--morado);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+.btn-morado:hover {
+    background: #5a52d5;
+    color: white;
+}
+
+.btn-verde {
+    background: var(--verde);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+.btn-verde:hover {
+    background: #059669;
+    color: white;
+}
+
+/* Tabla */
+/* Tabla de Usuarios */
+.tabla-usuarios {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.tabla-usuarios thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.tabla-usuarios th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.tabla-usuarios tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+}
+
+.tabla-usuarios tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.tabla-usuarios tbody tr:last-child {
+    border-bottom: none;
+}
+
+.tabla-usuarios td {
+    padding: 15px;
+}
+
+/* Etiquetas */
+.etiqueta {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.etiqueta-si {
+    background-color: #28a745;
+    color: white;
+}
+
+.etiqueta-no {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Botones */
+.boton {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.boton-editar {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.boton-editar:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+.boton-eliminar {
+    background-color: #dc3545;
+    color: white;
+}
+
+.boton-eliminar:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+/* Zona de peligro */
+.zona-peligro {
+    border-left: 4px solid var(--rojo);
+    border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    margin-top: 50px;
+}
+

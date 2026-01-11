@@ -3,40 +3,51 @@
     <div class="container">
         <h1>CRUD PROYECTO</h1>
         <a class="btn btn-success btn-block my-4" href="/usuario/crearUsuario">Crear nuevo Usuario</a>
-        <table class="table">
-            <thead class="thead-dark">
+        <table class="tabla-usuarios">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre Completo</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Es Docente</th>
+            <th scope="col">Rol Principal</th>
+            <th scope="col">Puntos</th>
+            <th scope="col">Tipo Usuario</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% if (arrayUsuarios.length > 0) { %>
+            <% arrayUsuarios.forEach(usuario => { %>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nombre Completo</th>
-                    <th scope="col">Edad</th>
-                    <th scope="col">Es Docente</th>
-                    <th scope="col">Rol Principal</th>
-                    <th scope="col">Puntos</th>
-                    <th scope="col">Tipo Usuario</th>
-                    <th scope="col">Acciones</th>
+                    <th scope="row"><%= usuario.id %></th>
+                    <td><%= usuario.nombreCompleto %></td>
+                    <td><%= usuario.edad %></td>
+                    <td>
+                        <% if (usuario.esDocente) { %>
+                            <span class="etiqueta etiqueta-si">Sí</span>
+                        <% } else { %>
+                            <span class="etiqueta etiqueta-no">No</span>
+                        <% } %>
+                    </td>
+                    <td><%= usuario.rolPrincipal %></td>
+                    <td><%= usuario.puntosPorLogro %></td>
+                    <td><%= usuario.tipoUsuario %></td>
+                    <td>
+                        <a class="boton boton-editar" href="usuario/<%= usuario.id %>">Editar</a>
+                        <button class="boton boton-eliminar">Eliminar</button>
+                    </td>
                 </tr>
-            </thead>
-            <tbody>
-                <% if (arrayUsuarios.length > 0) { %>
-                    <!--Haremos el foreach para recorrer el array-->
-                    <% arrayUsuarios.forEach(usuario => { %>
-                        <tr>
-                            <th scope="row"><%= usuario.id %></th>
-                            <td><%= usuario.nombreCompleto %></td>
-                            <td><%= usuario.edad %></td>
-                            <td><%= usuario.esDocente ? 'Sí' : 'No' %></td>
-                            <td><%= usuario.rolPrincipal %></td>
-                            <td><%= usuario.puntosPorLogro %></td>
-                            <td><%= usuario.tipoUsuario %></td>
-                            <td>
-                                <a class="btn btn-warning btn-sm" href="usuario/<%= usuario.id %>">Editar/Eliminar</a>
-                            </td>
-                        </tr>
-                    <% }) %>
-                <% } %>
-            </tbody>
-
-        </table>
+            <% }) %>
+        <% } else { %>
+            <tr>
+                <td colspan="8" style="text-align: center; padding: 30px;">
+                    No hay usuarios registrados
+                </td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>
     </div>
 
 
