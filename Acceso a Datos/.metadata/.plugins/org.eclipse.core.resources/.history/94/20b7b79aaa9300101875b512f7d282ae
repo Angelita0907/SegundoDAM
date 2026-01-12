@@ -1,0 +1,28 @@
+package models;
+
+public class Usuario {
+
+	private int idUsuario;
+	private boolean esStreamer;
+	
+	public int getIdUsuario() {
+		return idUsuario;
+	}
+	public void setIdUsuario(int idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+	public boolean isEsStreamer() {
+		return esStreamer;
+	}
+	public void setEsStreamer(boolean esStreamer) {
+		this.esStreamer = esStreamer;
+	}
+	
+	public Usuario(int idUsuario, boolean esStreamer) {
+		super();
+		this.idUsuario = idUsuario;
+		this.esStreamer = esStreamer;
+	}
+	
+	
+}

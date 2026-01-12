@@ -1,0 +1,16 @@
+package service;
+
+import Repository.usuarioRepository;
+
+public class usuarioService {
+	
+	usuarioRepository usuarioRepo;
+
+	public usuarioService(usuarioRepository usuarioRepo) {
+		super();
+		this.usuarioRepo = new usuarioRepository();
+	}
+	
+	
+
+}

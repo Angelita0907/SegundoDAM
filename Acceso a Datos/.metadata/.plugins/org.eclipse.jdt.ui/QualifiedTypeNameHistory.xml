@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="examenMongo.modelo.Preferencias"/>
+    <fullyQualifiedTypeName name="examenMongo.modelo.Evento"/>
+    <fullyQualifiedTypeName name="examenMongo.servicio.UsuariosServicio"/>
+    <fullyQualifiedTypeName name="examenMongo.repositorio.UsuarioRepositorio"/>
+    <fullyQualifiedTypeName name="com.mongodb.client.result.InsertOneResult"/>
+    <fullyQualifiedTypeName name="examenMongo.utils.PlanActivo"/>
+    <fullyQualifiedTypeName name="com.mongodb.client.result.UpdateResult"/>
+    <fullyQualifiedTypeName name="org.bson.Document"/>
+    <fullyQualifiedTypeName name="examenMongo.modelo.Usuario"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="jdbc.utiles.MySqlConector"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="jdbc.repository.JugadorRepository"/>
+    <fullyQualifiedTypeName name="jdbc.service.JugadorService"/>
+    <fullyQualifiedTypeName name="jdbc.service.PartidaService"/>
+    <fullyQualifiedTypeName name="jdbc.repository.PartidaRepository"/>
+    <fullyQualifiedTypeName name="jdbc.models.Partida"/>
+    <fullyQualifiedTypeName name="jdbc.models.Jugador"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="jdbc.utiles.ResultadoPartida"/>
+    <fullyQualifiedTypeName name="java.lang.Throwable"/>
+    <fullyQualifiedTypeName name="jdbc.utiles.MiExcepcion"/>
+</qualifiedTypeNameHistroy>
