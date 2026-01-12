@@ -1,0 +1,846 @@
+[
+  {
+    "id": 1,
+    "nombre": "Portátil Lenovo ThinkPad X1",
+    "categoria": "Ordenadores",
+    "precio": 1299.99,
+    "stock": 20,
+    "especificaciones": {
+      "procesador": "Intel i7",
+      "ram": "16GB",
+      "almacenamiento": "512GB SSD"
+    },
+    "valoraciones": [
+      { "usuario": "Ana", "comentario": "Muy rápido y fiable", "puntuacion": 4.7 },
+      { "usuario": "Luis", "comentario": "Excelente para trabajar", "puntuacion": 5.0 }
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Smartphone Samsung Galaxy S24",
+    "categoria": "Teléfonos",
+    "precio": 1199.00,
+    "stock": 30,
+    "especificaciones": {
+      "pantalla": "6.8 pulgadas AMOLED",
+      "bateria": "5000mAh",
+      "camara": "200MP"
+    },
+    "valoraciones": [
+      { "usuario": "María", "comentario": "La cámara es impresionante", "puntuacion": 4.8 },
+      { "usuario": "Pedro", "comentario": "Un poco caro pero vale la pena", "puntuacion": 4.5 }
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Auriculares Sony WH-1000XM5",
+    "categoria": "Audio",
+    "precio": 399.99,
+    "stock": 50,
+    "especificaciones": {
+      "tipo": "Inalámbricos",
+      "cancelacionRuido": true,
+      "autonomia": "30 horas"
+    },
+    "valoraciones": [
+      { "usuario": "Clara", "comentario": "La cancelación de ruido es brutal", "puntuacion": 5.0 },
+      { "usuario": "Javier", "comentario": "Muy cómodos", "puntuacion": 4.6 }
+    ]
+  },
+
+  {
+    "id": 4,
+    "nombre": "Tablet Apple iPad Air M2",
+    "categoria": "Tablets",
+    "precio": 899.00,
+    "stock": 25,
+    "especificaciones": {
+      "pantalla": "11 pulgadas Liquid Retina",
+      "almacenamiento": "256GB",
+      "procesador": "Apple M2"
+    },
+    "valoraciones": [
+      { "usuario": "Sofía", "comentario": "Perfecta para estudiar", "puntuacion": 4.9 },
+      { "usuario": "David", "comentario": "Muy ligera", "puntuacion": 4.7 }
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Monitor LG UltraGear 27GN950",
+    "categoria": "Monitores",
+    "precio": 799.99,
+    "stock": 15,
+    "especificaciones": {
+      "resolucion": "4K",
+      "tasaRefresco": "144Hz",
+      "panel": "Nano IPS"
+    },
+    "valoraciones": [
+      { "usuario": "Carlos", "comentario": "Excelente para gaming", "puntuacion": 4.9 },
+      { "usuario": "Pablo", "comentario": "Colores increíbles", "puntuacion": 4.8 }
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Smartwatch Garmin Fénix 7",
+    "categoria": "Wearables",
+    "precio": 799.00,
+    "stock": 18,
+    "especificaciones": {
+      "autonomia": "18 días",
+      "resistenciaAgua": "10ATM",
+      "gps": true
+    },
+    "valoraciones": [
+      { "usuario": "Lorena", "comentario": "Ideal para deportes", "puntuacion": 5.0 },
+      { "usuario": "Mario", "comentario": "Muy completo", "puntuacion": 4.8 }
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Cámara Canon EOS R8",
+    "categoria": "Fotografía",
+    "precio": 1499.99,
+    "stock": 12,
+    "especificaciones": {
+      "sensor": "Full Frame",
+      "megapixeles": "24.2MP",
+      "video": "4K 60fps"
+    },
+    "valoraciones": [
+      { "usuario": "Julia", "comentario": "Fotos espectaculares", "puntuacion": 4.9 },
+      { "usuario": "Hugo", "comentario": "Ligera y potente", "puntuacion": 4.7 }
+    ]
+  },
+  {
+    "id": 8,
+    "nombre": "Altavoz JBL Charge 6",
+    "categoria": "Audio",
+    "precio": 179.99,
+    "stock": 40,
+    "especificaciones": {
+      "potencia": "40W",
+      "resistenciaAgua": "IP67",
+      "autonomia": "20 horas"
+    },
+    "valoraciones": [
+      { "usuario": "Leo", "comentario": "Sonido potente", "puntuacion": 4.8 },
+      { "usuario": "Teresa", "comentario": "Ideal para exteriores", "puntuacion": 4.6 }
+    ]
+  },
+  {
+    "id": 9,
+    "nombre": "Teclado Mecánico Keychron K8 Pro",
+    "categoria": "Accesorios",
+    "precio": 129.99,
+    "stock": 60,
+    "especificaciones": {
+      "tipo": "Mecánico",
+      "switches": "Gateron Brown",
+      "conectividad": "Bluetooth/USB-C"
+    },
+    "valoraciones": [
+      { "usuario": "Raúl", "comentario": "Teclas muy cómodas", "puntuacion": 4.7 },
+      { "usuario": "Sara", "comentario": "Buena calidad", "puntuacion": 4.5 }
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "Router ASUS ROG Rapture GT-AXE16000",
+    "categoria": "Red",
+    "precio": 499.99,
+    "stock": 10,
+    "especificaciones": {
+      "wifi": "WiFi 6E",
+      "puertos": 6,
+      "velocidadMaxima": "16000Mbps"
+    },
+    "valoraciones": [
+      { "usuario": "Tomás", "comentario": "Velocidad brutal", "puntuacion": 5.0 },
+      { "usuario": "Nadia", "comentario": "Muy configurable", "puntuacion": 4.8 }
+    ]
+  },
+
+  {
+    "id": 11,
+    "nombre": "Portátil MacBook Pro 14 M3 Pro",
+    "categoria": "Ordenadores",
+    "precio": 2199.00,
+    "stock": 14,
+    "especificaciones": {
+      "procesador": "Apple M3 Pro",
+      "ram": "16GB",
+      "almacenamiento": "512GB SSD"
+    },
+    "valoraciones": [
+      { "usuario": "Patricia", "comentario": "Muy fluido", "puntuacion": 4.9 },
+      { "usuario": "Óscar", "comentario": "El mejor para edición", "puntuacion": 5.0 }
+    ]
+  },
+  {
+    "id": 12,
+    "nombre": "Smartphone Google Pixel 9 Pro",
+    "categoria": "Teléfonos",
+    "precio": 1099.00,
+    "stock": 22,
+    "especificaciones": {
+      "pantalla": "6.7 OLED",
+      "bateria": "5100mAh",
+      "camara": "50MP + IA"
+    },
+    "valoraciones": [
+      { "usuario": "Irene", "comentario": "Fotos nocturnas increíbles", "puntuacion": 4.8 },
+      { "usuario": "Martín", "comentario": "Software impecable", "puntuacion": 4.6 }
+    ]
+  },
+
+  {
+    "id": 13,
+    "nombre": "Barra de Sonido Samsung Q990D",
+    "categoria": "Audio",
+    "precio": 1299.99,
+    "stock": 16,
+    "especificaciones": {
+      "canales": "11.1.4",
+      "potencia": "650W",
+      "dolbyAtmos": true
+    },
+    "valoraciones": [
+      { "usuario": "Rosa", "comentario": "Audio de cine en casa", "puntuacion": 5.0 },
+      { "usuario": "Julián", "comentario": "Gran inmersión", "puntuacion": 4.8 }
+    ]
+  },
+  {
+    "id": 14,
+    "nombre": "Tablet Xiaomi Pad 7 Pro",
+    "categoria": "Tablets",
+    "precio": 499.00,
+    "stock": 32,
+    "especificaciones": {
+      "pantalla": "12.4 pulgadas IPS",
+      "almacenamiento": "128GB",
+      "procesador": "Snapdragon 8 Gen 2"
+    },
+    "valoraciones": [
+      { "usuario": "Eva", "comentario": "Gran calidad por el precio", "puntuacion": 4.7 },
+      { "usuario": "Néstor", "comentario": "Muy rápida", "puntuacion": 4.5 }
+    ]
+  },
+
+  {
+    "id": 15,
+    "nombre": "Monitor ASUS ProArt PA32UCR",
+    "categoria": "Monitores",
+    "precio": 1499.00,
+    "stock": 8,
+    "especificaciones": {
+      "resolucion": "4K HDR",
+      "panel": "Mini LED",
+      "coberturaColor": "99% DCI-P3"
+    },
+    "valoraciones": [
+      { "usuario": "Lucas", "comentario": "Ideal para profesionales", "puntuacion": 4.9 },
+      { "usuario": "Carmen", "comentario": "Colores perfectos", "puntuacion": 4.8 }
+    ]
+  },
+
+  {
+    "id": 16,
+    "nombre": "Smartwatch Apple Watch Series 10",
+    "categoria": "Wearables",
+    "precio": 549.00,
+    "stock": 28,
+    "especificaciones": {
+      "pantalla": "OLED Always-On",
+      "sensores": ["ECG", "Oxígeno", "Temperatura"],
+      "autonomia": "2 días"
+    },
+    "valoraciones": [
+      { "usuario": "Claudia", "comentario": "Me encanta su diseño", "puntuacion": 4.8 },
+      { "usuario": "Marcos", "comentario": "Muy completo", "puntuacion": 4.6 }
+    ]
+  },
+
+  {
+    "id": 17,
+    "nombre": "Cámara Sony A7 IV",
+    "categoria": "Fotografía",
+    "precio": 2499.00,
+    "stock": 10,
+    "especificaciones": {
+      "megapixeles": "33MP",
+      "video": "4K 60fps",
+      "sensor": "Full Frame"
+    },
+    "valoraciones": [
+      { "usuario": "Alba", "comentario": "Muy versátil", "puntuacion": 4.9 },
+      { "usuario": "Félix", "comentario": "Video espectacular", "puntuacion": 4.8 }
+    ]
+  },
+
+  {
+    "id": 18,
+    "nombre": "Altavoz Bose SoundLink Flex",
+    "categoria": "Audio",
+    "precio": 149.00,
+    "stock": 45,
+    "especificaciones": {
+      "resistenciaAgua": "IP67",
+      "autonomia": "12 horas",
+      "tipo": "Bluetooth"
+    },
+    "valoraciones": [
+      { "usuario": "Paula", "comentario": "Gran calidad de sonido", "puntuacion": 4.7 },
+      { "usuario": "Andrés", "comentario": "Compacto y potente", "puntuacion": 4.6 }
+    ]
+  },
+
+  {
+    "id": 19,
+    "nombre": "Ratón Logitech MX Master 4",
+    "categoria": "Accesorios",
+    "precio": 119.99,
+    "stock": 70,
+    "especificaciones": {
+      "conexion": "Bluetooth",
+      "dpi": 8000,
+      "bateria": "90 días"
+    },
+    "valoraciones": [
+      { "usuario": "Rafa", "comentario": "Ergonómico y preciso", "puntuacion": 4.8 },
+      { "usuario": "Diana", "comentario": "Perfecto para trabajo", "puntuacion": 4.7 }
+    ]
+  },
+
+  {
+    "id": 20,
+    "nombre": "Router TP-Link Archer AXE75",
+    "categoria": "Red",
+    "precio": 249.99,
+    "stock": 26,
+    "especificaciones": {
+      "wifi": "WiFi 6E",
+      "velocidadMaxima": "5400Mbps",
+      "puertos": 4
+    },
+    "valoraciones": [
+      { "usuario": "Iván", "comentario": "Buena cobertura", "puntuacion": 4.6 },
+      { "usuario": "Elena", "comentario": "Fácil de configurar", "puntuacion": 4.7 }
+    ]
+  },
+
+  /* --- Del 21 al 50: similar estructura, diferentes productos --- */
+
+  {
+    "id": 21,
+    "nombre": "Portátil HP Spectre x360",
+    "categoria": "Ordenadores",
+    "precio": 1699.00,
+    "stock": 19,
+    "especificaciones": {
+      "procesador": "Intel i7",
+      "ram": "16GB",
+      "almacenamiento": "1TB SSD"
+    },
+    "valoraciones": [
+      { "usuario": "Lucía", "comentario": "Convertible muy útil", "puntuacion": 4.7 },
+      { "usuario": "Gabriel", "comentario": "Excelente pantalla", "puntuacion": 4.8 }
+    ]
+  },
+
+  {
+    "id": 22,
+    "nombre": "Smartphone OnePlus 13",
+    "categoria": "Teléfonos",
+    "precio": 899.00,
+    "stock": 35,
+    "especificaciones": {
+      "pantalla": "6.74 AMOLED 120Hz",
+      "bateria": "5300mAh",
+      "camara": "50MP triple"
+    },
+    "valoraciones": [
+      { "usuario": "Jorge", "comentario": "Muy rápido", "puntuacion": 4.7 },
+      { "usuario": "Sonia", "comentario": "Gran autonomía", "puntuacion": 4.6 }
+    ]
+  },
+
+  {
+    "id": 23,
+    "nombre": "Auriculares Apple AirPods Max 2",
+    "categoria": "Audio",
+    "precio": 579.00,
+    "stock": 25,
+    "especificaciones": {
+      "tipo": "Inalámbricos",
+      "cancelacionRuido": true,
+      "autonomia": "25 horas"
+    },
+    "valoraciones": [
+      { "usuario": "Álvaro", "comentario": "Muy premium", "puntuacion": 4.8 },
+      { "usuario": "Natalia", "comentario": "Sonido espectacular", "puntuacion": 4.9 }
+    ]
+  },
+
+  {
+    "id": 24,
+    "nombre": "Tablet Samsung Galaxy Tab S10+",
+    "categoria": "Tablets",
+    "precio": 1099.00,
+    "stock": 20,
+    "especificaciones": {
+      "pantalla": "12.6 AMOLED",
+      "almacenamiento": "256GB",
+      "procesador": "Snapdragon 8 Gen 3"
+    },
+    "valoraciones": [
+      { "usuario": "Juan", "comentario": "Perfecta para dibujar", "puntuacion": 4.8 },
+      { "usuario": "Marta", "comentario": "Gran rendimiento", "puntuacion": 4.7 }
+    ]
+  },
+
+  {
+    "id": 25,
+    "nombre": "Monitor Dell Alienware AW3423DW",
+    "categoria": "Monitores",
+    "precio": 1299.00,
+    "stock": 13,
+    "especificaciones": {
+      "resolucion": "WQHD",
+      "panel": "QD-OLED",
+      "tasaRefresco": "165Hz"
+    },
+    "valoraciones": [
+      { "usuario": "Kevin", "comentario": "Imagen increíble", "puntuacion": 4.9 },
+      { "usuario": "Joan", "comentario": "Negros perfectos", "puntuacion": 4.9 }
+    ]
+  },
+
+  {
+    "id": 26,
+    "nombre": "Smartwatch Samsung Galaxy Watch 7",
+    "categoria": "Wearables",
+    "precio": 349.00,
+    "stock": 40,
+    "especificaciones": {
+      "pantalla": "AMOLED",
+      "sensores": ["ECG", "Ritmo cardiaco", "Oxígeno"],
+      "autonomia": "3 días"
+    },
+    "valoraciones": [
+      { "usuario": "Iago", "comentario": "Muy intuitivo", "puntuacion": 4.6 },
+      { "usuario": "Andrea", "comentario": "Buena batería", "puntuacion": 4.7 }
+    ]
+  },
+
+  {
+    "id": 27,
+    "nombre": "Cámara Nikon Z7 II",
+    "categoria": "Fotografía",
+    "precio": 2799.00,
+    "stock": 8,
+    "especificaciones": {
+      "megapixeles": "45.7MP",
+      "video": "4K 60fps",
+      "sensor": "Full Frame"
+    },
+    "valoraciones": [
+      { "usuario": "Verónica", "comentario": "Gran resolución", "puntuacion": 4.9 },
+      { "usuario": "Samuel", "comentario": "Muy profesional", "puntuacion": 4.8 }
+    ]
+  },
+
+  {
+    "id": 28,
+    "nombre": "Altavoz Sony SRS-XG500",
+    "categoria": "Audio",
+    "precio": 399.00,
+    "stock": 30,
+    "especificaciones": {
+      "potencia": "60W",
+      "autonomia": "25 horas",
+      "resistenciaAgua": "IP66"
+    },
+    "valoraciones": [
+      { "usuario": "Gema", "comentario": "Muy potente", "puntuacion": 4.8 },
+      { "usuario": "Ismael", "comentario": "Buen bajo", "puntuacion": 4.7 }
+    ]
+  },
+
+  {
+    "id": 29,
+    "nombre": "Teclado Razer BlackWidow V4",
+    "categoria": "Accesorios",
+    "precio": 189.00,
+    "stock": 55,
+    "especificaciones": {
+      "tipo": "Mecánico",
+      "switches": "Green",
+      "retroiluminacion": "RGB"
+    },
+    "valoraciones": [
+      { "usuario": "Fernando", "comentario": "Perfecto para gaming", "puntuacion": 4.7 },
+      { "usuario": "Bea", "comentario": "Muy llamativo", "puntuacion": 4.5 }
+    ]
+  },
+
+  {
+    "id": 30,
+    "nombre": "Router Google Nest WiFi Pro",
+    "categoria": "Red",
+    "precio": 299.00,
+    "stock": 35,
+    "especificaciones": {
+      "wifi": "WiFi 6E",
+      "cobertura": "220m²",
+      "unidades": 2
+    },
+    "valoraciones": [
+      { "usuario": "Rocío", "comentario": "Muy estable", "puntuacion": 4.6 },
+      { "usuario": "Luis", "comentario": "Bonito diseño", "puntuacion": 4.7 }
+    ]
+  },
+
+  /* --- 31 a 50 (20 items más) --- */
+
+  {
+    "id": 31,
+    "nombre": "Portátil Dell XPS 15",
+    "categoria": "Ordenadores",
+    "precio": 1899.00,
+    "stock": 17,
+    "especificaciones": {
+      "procesador": "Intel i9",
+      "ram": "32GB",
+      "almacenamiento": "1TB SSD"
+    },
+    "valoraciones": [
+      { "usuario": "Helena", "comentario": "Pantalla magnífica", "puntuacion": 4.9 },
+      { "usuario": "Rubén", "comentario": "Muy potente", "puntuacion": 4.8 }
+    ]
+  },
+
+  {
+    "id": 32,
+    "nombre": "Smartphone Xiaomi 15 Ultra",
+    "categoria": "Teléfonos",
+    "precio": 1199.00,
+    "stock": 28,
+    "especificaciones": {
+      "pantalla": "6.73 AMOLED",
+      "bateria": "5200mAh",
+      "camara": "50MP cuádruple Leica"
+    },
+    "valoraciones": [
+      { "usuario": "Arturo", "comentario": "Fotos espectaculares", "puntuacion": 4.8 },
+      { "usuario": "Elisa", "comentario": "Muy rápido", "puntuacion": 4.7 }
+    ]
+  },
+
+  {
+    "id": 33,
+    "nombre": "Auriculares Sennheiser Momentum 4",
+    "categoria": "Audio",
+    "precio": 349.00,
+    "stock": 45,
+    "especificaciones": {
+      "cancelacionRuido": true,
+      "autonomia": "60 horas",
+      "tipo": "Bluetooth"
+    },
+    "valoraciones": [
+      { "usuario": "Héctor", "comentario": "Batería impresionante", "puntuacion": 4.9 },
+      { "usuario": "Yolanda", "comentario": "Sonido equilibrado", "puntuacion": 4.8 }
+    ]
+  },
+
+  {
+    "id": 34,
+    "nombre": "Tablet Lenovo Tab P12 Pro",
+    "categoria": "Tablets",
+    "precio": 799.00,
+    "stock": 27,
+    "especificaciones": {
+      "pantalla": "12.6 AMOLED",
+      "almacenamiento": "256GB",
+      "procesador": "Snapdragon 870"
+    },
+    "valoraciones": [
+      { "usuario": "Nora", "comentario": "Muy buena pantalla", "puntuacion": 4.7 },
+      { "usuario": "Vicente", "comentario": "Gran sonido", "puntuacion": 4.6 }
+    ]
+  },
+
+  {
+    "id": 35,
+    "nombre": "Monitor BenQ PD3205U",
+    "categoria": "Monitores",
+    "precio": 699.00,
+    "stock": 22,
+    "especificaciones": {
+      "resolucion": "4K",
+      "panel": "IPS",
+      "tamaño": "32 pulgadas"
+    },
+    "valoraciones": [
+      { "usuario": "Sandra", "comentario": "Perfecto para diseño", "puntuacion": 4.8 },
+      { "usuario": "Pere", "comentario": "Muy buena calidad", "puntuacion": 4.7 }
+    ]
+  },
+
+  {
+    "id": 36,
+    "nombre": "Smartwatch Huawei Watch GT 5",
+    "categoria": "Wearables",
+    "precio": 299.00,
+    "stock": 38,
+    "especificaciones": {
+      "autonomia": "14 días",
+      "gps": true,
+      "pantalla": "AMOLED"
+    },
+    "valoraciones": [
+      { "usuario": "Silvia", "comentario": "Gran autonomía", "puntuacion": 4.8 },
+      { "usuario": "Quim", "comentario": "Muy elegante", "puntuacion": 4.6 }
+    ]
+  },
+
+  {
+    "id": 37,
+    "nombre": "Cámara Fujifilm X-T5",
+    "categoria": "Fotografía",
+    "precio": 1899.00,
+    "stock": 14,
+    "especificaciones": {
+      "megapixeles": "40MP",
+      "sensor": "APS-C",
+      "video": "6.2K"
+    },
+    "valoraciones": [
+      { "usuario": "Alicia", "comentario": "Colores increíbles", "puntuacion": 4.9 },
+      { "usuario": "Urbano", "comentario": "Muy ligera", "puntuacion": 4.7 }
+    ]
+  },
+
+  {
+    "id": 38,
+    "nombre": "Altavoz Marshall Stanmore III",
+    "categoria": "Audio",
+    "precio": 399.00,
+    "stock": 26,
+    "especificaciones": {
+      "potencia": "80W",
+      "tipo": "Bluetooth",
+      "estilo": "Vintage"
+    },
+    "valoraciones": [
+      { "usuario": "Inés", "comentario": "Sonido único", "puntuacion": 4.8 },
+      { "usuario": "Uri", "comentario": "Diseño precioso", "puntuacion": 4.7 }
+    ]
+  },
+
+  {
+    "id": 39,
+    "nombre": "Ratón Razer Basilisk V4",
+    "categoria": "Accesorios",
+    "precio": 129.00,
+    "stock": 65,
+    "especificaciones": {
+      "dpi": 20000,
+      "tipo": "Inalámbrico",
+      "botones": 11
+    },
+    "valoraciones": [
+      { "usuario": "Jairo", "comentario": "Muy preciso", "puntuacion": 4.7 },
+      { "usuario": "Eva", "comentario": "Ideal para shooters", "puntuacion": 4.6 }
+    ]
+  },
+
+  {
+    "id": 40,
+    "nombre": "Router Linksys Hydra Pro 6E",
+    "categoria": "Red",
+    "precio": 349.00,
+    "stock": 18,
+    "especificaciones": {
+      "wifi": "WiFi 6E",
+      "velocidadMaxima": "6600Mbps",
+      "puertos": 5
+    },
+    "valoraciones": [
+      { "usuario": "Salvador", "comentario": "Señal muy estable", "puntuacion": 4.7 },
+      { "usuario": "Naiara", "comentario": "Funciona perfecto", "puntuacion": 4.8 }
+    ]
+  },
+
+  {
+    "id": 41,
+    "nombre": "Portátil Asus ROG Strix G17",
+    "categoria": "Ordenadores",
+    "precio": 2199.00,
+    "stock": 12,
+    "especificaciones": {
+      "procesador": "Ryzen 9",
+      "ram": "32GB",
+      "almacenamiento": "1TB SSD"
+    },
+    "valoraciones": [
+      { "usuario": "Arnau", "comentario": "Perfecto para gaming", "puntuacion": 4.9 },
+      { "usuario": "Paula", "comentario": "Muy rápido", "puntuacion": 4.8 }
+    ]
+  },
+
+  {
+    "id": 42,
+    "nombre": "Smartphone Vivo X200 Pro",
+    "categoria": "Teléfonos",
+    "precio": 1099.00,
+    "stock": 22,
+    "especificaciones": {
+      "pantalla": "6.78 AMOLED",
+      "bateria": "5000mAh",
+      "camara": "50MP + teleobjetivo periscópico"
+    },
+    "valoraciones": [
+      { "usuario": "Alex", "comentario": "Fotos increíbles", "puntuacion": 4.9 },
+      { "usuario": "Mery", "comentario": "Mucha potencia", "puntuacion": 4.8 }
+    ]
+  },
+
+  {
+    "id": 43,
+    "nombre": "Auriculares JBL Tour One M2",
+    "categoria": "Audio",
+    "precio": 299.00,
+    "stock": 42,
+    "especificaciones": {
+      "cancelacionRuido": true,
+      "autonomia": "50 horas",
+      "tipo": "Bluetooth"
+    },
+    "valoraciones": [
+      { "usuario": "Biel", "comentario": "Muy cómodos", "puntuacion": 4.7 },
+      { "usuario": "Carla", "comentario": "Buena cancelación", "puntuacion": 4.6 }
+    ]
+  },
+
+  {
+    "id": 44,
+    "nombre": "Tablet Amazon Fire Max 11",
+    "categoria": "Tablets",
+    "precio": 249.00,
+    "stock": 60,
+    "especificaciones": {
+      "pantalla": "11 pulgadas",
+      "almacenamiento": "64GB",
+      "bateria": "14 horas"
+    },
+    "valoraciones": [
+      { "usuario": "Óscar", "comentario": "Perfecta para casa", "puntuacion": 4.5 },
+      { "usuario": "Diana", "comentario": "Buena relación calidad precio", "puntuacion": 4.4 }
+    ]
+  },
+
+  {
+    "id": 45,
+    "nombre": "Monitor Samsung Odyssey G85NB",
+    "categoria": "Monitores",
+    "precio": 1499.00,
+    "stock": 10,
+    "especificaciones": {
+      "panel": "QD-OLED",
+      "resolucion": "4K",
+      "tasaRefresco": "240Hz"
+    },
+    "valoraciones": [
+      { "usuario": "Felipe", "comentario": "Impresionante para jugar", "puntuacion": 4.9 },
+      { "usuario": "Tamara", "comentario": "Muy fluido", "puntuacion": 4.8 }
+    ]
+  },
+
+  {
+    "id": 46,
+    "nombre": "Smartwatch Amazfit GTR 5",
+    "categoria": "Wearables",
+    "precio": 249.00,
+    "stock": 45,
+    "especificaciones": {
+      "autonomia": "20 días",
+      "gps": true,
+      "pantalla": "AMOLED"
+    },
+    "valoraciones": [
+      { "usuario": "Raquel", "comentario": "Buen precio", "puntuacion": 4.6 },
+      { "usuario": "Albert", "comentario": "Batería excelente", "puntuacion": 4.7 }
+    ]
+  },
+
+  {
+    "id": 47,
+    "nombre": "Cámara Panasonic Lumix GH7",
+    "categoria": "Fotografía",
+    "precio": 1999.00,
+    "stock": 11,
+    "especificaciones": {
+      "video": "6K",
+      "sensor": "Micro 4/3",
+      "estabilizador": "5 ejes"
+    },
+    "valoraciones": [
+      { "usuario": "Rita", "comentario": "Perfecta para vídeo", "puntuacion": 4.9 },
+      { "usuario": "Joel", "comentario": "Muy versátil", "puntuacion": 4.7 }
+    ]
+  },
+
+  {
+    "id": 48,
+    "nombre": "Altavoz Sonos Move 2",
+    "categoria": "Audio",
+    "precio": 499.00,
+    "stock": 29,
+    "especificaciones": {
+      "autonomia": "24 horas",
+      "tipo": "WiFi/Bluetooth",
+      "resistenciaAgua": "IP56"
+    },
+    "valoraciones": [
+      { "usuario": "Núria", "comentario": "Sonido impresionante", "puntuacion": 4.8 },
+      { "usuario": "Toni", "comentario": "Muy práctico", "puntuacion": 4.7 }
+    ]
+  },
+
+  {
+    "id": 49,
+    "nombre": "Teclado Logitech G Pro X 2",
+    "categoria": "Accesorios",
+    "precio": 199.00,
+    "stock": 52,
+    "especificaciones": {
+      "tipo": "Mecánico",
+      "switches": "Intercambiables",
+      "conectividad": "USB"
+    },
+    "valoraciones": [
+      { "usuario": "Maite", "comentario": "Muy personalizable", "puntuacion": 4.7 },
+      { "usuario": "Xavi", "comentario": "Gran calidad", "puntuacion": 4.6 }
+    ]
+  },
+
+  {
+    "id": 50,
+    "nombre": "Router ASUS ZenWiFi AX Mini",
+    "categoria": "Red",
+    "precio": 199.00,
+    "stock": 33,
+    "especificaciones": {
+      "wifi": "WiFi 6",
+      "unidades": 3,
+      "cobertura": "400m²"
+    },
+    "valoraciones": [
+      { "usuario": "Vanesa", "comentario": "Muy práctico para casa", "puntuacion": 4.7 },
+      { "usuario": "Dani", "comentario": "Se nota la mejora", "puntuacion": 4.6 }
+    ]
+  }
+]
+

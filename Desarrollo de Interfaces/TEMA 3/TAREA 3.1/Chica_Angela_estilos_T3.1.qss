@@ -1,0 +1,165 @@
+
+/* aqui pongo los estilos de label y el fondo de la ventana */
+
+QLabel{
+    color: #4a4063;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+QMainWindow {
+    background-color: #f4f1f9;
+}
+
+/* QCheckBox --> estilos */
+
+QCheckBox {
+    color: #6b5b95;
+    font-size: 14px;
+    spacing: 10px;
+    padding: 5px;
+}
+
+QCheckBox::indicator {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #9b7ec4;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+QCheckBox::indicator:hover {
+    border: 2px solid #6b5b95;
+    background-color: #e8e0f5;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #9b7ec4;
+    border: 2px solid #7d5fa7;
+}
+
+QCheckBox::indicator:disabled{
+    background-color: #d1c4e0;
+    border: 2px solid #b8a8cf;
+}
+
+/* QPushBotton --> estilos */
+QPushButton {
+    background-color: #9b7ec4;
+    color: #ffffff;
+    border: 2px solid #7d5fa7;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 13px;
+}
+
+QPushButton:hover {
+    background-color: #b39ddb;
+    border: 2px solid #9b7ec4;
+}
+
+QPushButton:pressed {
+    background-color: #7d5fa7;
+    border: 2px solid #6b5b95;
+    padding-top: 12px;
+    padding-bottom: 8px;
+}
+
+QPushButton:disabled {
+    background-color: #d1c4e0;
+    border: 2px solid #b8a8cf;
+    color: #a89fc4;
+}
+
+/* QLineEdit --> estilos */
+QLineEdit {
+    background-color: #ffffff;
+    border: 2px solid #c4b5d6;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 13px;
+    color: #4a4063;
+}
+
+QLineEdit:hover {
+    border: 2px solid #9b7ec4;
+    background-color: #fdfcfe;
+}
+
+QLineEdit:focus {
+    border: 2px solid #7d5fa7;
+    background-color: #f9f7fc;
+    color: #4a4063;
+}
+/* para darletambien alfo de color a todo ya que estamos */
+QLineEdit::placeholder {
+    color: #c4b5d6;
+}
+
+/*QRadioButton --> estilos */
+
+QRadioButton {
+    font-size: 13px;
+    color: #4a4063;
+    padding: 6px;
+    spacing: 10px;
+}
+
+QRadioButton::indicator {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d4a5c4;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+QRadioButton::indicator:hover {
+    border: 2px solid #b88aab;
+    background-color: #faf4f8;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #d4a5c4;
+    border: 2px solid #b88aab;
+}
+
+/* QComboBox --> estilos */
+QComboBox {
+    background-color: #ffffff;
+    border: 2px solid #c4b5d6;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 13px;
+    color: #4a4063;
+}
+
+QComboBox:hover {
+    border: 2px solid #9b7ec4;
+    background-color: #f9f7fc;
+}
+
+QComboBox:focus {
+    border: 2px solid #7d5fa7;
+}
+
+QComboBox::drop-down {
+    width: 30px;
+}
+
+QComboBox::down-arrow {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #9b7ec4;
+    margin-right: 8px;
+}
+
+
+/* Como ponía el enunciado he personalizado tambien el menu de como se ve las opciones */
+QComboBox QAbstractItemView {
+    background-color: #ffffff;
+    border: 2px solid #9b7ec4;
+    border-radius: 6px;
+    selection-background-color: #9b7ec4;
+    selection-color: #ffffff;
+    padding: 5px;
+}

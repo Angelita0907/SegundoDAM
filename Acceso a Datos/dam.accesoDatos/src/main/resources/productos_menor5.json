@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "enVenta": true,
+    "nombre": " Producto 1 ",
+    "precio": 10.0,
+    "stock": 3
+  },
+  {
+    "id": 3,
+    "enVenta": true,
+    "nombre": " Producto 3 ",
+    "precio": 25.0,
+    "stock": 0
+  }
+]

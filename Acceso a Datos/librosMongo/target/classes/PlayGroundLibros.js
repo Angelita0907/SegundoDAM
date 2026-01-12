@@ -1,0 +1,69 @@
+// creamos la base de datos y la usamos
+use('LitMindDB');
+
+// creamos indice para el id
+db.usuarios.createIndex({ "id": 1 },{ unique: true });
+
+// insert del json que hay en resources
+db.usuarios.insertMany([
+	{
+		"id": "USR-1001",
+		"nombreCompleto": "Elena Ríos Martínez",
+		"edad": 15,
+		"esDocente": false,
+		"rolPrincipal": "ESTUDIANTE",
+		"puntosPorLogro": 80,
+		"tipoUsuario": "AVANZADO",
+		"lecturaActiva": {
+			"id": "LEC-0034",
+			"titulo": "Crónicas de un Viajero Estelar",
+			"autor": "Anya Sharma",
+			"genero": "CIENCIA_FICCION",
+			"progreso": 68.5
+		},
+		"lecturasAsignadas": [
+			{
+				"id": "ASG-001",
+				"idDocente": "DOC-550",
+				"tituloAsignacion": "Tarea 1: Resumen de Utopías",
+				"esObligatoria": true,
+				"codigoClase": "CS-A101",
+				"totalAlumnos": 28
+			},
+			{
+				"id": "ASG-002",
+				"idDocente": "DOC-550",
+				"tituloAsignacion": "Lectura Opcional de Verano",
+				"esObligatoria": false,
+				"codigoClase": "CS-A101",
+				"totalAlumnos": 28,
+			}
+		]
+	},
+	{
+		"id": "USR-1002",
+		"nombreCompleto": "Roberto Gómez Piñol",
+		"edad": 17,
+		"esDocente": false,
+		"rolPrincipal": "ESTUDIANTE",
+		"puntosPorLogro": 10,
+		"tipoUsuario": "BASICO",
+		"lecturaActiva": {
+			"id": "LEC-0199",
+			"titulo": "Introducción a la Programación Funcional",
+			"autor": "Dr. Manuel Torres",
+			"genero": "TECNICO",
+			"progreso": 15.0
+		},
+		"lecturasAsignadas": [
+			{
+				"id": "ASG-003",
+				"idDocente": "DOC-701",
+				"tituloAsignacion": "Entrega de Proyecto Final",
+				"esObligatoria": true,
+				"codigoClase": "MAT-B205",
+				"totalAlumnos": 22,
+			}
+		]
+	}
+])

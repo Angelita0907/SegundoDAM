@@ -1,0 +1,122 @@
+2025-11-11 10:02:34.044 [main] INFO  gestiona.GestionaClasificacion - Equipo: RED BULL
+2025-11-11 10:02:34.050 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11000949, nombre=Max Verstappen, puntos=1, identificadorEquipo=11000159, pais=NL]
+2025-11-11 10:02:34.050 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11000852, nombre=Sergio Pérez, puntos=1, identificadorEquipo=11000159, pais=MEX]
+2025-11-11 10:02:34.050 [main] INFO  gestiona.GestionaClasificacion - Equipo: MCLAREN
+2025-11-11 10:02:34.050 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11000999, nombre=Lando Norris, puntos=1, identificadorEquipo=11000105, pais=GBR]
+2025-11-11 10:02:34.050 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11001429, nombre=Oscar Piastri, puntos=1, identificadorEquipo=11000105, pais=AUT]
+2025-11-11 10:02:34.051 [main] INFO  gestiona.GestionaClasificacion - Equipo: FERRARI
+2025-11-11 10:02:34.051 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11000962, nombre=Carlos Sainz, puntos=1, identificadorEquipo=11000045, pais=ESP]
+2025-11-11 10:02:34.051 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11000995, nombre=Charles Leclerc, puntos=1, identificadorEquipo=11000045, pais=M.]
+2025-11-11 10:02:34.051 [main] INFO  gestiona.GestionaClasificacion - Equipo: MERCEDES AMG F1
+2025-11-11 10:02:34.051 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11001036, nombre=George Russell, puntos=1, identificadorEquipo=11000179, pais=GBR]
+2025-11-11 10:02:34.051 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11000822, nombre=Lewis Hamilton, puntos=1, identificadorEquipo=11000179, pais=GBR]
+2025-11-11 10:02:34.051 [main] INFO  gestiona.GestionaClasificacion - Equipo: ASTON MARTIN
+2025-11-11 10:02:34.051 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11000008, nombre=Fernando Alonso, puntos=4, identificadorEquipo=11000363, pais=ESP]
+2025-11-11 10:02:34.051 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11000996, nombre=Lance Stroll, puntos=1, identificadorEquipo=11000363, pais=CAN]
+2025-11-11 10:02:34.051 [main] INFO  gestiona.GestionaClasificacion - Equipo: HAAS F1 TEAM
+2025-11-11 10:02:34.052 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11000879, nombre=Kevin Magnussen, puntos=1, identificadorEquipo=11000198, pais=DIN]
+2025-11-11 10:02:34.052 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11000836, nombre=Nico Hulkenberg, puntos=1, identificadorEquipo=11000198, pais=ALM]
+2025-11-11 10:02:34.052 [main] INFO  gestiona.GestionaClasificacion - Equipo: RB
+2025-11-11 10:02:34.052 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11001423, nombre=Liam Lawson, puntos=1, identificadorEquipo=11000383, pais=NZ]
+2025-11-11 10:02:34.052 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11001421, nombre=Yuki Tsunoda, puntos=5, identificadorEquipo=11000383, pais=JAP]
+2025-11-11 10:02:34.052 [main] INFO  gestiona.GestionaClasificacion - Equipo: WILLIAMS
+2025-11-11 10:02:34.052 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11001284, nombre=Alexander Albon, puntos=5, identificadorEquipo=11000150, pais=TH]
+2025-11-11 10:02:34.052 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11001436, nombre=Franco Colapinto, puntos=1, identificadorEquipo=11000150, pais=ARG]
+2025-11-11 10:02:34.052 [main] INFO  gestiona.GestionaClasificacion - Equipo: ALPINE F1 TEAM
+2025-11-11 10:02:34.052 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11000957, nombre=Esteban Ocon, puntos=1, identificadorEquipo=11000123, pais=FRA]
+2025-11-11 10:02:34.052 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11000955, nombre=Pierre Gasly, puntos=1, identificadorEquipo=11000123, pais=FRA]
+2025-11-11 10:02:34.052 [main] INFO  gestiona.GestionaClasificacion - Equipo: KICK SAUBER
+2025-11-11 10:02:34.053 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11001371, nombre=Guanyu Zhou, puntos=1, identificadorEquipo=11000384, pais=CHN]
+2025-11-11 10:02:34.053 [main] INFO  gestiona.GestionaClasificacion -   Piloto [identificadorPiloto=11000857, nombre=Valtteri Bottas, puntos=1, identificadorEquipo=11000384, pais=FIN]
+2025-11-11 10:03:23.547 [main] INFO  gestiona.GestionaClasificacion - Equipo: RED BULL
+2025-11-11 10:03:23.554 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000949, nombre=Max Verstappen, puntos=1, identificadorEquipo=11000159, pais=NL]
+2025-11-11 10:03:23.554 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000852, nombre=Sergio Pérez, puntos=1, identificadorEquipo=11000159, pais=MEX]
+2025-11-11 10:03:23.554 [main] INFO  gestiona.GestionaClasificacion - Equipo: MCLAREN
+2025-11-11 10:03:23.554 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000999, nombre=Lando Norris, puntos=1, identificadorEquipo=11000105, pais=GBR]
+2025-11-11 10:03:23.554 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001429, nombre=Oscar Piastri, puntos=1, identificadorEquipo=11000105, pais=AUT]
+2025-11-11 10:03:23.554 [main] INFO  gestiona.GestionaClasificacion - Equipo: FERRARI
+2025-11-11 10:03:23.554 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000962, nombre=Carlos Sainz, puntos=1, identificadorEquipo=11000045, pais=ESP]
+2025-11-11 10:03:23.555 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000995, nombre=Charles Leclerc, puntos=1, identificadorEquipo=11000045, pais=M.]
+2025-11-11 10:03:23.555 [main] INFO  gestiona.GestionaClasificacion - Equipo: MERCEDES AMG F1
+2025-11-11 10:03:23.555 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001036, nombre=George Russell, puntos=1, identificadorEquipo=11000179, pais=GBR]
+2025-11-11 10:03:23.555 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000822, nombre=Lewis Hamilton, puntos=1, identificadorEquipo=11000179, pais=GBR]
+2025-11-11 10:03:23.555 [main] INFO  gestiona.GestionaClasificacion - Equipo: ASTON MARTIN
+2025-11-11 10:03:23.555 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000008, nombre=Fernando Alonso, puntos=4, identificadorEquipo=11000363, pais=ESP]
+2025-11-11 10:03:23.555 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000996, nombre=Lance Stroll, puntos=1, identificadorEquipo=11000363, pais=CAN]
+2025-11-11 10:03:23.555 [main] INFO  gestiona.GestionaClasificacion - Equipo: HAAS F1 TEAM
+2025-11-11 10:03:23.555 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000879, nombre=Kevin Magnussen, puntos=1, identificadorEquipo=11000198, pais=DIN]
+2025-11-11 10:03:23.555 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000836, nombre=Nico Hulkenberg, puntos=1, identificadorEquipo=11000198, pais=ALM]
+2025-11-11 10:03:23.556 [main] INFO  gestiona.GestionaClasificacion - Equipo: RB
+2025-11-11 10:03:23.556 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001423, nombre=Liam Lawson, puntos=1, identificadorEquipo=11000383, pais=NZ]
+2025-11-11 10:03:23.556 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001421, nombre=Yuki Tsunoda, puntos=5, identificadorEquipo=11000383, pais=JAP]
+2025-11-11 10:03:23.556 [main] INFO  gestiona.GestionaClasificacion - Equipo: WILLIAMS
+2025-11-11 10:03:23.556 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001284, nombre=Alexander Albon, puntos=5, identificadorEquipo=11000150, pais=TH]
+2025-11-11 10:03:23.556 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001436, nombre=Franco Colapinto, puntos=1, identificadorEquipo=11000150, pais=ARG]
+2025-11-11 10:03:23.556 [main] INFO  gestiona.GestionaClasificacion - Equipo: ALPINE F1 TEAM
+2025-11-11 10:03:23.556 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000957, nombre=Esteban Ocon, puntos=1, identificadorEquipo=11000123, pais=FRA]
+2025-11-11 10:03:23.556 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000955, nombre=Pierre Gasly, puntos=1, identificadorEquipo=11000123, pais=FRA]
+2025-11-11 10:03:23.556 [main] INFO  gestiona.GestionaClasificacion - Equipo: KICK SAUBER
+2025-11-11 10:03:23.556 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001371, nombre=Guanyu Zhou, puntos=1, identificadorEquipo=11000384, pais=CHN]
+2025-11-11 10:03:23.557 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000857, nombre=Valtteri Bottas, puntos=1, identificadorEquipo=11000384, pais=FIN]
+2025-11-11 17:01:06.548 [main] INFO  gestiona.GestionaClasificacion - Equipo: RED BULL
+2025-11-11 17:01:06.560 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000949, nombre=Max Verstappen, puntos=1, identificadorEquipo=11000159, pais=NL]
+2025-11-11 17:01:06.560 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000852, nombre=Sergio Pérez, puntos=1, identificadorEquipo=11000159, pais=MEX]
+2025-11-11 17:01:06.561 [main] INFO  gestiona.GestionaClasificacion - Equipo: MCLAREN
+2025-11-11 17:01:06.561 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000999, nombre=Lando Norris, puntos=1, identificadorEquipo=11000105, pais=GBR]
+2025-11-11 17:01:06.561 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001429, nombre=Oscar Piastri, puntos=1, identificadorEquipo=11000105, pais=AUT]
+2025-11-11 17:01:06.561 [main] INFO  gestiona.GestionaClasificacion - Equipo: FERRARI
+2025-11-11 17:01:06.561 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000962, nombre=Carlos Sainz, puntos=1, identificadorEquipo=11000045, pais=ESP]
+2025-11-11 17:01:06.561 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000995, nombre=Charles Leclerc, puntos=1, identificadorEquipo=11000045, pais=M.]
+2025-11-11 17:01:06.561 [main] INFO  gestiona.GestionaClasificacion - Equipo: MERCEDES AMG F1
+2025-11-11 17:01:06.561 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001036, nombre=George Russell, puntos=1, identificadorEquipo=11000179, pais=GBR]
+2025-11-11 17:01:06.561 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000822, nombre=Lewis Hamilton, puntos=1, identificadorEquipo=11000179, pais=GBR]
+2025-11-11 17:01:06.561 [main] INFO  gestiona.GestionaClasificacion - Equipo: ASTON MARTIN
+2025-11-11 17:01:06.561 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000008, nombre=Fernando Alonso, puntos=4, identificadorEquipo=11000363, pais=ESP]
+2025-11-11 17:01:06.562 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000996, nombre=Lance Stroll, puntos=1, identificadorEquipo=11000363, pais=CAN]
+2025-11-11 17:01:06.562 [main] INFO  gestiona.GestionaClasificacion - Equipo: HAAS F1 TEAM
+2025-11-11 17:01:06.562 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000879, nombre=Kevin Magnussen, puntos=1, identificadorEquipo=11000198, pais=DIN]
+2025-11-11 17:01:06.562 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000836, nombre=Nico Hulkenberg, puntos=1, identificadorEquipo=11000198, pais=ALM]
+2025-11-11 17:01:06.562 [main] INFO  gestiona.GestionaClasificacion - Equipo: RB
+2025-11-11 17:01:06.562 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001423, nombre=Liam Lawson, puntos=1, identificadorEquipo=11000383, pais=NZ]
+2025-11-11 17:01:06.562 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001421, nombre=Yuki Tsunoda, puntos=5, identificadorEquipo=11000383, pais=JAP]
+2025-11-11 17:01:06.562 [main] INFO  gestiona.GestionaClasificacion - Equipo: WILLIAMS
+2025-11-11 17:01:06.562 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001284, nombre=Alexander Albon, puntos=5, identificadorEquipo=11000150, pais=TH]
+2025-11-11 17:01:06.562 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001436, nombre=Franco Colapinto, puntos=1, identificadorEquipo=11000150, pais=ARG]
+2025-11-11 17:01:06.563 [main] INFO  gestiona.GestionaClasificacion - Equipo: ALPINE F1 TEAM
+2025-11-11 17:01:06.563 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000957, nombre=Esteban Ocon, puntos=1, identificadorEquipo=11000123, pais=FRA]
+2025-11-11 17:01:06.563 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000955, nombre=Pierre Gasly, puntos=1, identificadorEquipo=11000123, pais=FRA]
+2025-11-11 17:01:06.563 [main] INFO  gestiona.GestionaClasificacion - Equipo: KICK SAUBER
+2025-11-11 17:01:06.563 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001371, nombre=Guanyu Zhou, puntos=1, identificadorEquipo=11000384, pais=CHN]
+2025-11-11 17:01:06.563 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000857, nombre=Valtteri Bottas, puntos=1, identificadorEquipo=11000384, pais=FIN]
+2025-11-11 17:01:06.601 [main] ERROR utils.Formula1XMLNuevo - Error al escribir XML: java.io.FileNotFoundException: C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos\formula1\src\main\resources\src\main\resources\equipos_generados.xml (El sistema no puede encontrar la ruta especificada)
+2025-11-11 17:01:31.334 [main] INFO  gestiona.GestionaClasificacion - Equipo: RED BULL
+2025-11-11 17:01:31.346 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000949, nombre=Max Verstappen, puntos=1, identificadorEquipo=11000159, pais=NL]
+2025-11-11 17:01:31.346 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000852, nombre=Sergio Pérez, puntos=1, identificadorEquipo=11000159, pais=MEX]
+2025-11-11 17:01:31.346 [main] INFO  gestiona.GestionaClasificacion - Equipo: MCLAREN
+2025-11-11 17:01:31.346 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000999, nombre=Lando Norris, puntos=1, identificadorEquipo=11000105, pais=GBR]
+2025-11-11 17:01:31.346 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001429, nombre=Oscar Piastri, puntos=1, identificadorEquipo=11000105, pais=AUT]
+2025-11-11 17:01:31.346 [main] INFO  gestiona.GestionaClasificacion - Equipo: FERRARI
+2025-11-11 17:01:31.346 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000962, nombre=Carlos Sainz, puntos=1, identificadorEquipo=11000045, pais=ESP]
+2025-11-11 17:01:31.347 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000995, nombre=Charles Leclerc, puntos=1, identificadorEquipo=11000045, pais=M.]
+2025-11-11 17:01:31.347 [main] INFO  gestiona.GestionaClasificacion - Equipo: MERCEDES AMG F1
+2025-11-11 17:01:31.347 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001036, nombre=George Russell, puntos=1, identificadorEquipo=11000179, pais=GBR]
+2025-11-11 17:01:31.347 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000822, nombre=Lewis Hamilton, puntos=1, identificadorEquipo=11000179, pais=GBR]
+2025-11-11 17:01:31.347 [main] INFO  gestiona.GestionaClasificacion - Equipo: ASTON MARTIN
+2025-11-11 17:01:31.347 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000008, nombre=Fernando Alonso, puntos=4, identificadorEquipo=11000363, pais=ESP]
+2025-11-11 17:01:31.347 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000996, nombre=Lance Stroll, puntos=1, identificadorEquipo=11000363, pais=CAN]
+2025-11-11 17:01:31.347 [main] INFO  gestiona.GestionaClasificacion - Equipo: HAAS F1 TEAM
+2025-11-11 17:01:31.347 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000879, nombre=Kevin Magnussen, puntos=1, identificadorEquipo=11000198, pais=DIN]
+2025-11-11 17:01:31.347 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000836, nombre=Nico Hulkenberg, puntos=1, identificadorEquipo=11000198, pais=ALM]
+2025-11-11 17:01:31.348 [main] INFO  gestiona.GestionaClasificacion - Equipo: RB
+2025-11-11 17:01:31.348 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001423, nombre=Liam Lawson, puntos=1, identificadorEquipo=11000383, pais=NZ]
+2025-11-11 17:01:31.348 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001421, nombre=Yuki Tsunoda, puntos=5, identificadorEquipo=11000383, pais=JAP]
+2025-11-11 17:01:31.348 [main] INFO  gestiona.GestionaClasificacion - Equipo: WILLIAMS
+2025-11-11 17:01:31.348 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001284, nombre=Alexander Albon, puntos=5, identificadorEquipo=11000150, pais=TH]
+2025-11-11 17:01:31.348 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001436, nombre=Franco Colapinto, puntos=1, identificadorEquipo=11000150, pais=ARG]
+2025-11-11 17:01:31.348 [main] INFO  gestiona.GestionaClasificacion - Equipo: ALPINE F1 TEAM
+2025-11-11 17:01:31.348 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000957, nombre=Esteban Ocon, puntos=1, identificadorEquipo=11000123, pais=FRA]
+2025-11-11 17:01:31.348 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000955, nombre=Pierre Gasly, puntos=1, identificadorEquipo=11000123, pais=FRA]
+2025-11-11 17:01:31.348 [main] INFO  gestiona.GestionaClasificacion - Equipo: KICK SAUBER
+2025-11-11 17:01:31.349 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11001371, nombre=Guanyu Zhou, puntos=1, identificadorEquipo=11000384, pais=CHN]
+2025-11-11 17:01:31.349 [main] INFO  gestiona.GestionaClasificacion - Piloto [identificadorPiloto=11000857, nombre=Valtteri Bottas, puntos=1, identificadorEquipo=11000384, pais=FIN]
+2025-11-11 17:01:31.424 [main] INFO  utils.Formula1XMLNuevo - Archivo XML generado correctamente: equipos_generados.xml

@@ -1,0 +1,2 @@
+2025-10-29 13:26:16.592 [main] ERROR tema1.LecturayEscritura.ContadorPalabras - C:\Users\alumno\Desktop\SegundoDAM\Acceso a Datos\dam.accesoDatos\src\main\resourcesempleados.xml (El sistema no puede encontrar el archivo especificado)
+2025-10-29 13:29:26.890 [main] INFO  tema1.LecturayEscritura.ContadorPalabras - Empleado [identificador=E001, nombreApellido=Juan Haro, edad=30, empresa=OpenAI]

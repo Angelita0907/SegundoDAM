@@ -1,0 +1,197 @@
+2025-12-16 13:06:54.709 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Ana García
+2025-12-16 13:06:54.725 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Carlos Ruiz
+2025-12-16 13:06:54.739 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: María López
+2025-12-16 13:06:54.752 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Pedro Martínez
+2025-12-16 13:38:48.619 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Ana García
+2025-12-16 13:38:48.634 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Carlos Ruiz
+2025-12-16 13:38:48.648 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: María López
+2025-12-16 13:38:48.661 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Pedro Martínez
+2025-12-16 13:38:48.771 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 13:38:48.780 [main] INFO  jdbc.controller.DixitControlador - Lista de puntuaciones: [Jugador{id=0, nombre='Pedro Martínez', email='null', puntosTotales=37}, Jugador{id=0, nombre='Carlos Ruiz', email='null', puntosTotales=23}, Jugador{id=0, nombre='María López', email='null', puntosTotales=18}, Jugador{id=0, nombre='Ana García', email='null', puntosTotales=12}]
+2025-12-16 13:38:48.795 [main] INFO  jdbc.controller.DixitControlador - [Partida{id=2, torneoId=4, narradorId=Jugador{id=2, nombre='null', email='null', puntosTotales=0}, fecha=2025-10-17, resultado=NADIE}, Partida{id=3, torneoId=6, narradorId=Jugador{id=1, nombre='null', email='null', puntosTotales=0}, fecha=2025-11-21, resultado=TODOS}, Partida{id=1, torneoId=3, narradorId=Jugador{id=4, nombre='null', email='null', puntosTotales=0}, fecha=2025-12-05, resultado=ALGUNOS}]
+2025-12-16 13:44:36.535 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 13:44:36.549 [main] INFO  jdbc.controller.DixitControlador - Lista de puntuaciones: [Jugador{id=0, nombre='Pedro Martínez', email='null', puntosTotales=37}, Jugador{id=0, nombre='Carlos Ruiz', email='null', puntosTotales=23}, Jugador{id=0, nombre='María López', email='null', puntosTotales=18}, Jugador{id=0, nombre='Ana García', email='null', puntosTotales=12}]
+2025-12-16 13:44:36.565 [main] INFO  jdbc.controller.DixitControlador - [Partida{id=2, torneoId=4, narradorId=Jugador{id=2, nombre='null', email='null', puntosTotales=0}, fecha=2025-10-17, resultado=NADIE}, Partida{id=3, torneoId=6, narradorId=Jugador{id=1, nombre='null', email='null', puntosTotales=0}, fecha=2025-11-21, resultado=TODOS}, Partida{id=1, torneoId=3, narradorId=Jugador{id=4, nombre='null', email='null', puntosTotales=0}, fecha=2025-12-05, resultado=ALGUNOS}]
+2025-12-16 17:35:20.582 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Ana García
+2025-12-16 17:35:20.607 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Carlos Ruiz
+2025-12-16 17:35:20.628 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: María López
+2025-12-16 17:35:20.647 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Pedro Martínez
+2025-12-16 17:53:59.997 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Ana García
+2025-12-16 17:54:00.019 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Carlos Ruiz
+2025-12-16 17:54:00.037 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: María López
+2025-12-16 17:54:00.055 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Pedro Martínez
+2025-12-16 17:58:18.594 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Ana García
+2025-12-16 17:58:18.616 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Carlos Ruiz
+2025-12-16 17:58:18.635 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: María López
+2025-12-16 17:58:18.651 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Pedro Martínez
+2025-12-16 17:58:18.657 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=1, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=12}
+2025-12-16 17:58:18.657 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 17:58:18.657 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=3, nombre='María López', email='maria.lopez@email.com', puntosTotales=18}
+2025-12-16 17:58:18.657 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 17:58:18.657 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=5, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=12}
+2025-12-16 17:58:18.657 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=6, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 17:58:18.657 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=7, nombre='María López', email='maria.lopez@email.com', puntosTotales=18}
+2025-12-16 17:58:18.657 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=8, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 17:59:04.221 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=1, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=12}
+2025-12-16 17:59:04.226 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 17:59:04.226 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=3, nombre='María López', email='maria.lopez@email.com', puntosTotales=18}
+2025-12-16 17:59:04.226 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 17:59:04.226 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=5, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=12}
+2025-12-16 17:59:04.226 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=6, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 17:59:04.227 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=7, nombre='María López', email='maria.lopez@email.com', puntosTotales=18}
+2025-12-16 17:59:04.227 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=8, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 18:06:13.310 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Ana García
+2025-12-16 18:06:13.331 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Carlos Ruiz
+2025-12-16 18:06:13.350 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: María López
+2025-12-16 18:06:13.368 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Pedro Martínez
+2025-12-16 18:06:13.374 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=1, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=12}
+2025-12-16 18:06:13.374 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 18:06:13.374 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=3, nombre='María López', email='maria.lopez@email.com', puntosTotales=18}
+2025-12-16 18:06:13.374 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 18:07:24.176 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=1, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=12}
+2025-12-16 18:07:24.178 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 18:07:24.178 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=3, nombre='María López', email='maria.lopez@email.com', puntosTotales=18}
+2025-12-16 18:07:24.178 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 18:07:24.237 [main] INFO  jdbc.controller.DixitControlador - Partida{id=0, torneoId=3, narradorId=Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}, fecha=2025-12-05, resultado=ALGUNOS}
+2025-12-16 18:08:18.543 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=1, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=12}
+2025-12-16 18:08:18.546 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 18:08:18.546 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=3, nombre='María López', email='maria.lopez@email.com', puntosTotales=18}
+2025-12-16 18:08:18.547 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 18:08:18.619 [main] INFO  jdbc.controller.DixitControlador - Partida{id=1, torneoId=3, narradorId=Jugador{id=4, nombre='null', email='null', puntosTotales=0}, fecha=2025-12-05, resultado=ALGUNOS}
+2025-12-16 18:08:18.619 [main] INFO  jdbc.controller.DixitControlador - Partida{id=0, torneoId=4, narradorId=Jugador{id=1, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=12}, fecha=2025-10-17, resultado=NADIE}
+2025-12-16 18:08:18.619 [main] INFO  jdbc.controller.DixitControlador - Partida{id=0, torneoId=6, narradorId=Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}, fecha=2025-11-21, resultado=TODOS}
+2025-12-16 18:18:28.846 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=1, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=12}
+2025-12-16 18:18:28.850 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 18:18:28.850 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=3, nombre='María López', email='maria.lopez@email.com', puntosTotales=18}
+2025-12-16 18:18:28.850 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 18:18:28.854 [main] INFO  jdbc.controller.DixitControlador - Partida{id=1, torneoId=3, narradorId=Jugador{id=4, nombre='null', email='null', puntosTotales=0}, fecha=2025-12-05, resultado=ALGUNOS}
+2025-12-16 18:18:28.854 [main] INFO  jdbc.controller.DixitControlador - Partida{id=2, torneoId=4, narradorId=Jugador{id=1, nombre='null', email='null', puntosTotales=0}, fecha=2025-10-17, resultado=NADIE}
+2025-12-16 18:18:28.855 [main] INFO  jdbc.controller.DixitControlador - Partida{id=3, torneoId=6, narradorId=Jugador{id=2, nombre='null', email='null', puntosTotales=0}, fecha=2025-11-21, resultado=TODOS}
+2025-12-16 18:20:26.117 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=1, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=12}
+2025-12-16 18:20:26.120 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 18:20:26.120 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=3, nombre='María López', email='maria.lopez@email.com', puntosTotales=18}
+2025-12-16 18:20:26.120 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 18:20:26.124 [main] INFO  jdbc.controller.DixitControlador - Partida{id=1, torneoId=3, narradorId=Jugador{id=4, nombre='null', email='null', puntosTotales=0}, fecha=2025-12-05, resultado=ALGUNOS}
+2025-12-16 18:20:26.124 [main] INFO  jdbc.controller.DixitControlador - Partida{id=2, torneoId=4, narradorId=Jugador{id=1, nombre='null', email='null', puntosTotales=0}, fecha=2025-10-17, resultado=NADIE}
+2025-12-16 18:20:26.124 [main] INFO  jdbc.controller.DixitControlador - Partida{id=3, torneoId=6, narradorId=Jugador{id=2, nombre='null', email='null', puntosTotales=0}, fecha=2025-11-21, resultado=TODOS}
+2025-12-16 18:46:04.004 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=1, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=12}
+2025-12-16 18:46:04.006 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 18:46:04.006 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=3, nombre='María López', email='maria.lopez@email.com', puntosTotales=18}
+2025-12-16 18:46:04.006 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=40}
+2025-12-16 18:46:04.009 [main] INFO  jdbc.controller.DixitControlador - Partida{id=1, torneoId=3, narradorId=Jugador{id=4, nombre='null', email='null', puntosTotales=0}, fecha=2025-12-05, resultado=ALGUNOS}
+2025-12-16 18:46:04.009 [main] INFO  jdbc.controller.DixitControlador - Partida{id=2, torneoId=4, narradorId=Jugador{id=1, nombre='null', email='null', puntosTotales=0}, fecha=2025-10-17, resultado=NADIE}
+2025-12-16 18:46:04.009 [main] INFO  jdbc.controller.DixitControlador - Partida{id=3, torneoId=6, narradorId=Jugador{id=2, nombre='null', email='null', puntosTotales=0}, fecha=2025-11-21, resultado=TODOS}
+2025-12-16 18:46:04.046 [main] INFO  jdbc.repository.JugadorRepository - Puntuación narrador actualizada correctamente
+2025-12-16 18:46:04.074 [main] INFO  jdbc.repository.JugadorRepository - Puntuación No acertante actualizada correctamente
+2025-12-16 18:46:04.093 [main] INFO  jdbc.repository.JugadorRepository - Puntuación narrador actualizada correctamente
+2025-12-16 18:46:04.120 [main] INFO  jdbc.repository.JugadorRepository - Puntuación No acertante actualizada correctamente
+2025-12-16 18:47:17.681 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=1, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=14}
+2025-12-16 18:47:17.682 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 18:47:17.683 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=3, nombre='María López', email='maria.lopez@email.com', puntosTotales=20}
+2025-12-16 18:47:17.683 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=43}
+2025-12-16 18:47:17.687 [main] INFO  jdbc.controller.DixitControlador - Partida{id=1, torneoId=3, narradorId=Jugador{id=4, nombre='null', email='null', puntosTotales=0}, fecha=2025-12-05, resultado=ALGUNOS}
+2025-12-16 18:47:17.687 [main] INFO  jdbc.controller.DixitControlador - Partida{id=2, torneoId=4, narradorId=Jugador{id=1, nombre='null', email='null', puntosTotales=0}, fecha=2025-10-17, resultado=NADIE}
+2025-12-16 18:47:17.687 [main] INFO  jdbc.controller.DixitControlador - Partida{id=3, torneoId=6, narradorId=Jugador{id=2, nombre='null', email='null', puntosTotales=0}, fecha=2025-11-21, resultado=TODOS}
+2025-12-16 18:47:17.704 [main] INFO  jdbc.controller.DixitControlador - [Partida{id=2, torneoId=4, narradorId=Jugador{id=1, nombre='null', email='null', puntosTotales=0}, fecha=2025-10-17, resultado=NADIE}, Partida{id=3, torneoId=6, narradorId=Jugador{id=2, nombre='null', email='null', puntosTotales=0}, fecha=2025-11-21, resultado=TODOS}, Partida{id=1, torneoId=3, narradorId=Jugador{id=4, nombre='null', email='null', puntosTotales=0}, fecha=2025-12-05, resultado=ALGUNOS}]
+2025-12-16 18:49:40.599 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=1, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=14}
+2025-12-16 18:49:40.601 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 18:49:40.602 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=3, nombre='María López', email='maria.lopez@email.com', puntosTotales=20}
+2025-12-16 18:49:40.602 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=43}
+2025-12-16 18:49:40.605 [main] INFO  jdbc.controller.DixitControlador - Partida{id=1, torneoId=3, narradorId=Jugador{id=4, nombre='null', email='null', puntosTotales=0}, fecha=2025-12-05, resultado=ALGUNOS}
+2025-12-16 18:49:40.606 [main] INFO  jdbc.controller.DixitControlador - Partida{id=2, torneoId=4, narradorId=Jugador{id=1, nombre='null', email='null', puntosTotales=0}, fecha=2025-10-17, resultado=NADIE}
+2025-12-16 18:49:40.606 [main] INFO  jdbc.controller.DixitControlador - Partida{id=3, torneoId=6, narradorId=Jugador{id=2, nombre='null', email='null', puntosTotales=0}, fecha=2025-11-21, resultado=TODOS}
+2025-12-16 18:49:40.621 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=43}
+2025-12-16 18:49:40.633 [main] INFO  jdbc.repository.JugadorRepository - Jugadores con mayor puntuación:[Jugador{id=0, nombre='Pedro Martínez', email='null', puntosTotales=43}, Jugador{id=0, nombre='Carlos Ruiz', email='null', puntosTotales=23}, Jugador{id=0, nombre='María López', email='null', puntosTotales=20}, Jugador{id=0, nombre='Ana García', email='null', puntosTotales=14}]
+2025-12-16 18:49:40.633 [main] INFO  jdbc.controller.DixitControlador - [Jugador{id=0, nombre='Pedro Martínez', email='null', puntosTotales=43}, Jugador{id=0, nombre='Carlos Ruiz', email='null', puntosTotales=23}, Jugador{id=0, nombre='María López', email='null', puntosTotales=20}, Jugador{id=0, nombre='Ana García', email='null', puntosTotales=14}]
+2025-12-16 18:49:40.643 [main] INFO  jdbc.controller.DixitControlador - Lista de puntuaciones: [Partida{id=2, torneoId=4, narradorId=Jugador{id=1, nombre='null', email='null', puntosTotales=0}, fecha=2025-10-17, resultado=NADIE}, Partida{id=3, torneoId=6, narradorId=Jugador{id=2, nombre='null', email='null', puntosTotales=0}, fecha=2025-11-21, resultado=TODOS}, Partida{id=1, torneoId=3, narradorId=Jugador{id=4, nombre='null', email='null', puntosTotales=0}, fecha=2025-12-05, resultado=ALGUNOS}]
+2025-12-16 18:50:20.793 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=1, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=14}
+2025-12-16 18:50:20.796 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 18:50:20.796 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=3, nombre='María López', email='maria.lopez@email.com', puntosTotales=20}
+2025-12-16 18:50:20.796 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=43}
+2025-12-16 18:50:20.800 [main] INFO  jdbc.controller.DixitControlador - Partida{id=1, torneoId=3, narradorId=Jugador{id=4, nombre='null', email='null', puntosTotales=0}, fecha=2025-12-05, resultado=ALGUNOS}
+2025-12-16 18:50:20.801 [main] INFO  jdbc.controller.DixitControlador - Partida{id=2, torneoId=4, narradorId=Jugador{id=1, nombre='null', email='null', puntosTotales=0}, fecha=2025-10-17, resultado=NADIE}
+2025-12-16 18:50:20.801 [main] INFO  jdbc.controller.DixitControlador - Partida{id=3, torneoId=6, narradorId=Jugador{id=2, nombre='null', email='null', puntosTotales=0}, fecha=2025-11-21, resultado=TODOS}
+2025-12-16 18:50:20.818 [main] INFO  jdbc.controller.DixitControlador - Jugador con mayor puntuación: Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=43}
+2025-12-16 18:50:20.829 [main] INFO  jdbc.repository.JugadorRepository - Jugadores con mayor puntuación:[Jugador{id=0, nombre='Pedro Martínez', email='null', puntosTotales=43}, Jugador{id=0, nombre='Carlos Ruiz', email='null', puntosTotales=23}, Jugador{id=0, nombre='María López', email='null', puntosTotales=20}, Jugador{id=0, nombre='Ana García', email='null', puntosTotales=14}]
+2025-12-16 18:50:20.830 [main] INFO  jdbc.controller.DixitControlador - Puntuaciones de Jugadores: [Jugador{id=0, nombre='Pedro Martínez', email='null', puntosTotales=43}, Jugador{id=0, nombre='Carlos Ruiz', email='null', puntosTotales=23}, Jugador{id=0, nombre='María López', email='null', puntosTotales=20}, Jugador{id=0, nombre='Ana García', email='null', puntosTotales=14}]
+2025-12-16 18:50:20.840 [main] INFO  jdbc.controller.DixitControlador - Lista de puntuaciones: [Partida{id=2, torneoId=4, narradorId=Jugador{id=1, nombre='null', email='null', puntosTotales=0}, fecha=2025-10-17, resultado=NADIE}, Partida{id=3, torneoId=6, narradorId=Jugador{id=2, nombre='null', email='null', puntosTotales=0}, fecha=2025-11-21, resultado=TODOS}, Partida{id=1, torneoId=3, narradorId=Jugador{id=4, nombre='null', email='null', puntosTotales=0}, fecha=2025-12-05, resultado=ALGUNOS}]
+2025-12-16 19:43:15.571 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=1, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=14}
+2025-12-16 19:43:15.574 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 19:43:15.574 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=3, nombre='María López', email='maria.lopez@email.com', puntosTotales=20}
+2025-12-16 19:43:15.574 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=43}
+2025-12-16 19:43:15.578 [main] INFO  jdbc.controller.DixitControlador - Partida{id=1, torneoId=3, narradorId=Jugador{id=4, nombre='null', email='null', puntosTotales=0}, fecha=2025-12-05, resultado=ALGUNOS}
+2025-12-16 19:43:15.578 [main] INFO  jdbc.controller.DixitControlador - Partida{id=2, torneoId=4, narradorId=Jugador{id=1, nombre='null', email='null', puntosTotales=0}, fecha=2025-10-17, resultado=NADIE}
+2025-12-16 19:43:15.578 [main] INFO  jdbc.controller.DixitControlador - Partida{id=3, torneoId=6, narradorId=Jugador{id=2, nombre='null', email='null', puntosTotales=0}, fecha=2025-11-21, resultado=TODOS}
+2025-12-16 19:43:15.596 [main] INFO  jdbc.controller.DixitControlador - Jugador con mayor puntuación: Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=43}
+2025-12-16 19:43:15.606 [main] INFO  jdbc.repository.JugadorRepository - Jugadores con mayor puntuación:[Jugador{id=0, nombre='Pedro Martínez', email='null', puntosTotales=43}, Jugador{id=0, nombre='Carlos Ruiz', email='null', puntosTotales=23}, Jugador{id=0, nombre='María López', email='null', puntosTotales=20}, Jugador{id=0, nombre='Ana García', email='null', puntosTotales=14}]
+2025-12-16 19:43:15.606 [main] INFO  jdbc.controller.DixitControlador - Puntuaciones de Jugadores: [Jugador{id=0, nombre='Pedro Martínez', email='null', puntosTotales=43}, Jugador{id=0, nombre='Carlos Ruiz', email='null', puntosTotales=23}, Jugador{id=0, nombre='María López', email='null', puntosTotales=20}, Jugador{id=0, nombre='Ana García', email='null', puntosTotales=14}]
+2025-12-16 19:43:15.617 [main] INFO  jdbc.controller.DixitControlador - Lista de puntuaciones: [Partida{id=2, torneoId=4, narradorId=Jugador{id=1, nombre='null', email='null', puntosTotales=0}, fecha=2025-10-17, resultado=NADIE}, Partida{id=3, torneoId=6, narradorId=Jugador{id=2, nombre='null', email='null', puntosTotales=0}, fecha=2025-11-21, resultado=TODOS}, Partida{id=1, torneoId=3, narradorId=Jugador{id=4, nombre='null', email='null', puntosTotales=0}, fecha=2025-12-05, resultado=ALGUNOS}]
+2025-12-16 20:26:14.248 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Ana García
+2025-12-16 20:26:14.270 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Carlos Ruiz
+2025-12-16 20:26:14.289 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: María López
+2025-12-16 20:26:14.307 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Pedro Martínez
+2025-12-16 20:26:14.313 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=1, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=12}
+2025-12-16 20:26:14.313 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 20:26:14.313 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=3, nombre='María López', email='maria.lopez@email.com', puntosTotales=18}
+2025-12-16 20:26:14.313 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 20:26:14.324 [main] INFO  jdbc.controller.DixitControlador - Jugador con mayor puntuación: Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 20:26:14.334 [main] INFO  jdbc.repository.JugadorRepository - Jugadores con mayor puntuación:[Jugador{id=0, nombre='Pedro Martínez', email='null', puntosTotales=37}, Jugador{id=0, nombre='Carlos Ruiz', email='null', puntosTotales=23}, Jugador{id=0, nombre='María López', email='null', puntosTotales=18}, Jugador{id=0, nombre='Ana García', email='null', puntosTotales=12}]
+2025-12-16 20:26:14.334 [main] INFO  jdbc.controller.DixitControlador - Puntuaciones de Jugadores: [Jugador{id=0, nombre='Pedro Martínez', email='null', puntosTotales=37}, Jugador{id=0, nombre='Carlos Ruiz', email='null', puntosTotales=23}, Jugador{id=0, nombre='María López', email='null', puntosTotales=18}, Jugador{id=0, nombre='Ana García', email='null', puntosTotales=12}]
+2025-12-16 20:26:14.344 [main] INFO  jdbc.controller.DixitControlador - Lista de puntuaciones: []
+2025-12-16 20:26:25.536 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=1, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=12}
+2025-12-16 20:26:25.539 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 20:26:25.539 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=3, nombre='María López', email='maria.lopez@email.com', puntosTotales=18}
+2025-12-16 20:26:25.539 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 20:26:25.639 [main] INFO  jdbc.controller.DixitControlador - Partida{id=0, torneoId=3, narradorId=Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}, fecha=2025-12-05, resultado=ALGUNOS}
+2025-12-16 20:26:25.639 [main] INFO  jdbc.controller.DixitControlador - Partida{id=0, torneoId=4, narradorId=Jugador{id=1, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=12}, fecha=2025-10-17, resultado=NADIE}
+2025-12-16 20:26:25.639 [main] INFO  jdbc.controller.DixitControlador - Partida{id=0, torneoId=6, narradorId=Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}, fecha=2025-11-21, resultado=TODOS}
+2025-12-16 20:26:25.650 [main] INFO  jdbc.controller.DixitControlador - Jugador con mayor puntuación: Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 20:26:25.659 [main] INFO  jdbc.repository.JugadorRepository - Jugadores con mayor puntuación:[Jugador{id=0, nombre='Pedro Martínez', email='null', puntosTotales=37}, Jugador{id=0, nombre='Carlos Ruiz', email='null', puntosTotales=23}, Jugador{id=0, nombre='María López', email='null', puntosTotales=18}, Jugador{id=0, nombre='Ana García', email='null', puntosTotales=12}]
+2025-12-16 20:26:25.659 [main] INFO  jdbc.controller.DixitControlador - Puntuaciones de Jugadores: [Jugador{id=0, nombre='Pedro Martínez', email='null', puntosTotales=37}, Jugador{id=0, nombre='Carlos Ruiz', email='null', puntosTotales=23}, Jugador{id=0, nombre='María López', email='null', puntosTotales=18}, Jugador{id=0, nombre='Ana García', email='null', puntosTotales=12}]
+2025-12-16 20:26:25.699 [main] INFO  jdbc.controller.DixitControlador - Lista de puntuaciones: [Partida{id=2, torneoId=4, narradorId=Jugador{id=1, nombre='null', email='null', puntosTotales=0}, fecha=2025-10-17, resultado=NADIE}, Partida{id=3, torneoId=6, narradorId=Jugador{id=2, nombre='null', email='null', puntosTotales=0}, fecha=2025-11-21, resultado=TODOS}, Partida{id=1, torneoId=3, narradorId=Jugador{id=4, nombre='null', email='null', puntosTotales=0}, fecha=2025-12-05, resultado=ALGUNOS}]
+2025-12-16 22:00:24.126 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Ana García
+2025-12-16 22:00:24.149 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Carlos Ruiz
+2025-12-16 22:00:24.169 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: María López
+2025-12-16 22:00:24.188 [main] INFO  jdbc.repository.JugadorRepository - Jugador añadido: Pedro Martínez
+2025-12-16 22:00:24.194 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=1, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=12}
+2025-12-16 22:00:24.194 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 22:00:24.194 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=3, nombre='María López', email='maria.lopez@email.com', puntosTotales=18}
+2025-12-16 22:00:24.195 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 22:00:24.206 [main] INFO  jdbc.controller.DixitControlador - Jugador con mayor puntuación: Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 22:00:24.218 [main] INFO  jdbc.repository.JugadorRepository - Jugadores con mayor puntuación:[Jugador{id=0, nombre='Pedro Martínez', email='null', puntosTotales=37}, Jugador{id=0, nombre='Carlos Ruiz', email='null', puntosTotales=23}, Jugador{id=0, nombre='María López', email='null', puntosTotales=18}, Jugador{id=0, nombre='Ana García', email='null', puntosTotales=12}]
+2025-12-16 22:00:24.218 [main] INFO  jdbc.controller.DixitControlador - Puntuaciones de Jugadores: [Jugador{id=0, nombre='Pedro Martínez', email='null', puntosTotales=37}, Jugador{id=0, nombre='Carlos Ruiz', email='null', puntosTotales=23}, Jugador{id=0, nombre='María López', email='null', puntosTotales=18}, Jugador{id=0, nombre='Ana García', email='null', puntosTotales=12}]
+2025-12-16 22:00:24.228 [main] INFO  jdbc.controller.DixitControlador - Lista de puntuaciones: []
+2025-12-16 22:00:36.244 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=1, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=12}
+2025-12-16 22:00:36.247 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 22:00:36.247 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=3, nombre='María López', email='maria.lopez@email.com', puntosTotales=18}
+2025-12-16 22:00:36.248 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 22:00:36.293 [main] INFO  jdbc.repository.JugadorRepository - Partida añadida con id: com.mysql.cj.jdbc.result.ResultSetImpl@12bfd80d
+2025-12-16 22:00:36.319 [main] INFO  jdbc.repository.JugadorRepository - Partida añadida con id: com.mysql.cj.jdbc.result.ResultSetImpl@5316e95f
+2025-12-16 22:00:36.346 [main] INFO  jdbc.repository.JugadorRepository - Partida añadida con id: com.mysql.cj.jdbc.result.ResultSetImpl@618c5d94
+2025-12-16 22:00:36.350 [main] INFO  jdbc.controller.DixitControlador - Partida{id=0, torneoId=3, narradorId=Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}, fecha=2025-12-05, resultado=ALGUNOS}
+2025-12-16 22:00:36.351 [main] INFO  jdbc.controller.DixitControlador - Partida{id=0, torneoId=4, narradorId=Jugador{id=1, nombre='Ana García', email='ana.garcia@email.com', puntosTotales=12}, fecha=2025-10-17, resultado=NADIE}
+2025-12-16 22:00:36.351 [main] INFO  jdbc.controller.DixitControlador - Partida{id=0, torneoId=6, narradorId=Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}, fecha=2025-11-21, resultado=TODOS}
+2025-12-16 22:00:36.361 [main] INFO  jdbc.controller.DixitControlador - Jugador con mayor puntuación: Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 22:00:36.372 [main] INFO  jdbc.repository.JugadorRepository - Jugadores con mayor puntuación:[Jugador{id=0, nombre='Pedro Martínez', email='null', puntosTotales=37}, Jugador{id=0, nombre='Carlos Ruiz', email='null', puntosTotales=23}, Jugador{id=0, nombre='María López', email='null', puntosTotales=18}, Jugador{id=0, nombre='Ana García', email='null', puntosTotales=12}]
+2025-12-16 22:00:36.373 [main] INFO  jdbc.controller.DixitControlador - Puntuaciones de Jugadores: [Jugador{id=0, nombre='Pedro Martínez', email='null', puntosTotales=37}, Jugador{id=0, nombre='Carlos Ruiz', email='null', puntosTotales=23}, Jugador{id=0, nombre='María López', email='null', puntosTotales=18}, Jugador{id=0, nombre='Ana García', email='null', puntosTotales=12}]
+2025-12-16 22:00:36.384 [main] INFO  jdbc.controller.DixitControlador - Lista de puntuaciones: [Partida{id=2, torneoId=4, narradorId=Jugador{id=1, nombre='null', email='null', puntosTotales=0}, fecha=2025-10-17, resultado=NADIE}, Partida{id=3, torneoId=6, narradorId=Jugador{id=2, nombre='null', email='null', puntosTotales=0}, fecha=2025-11-21, resultado=TODOS}, Partida{id=1, torneoId=3, narradorId=Jugador{id=4, nombre='null', email='null', puntosTotales=0}, fecha=2025-12-05, resultado=ALGUNOS}]
+2025-12-16 22:13:25.471 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 22:13:25.477 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=3, nombre='María López', email='maria.lopez@email.com', puntosTotales=18}
+2025-12-16 22:13:25.477 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 22:14:13.145 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 22:14:13.147 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=3, nombre='María López', email='maria.lopez@email.com', puntosTotales=18}
+2025-12-16 22:14:13.147 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 22:14:13.182 [main] INFO  jdbc.repository.JugadorRepository - Jugador borrado correctamente
+2025-12-16 22:32:14.246 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 22:32:14.253 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 22:35:36.500 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=2, nombre='Carlos Ruiz', email='carlos.ruiz@email.com', puntosTotales=23}
+2025-12-16 22:35:36.503 [main] INFO  jdbc.controller.DixitControlador - Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 22:35:36.506 [main] INFO  jdbc.controller.DixitControlador - Partida{id=1, torneoId=3, narradorId=Jugador{id=4, nombre='null', email='null', puntosTotales=0}, fecha=2025-12-05, resultado=ALGUNOS}
+2025-12-16 22:35:36.506 [main] INFO  jdbc.controller.DixitControlador - Partida{id=3, torneoId=6, narradorId=Jugador{id=2, nombre='null', email='null', puntosTotales=0}, fecha=2025-11-21, resultado=TODOS}
+2025-12-16 22:35:36.523 [main] INFO  jdbc.controller.DixitControlador - Jugador con mayor puntuación: Jugador{id=4, nombre='Pedro Martínez', email='pedro.martinez@email.com', puntosTotales=37}
+2025-12-16 22:35:36.535 [main] INFO  jdbc.repository.JugadorRepository - Jugadores con mayor puntuación:[Jugador{id=0, nombre='Pedro Martínez', email='null', puntosTotales=37}, Jugador{id=0, nombre='Carlos Ruiz', email='null', puntosTotales=23}]
+2025-12-16 22:35:36.535 [main] INFO  jdbc.controller.DixitControlador - Puntuaciones de Jugadores: [Jugador{id=0, nombre='Pedro Martínez', email='null', puntosTotales=37}, Jugador{id=0, nombre='Carlos Ruiz', email='null', puntosTotales=23}]
+2025-12-16 22:35:36.545 [main] INFO  jdbc.controller.DixitControlador - Lista de puntuaciones: [Partida{id=3, torneoId=6, narradorId=Jugador{id=2, nombre='null', email='null', puntosTotales=0}, fecha=2025-11-21, resultado=TODOS}, Partida{id=1, torneoId=3, narradorId=Jugador{id=4, nombre='null', email='null', puntosTotales=0}, fecha=2025-12-05, resultado=ALGUNOS}]
+2025-12-16 22:35:36.555 [main] INFO  jdbc.repository.JugadorRepository - Jugador borrado correctamente
+2025-12-16 22:35:36.576 [main] INFO  jdbc.repository.JugadorRepository - La media de puntuaciones es: 30.0
+2025-12-16 22:35:36.587 [main] INFO  jdbc.repository.JugadorRepository - La media de puntuaciones es: 30.0

@@ -1,0 +1,70 @@
+package models;
+
+import java.time.LocalDate;
+import java.util.Objects;
+
+public class Canal {
+	
+	private int idCanal;
+	private String titulo;
+	private Usuario streamer;
+	private LocalDate fechaCreacion;
+	
+	public int getIdCanal() {
+		return idCanal;
+	}
+	public void setIdCanal(int idCanal) {
+		this.idCanal = idCanal;
+	}
+	public String getTitulo() {
+		return titulo;
+	}
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+	public Usuario getStreamer() {
+		return streamer;
+	}
+	public void setStreamer(Usuario streamer) {
+		this.streamer = streamer;
+	}
+	public LocalDate getFechaCreacion() {
+		return fechaCreacion;
+	}
+	public void setFechaCreacion(LocalDate fechaCreacion) {
+		this.fechaCreacion = fechaCreacion;
+	}
+	
+	public Canal(int idCanal, String titulo, Usuario streamer, LocalDate fechaCreacion) {
+		super();
+		this.idCanal = idCanal;
+		this.titulo = titulo;
+		this.streamer = streamer;
+		this.fechaCreacion = fechaCreacion;
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(idCanal);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Canal other = (Canal) obj;
+		return idCanal == other.idCanal;
+	}
+	
+	@Override
+	public String toString() {
+		return "Canal [idCanal=" + idCanal + ", titulo=" + titulo + ", streamer=" + streamer + ", fechaCreacion="
+				+ fechaCreacion + "]";
+	}
+	
+	
+
+}

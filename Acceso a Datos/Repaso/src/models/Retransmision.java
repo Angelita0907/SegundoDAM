@@ -1,0 +1,59 @@
+package models;
+
+import java.time.LocalDate;
+
+public class Retransmision {
+	
+	private int idRetransmision;
+	private String titulo;
+	private LocalDate fechaInicio;
+	private LocalDate fechaFin;
+	private Canal idCanal;
+	
+	public int getIdRetransmision() {
+		return idRetransmision;
+	}
+	public void setIdRetransmision(int idRetransmision) {
+		this.idRetransmision = idRetransmision;
+	}
+	public String getTitulo() {
+		return titulo;
+	}
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+	public LocalDate getFechaInicio() {
+		return fechaInicio;
+	}
+	public void setFechaInicio(LocalDate fechaInicio) {
+		this.fechaInicio = fechaInicio;
+	}
+	public LocalDate getFechaFin() {
+		return fechaFin;
+	}
+	public void setFechaFin(LocalDate fechaFin) {
+		this.fechaFin = fechaFin;
+	}
+	public Canal getIdCanal() {
+		return idCanal;
+	}
+	public void setIdCanal(Canal idCanal) {
+		this.idCanal = idCanal;
+	}
+	
+	public Retransmision(int idRetransmision, String titulo, LocalDate fechaInicio, LocalDate fechaFin, Canal idCanal) {
+		super();
+		this.idRetransmision = idRetransmision;
+		this.titulo = titulo;
+		this.fechaInicio = fechaInicio;
+		this.fechaFin = fechaFin;
+		this.idCanal = idCanal;
+	}
+	@Override
+	public String toString() {
+		return "Retransmision [idRetransmision=" + idRetransmision + ", titulo=" + titulo + ", fechaInicio="
+				+ fechaInicio + ", fechaFin=" + fechaFin + ", idCanal=" + idCanal + "]";
+	}
+	
+
+}

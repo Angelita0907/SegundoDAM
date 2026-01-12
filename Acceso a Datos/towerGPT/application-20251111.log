@@ -1,0 +1,2 @@
+2025-11-11 10:14:03.997 [main] INFO  repository.RepositorioInteracciones - Interacción con mejor valoración: InteraccionAgente [identificador=null1, tipoAgente=IA, peticion=Pregunta 2, respuesta=Respuesta 2, tiempoEjecucion=1.5, numValoracionesPositivas=5, porcentajeAcierto=95.0]
+2025-11-11 10:14:03.999 [main] INFO  repository.RepositorioInteracciones - Se ha modificado la interacción: InteraccionAgente [identificador=null1, tipoAgente=HUMANO, peticion=Pregunta 3, respuesta=Respuesta 3, tiempoEjecucion=7.0, numValoracionesPositivas=4, porcentajeAcierto=92.0]

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#6690D5FF">
+
+    <!-- Creamos el titulo de nuestra app -->
+    <TextView
+        android:id="@+id/texto1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clientes"
+        android:textStyle="bold"
+        android:fontFamily="@font/fuente2"
+        android:textSize="40dp"
+        android:textColor="@color/azulito4"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints">
+    </TextView>
+
+    <!-- Ahora los elementos principales -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fuente1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/texto1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:fontFamily="@font/fuente3"
+            android:hint="Nombre">
+        </EditText>
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:fontFamily="@font/fuente3"
+            android:hint="Apellidos">
+        </EditText>
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:fontFamily="@font/fuente3"
+            android:hint="Teléfono">
+        </EditText>
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:fontFamily="@font/fuente3"
+            android:hint="Correo electrónico">
+        </EditText>
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:fontFamily="@font/fuente3"
+            android:hint="Dirección">
+        </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turno:"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/grupo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mañana">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tarde">
+            </RadioButton>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/Guardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/azulito2"
+                android:text="Guardar Datos"
+                >
+            </Button>
+
+            <Button
+                android:id="@+id/cita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/azulito3"
+                android:text="Pedir Cita"
+                android:layout_marginStart="10dp">
+            </Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

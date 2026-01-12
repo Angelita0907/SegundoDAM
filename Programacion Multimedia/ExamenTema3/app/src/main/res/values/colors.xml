@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- Variables para usar estos colores en los layouts correspondientes -->
+    <color name="azulito1">#0000FF</color>
+    <color name="azulito2">#4052D6</color>
+    <color name="azulito3">#1591EA</color>
+    <color name="azulito4">#00008A</color>
+    <color name="azulito5">#44021e</color>
+</resources>

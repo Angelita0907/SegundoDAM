@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+body{
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    color: #535ac4;
+    background-image: url("/FormularioValidacion/img/fondo1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Libre Caslon Text', serif;
+}
+
+form{
+    display: inline-block;
+    text-align: center;
+    width: 50%; 
+    max-width: 400px;
+    border: 1px solid #696FC7;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #a7aae159;
+}
+
+h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #696FC7;
+}
+
+p{
+    font-size:12px;
+}
+
+#registro{
+    background-color: #696FC7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    display: block; 
+    margin: 15px auto 0 auto; 
+    cursor: pointer;
+}
+
+#registro:hover{
+    background-color: #535ac4;
+}
+
