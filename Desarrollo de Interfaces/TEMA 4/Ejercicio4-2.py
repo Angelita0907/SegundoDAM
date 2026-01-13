@@ -37,21 +37,21 @@ anio_21 = df[df['Año'] == 2021]
 ventas_21 = anio_21['Ventas'].sum()
 
 anio_20 = df[df['Año'] == 2020]
-ventas_20 = anio_21['Ventas'].sum()
+ventas_20 = anio_20['Ventas'].sum()
 
 
 comparacion_ventas = dp.BigNumber(
     heading='Comparación ventas 2021-2020',
-    value=anio_21,
-    change=anio_21 - anio_20,
-    is_upward_change=anio_21 > anio_20
+    value=ventas_21,
+    change=ventas_21 - ventas_20,
+    is_upward_change=ventas_21 > ventas_20
 )
 
 table = dp.Table(df)
 data_table = dp.DataTable(df)
 
 report = dp.Report(table, data_table)
-report.save(path="DI_U05_A02_PP_E_01.html", open=True)
+report.save(path="DI_U05_A02_PP_E_01_tabla.html", open=True)
 
 texto = dp.Text("**Aquí puedes descargar el fichero con todos los datos del informe**")
 
