@@ -9,10 +9,8 @@
     <fullyQualifiedTypeName name="com.mongodb.client.result.UpdateResult"/>
     <fullyQualifiedTypeName name="org.bson.Document"/>
     <fullyQualifiedTypeName name="examenMongo.modelo.Usuario"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="jdbc.utiles.MySqlConector"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="jdbc.repository.JugadorRepository"/>
     <fullyQualifiedTypeName name="jdbc.service.JugadorService"/>
     <fullyQualifiedTypeName name="jdbc.service.PartidaService"/>
@@ -24,4 +22,10 @@
     <fullyQualifiedTypeName name="jdbc.utiles.ResultadoPartida"/>
     <fullyQualifiedTypeName name="java.lang.Throwable"/>
     <fullyQualifiedTypeName name="jdbc.utiles.MiExcepcion"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.NullString"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.UniqueConstraint"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="modelo.Persona"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
 </qualifiedTypeNameHistroy>
