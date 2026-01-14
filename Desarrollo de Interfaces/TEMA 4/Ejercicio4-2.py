@@ -1,9 +1,11 @@
 import pandas as pd
 import datapane as dp
 
+# importamos para que lea el fichero csv
 fichero_csv = "TEMA 4/DI_U05_A02_PP_E_01.csv"
 df = pd.read_csv(fichero_csv)
 
+# en orden a lo indicado en el enunciado 
 imagen = dp.Media(file='TEMA 4/DI_U05_A02_PP_E_02.jpg')
 
 titulo = dp.HTML(
@@ -18,7 +20,7 @@ ventas_por_anio = df.groupby('Año')['Ventas'].sum()
 mejor_anio = ventas_por_anio.idxmax()
 valor_mejor_anio = ventas_por_anio.max()
 
-
+# creamos el número para ver la diferencia entre ventas
 unidades = dp.BigNumber(
     heading='Ventas totales y año con mayor ventas',
     value=ventas_totales,
@@ -33,12 +35,12 @@ resumen_ejecutivo = dp.Text("**La dirección necesita un balance sobre las venta
 "para poder entender la situación en la que se encuentran en ese momento y poder saber si deben realizar cambios "
 "en la empresa o su forma de actuar**")
 
+# aquí lo mismo pero con dos años en concreto
 anio_21 = df[df['Año'] == 2021]
 ventas_21 = anio_21['Ventas'].sum()
 
 anio_20 = df[df['Año'] == 2020]
 ventas_20 = anio_20['Ventas'].sum()
-
 
 comparacion_ventas = dp.BigNumber(
     heading='Comparación ventas 2021-2020',
@@ -47,11 +49,12 @@ comparacion_ventas = dp.BigNumber(
     is_upward_change=ventas_21 > ventas_20
 )
 
+# creamos la tabla dinámica
 table = dp.Table(df)
 data_table = dp.DataTable(df)
 
 report = dp.Report(table, data_table)
-report.save(path="DI_U05_A02_PP_E_01_tabla.html", open=True)
+report.save(path="DI_U05_A02_PP_E_01.html", open=True)
 
 texto = dp.Text("**Aquí puedes descargar el fichero con todos los datos del informe**")
 
@@ -65,6 +68,8 @@ report = dp.Report(
     resumen_ejecutivo,
     comparacion_ventas,
     texto,
+    table,
+    data_table,
     descarga
 )
 
