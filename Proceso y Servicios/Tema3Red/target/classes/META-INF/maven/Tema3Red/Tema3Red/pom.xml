@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>Tema3Red</groupId>
   <artifactId>Tema3Red</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-=======
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>Tema3Red</groupId>
-  <artifactId>Tema3Red</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
->>>>>>> 0b2e203e636caa13e7fb62219d0b34690426ce80
 </project>
