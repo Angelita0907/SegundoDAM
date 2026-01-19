@@ -1,3 +1,4 @@
+
 package boletin1;
 
 import java.io.BufferedReader;
