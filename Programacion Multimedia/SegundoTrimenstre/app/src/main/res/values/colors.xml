@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="barra">#F23DA0</color>
+    <color name="estrellas">#F2811D</color>
+    <color name="estrellas2">#F2D888</color>
+
 </resources>

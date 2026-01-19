@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home"
+        android:title="Inicio"/>
+    <item android:id="@+id/about"
+        android:title="Sobre Nosotros">
+        <menu>
+            <item android:id="@+id/empresa"
+                android:title="Empresa" />
+            <item android:id="@+id/emprendimiento"
+                android:title="Emprendimiento" />
+        </menu>
+    </item>
+    <item android:id="@+id/pokemon"
+        android:title="Pokemon">
+        <menu>
+            <item android:id="@+id/listado_pokemon"
+                android:title="Lisado de Pokemon" />
+            <item android:id="@+id/crear_pokemon"
+                android:title="Crear Pokemon" />
+        </menu>
+    </item>
+    <item android:id="@+id/contact"
+        android:title="Contacto"/>
+
+
+</menu>

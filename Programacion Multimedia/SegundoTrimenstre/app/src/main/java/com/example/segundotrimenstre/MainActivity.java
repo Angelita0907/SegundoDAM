@@ -2,6 +2,10 @@ package com.example.segundotrimenstre;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -9,7 +13,9 @@ import android.widget.AutoCompleteTextView;
 import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.RatingBar;
+import android.widget.SeekBar;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +24,38 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+    // los menú se ponen siempre al principio
+    // para los menú se hace con inflatters basicamente
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.mainmenu, menu);
+        return true;
+    }
+
+    // ahora lo mismo pero que podamos usar ese menú
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Log.i("menus",item.toString());
+        return super.onOptionsItemSelected(item);
+    }
+
+    // para el segundo menú pulsando
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v,
+                                    ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menuelemento, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        Log.i("menus",item.toString());
+        return super.onContextItemSelected(item);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +67,34 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // barra de progreso
+        /*
+        SeekBar miControl = (SeekBar) findViewById(R.id.miSeekBar);
+        miControl.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                Log.i("Bar","Valor progreso:"+ seekBar.getProgress());
+            }
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                Log.i("Bar","Valor final de:"+ seekBar.getProgress());
+            }
+        });
+*/
+
+        // estrellitas
+        RatingBar controlRating =  (RatingBar) findViewById(R.id.myRating);
+        controlRating.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                Log.i("Rating","Valor de rating: "+rating);
+            }
+        });
+
 /*
         Spinner listaSpinner = (Spinner) findViewById(R.id.miSpinner);
         final String[] datosSpinner = new String[]{"Elemento 1", "Elemento 2", "Elemento 3", "Elemento 4", "Elemento 5"};
@@ -37,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Para obtener información del elemento pulsado:
         listaSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Log.i("Pulsado", "Elemento pulsado: "+position);
@@ -47,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 */
-
+/*
         //Adaptadores
         Datos[] datos = new Datos[]{
                 new Datos("Linea superior 1", "Linea inferior 1"),
@@ -61,7 +128,18 @@ public class MainActivity extends AppCompatActivity {
         listado.setAdapter(miAdaptador);
 
 
+        listado.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.i("Pulsado", "Elemento pulsado: "+position);
+                Log.i("Pulsado", "Elemento pulsado: "+(Datos) parent.getItemAtPosition(position));
+            }
+        });
+*/
 
+        // para el menu ponemos el elemento que hace de menu en el oncreate
+        /*TextView elemento = (TextView) findViewById(R.id.texto);
+        registerForContextMenu(elemento);*/
 
     }
 }
