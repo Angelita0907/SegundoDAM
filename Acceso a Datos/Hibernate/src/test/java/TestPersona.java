@@ -35,7 +35,7 @@ class TestPersona {
 			sesion.close();		
 		}
 		
-		// leer una reunión
+		// leer una persona
 		@Test
 		void testRetrievePersona() {
 			Session sesion = HibernateUtil.getFactoriaSession().openSession();
@@ -44,7 +44,7 @@ class TestPersona {
 			sesion.close();
 		}
 		
-		//actualizar una reunión
+		//actualizar una persona
 		@Test
 		void testUpdatePersona() {
 			Session sesion = HibernateUtil.getFactoriaSession().openSession();
@@ -55,9 +55,9 @@ class TestPersona {
 			sesion.close();
 		}
 		
-		//eliminar una reunión
+		//eliminar una persona
 		@Test
-		void testDeleteReunion() {
+		void testDeletePersona() {
 			Session sesion = HibernateUtil.getFactoriaSession().openSession();
 			sesion.beginTransaction();
 			sesion.remove(sesion.find(Persona.class, 1));

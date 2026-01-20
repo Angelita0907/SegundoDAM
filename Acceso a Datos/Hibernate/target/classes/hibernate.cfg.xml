@@ -18,5 +18,6 @@
        <!-- Entidades -->
        <mapping class="modelo.Reunion"/>
        <mapping class="modelo.Persona"/>
+       <mapping class="modelo.Sala"/>
    </session-factory>
 </hibernate-configuration>
