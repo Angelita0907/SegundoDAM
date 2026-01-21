@@ -3,7 +3,6 @@ package modelo;
 import java.util.List;
 import java.util.Objects;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,7 +20,7 @@ public class Sala {
 	private String nombre;
 	private int capacidad;
 
-	@OneToMany(mappedBy = "sala", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "sala")
 	private List<Reunion> reuniones;
 
 	public Sala() {
@@ -29,11 +28,11 @@ public class Sala {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Sala(String nombre, int capacidad, List<Reunion> reuniones) {
+	public Sala(String nombre) {
 		super();
 		this.nombre = nombre;
-		this.capacidad = capacidad;
-		this.reuniones = reuniones;
+		//this.capacidad = capacidad;
+		//this.reuniones = reuniones;
 	}
 
 	public int getIdSala() {
