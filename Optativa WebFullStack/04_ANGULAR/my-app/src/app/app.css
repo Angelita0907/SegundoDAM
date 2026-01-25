@@ -1,0 +1,6 @@
+div {
+  width: 200px;
+  height: 100px;
+  border: 1px solid plum;   /* Para ver los bordes */
+  padding: 10px;
+}

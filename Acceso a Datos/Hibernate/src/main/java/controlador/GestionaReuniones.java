@@ -49,7 +49,7 @@ public class GestionaReuniones {
 		for (Reunion reunion : reuniones) {
 			logger.debug(reunion);
 		}
-		
+		/*
 		// ponemo para las relaciones n:m
 		Persona p = new Persona("12345677p", "Pepa Rosa", 22, "rosaio@gmail.com", LocalDate.of(2001, 1, 21), "612345789" );
 		daoPersona.create(p);
@@ -58,7 +58,7 @@ public class GestionaReuniones {
 		p.addReunion(nuevaReunion);
 		daoPersona.update(p);
 		//Propago el cambio. En este momento se rellena la tabla intermedia.
-
+*/
 	}
 
 }
