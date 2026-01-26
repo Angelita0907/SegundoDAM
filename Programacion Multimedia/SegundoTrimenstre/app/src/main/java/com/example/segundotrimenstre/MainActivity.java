@@ -68,6 +68,76 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        //spinner
+        /*
+        Spinner listaSpinner = (Spinner) findViewById(R.id.miSpinner);
+        final String[] datosSpinner = new String[]{"Cien años de soledad",
+                "1984",
+                "Don Quijote",
+                "El principito",
+                "Crónica de una muerte",
+                "Fahrenheit 451",
+                "El amor en tiempos de cólera",
+                "La sombra del viento"};
+        ArrayAdapter<String> adaptadorSpinner = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, datosSpinner);
+        listaSpinner.setAdapter(adaptadorSpinner);
+
+        listaSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Log.i("Pulsado", "Elemento pulsado: "+position);
+                Log.i("Pulsado", "Elemento pulsado: "+(String) parent.getItemAtPosition(position));
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        */
+
+
+        // grid view
+        /*
+        GridView listado = (GridView) findViewById(R.id.miGrid);
+        final String[] datos = new String[]{"Perfil",
+                "Notificaciones",
+                "Seguridad",
+                "Privacidad",
+                "Idioma",
+                "Ayuda",
+                "Cerrar Sesión"};
+        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,datos);
+        listado.setAdapter(adaptador);
+
+        listado.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.i("Pulsado", "Elemento pulsado: "+position);
+                Log.i("Pulsado", "Elemento pulsado: "+(String) parent.getItemAtPosition(position));
+            }
+        });
+*/
+
+        // list View
+        /*
+        ListView listado = (ListView) findViewById(R.id.miLista);
+        final String[] datos = new String[]{"Comprar café",
+                "Llamar al médico",
+                "Estudiar Java",
+                "Ir al gimnasio",
+                "Configurar notificaciones",
+                "Actualizar Android Studio"};
+        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,datos);
+        listado.setAdapter(adaptador);
+
+        listado.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.i("Pulsado", "Elemento pulsado: "+position);
+                Log.i("Pulsado", "Elemento pulsado: "+(String) parent.getItemAtPosition(position));
+            }
+        });
+        */
+
         // barra de progreso
         /*
         SeekBar miControl = (SeekBar) findViewById(R.id.miSeekBar);
@@ -87,6 +157,7 @@ public class MainActivity extends AppCompatActivity {
 */
 
         // estrellitas
+        /*
         RatingBar controlRating =  (RatingBar) findViewById(R.id.myRating);
         controlRating.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
@@ -94,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("Rating","Valor de rating: "+rating);
             }
         });
+         */
 
 /*
         Spinner listaSpinner = (Spinner) findViewById(R.id.miSpinner);
@@ -114,14 +186,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 */
-/*
+
         //Adaptadores
         Datos[] datos = new Datos[]{
-                new Datos("Linea superior 1", "Linea inferior 1"),
-                new Datos("Linea superior 2", "Linea inferior 2"),
-                new Datos("Linea superior 3", "Linea inferior 3"),
-                new Datos("Linea superior 4", "Linea inferior 4"),
-                new Datos("Linea superior 5", "Linea inferior 5")
+                new Datos("Soporte Técnico", "Tu pedido ha sido enviado con éxito"),
+                // El primer String es el remitente, el segundo el mensaje
+                new Datos("Seguridad Google", "Nuevo inicio de sesión detectado"),
+                new Datos("Amazon", "Oferta relámpago: 50% en tecnología"),
+                new Datos("WhatsApp", "Tienes 5 mensajes nuevos de " + "Mamá"),
+                new Datos("Banco", "Tu estado de cuenta está disponible")
         };
         ListView listado = (ListView) findViewById(R.id.miLista);
         Adaptador miAdaptador = new Adaptador(this, datos);
@@ -135,11 +208,11 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("Pulsado", "Elemento pulsado: "+(Datos) parent.getItemAtPosition(position));
             }
         });
-*/
+
 
         // para el menu ponemos el elemento que hace de menu en el oncreate
-        /*TextView elemento = (TextView) findViewById(R.id.texto);
-        registerForContextMenu(elemento);*/
+        TextView elemento = (TextView) findViewById(R.id.texto);
+        registerForContextMenu(elemento);
 
     }
 }
