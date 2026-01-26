@@ -1,4 +1,4 @@
-package boletintcpHilos.Ejercicio1;
+package boletintcpHilos.Ejercicio3;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -9,7 +9,8 @@ import java.time.LocalDateTime;
 public class Servidor {
 	
 	public static void main(String[] args) {
-		int puerto = 44445;
+		Contador contador = new Contador(0);
+		int puerto = 44444;
 				
 	       try (ServerSocket servidor = new ServerSocket(puerto)) {
 	           System.out.println("Servidor multihilo iniciado en el puerto " + puerto);
@@ -19,7 +20,7 @@ public class Servidor {
 	               System.out.println("Nuevo cliente conectado: " + socketCliente.getInetAddress() +", en fecha: " +LocalDateTime.now());
 	               // 2. Lanza un hilo nuevo para este cliente específico
 	               // Esto permite que el bucle vuelva al accept() inmediatamente
-	               new HiloServidor(socketCliente).start();
+	               new HiloServidor(socketCliente, contador).start();
 	           }
 	       } catch (IOException e) {
 	           System.err.println("Error en el servidor: " + e.getMessage());
