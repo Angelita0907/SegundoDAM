@@ -27,7 +27,7 @@ public class Tablero {
 		
 		return acierto;
 	}
-	
+	/*
 	public void mostrarPremios() {
 		System.out.print("Posiciones con premio: ");
         for (int i = 0; i < tablero.length; i++) {
@@ -37,7 +37,7 @@ public class Tablero {
                 }
             }
         }
-	}
+	}*/
 
 	public String[][] getTablero() {
 		return tablero;
