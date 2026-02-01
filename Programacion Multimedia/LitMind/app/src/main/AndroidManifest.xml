@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LitMind">
         <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".ReadingActivity"
             android:exported="false" />
         <activity
@@ -34,12 +37,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="false">
         </activity>
         <!--
  Desde aquí voy definir todas las activities que
@@ -47,7 +45,7 @@
         -->
         <!-- Splash Activity (Pantalla de inicio) -->
         <activity
-            android:name=".SplashActivity"
+            android:name=".PantallaCarga"
             android:exported="true"
             android:theme="@style/Theme.LitMind.Splash">
             <intent-filter>
@@ -55,7 +53,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- Onboarding Activity -->
+        </activity>
         <activity
             android:name=".OnboardingActivity"
             android:exported="false" />

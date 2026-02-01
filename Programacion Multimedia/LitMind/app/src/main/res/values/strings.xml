@@ -37,6 +37,18 @@
     <string name="login_register">¿No tienes cuenta? Regístrate</string>
     <string name="login_forgot">¿Olvidaste tu contraseña?</string>
 
+    <!-- Register -->
+    <string name="register_title">Regístrate</string>
+    <string name="register_email">Correo electrónico</string>
+    <string name="register_username">Nombre de usuario</string>
+    <string name="register_phone">Teléfono de contacto</string>
+    <string name="register_password">Contraseña</string>
+    <string name="register_confirm_password">Confirmar contraseña</string>
+    <string name="register_button">Registrarse</string>
+    <string name="register_continue_with">or continue with</string>
+    <string name="register_login">¿Ya tienes cuenta? Inicia sesión</string>
+    <string name="toggle_password">Mostrar/Ocultar contraseña</string>
+
     <!-- Bottom Navigation -->
     <string name="nav_home">Inicio</string>
     <string name="nav_library">Biblioteca</string>

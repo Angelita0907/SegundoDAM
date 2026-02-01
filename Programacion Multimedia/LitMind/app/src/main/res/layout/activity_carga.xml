@@ -10,7 +10,6 @@
         android:id="@+id/ivLogo"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:src="@drawable/ic_book"
         android:contentDescription="@string/app_name"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
