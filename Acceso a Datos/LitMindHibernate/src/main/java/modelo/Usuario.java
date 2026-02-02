@@ -1,132 +1,119 @@
 package modelo;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 import utils.Roles;
 import utils.TipoUsuario;
 
+@Entity
+@Table(name = "usuario")
 public class Usuario implements Comparable<Usuario> {
 
-    private String id; 
-    private String nombreCompleto;
-    private int edad; 
-    private boolean esDocente; 
-    private Roles rolPrincipal; // (Estudiante, Docente, Familia)
-    private int puntosPorLogro; 
-    private TipoUsuario tipoUsuario; 
-    private Lectura lecturaActiva; 
-    private List<Asignacion> lecturasAsignadas; 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id_usuario;
+	private String nombreCompleto;
+	private int edad;
+	@Enumerated(EnumType.STRING)
+	private Roles rolPrincipal; // (Estudiante, Docente, Familia)
+	private int puntosPorLogro;
+	@Enumerated(EnumType.STRING)
+	private TipoUsuario tipoUsuario;
 
+	@OneToOne(optional = true)
+	private Estudiante estudiante;
 
 	public Usuario() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Usuario(String id, String nombreCompleto, int edad, boolean esDocente, Roles rolPrincipal,
-			int puntosPorLogro, TipoUsuario tipoUsuario, Lectura lecturaActiva,
-			List<Asignacion> asignacionesRecibidas) {
+	public Usuario(String nombreCompleto, int edad, Roles rolPrincipal, int puntosPorLogro,
+			TipoUsuario tipoUsuario, Estudiante estudiante) {
 		super();
-		this.id = id;
 		this.nombreCompleto = nombreCompleto;
 		this.edad = edad;
-		this.esDocente = esDocente;
 		this.rolPrincipal = rolPrincipal;
 		this.puntosPorLogro = puntosPorLogro;
 		this.tipoUsuario = tipoUsuario;
-		this.lecturaActiva = lecturaActiva;
-		this.lecturasAsignadas = new ArrayList<>();
+		this.estudiante = estudiante;
 	}
 
-	public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getNombreCompleto() {
-        return nombreCompleto;
-    }
-
-    public void setNombreCompleto(String nombreCompleto) {
-        this.nombreCompleto = nombreCompleto;
-    }
-
-    public Integer getEdad() {
-        return edad;
-    }
-
-    public void setEdad(Integer edad) {
-        this.edad = edad;
-    }
-
-    public Boolean getEsDocente() {
-        return esDocente;
-    }
-
-    public void setEsDocente(Boolean esDocente) {
-        this.esDocente = esDocente;
-    }
-
-    public Roles getRolPrincipal() {
-        return rolPrincipal;
-    }
-
-    public void setRolPrincipal(Roles rolPrincipal) {
-        this.rolPrincipal = rolPrincipal;
-    }
-
-    public TipoUsuario getTipoUsuario() {
-        return tipoUsuario;
-    }
-
-    public void setTipoUsuario(TipoUsuario tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
-    }
-
-    public int getPuntosPorLogro() {
-        return puntosPorLogro;
-    }
-
-    public void setPuntosPorLogro(int puntosPorLogro) {
-        this.puntosPorLogro = puntosPorLogro;
-    }
-    
-    public Lectura getLecturaActiva() {
-		return lecturaActiva;
+	public int getId() {
+		return id_usuario;
 	}
 
-	public void setLecturaActiva(Lectura lecturaActiva) {
-		this.lecturaActiva = lecturaActiva;
+	public void setId(int id_usuario) {
+		this.id_usuario = id_usuario;
 	}
 
-	public List<Asignacion> getAsignacionesRecibidas() {
-		return lecturasAsignadas;
+	public String getNombreCompleto() {
+		return nombreCompleto;
 	}
 
-	public void setAsignacionesRecibidas(List<Asignacion> asignacionesRecibidas) {
-		this.lecturasAsignadas = asignacionesRecibidas;
+	public void setNombreCompleto(String nombreCompleto) {
+		this.nombreCompleto = nombreCompleto;
+	}
+
+	public Integer getEdad() {
+		return edad;
+	}
+
+	public void setEdad(Integer edad) {
+		this.edad = edad;
+	}
+
+	public Roles getRolPrincipal() {
+		return rolPrincipal;
+	}
+
+	public void setRolPrincipal(Roles rolPrincipal) {
+		this.rolPrincipal = rolPrincipal;
+	}
+
+	public TipoUsuario getTipoUsuario() {
+		return tipoUsuario;
+	}
+
+	public void setTipoUsuario(TipoUsuario tipoUsuario) {
+		this.tipoUsuario = tipoUsuario;
+	}
+
+	public int getPuntosPorLogro() {
+		return puntosPorLogro;
+	}
+
+	public void setPuntosPorLogro(int puntosPorLogro) {
+		this.puntosPorLogro = puntosPorLogro;
+	}
+
+	public Estudiante getEstudiante() {
+		return estudiante;
+	}
+
+	public void setEstudiante(Estudiante estudiante) {
+		this.estudiante = estudiante;
 	}
 
 	@Override
 	public String toString() {
-		return "Usuario [id=" + id + ", nombreCompleto=" + nombreCompleto + ", edad=" + edad + ", esDocente="
-				+ esDocente + ", rolPrincipal=" + rolPrincipal + ", puntosPorLogro=" + puntosPorLogro + ", tipoUsuario="
-				+ tipoUsuario + ", lecturaActiva=" + lecturaActiva + ", lecturasAsignadas=" + lecturasAsignadas + "]";
+		return "Usuario [id=" + id_usuario + ", nombreCompleto=" + nombreCompleto + ", edad=" + edad + ", esDocente="
+				+ ", rolPrincipal=" + rolPrincipal + ", puntosPorLogro=" + puntosPorLogro + ", tipoUsuario="
+				+ tipoUsuario + ", lecturasAsignadas=" + "]";
 	}
 
-
 	// aquí implemento comparable para usarlo en el servicio
-	
+
 	@Override
 	public int compareTo(Usuario usu) {
 		// TODO Auto-generated method stub
 		return Integer.compare(this.puntosPorLogro, usu.puntosPorLogro);
 	}
-	
-	
-	
+
 }

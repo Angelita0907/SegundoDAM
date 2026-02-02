@@ -1,35 +1,49 @@
 package modelo;
 
+import java.util.List;
+import java.util.Objects;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import utils.Genero;
 
+@Entity
+@Table(name = "lectura")
 public class Lectura {
 
-	private String id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id_lectura;
 	private String titulo;
 	private String autor;
-	private Genero genero; 
-	private double progreso;
+	private Genero genero;
+	
+	// lado inverso
+	@OneToMany(mappedBy = "lectura") 
+    private List<Asignacion> asignaciones;
 
 	public Lectura() {
 		super();
 	}
 
-	public Lectura(String id, String titulo, String autor, Genero genero, double progreso) {
+	public Lectura(String titulo, String autor, Genero genero) {
 		super();
-		this.id = id;
 		this.titulo = titulo;
 		this.autor = autor;
 		this.genero = genero;
-		this.progreso = progreso;
 	}
 
 	// Getters y Setters
-	public String getId() {
-		return id;
+	public int getId() {
+		return id_lectura;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setId(int id) {
+		this.id_lectura = id;
 	}
 
 	public String getTitulo() {
@@ -56,20 +70,27 @@ public class Lectura {
 		this.genero = genero;
 	}
 
-	public double getProgreso() {
-		return progreso;
+	@Override
+	public int hashCode() {
+		return Objects.hash(id_lectura);
 	}
 
-	public void setProgreso(double progreso) {
-		this.progreso = progreso;
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Lectura other = (Lectura) obj;
+		return Objects.equals(id_lectura, other.id_lectura);
 	}
 
 	@Override
 	public String toString() {
-		return "Lectura [id=" + id + ", titulo=" + titulo + ", autor=" + autor + ", genero=" + genero + ", progreso="
-				+ progreso + "]";
+		return "Lectura [id=" + id_lectura + ", titulo=" + titulo + ", autor=" + autor + ", genero=" + genero
+				+ "]";
 	}
-	
-	
 
 }

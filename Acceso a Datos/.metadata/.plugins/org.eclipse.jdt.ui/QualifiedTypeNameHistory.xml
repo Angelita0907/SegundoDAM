@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="examenMongo.modelo.Preferencias"/>
-    <fullyQualifiedTypeName name="examenMongo.modelo.Evento"/>
-    <fullyQualifiedTypeName name="examenMongo.servicio.UsuariosServicio"/>
-    <fullyQualifiedTypeName name="examenMongo.repositorio.UsuarioRepositorio"/>
-    <fullyQualifiedTypeName name="com.mongodb.client.result.InsertOneResult"/>
-    <fullyQualifiedTypeName name="examenMongo.utils.PlanActivo"/>
-    <fullyQualifiedTypeName name="com.mongodb.client.result.UpdateResult"/>
-    <fullyQualifiedTypeName name="org.bson.Document"/>
     <fullyQualifiedTypeName name="examenMongo.modelo.Usuario"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="jdbc.utiles.MySqlConector"/>
@@ -36,17 +28,36 @@
     <fullyQualifiedTypeName name="repository.RepositorioActa"/>
     <fullyQualifiedTypeName name="modelo.Acta"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.JoinColumn"/>
-    <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.ManyToOne"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.ManyToMany"/>
     <fullyQualifiedTypeName name="jakarta.persistence.CascadeType"/>
-    <fullyQualifiedTypeName name="utils.AbstractDao"/>
     <fullyQualifiedTypeName name="java.time.Period"/>
     <fullyQualifiedTypeName name="modelo.Reunion"/>
     <fullyQualifiedTypeName name="repository.RepositorioPersona"/>
     <fullyQualifiedTypeName name="modelo.Persona"/>
-    <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Enumerated"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.EnumType"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.OneToOne"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.ManyToOne"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.JoinColumn"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.ManyToMany"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="modelo.Asignacion"/>
+    <fullyQualifiedTypeName name="modelo.Docente"/>
+    <fullyQualifiedTypeName name="java.io.DataOutputStream"/>
+    <fullyQualifiedTypeName name="modelo.Lectura"/>
+    <fullyQualifiedTypeName name="modelo.Logro"/>
+    <fullyQualifiedTypeName name="utils.AbstractDao"/>
+    <fullyQualifiedTypeName name="modelo.Usuario"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="modelo.Estudiante"/>
+    <fullyQualifiedTypeName name="repository.RepositorioUsuario"/>
+    <fullyQualifiedTypeName name="repository.RepositorioEstudiante"/>
+    <fullyQualifiedTypeName name="repository.RepositorioDocente"/>
+    <fullyQualifiedTypeName name="repository.RepositorioLectura"/>
+    <fullyQualifiedTypeName name="repository.RepositorioAsignacion"/>
+    <fullyQualifiedTypeName name="repository.RepositorioLogro"/>
 </qualifiedTypeNameHistroy>
