@@ -12,7 +12,7 @@
        <property name="hibernate.connection.password">usuario</property>
        <!-- Dialect -->
        <property name="hibernate.dialect">  org.hibernate.dialect.MySQLDialect       </property>
-       <property name="hibernate.hbm2ddl.auto">create</property>
+       <property name="hibernate.hbm2ddl.auto">update</property>
        <property name="hibernate.show_sql">true</property>
        <property name="hibernate.format_sql">true</property>
        <!-- Entidades -->
@@ -20,5 +20,7 @@
        <mapping class="modelo.Persona"/>
        <mapping class="modelo.Sala"/>
        <mapping class="modelo.Acta"/>
+       <mapping class="modelo.Alumnos"/>
+       <mapping class="modelo.Cursos"/>
    </session-factory>
 </hibernate-configuration>
