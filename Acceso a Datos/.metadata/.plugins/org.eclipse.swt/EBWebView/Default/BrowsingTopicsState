@@ -14,7 +14,11 @@
       "taxonomy_version": 0,
       "top_topics_and_observing_domains": [  ]
    }, {
+<<<<<<< HEAD
       "calculation_time": "13414441189968106",
+=======
+      "calculation_time": "13414510466252750",
+>>>>>>> d4fdaa98170711aeac28fa3f49e2e58e8da6d468
       "config_version": 0,
       "model_version": "0",
       "padded_top_topics_start_index": 0,
@@ -22,5 +26,9 @@
       "top_topics_and_observing_domains": [  ]
    } ],
    "hex_encoded_hmac_key": "0000000000000000000000000000000000000000000000000000000000000000",
+<<<<<<< HEAD
    "next_scheduled_calculation_time": "13415045989971798"
+=======
+   "next_scheduled_calculation_time": "13415115266252976"
+>>>>>>> d4fdaa98170711aeac28fa3f49e2e58e8da6d468
 }

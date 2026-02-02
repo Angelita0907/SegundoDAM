@@ -143,6 +143,8 @@ public class Reunion {
 
 		if (p.getReuniones().contains(this)) {
 			p.getReuniones().remove(this);
+			
+			
 		}
 
 	}
