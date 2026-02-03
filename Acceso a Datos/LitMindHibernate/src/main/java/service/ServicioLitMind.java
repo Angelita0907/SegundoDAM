@@ -37,6 +37,8 @@ public class ServicioLitMind {
 		this.repoLogro = new RepositorioLogro();
 	}
 	
+	//metodos crud
+	
 	/*Una consulta a la BBDD que restrinja el número de elementos devueltos de una lista a 1*/
 	public Usuario obtenerPrimerUsuario() {
 		try (Session session = HibernateUtil.getFactoriaSession().openSession()) {

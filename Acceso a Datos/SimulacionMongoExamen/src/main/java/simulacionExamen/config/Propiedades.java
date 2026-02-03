@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package simulacionExamen.config;
 
 import java.io.FileInputStream;
@@ -25,31 +24,3 @@ private final static String rutaResources = "src\\main\\resources\\";
 		return props.getProperty(key);
 	}
 }
-=======
-package simulacionExamen.config;
-
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.Properties;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import simulacionExamen.config.Propiedades;
-
-public class Propiedades {
-private final static String rutaResources = "src\\main\\resources\\";
-	
-	private static final Logger logger = LogManager.getLogger(Propiedades.class);
-	
-	private Properties props = new Properties();
-
-	public Propiedades(String nombreFichero) throws IOException {
-		props.load(new FileInputStream(rutaResources + nombreFichero));
-	}
-
-	public String get(String key) {
-		return props.getProperty(key);
-	}
-}
->>>>>>> 0b2e203e636caa13e7fb62219d0b34690426ce80

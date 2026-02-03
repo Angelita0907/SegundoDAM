@@ -59,8 +59,9 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-			<item value="C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos"/>
 			<item value="C:\Users\alumno\Desktop\SegundoDAM\Acceso a Datos"/>
+			<item value="C:\Users\alumno\Downloads\simulacionHibernate"/>
+			<item value="C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos"/>
 			<item value="C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos\ExamenMongo"/>
 			<item value="C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos\bancoalimentos"/>
 			<item value="C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos\formula1"/>
