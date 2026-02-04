@@ -93,7 +93,7 @@ public class Logro {
 	public void addEstudiante(Estudiante e) {
 		this.estudiantes.add(e);
 		if (!e.getLogros().contains(this)) {
-			e.getLogros().remove(this);
+			e.getLogros().add(this);
 		}
 	}
 	
