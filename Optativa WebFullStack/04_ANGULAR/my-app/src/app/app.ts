@@ -1,17 +1,19 @@
-/* comento esto para empezar con el tutorial de angular de cero
+/* comento esto para empezar con el tutorial de angular de cero*/
+
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Hero } from './components/hero/hero';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Hero],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('my-app');
 }
-*/
+
  /*
 import {Component} from '@angular/core';
 
@@ -96,6 +98,7 @@ export class App {
 */
 
 //Event handling --> para interactuar con elementos de la web
+/*
 import {Component} from '@angular/core';
 
 @Component({
@@ -117,4 +120,4 @@ export class App {
   showSecretMessage() {
   this.message = 'Way to go 🚀';
 }
-}
+}*/
