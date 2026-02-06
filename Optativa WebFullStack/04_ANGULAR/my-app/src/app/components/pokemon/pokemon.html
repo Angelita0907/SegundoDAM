@@ -1,11 +1,12 @@
 <section>
     <form>
-        <input type="text" placeholder="Filter by city"/>
+        <input type="text" placeholder="Buscar Pokemon"/>
         <button class="primary" type="button">Buscar</button>
     </form>
-    <section>
-        <app-pokemones>
-            
-        </app-pokemones>
+    <section class="results">
+        <app-pokemones 
+        *ngFor="let pokemones of pokemoneslist"
+        [pokemones]="pokemones"
+        ></app-pokemones>
     </section>
 </section>
