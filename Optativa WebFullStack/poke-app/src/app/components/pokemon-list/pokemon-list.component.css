@@ -1,0 +1,141 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Botones */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.btn-create {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-create:hover {
+  background-color: #2980b9;
+}
+
+.btn-edit {
+  background-color: #95a5a6;
+  color: white;
+  margin-right: 8px;
+}
+
+.btn-edit:hover {
+  background-color: #7f8c8d;
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+}
+
+/* Grid de tarjetas */
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.pokemon-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.pokemon-number {
+  color: #95a5a6;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.pokemon-info h2 {
+  color: #2c3e50;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.pokemon-type {
+  display: inline-block;
+  background-color: #ecf0f1;
+  color: #7f8c8d;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.pokemon-description {
+  color: #7f8c8d;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 12px 0;
+}
+
+.pokemon-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 8px;
+}
+
+/* Estado vacío */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: white;
+  border-radius: 8px;
+  grid-column: 1 / -1;
+}
+
+.empty-state p {
+  color: #95a5a6;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Info */
+.info {
+  margin-top: 30px;
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 14px;
+}

@@ -1,0 +1,53 @@
+<div class="container">
+  <h1>Editar Pokémon</h1>
+
+  <div *ngIf="notFound" class="error">
+    <p>Pokémon no encontrado</p>
+    <button (click)="onCancel()" class="btn btn-cancel">Volver al listado</button>
+  </div>
+
+  <form *ngIf="!notFound" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nombre">Nombre del Pokémon</label>
+      <input 
+        type="text" 
+        id="nombre"
+        [(ngModel)]="pokemon.nombre"
+        name="nombre"
+        required
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="tipo">Tipo</label>
+      <input 
+        type="text" 
+        id="tipo"
+        [(ngModel)]="pokemon.tipo"
+        name="tipo"
+        required
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="descripcion">Descripción</label>
+      <textarea 
+        id="descripcion"
+        [(ngModel)]="pokemon.descripcion"
+        name="descripcion"
+        rows="4"
+        required
+      ></textarea>
+    </div>
+
+    <div class="button-group">
+      <button type="submit" class="btn btn-edit">Guardar cambios</button>
+      <button type="button" (click)="onCancel()" class="btn btn-cancel">Cancelar</button>
+    </div>
+  </form>
+
+  <div *ngIf="!notFound" class="danger-zone">
+    <h3>Zona peligrosa</h3>
+    <button (click)="deletePokemon()" class="btn btn-delete">Eliminar Pokémon</button>
+  </div>
+</div>

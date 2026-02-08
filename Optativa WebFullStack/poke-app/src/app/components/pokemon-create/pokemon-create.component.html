@@ -1,0 +1,46 @@
+<div class="container">
+  <h1>Crear nuevo Pokémon</h1>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nombre">Nombre del Pokémon</label>
+      <input 
+        type="text" 
+        id="nombre"
+        [(ngModel)]="pokemon.nombre"
+        name="nombre"
+        placeholder="Ej: Pikachu"
+        required
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="tipo">Tipo</label>
+      <input 
+        type="text" 
+        id="tipo"
+        [(ngModel)]="pokemon.tipo"
+        name="tipo"
+        placeholder="Ej: Eléctrico"
+        required
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="descripcion">Descripción</label>
+      <textarea 
+        id="descripcion"
+        [(ngModel)]="pokemon.descripcion"
+        name="descripcion"
+        rows="4"
+        placeholder="Ej: Un Pokémon de tipo eléctrico muy popular"
+        required
+      ></textarea>
+    </div>
+
+    <div class="button-group">
+      <button type="submit" class="btn btn-create">Crear Pokémon</button>
+      <button type="button" (click)="onCancel()" class="btn btn-cancel">Cancelar</button>
+    </div>
+  </form>
+</div>
