@@ -10,25 +10,25 @@ export class PokemonService {
       _id: '1',
       nombre: 'Pikachu',
       tipo: 'Eléctrico',
-      descripcion: 'Un Pokémon de tipo eléctrico muy popular'
+      descripcion: 'A todos nos gusta'
     },
     {
       _id: '2',
       nombre: 'Charmander',
       tipo: 'Fuego',
-      descripcion: 'Un Pokémon de tipo fuego con cola en llamas'
+      descripcion: 'El mejor inicial para luego tener a charizar'
     },
     {
       _id: '3',
       nombre: 'Squirtle',
       tipo: 'Agua',
-      descripcion: 'Un Pokémon tortuga de tipo agua'
+      descripcion: 'Está bien'
     },
     {
       _id: '4',
       nombre: 'Bulbasaur',
       tipo: 'Planta/Veneno',
-      descripcion: 'Un Pokémon con un bulbo en su espalda'
+      descripcion: 'Tipo planta los mejores'
     }
   ];
 
