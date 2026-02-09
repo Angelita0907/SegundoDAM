@@ -20,6 +20,7 @@ public class GestionaArticulos {
 		AutorDao autorDao = new AutorDao();
 		ArticuloDao articuloDao = new ArticuloDao();
 		RevistaDao revistaDao = new RevistaDao();
+		/*
 		Autor a1 = new Autor("12345678C", "Pepa Flores", "flores@gmail.com");
 		autorDao.create(a1);
 		Autor a2 = new Autor("12345679E", "Ruperta Florero", "florero@gmail.com");
@@ -55,7 +56,7 @@ public class GestionaArticulos {
 		r2.addArticulo(ar5);
 		r2.addArticulo(ar6);
 		revistaDao.mergeaObjeto(r2);
-
+*/
 		List<Autor> autores = autorDao.getAll();
 		for (Autor a : autores) {
 			logger.debug(a);
@@ -65,6 +66,45 @@ public class GestionaArticulos {
 		for (Articulo a : articulos) {
 			logger.debug(a);
 		}
+		
+		List<Articulo> articulosRamon = articuloDao.getArticulosPorAutorHQL("Ramon Florito");
+		logger.info("Total encontrados: " + articulosRamon.size());
+		for (Articulo a : articulosRamon) {
+			logger.info("  ✓ " + a.getTitulo());
+		}
+		
+		List<Object[]> articulosLargos = articuloDao.getArticulosMasDe6PaginasHQL();
+		logger.info("Total encontrados: " + articulosLargos.size());
+		for (Object[] fila : articulosLargos) {
+			String titulo = (String) fila[0];
+			Integer numPaginas = (Integer) fila[1];
+			logger.info("  ✓ " + titulo + " → " + numPaginas + " páginas");
+		}
+		
+		List<Object[]> articulosConRevista = articuloDao.getArticulosConRevistaHQL();
+		logger.info("Total encontrados: " + articulosConRevista.size());
+		for (Object[] fila : articulosConRevista) {
+			String titulo = (String) fila[0];
+			Integer numPaginas = (Integer) fila[1];
+			String nombreRevista = (String) fila[2];
+			LocalDate fecha = (LocalDate) fila[3];
+			
+			logger.info("  ✓ " + titulo);
+			logger.info("    Páginas: " + numPaginas + 
+			                   " | Revista: " + nombreRevista + 
+			                   " | Fecha: " + fecha);
+		}
+		
+		
+		LocalDate fechaLimite = LocalDate.now();
+		List<Revista> revistasAntiguas = revistaDao.getRevistasAntesDeHQL(fechaLimite);
+		logger.info("Total encontradas: " + revistasAntiguas.size());
+		for (Revista revista : revistasAntiguas) {
+			logger.info("  ✓ " + revista.getNombreRevista() + 
+			                   " | Nº " + revista.getNumeroRevista() + 
+			                   " | " + revista.getFecha());
+		}
+		
 
 	}
 
