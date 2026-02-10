@@ -20,7 +20,7 @@ public class GestionaArticulos {
 		AutorDao autorDao = new AutorDao();
 		ArticuloDao articuloDao = new ArticuloDao();
 		RevistaDao revistaDao = new RevistaDao();
-		/*
+		
 		Autor a1 = new Autor("12345678C", "Pepa Flores", "flores@gmail.com");
 		autorDao.create(a1);
 		Autor a2 = new Autor("12345679E", "Ruperta Florero", "florero@gmail.com");
@@ -56,7 +56,7 @@ public class GestionaArticulos {
 		r2.addArticulo(ar5);
 		r2.addArticulo(ar6);
 		revistaDao.mergeaObjeto(r2);
-*/
+
 		List<Autor> autores = autorDao.getAll();
 		for (Autor a : autores) {
 			logger.debug(a);
