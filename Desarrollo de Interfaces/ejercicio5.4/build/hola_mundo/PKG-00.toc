@@ -1,0 +1,60 @@
+('C:\\Users\\alumno\\Desktop\\SegundoDAM\\Desarrollo de '
+ 'Interfaces\\ejercicio5.4\\build\\hola_mundo\\hola_mundo.pkg',
+ {'BINARY': True,
+  'DATA': True,
+  'EXECUTABLE': True,
+  'EXTENSION': True,
+  'PYMODULE': True,
+  'PYSOURCE': True,
+  'PYZ': False,
+  'SPLASH': True,
+  'SYMLINK': False},
+ [('pyi-contents-directory _internal', '', 'OPTION'),
+  ('PYZ-00.pyz',
+   'C:\\Users\\alumno\\Desktop\\SegundoDAM\\Desarrollo de '
+   'Interfaces\\ejercicio5.4\\build\\hola_mundo\\PYZ-00.pyz',
+   'PYZ'),
+  ('struct',
+   'C:\\Users\\alumno\\Desktop\\SegundoDAM\\Desarrollo de '
+   'Interfaces\\ejercicio5.4\\build\\hola_mundo\\localpycs\\struct.pyc',
+   'PYMODULE'),
+  ('pyimod01_archive',
+   'C:\\Users\\alumno\\Desktop\\SegundoDAM\\Desarrollo de '
+   'Interfaces\\ejercicio5.4\\build\\hola_mundo\\localpycs\\pyimod01_archive.pyc',
+   'PYMODULE'),
+  ('pyimod02_importers',
+   'C:\\Users\\alumno\\Desktop\\SegundoDAM\\Desarrollo de '
+   'Interfaces\\ejercicio5.4\\build\\hola_mundo\\localpycs\\pyimod02_importers.pyc',
+   'PYMODULE'),
+  ('pyimod03_ctypes',
+   'C:\\Users\\alumno\\Desktop\\SegundoDAM\\Desarrollo de '
+   'Interfaces\\ejercicio5.4\\build\\hola_mundo\\localpycs\\pyimod03_ctypes.pyc',
+   'PYMODULE'),
+  ('pyimod04_pywin32',
+   'C:\\Users\\alumno\\Desktop\\SegundoDAM\\Desarrollo de '
+   'Interfaces\\ejercicio5.4\\build\\hola_mundo\\localpycs\\pyimod04_pywin32.pyc',
+   'PYMODULE'),
+  ('pyiboot01_bootstrap',
+   'C:\\Users\\alumno\\Desktop\\SegundoDAM\\Desarrollo de '
+   'Interfaces\\ejercicio5.4\\venv\\Lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'PYSOURCE'),
+  ('pyi_rth_inspect',
+   'C:\\Users\\alumno\\Desktop\\SegundoDAM\\Desarrollo de '
+   'Interfaces\\ejercicio5.4\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('pyi_rth_pyside6',
+   'C:\\Users\\alumno\\Desktop\\SegundoDAM\\Desarrollo de '
+   'Interfaces\\ejercicio5.4\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pyside6.py',
+   'PYSOURCE'),
+  ('hola_mundo',
+   'C:\\Users\\alumno\\Desktop\\SegundoDAM\\Desarrollo de '
+   'Interfaces\\ejercicio5.4\\hola_mundo.py',
+   'PYSOURCE')],
+ 'python311.dll',
+ True,
+ False,
+ False,
+ [],
+ None,
+ None,
+ None)
