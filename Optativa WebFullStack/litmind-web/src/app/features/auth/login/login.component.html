@@ -1,0 +1,108 @@
+<div class="login-container">
+  <div class="login-card">
+    <!-- Logo y título -->
+    <div class="header">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Libro abierto con cerebro -->
+            <path d="M20,40 L20,80 L45,75 L45,35 Z" fill="#E8D5F2"/>
+            <path d="M80,40 L80,80 L55,75 L55,35 Z" fill="#C8B5E2"/>
+            <circle cx="50" cy="20" r="15" fill="#A595C2" opacity="0.7"/>
+            <path d="M45,15 Q50,10 55,15" stroke="#8575A2" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <h1>LitMind</h1>
+      </div>
+      <p class="subtitle">Mejora tus habilidades lectoras</p>
+    </div>
+
+    <!-- Formulario -->
+    <form (ngSubmit)="onSubmit()" class="login-form">
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="credentials.email"
+          placeholder="tu@email.com"
+          [disabled]="loading()"
+          required
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <div class="password-input">
+          <input
+            [type]="showPassword() ? 'text' : 'password'"
+            id="password"
+            name="password"
+            [(ngModel)]="credentials.password"
+            placeholder="••••••••"
+            [disabled]="loading()"
+            required
+          />
+          <button
+            type="button"
+            class="toggle-password"
+            (click)="togglePasswordVisibility()"
+            [disabled]="loading()"
+          >
+            {{ showPassword() ? '👁️' : '👁️‍🗨️' }}
+          </button>
+        </div>
+      </div>
+
+      <!-- Error message -->
+      @if (error()) {
+        <div class="error-message">
+          {{ error() }}
+        </div>
+      }
+
+      <!-- Botón de login -->
+      <button
+        type="submit"
+        class="btn-login"
+        [disabled]="loading()"
+      >
+        @if (loading()) {
+          <span class="spinner"></span>
+          Iniciando sesión...
+        } @else {
+          Iniciar sesión
+        }
+      </button>
+
+      <!-- Demo credentials -->
+      <div class="demo-info">
+        <small>
+          <strong>Demo:</strong> test&#64;litmind.com / test123
+        </small>
+      </div>
+    </form>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>
+        ¿No tienes una cuenta?
+        <a routerLink="/auth/register">Regístrate aquí</a>
+      </p>
+      <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+    </div>
+  </div>
+
+  <!-- Imagen lateral decorativa -->
+  <div class="side-decoration">
+    <div class="gradient-bg"></div>
+    <div class="floating-books">
+      <div class="book book-1"></div>
+      <div class="book book-2"></div>
+      <div class="book book-3"></div>
+    </div>
+  </div>
+</div>

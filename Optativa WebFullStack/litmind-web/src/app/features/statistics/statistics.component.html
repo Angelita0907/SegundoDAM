@@ -1,0 +1,174 @@
+<div class="statistics-container">
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20,40 L20,80 L45,75 L45,35 Z" fill="#E8D5F2"/>
+          <path d="M80,40 L80,80 L55,75 L55,35 Z" fill="#C8B5E2"/>
+          <circle cx="50" cy="20" r="15" fill="#A595C2" opacity="0.7"/>
+        </svg>
+      </div>
+      <h1>LitMind</h1>
+    </div>
+    
+    @if (user()) {
+      <div class="user-menu">
+        <div class="user-info">
+          <span class="user-name">{{ user()!.nombre }}</span>
+          <span class="user-role">{{ user()!.rol }}</span>
+        </div>
+        <button class="btn-logout" (click)="logout()">
+          Cerrar sesión
+        </button>
+      </div>
+    }
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    @if (loading()) {
+      <div class="loading-state">
+        <div class="spinner-large"></div>
+        <p>Cargando estadísticas...</p>
+      </div>
+    } @else {
+      <!-- Welcome Section -->
+      <section class="welcome-section">
+        <h2>¡Hola, {{ user()?.nombre }}! 👋</h2>
+        <p class="welcome-text">
+          Aquí tienes un resumen de tu progreso lector
+        </p>
+      </section>
+
+      <!-- Stats Overview -->
+      @if (stats()) {
+        <section class="stats-overview">
+          <!-- Velocidad de Lectura -->
+          <div class="stat-card stat-card-primary">
+            <div class="stat-icon">⚡</div>
+            <div class="stat-content">
+              <h3>Velocidad de Lectura</h3>
+              <p class="stat-value">{{ stats()!.velocidadLectura }} <span class="unit">ppm</span></p>
+              <p class="stat-label">{{ getSpeedLevel(stats()!.velocidadLectura) }}</p>
+              <div class="progress-bar">
+                <div class="progress-fill" [style.width]="getProgressBarWidth(stats()!.velocidadLectura / 5)"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comprensión Lectora -->
+          <div class="stat-card stat-card-success">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-content">
+              <h3>Comprensión Lectora</h3>
+              <p class="stat-value">{{ stats()!.comprensionMedia }}<span class="unit">%</span></p>
+              <p class="stat-label">{{ getComprehensionLevel(stats()!.comprensionMedia) }}</p>
+              <div class="progress-bar">
+                <div class="progress-fill" [style.width]="getProgressBarWidth(stats()!.comprensionMedia)"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Libros Completados -->
+          <div class="stat-card stat-card-warning">
+            <div class="stat-icon">📚</div>
+            <div class="stat-content">
+              <h3>Libros Completados</h3>
+              <p class="stat-value">{{ stats()!.librosCompletados }}</p>
+              <p class="stat-label">¡Sigue así!</p>
+            </div>
+          </div>
+
+          <!-- Racha de Días -->
+          <div class="stat-card stat-card-info">
+            <div class="stat-icon">🔥</div>
+            <div class="stat-content">
+              <h3>Racha Actual</h3>
+              <p class="stat-value">{{ stats()!.racha }} <span class="unit">días</span></p>
+              <p class="stat-label">Consecutivos leyendo</p>
+            </div>
+          </div>
+        </section>
+      }
+
+      <!-- Charts Section -->
+      <section class="charts-section">
+        <!-- Actividad Semanal -->
+        <div class="chart-card">
+          <h3>Actividad Semanal</h3>
+          <div class="weekly-activity">
+            @for (day of weeklyActivity(); track day.dia) {
+              <div class="activity-day">
+                <span class="day-label">{{ day.dia }}</span>
+                <div class="day-indicator" [class.active]="day.activo">
+                  {{ day.activo ? '✓' : '−' }}
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+
+        <!-- Progreso de Lectura -->
+        <div class="chart-card">
+          <h3>Progreso de Lectura (últimos 7 días)</h3>
+          <div class="reading-chart">
+            @for (progress of readingProgress(); track $index) {
+              <div class="chart-bar">
+                <div 
+                  class="bar-fill" 
+                  [style.height]="getProgressBarWidth(progress.minutos)"
+                  [title]="formatMinutes(progress.minutos)"
+                ></div>
+                <span class="bar-label">
+                  {{ progress.fecha.getDate() }}/{{ progress.fecha.getMonth() + 1 }}
+                </span>
+              </div>
+            }
+          </div>
+        </div>
+
+        <!-- Tendencia de Comprensión -->
+        <div class="chart-card">
+          <h3>Tendencia de Comprensión</h3>
+          <div class="comprehension-chart">
+            @for (data of comprehensionTrend(); track data.mes) {
+              <div class="trend-item">
+                <span class="trend-label">{{ data.mes }}</span>
+                <div class="trend-bar-container">
+                  <div 
+                    class="trend-bar" 
+                    [style.width]="getProgressBarWidth(data.porcentaje)"
+                  ></div>
+                  <span class="trend-value">{{ data.porcentaje }}%</span>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+      </section>
+
+      <!-- Additional Info -->
+      <section class="info-section">
+        <div class="info-card">
+          <h3>💡 Consejo del día</h3>
+          <p>
+            Leer 20 minutos diarios puede mejorar tu comprensión lectora hasta un 30% en 3 meses.
+          </p>
+        </div>
+        
+        @if (stats()) {
+          <div class="info-card">
+            <h3>⏱️ Tiempo Total de Lectura</h3>
+            <p class="large-text">
+              {{ formatMinutes(stats()!.tiempoTotalLectura) }}
+            </p>
+            <p class="small-text">
+              ¡Has invertido {{ stats()!.tiempoTotalLectura }} minutos mejorando!
+            </p>
+          </div>
+        }
+      </section>
+    }
+  </main>
+</div>

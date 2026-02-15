@@ -1,0 +1,28 @@
+{
+"pokemons": [
+  {
+    "_id": 1,
+    "nombre": "Pikachu",
+    "tipo": "Eléctrico",
+    "descripcion": "Un Pokémon de tipo eléctrico muy popular"
+  },
+  {
+    "_id": 2,
+    "nombre": "Charmander",
+    "tipo": "Fuego",
+    "descripcion": "Un Pokémon de tipo fuego con cola en llamas"
+  },
+  {
+    "_id": 3,
+    "nombre": "Squirtle",
+    "tipo": "Agua",
+    "descripcion": "Un Pokémon tortuga de tipo agua"
+  },
+  {
+    "_id": 4,
+    "nombre": "Bulbasaur",
+    "tipo": "Planta/Veneno",
+    "descripcion": "Un Pokémon con un bulbo en su espalda"
+  }
+]
+}

@@ -1,0 +1,165 @@
+<div class="register-container">
+  <div class="register-card">
+    <!-- Logo y título -->
+    <div class="header">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20,40 L20,80 L45,75 L45,35 Z" fill="#E8D5F2"/>
+            <path d="M80,40 L80,80 L55,75 L55,35 Z" fill="#C8B5E2"/>
+            <circle cx="50" cy="20" r="15" fill="#A595C2" opacity="0.7"/>
+            <path d="M45,15 Q50,10 55,15" stroke="#8575A2" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <h1>LitMind</h1>
+      </div>
+      <p class="subtitle">Crea tu cuenta y comienza a mejorar</p>
+    </div>
+
+    <!-- Formulario -->
+    <form (ngSubmit)="onSubmit()" class="register-form">
+      <!-- Nombre -->
+      <div class="form-group">
+        <label for="nombre">Nombre completo</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          [(ngModel)]="registerData.nombre"
+          placeholder="Tu nombre"
+          [disabled]="loading()"
+          required
+        />
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="registerData.email"
+          placeholder="tu@email.com"
+          [disabled]="loading()"
+          required
+        />
+      </div>
+
+      <!-- Rol -->
+      <div class="form-group">
+        <label for="rol">Tipo de usuario</label>
+        <select
+          id="rol"
+          name="rol"
+          [(ngModel)]="registerData.rol"
+          [disabled]="loading()"
+          required
+        >
+          @for (role of roles; track role.value) {
+            <option [value]="role.value">{{ role.label }}</option>
+          }
+        </select>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <div class="password-input">
+          <input
+            [type]="showPassword() ? 'text' : 'password'"
+            id="password"
+            name="password"
+            [(ngModel)]="registerData.password"
+            placeholder="Mínimo 6 caracteres"
+            [disabled]="loading()"
+            required
+          />
+          <button
+            type="button"
+            class="toggle-password"
+            (click)="togglePasswordVisibility('password')"
+            [disabled]="loading()"
+          >
+            {{ showPassword() ? '👁️' : '👁️‍🗨️' }}
+          </button>
+        </div>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="form-group">
+        <label for="confirmPassword">Confirmar contraseña</label>
+        <div class="password-input">
+          <input
+            [type]="showConfirmPassword() ? 'text' : 'password'"
+            id="confirmPassword"
+            name="confirmPassword"
+            [(ngModel)]="confirmPassword"
+            placeholder="Repite tu contraseña"
+            [disabled]="loading()"
+            required
+          />
+          <button
+            type="button"
+            class="toggle-password"
+            (click)="togglePasswordVisibility('confirm')"
+            [disabled]="loading()"
+          >
+            {{ showConfirmPassword() ? '👁️' : '👁️‍🗨️' }}
+          </button>
+        </div>
+      </div>
+
+      <!-- Error message -->
+      @if (error()) {
+        <div class="error-message">
+          {{ error() }}
+        </div>
+      }
+
+      <!-- Botón de registro -->
+      <button
+        type="submit"
+        class="btn-register"
+        [disabled]="loading()"
+      >
+        @if (loading()) {
+          <span class="spinner"></span>
+          Creando cuenta...
+        } @else {
+          Crear cuenta
+        }
+      </button>
+    </form>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>
+        ¿Ya tienes una cuenta?
+        <a routerLink="/auth/login">Inicia sesión aquí</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Imagen lateral decorativa -->
+  <div class="side-decoration">
+    <div class="gradient-bg"></div>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">📚</div>
+        <h3>Aprende a tu ritmo</h3>
+        <p>Ejercicios adaptados a tu nivel</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🎯</div>
+        <h3>Mide tu progreso</h3>
+        <p>Estadísticas detalladas de tu evolución</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🏆</div>
+        <h3>Logra objetivos</h3>
+        <p>Desbloquea logros y recompensas</p>
+      </div>
+    </div>
+  </div>
+</div>

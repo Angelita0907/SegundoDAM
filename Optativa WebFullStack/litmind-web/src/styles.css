@@ -1,0 +1,71 @@
+/* Reset y configuración base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #F5E6FF 0%, #EDE0F5 100%);
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+app-root {
+  display: block;
+  min-height: 100vh;
+}
+
+/* Variables CSS para colores de LitMind */
+:root {
+  --primary: #8575A2;
+  --primary-dark: #6B5B95;
+  --primary-light: #A595C2;
+  --secondary: #E8D5F2;
+  --success: #75A285;
+  --warning: #E5A865;
+  --info: #7595A2;
+  --gray-100: #F5F5F5;
+  --gray-200: #E0E0E0;
+  --gray-300: #BDBDBD;
+  --gray-400: #9E9E9E;
+  --gray-500: #757575;
+  --gray-600: #616161;
+  --gray-700: #424242;
+  --gray-800: #212121;
+}
+
+/* Utilidades generales */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Transiciones suaves globales */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}

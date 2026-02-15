@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="header">
+    <h1>Mis Pokémon</h1>
+    <a routerLink="/crear" class="btn btn-create">+ Crear Pokémon</a>
+  </div>
+
+  <div class="pokemon-grid">
+    <div class="pokemon-card" *ngFor="let pokemon of pokemonList; let i = index">
+      <div class="pokemon-number">#{{ i + 1 }}</div>
+      <div class="pokemon-info">
+        <h2>{{ pokemon.nombre }}</h2>
+        <span class="pokemon-type">{{ pokemon.tipo }}</span>
+        <p class="pokemon-description">{{ pokemon.descripcion }}</p>
+      </div>
+      <div class="pokemon-actions">
+        <a [routerLink]="['/editar', pokemon._id]" class="btn btn-edit">Editar</a>
+        <button (click)="deletePokemon(pokemon._id)" class="btn btn-delete">Eliminar</button>
+      </div>
+    </div>
+
+    <div class="empty-state" *ngIf="pokemonList.length === 0">
+      <p>No hay pokémon registrados</p>
+      <a routerLink="/crear" class="btn btn-create">Crear el primero</a>
+    </div>
+  </div>
+
+  <div class="info" *ngIf="pokemonList.length > 0">
+    Total: {{ pokemonList.length }} pokémon
+  </div>
+</div>
