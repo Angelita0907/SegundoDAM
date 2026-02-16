@@ -36,6 +36,9 @@
 		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\alumno\Desktop\SegundoDAM\Acceso a Datos\LitMindSpring"/>
+		</list>
 		<section name="SmartImportWizard.dialogBounds">
 			<item key="DIALOG_X_ORIGIN" value="45"/>
 			<item key="DIALOG_Y_ORIGIN" value="100"/>
@@ -59,6 +62,8 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\alumno\Desktop\SegundoDAM\Proceso y Servicios\restConBD"/>
+			<item value="C:\Users\alumno\Desktop\SegundoDAM\Proceso y Servicios\PrimerProyecto"/>
 			<item value="C:\Users\alumno\Desktop\SegundoDAM\Acceso a Datos"/>
 			<item value="C:\Users\Usuario\OneDrive\Desktop\SegundoDAM\Acceso a Datos"/>
 			<item value="C:\Users\alumno\Downloads\simulacionHibernate"/>
