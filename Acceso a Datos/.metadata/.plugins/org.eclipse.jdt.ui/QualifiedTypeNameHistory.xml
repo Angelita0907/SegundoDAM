@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="modelo.Acta"/>
-    <fullyQualifiedTypeName name="java.time.Period"/>
-    <fullyQualifiedTypeName name="modelo.Reunion"/>
-    <fullyQualifiedTypeName name="repository.RepositorioPersona"/>
-    <fullyQualifiedTypeName name="modelo.Persona"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Enumerated"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.EnumType"/>
-    <fullyQualifiedTypeName name="modelo.Asignacion"/>
-    <fullyQualifiedTypeName name="modelo.Docente"/>
-    <fullyQualifiedTypeName name="java.io.DataOutputStream"/>
-    <fullyQualifiedTypeName name="modelo.Lectura"/>
-    <fullyQualifiedTypeName name="modelo.Logro"/>
-    <fullyQualifiedTypeName name="utils.AbstractDao"/>
     <fullyQualifiedTypeName name="modelo.Usuario"/>
     <fullyQualifiedTypeName name="modelo.Estudiante"/>
     <fullyQualifiedTypeName name="repository.RepositorioUsuario"/>
@@ -38,7 +25,6 @@
     <fullyQualifiedTypeName name="jakarta.persistence.JoinColumn"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
-    <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="jakarta.persistence.ManyToMany"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="jakarta.persistence.CascadeType"/>
@@ -48,7 +34,6 @@
     <fullyQualifiedTypeName name="models.Cine"/>
     <fullyQualifiedTypeName name="models.Pelicula"/>
     <fullyQualifiedTypeName name="java.lang.LinkageError"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="modelos.Ubicacion"/>
@@ -60,4 +45,19 @@
     <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
     <fullyQualifiedTypeName name="lombok.Data"/>
     <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.config.JpaRepositoryConfigExtension"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="models.Lectura"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="models.Logro"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="repository.EstudianteRepository"/>
+    <fullyQualifiedTypeName name="repository.LecturaRepository"/>
+    <fullyQualifiedTypeName name="repository.LogroRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="models.Estudiante"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="exceptions.EstudianteException"/>
 </qualifiedTypeNameHistroy>
