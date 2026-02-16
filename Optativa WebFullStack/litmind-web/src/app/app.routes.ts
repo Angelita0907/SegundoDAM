@@ -29,6 +29,27 @@ export const routes: Routes = [
       .then(m => m.StatisticsComponent)
   },
   {
+    path: 'admin',
+    canActivate: [authGuard],
+    children: [
+      {
+        path: 'readings',
+        loadComponent: () => import('./features/admin/readings-list/readings-list.component')
+          .then(m => m.ReadingsListComponent)
+      },
+      {
+        path: 'readings/create',
+        loadComponent: () => import('./features/admin/reading-create/reading-create.component')
+          .then(m => m.ReadingCreateComponent)
+      },
+      {
+        path: 'readings/edit/:id',
+        loadComponent: () => import('./features/admin/reading-edit/reading-edit.component')
+          .then(m => m.ReadingEditComponent)
+      }
+    ]
+  },
+  {
     path: '**',
     redirectTo: '/dashboard'
   }

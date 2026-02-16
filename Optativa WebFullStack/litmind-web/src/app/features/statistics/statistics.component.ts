@@ -1,6 +1,6 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '@core/services/auth.service';
 import { StatisticsService, ReadingProgress, ComprehensionData } from '@core/services/statistics.service';
 import { User, UserStats } from '@core/models/user.model';
@@ -8,7 +8,7 @@ import { User, UserStats } from '@core/models/user.model';
 @Component({
   selector: 'app-statistics',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './statistics.component.html',
   styleUrls: ['./statistics.component.css']
 })
