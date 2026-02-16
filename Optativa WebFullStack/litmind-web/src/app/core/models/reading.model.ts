@@ -11,7 +11,7 @@ export interface Reading {
   genero: string;
   nivel: ReadingLevel;
   contenido: string;
-  reseña: string;
+  resena: string;
   portada?: string;
   autor?: string;
   duracionEstimada: number;  // en minutos

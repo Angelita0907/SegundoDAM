@@ -14,6 +14,9 @@
     
     @if (user()) {
       <div class="user-menu">
+        <a routerLink="/admin/readings" class="btn-admin">
+          ⚙️ Gestionar Lecturas
+        </a>
         <div class="user-info">
           <span class="user-name">{{ user()!.nombre }}</span>
           <span class="user-role">{{ user()!.rol }}</span>

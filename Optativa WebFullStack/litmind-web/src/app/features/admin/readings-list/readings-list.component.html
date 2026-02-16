@@ -1,0 +1,159 @@
+<div class="readings-container">
+  <!-- Header -->
+  <div class="header">
+    <div class="header-content">
+      <h1>📚 Gestión de Lecturas</h1>
+      <p class="subtitle">Administra el catálogo de lecturas disponibles en LitMind</p>
+    </div>
+    <a routerLink="/admin/readings/create" class="btn btn-create">
+      <span>+</span> Nueva Lectura
+    </a>
+  </div>
+
+  <!-- Stats Cards -->
+  @if (stats()) {
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">📖</div>
+        <div class="stat-info">
+          <span class="stat-label">Total Lecturas</span>
+          <span class="stat-value">{{ stats().total }}</span>
+        </div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-icon">🟢</div>
+        <div class="stat-info">
+          <span class="stat-label">Básicas</span>
+          <span class="stat-value">{{ stats().byLevel.basic }}</span>
+        </div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-icon">🟡</div>
+        <div class="stat-info">
+          <span class="stat-label">Intermedias</span>
+          <span class="stat-value">{{ stats().byLevel.intermediate }}</span>
+        </div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-icon">🟠</div>
+        <div class="stat-info">
+          <span class="stat-label">Avanzadas</span>
+          <span class="stat-value">{{ stats().byLevel.advanced }}</span>
+        </div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-icon">🔴</div>
+        <div class="stat-info">
+          <span class="stat-label">Expertas</span>
+          <span class="stat-value">{{ stats().byLevel.expert }}</span>
+        </div>
+      </div>
+    </div>
+  }
+
+  <!-- Filters -->
+  <div class="filters">
+    <div class="search-box">
+      <input
+        type="text"
+        placeholder="🔍 Buscar por título, autor o género..."
+        [value]="searchQuery()"
+        (input)="onSearchChange($event)"
+        class="search-input"
+      />
+    </div>
+    
+    <select 
+      class="level-filter"
+      [value]="selectedLevel()"
+      (change)="onLevelChange($event)"
+    >
+      @for (level of levels; track level.value) {
+        <option [value]="level.value">{{ level.label }}</option>
+      }
+    </select>
+  </div>
+
+  <!-- Readings Grid -->
+  <div class="readings-grid">
+    @for (reading of filteredReadings(); track reading.id; let i = $index) {
+      <div class="reading-card">
+        <!-- Cover Image -->
+        <div class="reading-cover">
+          @if (reading.portada) {
+            <img [src]="reading.portada" [alt]="reading.titulo" />
+          } @else {
+            <div class="cover-placeholder">📕</div>
+          }
+          <span class="reading-number">#{{ i + 1 }}</span>
+        </div>
+
+        <!-- Reading Info -->
+        <div class="reading-info">
+          <h3 class="reading-title">{{ reading.titulo }}</h3>
+          
+          @if (reading.autor) {
+            <p class="reading-author">✍️ {{ reading.autor }}</p>
+          }
+          
+          <div class="reading-meta">
+            <span 
+              class="level-badge" 
+              [ngClass]="getLevelBadgeClass(reading.nivel)"
+            >
+              {{ getLevelLabel(reading.nivel) }}
+            </span>
+            <span class="genre-badge">{{ reading.genero }}</span>
+            <span class="duration-badge">
+              ⏱️ {{ formatDuration(reading.duracionEstimada) }}
+            </span>
+          </div>
+          
+          <p class="reading-resume">{{ reading.resena }}</p>
+        </div>
+
+        <!-- Actions -->
+        <div class="reading-actions">
+          <a 
+            [routerLink]="['/admin/readings/edit', reading.id]" 
+            class="btn btn-edit"
+          >
+            ✏️ Editar
+          </a>
+          <button 
+            (click)="deleteReading(reading.id)" 
+            class="btn btn-delete"
+          >
+            🗑️ Eliminar
+          </button>
+        </div>
+      </div>
+    } @empty {
+      <div class="empty-state">
+        <div class="empty-icon">📚</div>
+        <h3>No se encontraron lecturas</h3>
+        <p>
+          @if (searchQuery() || selectedLevel() !== 'ALL') {
+            Intenta ajustar los filtros de búsqueda
+          } @else {
+            Aún no hay lecturas registradas en el sistema
+          }
+        </p>
+        <a routerLink="/admin/readings/create" class="btn btn-create">
+          Crear primera lectura
+        </a>
+      </div>
+    }
+  </div>
+
+  <!-- Footer Info -->
+  @if (filteredReadings().length > 0) {
+    <div class="footer-info">
+      Mostrando {{ filteredReadings().length }} de {{ readingsList().length }} lecturas
+    </div>
+  }
+</div>
