@@ -1,6 +1,5 @@
 package acceso.veterinaria.models;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;   
 
@@ -30,7 +29,7 @@ public class Vacuna
 	
 	@ManyToMany()
 	@JoinTable(name = "animal_vacuna", joinColumns = @JoinColumn(name = "idVacuna"), inverseJoinColumns = @JoinColumn(name = "idAnimal"))
-	private List<Animal> animales;
+	private List<Animal> animales = new ArrayList<Animal>(); ;
 
 	public Vacuna(String nombre, String partida, String farmaceutica) {
 		this.nombre = nombre;

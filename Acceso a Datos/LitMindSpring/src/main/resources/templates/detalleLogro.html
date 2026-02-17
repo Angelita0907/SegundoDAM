@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalle Logro</title>
+</head>
+<body>
+  <h1>Detalle del Logro</h1>
+  <p><strong>ID:</strong> <span th:text="${detalleLogro.id}"></span></p>
+  <p><strong>Nombre:</strong> <span th:text="${detalleLogro.nombreLogro}"></span></p>
+  <p><strong>Descripción:</strong> <span th:text="${detalleLogro.descripcion}"></span></p>
+
+  <h2>Estudiantes con este logro</h2>
+  <ul>
+    <li th:each="e : ${detalleLogro.estudiantes}" th:text="${e.nombreCompleto}"></li>
+  </ul>
+
+  <br>
+  <a th:href="@{/litmind/listaLogro}">Volver a la lista</a>
+</body>
+</html>

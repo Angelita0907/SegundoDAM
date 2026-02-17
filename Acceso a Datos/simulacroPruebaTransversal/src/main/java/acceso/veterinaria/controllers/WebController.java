@@ -1,6 +1,8 @@
 package acceso.veterinaria.controllers;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,55 +10,60 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import acceso.myshop.models.Product;
-import acceso.myshop.services.ProductService;
+import acceso.veterinaria.models.Animal;
+import acceso.veterinaria.models.Vacuna;
+import acceso.veterinaria.services.AnimalService;
 import exceptions.AnimalNotFoundException;
 
 @Controller
-@RequestMapping("/miweb")
+@RequestMapping("/clinica")
 
 public class WebController {
 	@Autowired
-	private ProductService productService;
+	private AnimalService animalService;
 
 	@RequestMapping("/") 
 	public String index(Model model) {
 		return "index";
 	}
 
-	@PostMapping("/producto")
-	public ResponseEntity<Product> addProduct(@RequestBody Product product) {
-		Product addedProduct = productService.createProduct(product);
-		return new ResponseEntity<>(addedProduct, HttpStatus.CREATED);
-	}
-	
-	// actualizar producto
-	@PutMapping("/producto/{id}")
-	public ResponseEntity<Product> updateProduct(@PathVariable Long id,@RequestBody Product product) {
-		Product addedProduct = productService.updateNameProduct(id, product);
-		return new ResponseEntity<>(addedProduct, HttpStatus.OK);
+	@PostMapping("/animal")
+	@ResponseBody
+	public String addAnimal(@RequestBody Animal animal) {
+		String addedProduct = animalService.createAnimal(animal);
+		return addedProduct;
 	}
 
-	@RequestMapping("/lista")
-	public String catalog(Model model) {
-		List<Product> productos = productService.findAll();
-		model.addAttribute("productos", productos);
-		return "lista";
+	@RequestMapping("/animales")
+	public String animales(Model model) {
+		List<Animal> animales = animalService.findAllAnimals();
+		model.addAttribute("animales", animales);
+		return "animales";
 	}
 	
     // Método para obtener un producto por ID
-    @GetMapping("/producto/{id}")
-    public String getProductById(@PathVariable Long id, Model model) {
-        Product product = productService.findProductById(id);
-    	model.addAttribute("detalleProducto", product);
-        return "detalle";
+    @GetMapping("/animal/{idAnimal}")
+    public String getAnimalById(@PathVariable Long idAnimal, Model model) {
+        Animal animal = animalService.findAnimalById(idAnimal);
+    	model.addAttribute("detalleAnimal", animal);
+        return "detalleAnimal";
     }
     
-    @DeleteMapping("/producto/{id}")
-    public ResponseEntity<Product> deleteProduct(@PathVariable Long id) {
-    	productService.deleteProduct(id);
-		return new ResponseEntity<>(HttpStatus.OK);
-	}
+    //agregar vacuna a un animal
+    @PostMapping("/agregarVacuna/{idAnimal}")
+    @ResponseBody
+    public Map<String, Object> addVacunaAnimal(@PathVariable Long idAnimal, @RequestBody Vacuna vacuna){
+    	Map<String, Object> respuesta = new HashMap<>();
+        Animal animal = animalService.addVacuna2Animal(idAnimal, vacuna);
+
+        Vacuna vacunaAnimal = animalService.findVacunaById(vacuna.getIdVacuna());
+        
+        respuesta.put("idAnimal", animal.getIdAnimal());
+        respuesta.put("idVacuna", vacunaAnimal.getIdVacuna());
+
+        return respuesta;
+    }
+    
     
 	
 	@ExceptionHandler(AnimalNotFoundException.class)

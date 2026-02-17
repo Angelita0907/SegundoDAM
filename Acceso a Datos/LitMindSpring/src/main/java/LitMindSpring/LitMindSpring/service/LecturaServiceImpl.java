@@ -6,7 +6,6 @@ import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import LitMindSpring.LitMindSpring.models.Estudiante;
 import LitMindSpring.LitMindSpring.models.Lectura;
 import LitMindSpring.LitMindSpring.repository.LecturaRepository;
 import exceptions.LecturaException;
@@ -34,13 +33,13 @@ public class LecturaServiceImpl implements LecturaService {
 	}
 
 	@Override
-	public Estudiante createLectura(Lectura lectura) {
-		lecturaRepository.save(lectura);
-		return lectura.getEstudiante();
+	public Lectura createLectura(Lectura lectura) {
+		
+		return lecturaRepository.save(lectura);
 	}
 
 	@Override
-	public Estudiante updateNameLectura(Long id, Lectura lectura) {
+	public Lectura updateNameLectura(Long id, Lectura lectura) {
 
 		Lectura lOriginal = this.findLecturaById(id);
 		if (lOriginal != null) {
@@ -49,8 +48,8 @@ public class LecturaServiceImpl implements LecturaService {
 			new LecturaException(id);
 		}
 
-		lecturaRepository.save(lOriginal);
-		return lOriginal.getEstudiante();
+		
+		return lecturaRepository.save(lOriginal);
 	}
 
 	@Override

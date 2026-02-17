@@ -36,7 +36,7 @@ public class Animal {
 
     // Relación ManyToMany con la clase Vacuna
     @ManyToMany(mappedBy = "animales", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Vacuna> vacunas;
+    private List<Vacuna> vacunas = new ArrayList<Vacuna>(); 
     
     public Animal(String nombre, LocalDate fechaNacimiento, TipoAnimal tipo) {
         this.nombre = nombre;

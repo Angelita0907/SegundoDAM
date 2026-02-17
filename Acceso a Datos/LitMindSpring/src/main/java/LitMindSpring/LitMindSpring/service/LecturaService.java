@@ -14,8 +14,8 @@ public interface LecturaService {
 		List<Lectura> findAllLecturas();
 		Set<Lectura> findLecturaByNombre(String nombre);
 		public Lectura findLecturaById(long id);
-		public Estudiante createLectura(Lectura lectura);
-		public Estudiante updateNameLectura(Long id, Lectura lectura);
+		public Lectura createLectura(Lectura lectura);
+		public Lectura updateNameLectura(Long id, Lectura lectura);
 		public void deleteLectura(Long id);
 
 }

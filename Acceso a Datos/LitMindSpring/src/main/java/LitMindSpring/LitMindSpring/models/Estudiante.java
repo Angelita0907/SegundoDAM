@@ -17,10 +17,12 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import utils.Rol;
 
 @Data
+@EqualsAndHashCode(exclude = {"logros", "lecturas"}) 
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -52,12 +54,24 @@ public class Estudiante {
 
 	// Relación 1:N con Lectura (lado inverso)
 	@OneToMany(mappedBy = "estudiante", cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<Lectura> lecturas = new ArrayList<>();
+	private List<Lectura> lecturas = new ArrayList<Lectura>();
 
 	// Relación N:M con Logro
 	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
-	private Set<Logro> logros = new HashSet<>();
+	private Set<Logro> logros = new HashSet<Logro>();
 
+	public Estudiante(String nombreCompleto, String email, Integer edad, int puntosXP, int nivelActual, Rol rol) {
+		super();
+		this.nombreCompleto = nombreCompleto;
+		this.email = email;
+		this.edad = edad;
+		this.puntosXP = puntosXP;
+		this.nivelActual = nivelActual;
+		this.rol = rol;
+		this.lecturas = new ArrayList<Lectura>();
+		this.logros = new HashSet<Logro>();
+	}
+	
 	public void addLogro(Logro l) {
 		this.logros.add(l);
 		if (!l.getEstudiantes().contains(this)) {

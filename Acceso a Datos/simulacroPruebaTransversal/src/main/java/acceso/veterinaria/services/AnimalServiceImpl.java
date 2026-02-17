@@ -5,6 +5,7 @@ import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import acceso.veterinaria.models.Animal;
 import acceso.veterinaria.models.Vacuna;
@@ -12,6 +13,7 @@ import acceso.veterinaria.repositories.AnimalRepository;
 import acceso.veterinaria.repositories.VacunaRepository;
 import exceptions.AnimalNotFoundException;
 
+@Service
 public class AnimalServiceImpl implements AnimalService {
 
 	@Autowired
@@ -31,10 +33,10 @@ public class AnimalServiceImpl implements AnimalService {
 		Animal aNuevo = animalRepository.save(animal);
 		
 		if(aNuevo != null) {
-			respuesta = "Animal creado correctamente" + aNuevo.getNombre();
+			respuesta = "Animal creado correctamente, con el id:" + aNuevo.getIdAnimal();
 		}
 		else {
-			throw new AnimalNotFoundException("No se ha podido crear el animal");
+			respuesta = "No se ha podido crear el animal";
 		}
 		
 		return respuesta;
@@ -44,14 +46,6 @@ public class AnimalServiceImpl implements AnimalService {
 	public Animal findAnimalById(long id) {
 		Optional<Animal> optionalAnimal = animalRepository.findById(id);
 		return optionalAnimal.orElseThrow(() -> new AnimalNotFoundException(id));
-	}
-
-	@Override
-	public Animal addVacuna2Animal(long id, Vacuna vacuna) {
-		
-		
-		
-		return null;
 	}
 
 	@Override
@@ -68,6 +62,26 @@ public class AnimalServiceImpl implements AnimalService {
 	public Vacuna findVacunaById(long id) {
 		Optional<Vacuna> optionalVacuna = vacunaRepository.findById(id);
 		return optionalVacuna.orElseThrow(() -> new AnimalNotFoundException(id));
+	}
+	
+	@Override
+	public Animal addVacuna2Animal(long id, Vacuna vacuna) {
+		
+		// que el animal exista y que la vacuna exista
+		Animal animal = animalRepository.findByIdAnimal(id);
+	    
+	    Vacuna nuevaVacuna = null;
+	    if (vacuna.getIdVacuna() != null) {
+	        nuevaVacuna = vacunaRepository.findByIdVacuna(vacuna.getIdVacuna());
+	    }
+	    else {
+	        nuevaVacuna = vacunaRepository.save(vacuna);
+	    }
+	    
+	    animal.getVacunas().add(nuevaVacuna);
+	    nuevaVacuna.getAnimales().add(animal);
+	    
+	    return animalRepository.save(animal);
 	}
 
 }

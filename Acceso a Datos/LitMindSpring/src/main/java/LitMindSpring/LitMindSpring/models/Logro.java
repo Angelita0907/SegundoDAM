@@ -12,9 +12,11 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Data
+@EqualsAndHashCode(exclude = {"estudiantes"}) 
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -45,8 +47,9 @@ public class Logro {
 
 	// Relación N:M con Estudiante (lado inverso)
 	@ManyToMany(mappedBy = "logros")
-	private Set<Estudiante> estudiantes = new HashSet<>();
+	private Set<Estudiante> estudiantes = new HashSet<Estudiante>();
 
+	
 
 	public void addEstudiante(Estudiante e) {
 		this.estudiantes.add(e);
@@ -60,6 +63,18 @@ public class Logro {
 		if (e.getLogros().contains(this)) {
 			e.getLogros().remove(this);
 		}
+	}
+
+	public Logro(String nombreLogro, String descripcion, String icono, int puntosRequeridos, int lecturasRequeridas,
+			String categoria) {
+		super();
+		this.nombreLogro = nombreLogro;
+		this.descripcion = descripcion;
+		this.icono = icono;
+		this.puntosRequeridos = puntosRequeridos;
+		this.lecturasRequeridas = lecturasRequeridas;
+		this.categoria = categoria;
+		this.estudiantes = new HashSet<Estudiante>();
 	}
 
 }
