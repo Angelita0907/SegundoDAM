@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="modelo.Usuario"/>
-    <fullyQualifiedTypeName name="modelo.Estudiante"/>
-    <fullyQualifiedTypeName name="repository.RepositorioUsuario"/>
-    <fullyQualifiedTypeName name="repository.RepositorioEstudiante"/>
-    <fullyQualifiedTypeName name="repository.RepositorioDocente"/>
-    <fullyQualifiedTypeName name="repository.RepositorioLectura"/>
-    <fullyQualifiedTypeName name="repository.RepositorioAsignacion"/>
-    <fullyQualifiedTypeName name="repository.RepositorioLogro"/>
-    <fullyQualifiedTypeName name="javax.annotation.processing.Generated"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.OneToOne"/>
     <fullyQualifiedTypeName name="modelos.Articulo"/>
     <fullyQualifiedTypeName name="jakarta.persistence.JoinTable"/>
     <fullyQualifiedTypeName name="dao.ArticuloDao"/>
@@ -42,22 +31,33 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
     <fullyQualifiedTypeName name="acceso.myshop.models.Product"/>
     <fullyQualifiedTypeName name="org.springframework.boot.persistence.autoconfigure.EntityScan"/>
-    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
     <fullyQualifiedTypeName name="lombok.Data"/>
     <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.config.JpaRepositoryConfigExtension"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="models.Lectura"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
-    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
     <fullyQualifiedTypeName name="models.Logro"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="repository.EstudianteRepository"/>
     <fullyQualifiedTypeName name="repository.LecturaRepository"/>
     <fullyQualifiedTypeName name="repository.LogroRepository"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="models.Estudiante"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+    <fullyQualifiedTypeName name="service.LogroService"/>
+    <fullyQualifiedTypeName name="service.LecturaService"/>
+    <fullyQualifiedTypeName name="service.EstudianteService"/>
     <fullyQualifiedTypeName name="exceptions.EstudianteException"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="acceso.veterinaria.repositories.AnimalService"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="acceso.veterinaria.models.Animal"/>
+    <fullyQualifiedTypeName name="acceso.veterinaria.services.AnimalService"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="acceso.veterinaria.repositories.AnimalRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="acceso.veterinaria.services.AnimalServiceImpl"/>
+    <fullyQualifiedTypeName name="exceptions.AnimalNotFoundException"/>
+    <fullyQualifiedTypeName name="acceso.veterinaria.repositories.VacunaRepository"/>
 </qualifiedTypeNameHistroy>

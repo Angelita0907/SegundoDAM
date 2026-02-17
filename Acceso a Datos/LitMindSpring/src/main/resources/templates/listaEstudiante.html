@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+	<head>
+		 <meta charset="UTF-8">
+		 <title>Estudiantes</title>
+	</head>
+	<body>
+		<table>
+		       <thead>
+		           <tr>
+		               <th>Nombre del Estudiante</th>
+		               <th>Nivel</th>
+		           </tr>
+		       </thead>
+		       <tbody>
+		           <tr th:each="estudiante : ${estudiantes}">
+		               <td th:text="${estudiante.nombreCompleto}">Nombre del Estudiante</td>
+		               <td th:text="${estudiante.nivelActual}">0.0</td>
+		           </tr>
+		       </tbody>
+		   </table>
+	</body>
+</html>
