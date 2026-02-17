@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- Vista Salas de Reuniones -->
+    <record id="view_sala_reuniones_tree" model="ir.ui.view">
+        <field name="name">sala.reuniones.tree</field>
+        <field name="model">sala.reuniones</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="description"/>
+            </list>
+        </field>
+    </record>
+    
+    <!-- Vista formulario Salas de Reuniones -->
+    <record id="view_sala_reuniones_form" model="ir.ui.view">
+        <field name="name">sala.reuniones.form</field>
+        <field name="model">sala.reuniones</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                    </group>
+                    
+                    <!-- Sección para visualizar todas las reuniones vinculadas -->
+                    <notebook>
+                        <page string="Reuniones">
+                            <field name="reuniones_ids">
+                                <list>
+                                    <field name="name"/>
+                                    <field name="fechaInicio"/>
+                                    <field name="duration"/>
+                                    <field name="responsable_id"/>
+                                    <field name="porcentaje_ocupacion"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de búsqueda para Salas -->
+    <record id="sala_search_view" model="ir.ui.view">
+        <field name="name">reuniones.sala.search</field>
+        <field name="model">sala.reuniones</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="description"/>
+            </search>
+        </field>
+    </record>
+    <record id="action_sala_reuniones" model="ir.actions.act_window">
+        <field name="name">Salas de Reuniones</field>
+        <field name="res_model">sala.reuniones</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear una nueva sala de reuniones
+            </p>
+            <p>
+                Haz clic en el botón "Nuevo" para crear una sala.
+            </p>
+        </field>
+    </record>
+    <menuitem 
+        id="menu_gestion_salas_root"
+        name="Gestión de las salas de reuniones"
+        sequence="10"/>
+    
+    <menuitem 
+        id="menu_salas"
+        name="Salas"
+        action="action_sala_reuniones"
+        parent="menu_gestion_salas_root"
+        sequence="10"/>
+    
+</odoo>

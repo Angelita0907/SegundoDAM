@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- Vista  lista Reuniones -->
+    <record id="view_reuniones_tree" model="ir.ui.view">
+        <field name="name">reuniones.tree</field>
+        <field name="model">reuniones</field>
+        <field name="arch" type="xml">
+            <list decoration-info="duration &lt; 2" decoration-danger="duration &gt; 5">
+                <field name="name"/>
+                <field name="fechaInicio"/>
+                <field name="duration"/>
+                <field name="sala_id"/>
+                <field name="responsable_id"/>
+                <field name="porcentaje_ocupacion"/>
+            </list>
+        </field>
+    </record>
+    
+    <!-- Vista formulario  Reuniones -->
+    <record id="view_reuniones_form" model="ir.ui.view">
+        <field name="name">reuniones.form</field>
+        <field name="model">reuniones</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="fechaInicio"/>
+                            <field name="duration"/>
+                            <field name="active"/>
+                        </group>
+                        <group>
+                            <field name="sala_id"/>
+                            <field name="asientos"/>
+                            <field name="responsable_id"/>
+                        </group>
+                    </group>
+                    
+                    <group>
+                        <field name="asistentes_ids" widget="many2many_tags"/>
+                    </group>
+                    
+                    <group>
+                        <field name="porcentaje_ocupacion"/>
+                    </group>
+                    
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista Calendario Reuniones -->
+    <record id="reunion_calendar_view" model="ir.ui.view">
+        <field name="name">reuniones.reunion.calendar</field>
+        <field name="model">reuniones</field>
+        <field name="arch" type="xml">
+            <calendar
+                string="Calendario de reuniones"
+                date_start="fechaInicio"
+                date_stop="fechaFinal"
+                color="responsable_id">
+                <field name="name"/>
+                <field name="responsable_id"/>
+            </calendar>
+        </field>
+    </record>
+    <record id="action_reuniones" model="ir.actions.act_window">
+        <field name="name">Reuniones</field>
+        <field name="res_model">reuniones</field>
+        <field name="view_mode">list,form,calendar</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear una nueva reunión
+            </p>
+            <p>
+                Haz clic en el botón "Nuevo" para crear una reunión.
+            </p>
+        </field>
+    </record>
+    <menuitem 
+        id="menu_reuniones"
+        name="Reuniones"
+        action="action_reuniones"
+        parent="menu_gestion_salas_root"
+        sequence="20"/>
+    
+</odoo>
