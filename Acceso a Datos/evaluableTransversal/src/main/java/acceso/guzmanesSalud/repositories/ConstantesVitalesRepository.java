@@ -9,6 +9,6 @@ import acceso.guzmanesSalud.models.ConstantesVitales;
 public interface ConstantesVitalesRepository extends JpaRepository <ConstantesVitales, Long>{
 
 	// lo comento porque no me arranca si lo pongo asi y no entiendo
-	//ConstantesVitales findConstantesById(long idConstantes);
+	ConstantesVitales findByIdConstantes(long idConstantes);
 	
 }

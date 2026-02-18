@@ -4,11 +4,12 @@ import java.time.LocalDateTime;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.web.bind.annotation.RestController;
 
 import acceso.guzmanesSalud.models.ConstantesVitales;
 import acceso.guzmanesSalud.models.Paciente;
 import acceso.guzmanesSalud.services.PacientesServiceImpl;
-
+@RestController
 public class PacienteControllers {
 
 	private static final Logger logger = LogManager.getLogger(PacienteControllers.class);

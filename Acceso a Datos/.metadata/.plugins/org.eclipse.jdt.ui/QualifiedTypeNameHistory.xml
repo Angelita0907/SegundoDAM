@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="jakarta.persistence.CascadeType"/>
     <fullyQualifiedTypeName name="repository.PeliculaRepository"/>
     <fullyQualifiedTypeName name="service.FestivalCineService"/>
     <fullyQualifiedTypeName name="models.Sala"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="acceso.guzmanesSalud.models.ConstantesVitales"/>
     <fullyQualifiedTypeName name="acceso.guzmanesSalud.models.Paciente"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
 </qualifiedTypeNameHistroy>
