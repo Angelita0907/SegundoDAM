@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.OneToMany"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.ManyToOne"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.JoinColumn"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.ManyToMany"/>
     <fullyQualifiedTypeName name="jakarta.persistence.CascadeType"/>
     <fullyQualifiedTypeName name="repository.PeliculaRepository"/>
     <fullyQualifiedTypeName name="service.FestivalCineService"/>
@@ -14,7 +7,6 @@
     <fullyQualifiedTypeName name="models.Cine"/>
     <fullyQualifiedTypeName name="models.Pelicula"/>
     <fullyQualifiedTypeName name="java.lang.LinkageError"/>
-    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="modelos.Ubicacion"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="exceptions.ProductNotFoundException"/>
@@ -38,9 +30,7 @@
     <fullyQualifiedTypeName name="exceptions.EstudianteException"/>
     <fullyQualifiedTypeName name="acceso.veterinaria.repositories.AnimalService"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="acceso.veterinaria.repositories.AnimalRepository"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
     <fullyQualifiedTypeName name="exceptions.AnimalNotFoundException"/>
@@ -51,13 +41,23 @@
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="LitMindSpring.LitMindSpring.repository.LogroRepository"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="LitMindSpring.LitMindSpring.models.Estudiante"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="acceso.guzmanesSalud.services.PacientesService"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="acceso.guzmanesSalud.repositories.PacienteRepositorio"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="acceso.guzmanesSalud.repositories.ConstantesVitalesRepository"/>
+    <fullyQualifiedTypeName name="acceso.guzmanesSalud.services.PacientesServiceImpl"/>
+    <fullyQualifiedTypeName name="exceptions.PacienteNotFoundException"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="acceso.guzmanesSalud.models.ConstantesVitales"/>
+    <fullyQualifiedTypeName name="acceso.guzmanesSalud.models.Paciente"/>
 </qualifiedTypeNameHistroy>

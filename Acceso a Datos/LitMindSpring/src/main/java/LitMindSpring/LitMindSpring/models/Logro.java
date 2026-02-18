@@ -13,12 +13,10 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 
 @Data
 @EqualsAndHashCode(exclude = {"estudiantes"}) 
 @AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name = "logro")
 public class Logro {
@@ -65,15 +63,8 @@ public class Logro {
 		}
 	}
 
-	public Logro(String nombreLogro, String descripcion, String icono, int puntosRequeridos, int lecturasRequeridas,
-			String categoria) {
+	public Logro() {
 		super();
-		this.nombreLogro = nombreLogro;
-		this.descripcion = descripcion;
-		this.icono = icono;
-		this.puntosRequeridos = puntosRequeridos;
-		this.lecturasRequeridas = lecturasRequeridas;
-		this.categoria = categoria;
 		this.estudiantes = new HashSet<Estudiante>();
 	}
 

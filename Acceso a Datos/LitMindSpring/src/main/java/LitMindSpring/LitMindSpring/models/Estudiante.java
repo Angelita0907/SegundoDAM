@@ -24,7 +24,6 @@ import utils.Rol;
 @Data
 @EqualsAndHashCode(exclude = {"logros", "lecturas"}) 
 @AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name = "estudiante")
 public class Estudiante {
@@ -54,20 +53,14 @@ public class Estudiante {
 
 	// Relación 1:N con Lectura (lado inverso)
 	@OneToMany(mappedBy = "estudiante", cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<Lectura> lecturas = new ArrayList<Lectura>();
+	private List<Lectura> lecturas;
 
 	// Relación N:M con Logro
 	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
-	private Set<Logro> logros = new HashSet<Logro>();
+	private Set<Logro> logros;
 
-	public Estudiante(String nombreCompleto, String email, Integer edad, int puntosXP, int nivelActual, Rol rol) {
+	public Estudiante() {
 		super();
-		this.nombreCompleto = nombreCompleto;
-		this.email = email;
-		this.edad = edad;
-		this.puntosXP = puntosXP;
-		this.nivelActual = nivelActual;
-		this.rol = rol;
 		this.lecturas = new ArrayList<Lectura>();
 		this.logros = new HashSet<Logro>();
 	}
