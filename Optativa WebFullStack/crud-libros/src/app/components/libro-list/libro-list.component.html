@@ -1,0 +1,34 @@
+<h1>📚 Lista de Libros</h1>
+<a class="btn" routerLink="/crear">+ Nuevo libro</a>
+
+<br><br>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Título</th>
+      <th>Autor</th>
+      <th>Género</th>
+      <th>Año</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let libro of libroList; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ libro.titulo }}</td>
+      <td>{{ libro.autor }}</td>
+      <td>{{ libro.genero }}</td>
+      <td>{{ libro.anio }}</td>
+      <td>
+        <a class="btn" [routerLink]="['/editar', libro._id]">Editar</a>
+        <button (click)="deleteLibro(libro._id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p *ngIf="libroList.length === 0">No hay libros. <a routerLink="/crear">Crea el primero.</a></p>
+
+<p>Total: {{ libroList.length }} libros</p>

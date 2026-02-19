@@ -1,0 +1,28 @@
+/* Estilos globales minimalistas — fáciles de recordar y reescribir */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+th { background: #f0f0f0; }
+
+input, select, textarea {
+  width: 100%;
+  padding: 6px;
+  margin: 4px 0 12px 0;
+  box-sizing: border-box;
+}
+
+button, a.btn {
+  padding: 6px 14px;
+  margin-right: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+label { font-weight: bold; }

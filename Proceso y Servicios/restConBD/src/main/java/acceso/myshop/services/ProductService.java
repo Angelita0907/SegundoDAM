@@ -7,6 +7,7 @@ import java.util.Set;
 import acceso.myshop.models.Product;
 
 public interface ProductService {
+	
 		List<Product>  findAll();
 	    Set<Product> findByCategory(String category);
 	    public Product createProduct(Product product) ;
