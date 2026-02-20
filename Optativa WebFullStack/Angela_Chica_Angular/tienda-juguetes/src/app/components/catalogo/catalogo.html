@@ -1,0 +1,23 @@
+<h1>Nuestro Catálogo</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Imagen</th>
+      <th>Nombre</th>
+      <th>Edad recomendada</th>
+      <th>Precio</th>
+      <th>Disponible</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let juguete of juguetes">
+      <td><img [src]="juguete.imagen" [alt]="juguete.nombre" width="80"></td>
+      <td>{{ juguete.nombre }}</td>
+      <td>+{{ juguete.edadRecomendada }} años</td>
+      <td>{{ juguete.precio | currency:'EUR' }}</td>
+      <td *ngIf="juguete.disponible">Sí</td>
+      <td *ngIf="!juguete.disponible">No</td>
+    </tr>
+  </tbody>
+</table>

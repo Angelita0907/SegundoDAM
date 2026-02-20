@@ -1,0 +1,13 @@
+<h1>Bienvenidos a Tiendas Angelita</h1>
+<p>Tu tienda de juguetes online de confianza.</p>
+
+<h2>Destacados</h2>
+<div class="cards">
+  <div class="card" *ngFor="let juguete of juguetes">
+    <img [src]="juguete.imagen" [alt]="juguete.nombre" width="150">
+    <h3>{{ juguete.nombre }}</h3>
+    <p>{{ juguete.precio | currency:'EUR' }}</p>
+  </div>
+</div>
+
+<a routerLink="/catalogo">Ver catálogo completo</a>

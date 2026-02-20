@@ -1,0 +1,17 @@
+<h1>Contacto</h1>
+
+<p *ngIf="enviado" class="exito">Mensaje enviado correctamente.</p>
+<p *ngIf="error" class="error">Por favor rellena todos los campos.</p>
+
+<form (ngSubmit)="enviar()">
+  <label>Nombre</label>
+  <input type="text" [(ngModel)]="nombre" name="nombre">
+
+  <label>Email</label>
+  <input type="email" [(ngModel)]="email" name="email">
+
+  <label>Mensaje</label>
+  <textarea rows="4" [(ngModel)]="mensaje" name="mensaje"></textarea>
+
+  <button type="submit">Enviar</button>
+</form>
