@@ -1,0 +1,82 @@
+<div class="perfil-page" *ngIf="usuario">
+
+  <!-- CABECERA PERFIL -->
+  <div class="perfil-header">
+    <div class="perfil-cover"></div>
+    <div class="perfil-info">
+      <div class="avatar-wrap">
+        <img [src]="usuario.foto" [alt]="usuario.nombre" class="avatar">
+      </div>
+      <div class="perfil-data">
+        <h1>{{ usuario.nombre }}</h1>
+        <div class="perfil-meta">
+          <span class="meta-badge rol-{{ usuario.rol }}">{{ getRolLabel(usuario.rol) }}</span>
+          <span class="meta-badge" [ngClass]="getNivelClass(usuario.nivel)">{{ usuario.nivel }}</span>
+        </div>
+        <p class="perfil-email">{{ usuario.email }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="perfil-body">
+
+    <!-- ESTADISTICAS -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <span class="stat-num">{{ actividades.length }}</span>
+        <span class="stat-label">Lecturas asignadas</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">{{ actividadesCompletadas }}</span>
+        <span class="stat-label">Completadas</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">{{ puntuacionMedia > 0 ? puntuacionMedia + '%' : '--' }}</span>
+        <span class="stat-label">Puntuacion media</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">{{ usuario.logros?.length || 0 }}</span>
+        <span class="stat-label">Logros</span>
+      </div>
+    </div>
+
+    <div class="perfil-cols">
+
+      <!-- ACTIVIDADES -->
+      <div class="section">
+        <h2>Mis actividades</h2>
+        <div class="actividades-list" *ngIf="actividades.length > 0">
+          <div class="actividad-item" *ngFor="let act of actividades">
+            <div class="act-info">
+              <span class="act-titulo">{{ act.titulo_lectura }}</span>
+              <span class="act-fecha">{{ act.fecha }}</span>
+            </div>
+            <div class="act-right">
+              <span class="act-score" *ngIf="act.completada">{{ act.puntuacion }}%</span>
+              <span class="act-badge" [class.completada]="act.completada" [class.pendiente]="!act.completada">
+                {{ act.completada ? 'Completada' : 'Pendiente' }}
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="empty-section" *ngIf="actividades.length === 0">
+          <p>No tienes actividades asignadas todavia.</p>
+        </div>
+      </div>
+
+      <!-- LOGROS -->
+      <div class="section section-logros">
+        <h2>Mis logros</h2>
+        <div class="logros-grid" *ngIf="usuario.logros && usuario.logros.length > 0">
+          <div class="logro-chip" *ngFor="let logro of usuario.logros">
+            {{ logro }}
+          </div>
+        </div>
+        <div class="empty-section" *ngIf="!usuario.logros || usuario.logros.length === 0">
+          <p>Completa actividades para desbloquear logros.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

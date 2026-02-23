@@ -1,0 +1,66 @@
+<div class="form-page">
+  <div class="form-card">
+    <div class="form-card-header">
+      <a routerLink="/usuarios" class="back-link">Volver al listado</a>
+      <h1>Editar Usuario</h1>
+    </div>
+
+    <div *ngIf="notFound" class="error-box">
+      <p>Usuario no encontrado</p>
+      <button (click)="onCancel()" class="btn btn-ghost">Volver</button>
+    </div>
+
+    <div class="avatar-preview" *ngIf="!notFound && usuario.foto">
+      <img [src]="usuario.foto" alt="Vista previa" class="avatar-img">
+      <span>Vista previa del avatar</span>
+    </div>
+
+    <form *ngIf="!notFound" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" [(ngModel)]="usuario.nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="usuario.email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Contrasena</label>
+        <input type="password" id="password" [(ngModel)]="usuario.password" name="password" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="rol">Rol</label>
+          <select id="rol" [(ngModel)]="usuario.rol" name="rol">
+            <option value="estudiante">Estudiante</option>
+            <option value="profesor">Profesor</option>
+            <option value="padre">Padre/Madre</option>
+            <option value="admin">Administrador</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="nivel">Nivel lector</label>
+          <select id="nivel" [(ngModel)]="usuario.nivel" name="nivel">
+            <option value="principiante">Principiante</option>
+            <option value="intermedio">Intermedio</option>
+            <option value="avanzado">Avanzado</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="foto">URL de foto de perfil</label>
+        <input type="text" id="foto" [(ngModel)]="usuario.foto" name="foto">
+        <p class="field-hint">Puedes usar: https://api.dicebear.com/7.x/avataaars/svg?seed=NOMBRE</p>
+      </div>
+      <div class="button-group">
+        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+        <button type="button" (click)="onCancel()" class="btn btn-ghost">Cancelar</button>
+      </div>
+    </form>
+
+    <div *ngIf="!notFound" class="danger-zone">
+      <p class="danger-label">Zona peligrosa</p>
+      <button (click)="deleteUsuario()" class="btn btn-danger">Eliminar usuario</button>
+    </div>
+  </div>
+</div>

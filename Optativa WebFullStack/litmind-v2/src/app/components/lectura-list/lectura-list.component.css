@@ -1,0 +1,36 @@
+.page-container { max-width: 1100px; margin: 0 auto; padding: 36px 24px; }
+.page-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 28px; }
+.page-header h1 { font-size: 26px; font-weight: 700; color: #1a1033; margin: 0 0 4px 0; }
+.page-sub { color: #7c7394; font-size: 13px; margin: 0; }
+
+.btn { padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 600; text-decoration: none; display: inline-block; transition: all 0.18s; }
+.btn-primary { background: linear-gradient(135deg, #6b5fa5, #8fa8d0); color: white; }
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(107,95,165,0.3); }
+.btn-sm { padding: 6px 14px; font-size: 12px; }
+.btn-edit { background: #f0eefc; color: #5b21b6; }
+.btn-edit:hover { background: #ede9fe; }
+.btn-delete { background: #fef2f2; color: #b91c1c; }
+.btn-delete:hover { background: #fee2e2; }
+
+.table-card { background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); overflow: hidden; }
+table { width: 100%; border-collapse: collapse; }
+thead { background: #f8f7fc; }
+th { padding: 13px 16px; text-align: left; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: #7c7394; }
+td { padding: 14px 16px; border-top: 1px solid #f0eefc; font-size: 13px; color: #2c2448; vertical-align: middle; }
+tr:hover td { background: #fafaf9; }
+
+.td-num { color: #9c94b4; width: 40px; }
+.td-titulo { font-weight: 600; color: #1a1033; }
+.td-resena { max-width: 260px; color: #7c7394; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.td-actions { display: flex; gap: 8px; white-space: nowrap; }
+
+.genero-tag { background: #f0f0f8; color: #4a3f6b; padding: 3px 10px; border-radius: 6px; font-size: 12px; }
+.nivel-badge { padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+.nivel-p { background: #dcfce7; color: #166534; }
+.nivel-i { background: #fef9c3; color: #854d0e; }
+.nivel-a { background: #fee2e2; color: #991b1b; }
+
+.empty-state { text-align: center; padding: 60px; }
+.empty-state p { color: #7c7394; margin-bottom: 16px; }
+
+.total { margin-top: 16px; text-align: right; color: #9c94b4; font-size: 12px; }
