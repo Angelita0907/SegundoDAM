@@ -1,0 +1,37 @@
+<nav class="navbar" *ngIf="isLoggedIn()">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <svg class="nav-logo" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 22V8a2 2 0 012-2h6l3 3h7a2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2z" stroke="white" stroke-width="1.5" fill="none"/>
+        <path d="M9 15h10M9 18h7" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">LitMind</span>
+    </div>
+
+    <div class="nav-links">
+      <!-- Nav admin -->
+      <ng-container *ngIf="isAdmin()">
+        <a routerLink="/lecturas" routerLinkActive="active">Lecturas</a>
+        <a routerLink="/usuarios" routerLinkActive="active">Usuarios</a>
+      </ng-container>
+      <!-- Nav usuario normal -->
+      <ng-container *ngIf="!isAdmin()">
+        <a routerLink="/mi-perfil" routerLinkActive="active">Mi perfil</a>
+      </ng-container>
+    </div>
+
+    <div class="nav-right">
+      <div class="nav-user" *ngIf="usuarioActual">
+        <img [src]="usuarioActual.foto" [alt]="usuarioActual.nombre" class="nav-avatar">
+        <span class="nav-username">{{ usuarioActual.nombre }}</span>
+      </div>
+      <button (click)="logout()" class="btn-logout">Salir</button>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer *ngIf="isLoggedIn()">
+  <p>LitMind &middot; App de Comprension Lectora &middot; 2 CFGS DAM 25/26</p>
+</footer>

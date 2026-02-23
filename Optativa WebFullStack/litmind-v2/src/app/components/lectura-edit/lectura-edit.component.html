@@ -1,0 +1,47 @@
+<div class="form-page">
+  <div class="form-card">
+    <div class="form-card-header">
+      <a routerLink="/lecturas" class="back-link">Volver al listado</a>
+      <h1>Editar Lectura</h1>
+    </div>
+
+    <div *ngIf="notFound" class="error-box">
+      <p>Lectura no encontrada</p>
+      <button (click)="onCancel()" class="btn btn-ghost">Volver</button>
+    </div>
+
+    <form *ngIf="!notFound" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="titulo">Titulo</label>
+        <input type="text" id="titulo" [(ngModel)]="lectura.titulo" name="titulo" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="genero">Genero</label>
+          <input type="text" id="genero" [(ngModel)]="lectura.genero" name="genero" required>
+        </div>
+        <div class="form-group">
+          <label for="nivel">Nivel</label>
+          <select id="nivel" [(ngModel)]="lectura.nivel" name="nivel">
+            <option value="principiante">Principiante</option>
+            <option value="intermedio">Intermedio</option>
+            <option value="avanzado">Avanzado</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="resena">Resena</label>
+        <textarea id="resena" [(ngModel)]="lectura.resena" name="resena" rows="4" required></textarea>
+      </div>
+      <div class="button-group">
+        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+        <button type="button" (click)="onCancel()" class="btn btn-ghost">Cancelar</button>
+      </div>
+    </form>
+
+    <div *ngIf="!notFound" class="danger-zone">
+      <p class="danger-label">Zona peligrosa</p>
+      <button (click)="deleteLectura()" class="btn btn-danger">Eliminar lectura</button>
+    </div>
+  </div>
+</div>

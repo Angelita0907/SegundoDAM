@@ -1,0 +1,41 @@
+<div class="page-container">
+  <div class="page-header">
+    <div>
+      <h1>Usuarios</h1>
+      <p class="page-sub">Gestiona los usuarios registrados en la plataforma</p>
+    </div>
+    <a routerLink="/usuarios/crear" class="btn btn-primary">Nuevo usuario</a>
+  </div>
+
+  <div class="users-grid" *ngIf="usuarios.length > 0">
+    <div class="user-card" *ngFor="let usuario of usuarios">
+      <div class="user-card-top">
+        <div class="user-avatar-wrap">
+          <img [src]="usuario.foto" [alt]="usuario.nombre" class="user-avatar" loading="lazy">
+        </div>
+        <div class="user-badges">
+          <span class="badge" [ngClass]="getRolClass(usuario.rol)">{{ getRolLabel(usuario.rol) }}</span>
+          <span class="badge" [ngClass]="getNivelClass(usuario.nivel)">{{ usuario.nivel }}</span>
+        </div>
+      </div>
+      <div class="user-card-body">
+        <h3>{{ usuario.nombre }}</h3>
+        <p class="user-email">{{ usuario.email }}</p>
+        <div class="user-logros" *ngIf="usuario.logros && usuario.logros.length > 0">
+          <span class="logro-chip" *ngFor="let logro of usuario.logros">{{ logro }}</span>
+        </div>
+      </div>
+      <div class="user-card-actions">
+        <a [routerLink]="['/usuarios/editar', usuario._id]" class="btn btn-sm btn-edit">Editar</a>
+        <button (click)="deleteUsuario(usuario._id)" class="btn btn-sm btn-delete">Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="empty-state" *ngIf="usuarios.length === 0">
+    <p>No hay usuarios registrados</p>
+    <a routerLink="/usuarios/crear" class="btn btn-primary">Crear el primero</a>
+  </div>
+
+  <p class="total" *ngIf="usuarios.length > 0">{{ usuarios.length }} usuarios registrados</p>
+</div>
