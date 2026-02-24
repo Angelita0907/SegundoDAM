@@ -24,7 +24,7 @@ export class UsuarioService {
       password: '1234',
       rol: 'estudiante',
       nivel: 'principiante',
-      foto: 'https://api.dicebear.com/7.x/avataaars/svg?seed=diego&backgroundColor=c0aede',
+      foto: 'https://media.themoviedb.org/t/p/w235_and_h235_face/qFek0KqpaPV5mVyHHNfAapDE9Tj.jpg',
       logros: ['Lector Novato']
     },
     {
@@ -34,7 +34,7 @@ export class UsuarioService {
       password: '1234',
       rol: 'padre',
       nivel: 'intermedio',
-      foto: 'https://api.dicebear.com/7.x/avataaars/svg?seed=ana&backgroundColor=d1f4d1',
+      foto: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Anne_Hathaway_at_The_Apprentice_in_NYC_03_%28cropped2%29.jpg',
       logros: ['Padre Activo']
     },
     {
@@ -44,7 +44,7 @@ export class UsuarioService {
       password: '1234',
       rol: 'profesor',
       nivel: 'avanzado',
-      foto: 'https://api.dicebear.com/7.x/avataaars/svg?seed=laura&backgroundColor=ffd5dc',
+      foto: 'https://media.themoviedb.org/t/p/w235_and_h235_face/qYNofOjlRke2MlJVihmJmEdQI4v.jpg',
       logros: ['Docente', 'Lector Experto']
     },
     {
@@ -54,7 +54,7 @@ export class UsuarioService {
       password: '1234',
       rol: 'estudiante',
       nivel: 'intermedio',
-      foto: 'https://api.dicebear.com/7.x/avataaars/svg?seed=carlos&backgroundColor=ffdfbf',
+      foto: 'https://www.panoramaaudiovisual.com/wp-content/uploads/2025/10/Guillermo-del-Toro-headshot-credit-John-Wilson_Netflix.jpg',
       logros: ['Lector Constante', 'Comprension Veloz']
     }
   ];

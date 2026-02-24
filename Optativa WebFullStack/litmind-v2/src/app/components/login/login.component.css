@@ -21,10 +21,10 @@
   margin-bottom: 32px;
 }
 
-.logo-icon {
-  font-size: 48px;
-  display: block;
-  margin-bottom: 8px;
+.logo-icon img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
 }
 
 .login-logo h1 {

@@ -28,6 +28,12 @@
   flex-shrink: 0;
 }
 
+.logo-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
 .brand-name {
   color: white;
   font-weight: 700;

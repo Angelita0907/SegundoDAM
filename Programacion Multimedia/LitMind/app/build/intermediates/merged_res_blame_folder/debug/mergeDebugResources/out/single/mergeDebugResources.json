@@ -1,0 +1,146 @@
+[
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\drawable_button_primary.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\drawable\\button_primary.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\layout_activity_stats.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\layout\\activity_stats.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-pngs-30:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\drawable_button_secondary.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\drawable\\button_secondary.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\drawable_splash_background.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\drawable\\splash_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\drawable_card_background.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\drawable\\card_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\layout_activity_role_selection.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\layout\\activity_role_selection.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\menu_options_menu.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\menu\\options_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\layout_activity_community.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\layout\\activity_community.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\menu_bottom_navigation_menu.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\menu\\bottom_navigation_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\layout_activity_library.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\layout\\activity_library.xml"
+    },
+    {
+        "merged": "es.ejemplo.android.litmind.app-debug-34:/layout_activity_main.xml.flat",
+        "source": "es.ejemplo.android.litmind.app-main-36:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\drawable_gradient_header.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\drawable\\gradient_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "es.ejemplo.android.litmind.app-debug-34:/layout_activity_role_selection.xml.flat",
+        "source": "es.ejemplo.android.litmind.app-main-36:/layout/activity_role_selection.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\layout_activity_carga.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\layout\\activity_carga.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\layout_activity_reading.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\layout\\activity_reading.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-debug-34:\\layout_activity_onboarding.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.13\\es.ejemplo.android.litmind.app-main-36:\\layout\\activity_onboarding.xml"
+    }
+]
